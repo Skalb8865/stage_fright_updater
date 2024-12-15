@@ -8,6 +8,7 @@
   --clr-rose: #e11d48;
   --clr-dark-rose: #881337;
   --clr-indigo: #4f46e5;
+  --clr-active-link:#be123c;
 
 
   /* Sizes */
@@ -127,8 +128,8 @@ body {
 }
 
 #active-link {
-  color: var(--clr-rose);
-  border-bottom: 3px solid var(--clr-rose);
+  color: var(--clr-active-link);
+  border-bottom: 3px solid var(--clr-active-link);
   border-radius: 3px;
 }
 
