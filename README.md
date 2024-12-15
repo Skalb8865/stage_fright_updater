@@ -1,13 +1,17 @@
 # test-deploy
 
+-------------------------------
 how to update github repository
+-------------------------------
 
-git init
+1. npm run build
 
-git add -A
+2. git init
 
-git commit -m "whatever comment you want"
+3. git add -A
 
-git branch -M main
+4. git commit -m "whatever comment you want"
 
-git push -u
+5. git branch -M main
+
+6. git push -u
