@@ -4,4 +4,6 @@ import '../styles/general-sans.css'
 import '../styles/sentient.css'
 
 
+import mobileNav from './mobile-nav'
 
+mobileNav();
