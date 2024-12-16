@@ -193,7 +193,7 @@ body {
 }
 
 #logo {
-  color: var(--clr-rose);
+  color: var(--background-clr-light);
   font-family: 'Sentient', serif;
   text-transform: uppercase;
   font-size: var(--size-3xl);
