@@ -454,6 +454,132 @@ body {
 
 
 /* ************** */
+/* Tour Section */
+/* ************** */
+.tour-home {
+    min-height: 40dvh;
+    background: grey;
+    justify-content: center;
+    text-align: center;
+}
+
+.tour-home h1 {
+    font-weight: 800;
+    color: black;
+    font-size: 50px;
+    padding: 200px 50px 50px 50px;
+}
+
+.tours {
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tours-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tour-cards {
+    width: 430px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    background: var(--background-clr-light);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgb(255 255 255 / 0.6);
+    text-align: center;
+    font-size: 14px;
+    transition: 0.35s ease;
+    ;
+}
+
+.tour-cards:hover {
+    transform: scale(1.025);
+    transition: 0.35s ease;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 1.4);
+}
+
+.tour-cards img {
+    width: 100%;
+    min-height: 301px;
+}
+
+.tour-cards h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.tour-cards p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+.tour-cards a {
+    margin: 10px 0 80px 0;
+    color: var(--background-clr-light);
+    text-decoration: none;
+    font-size: 14px;
+    background: var(--clr-rose);
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+dialog {
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all 0.3s allow-discrete;
+}
+
+dialog[open] {
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.3s allow-discrete;
+}
+
+dialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.description {
+    max-width: 40ch;
+    margin: 1rem 0;
+}
+
+
+
+/* ************** */
 /* Albumd Section */
 /* ************** */
 .our-albums {
