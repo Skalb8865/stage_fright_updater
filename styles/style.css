@@ -101,7 +101,7 @@ body {
 /* ************** */
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -390,6 +390,7 @@ body {
     height: 370px;
     transition: .35s;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+    border: 1px solid rgb(75, 82, 92);
 }
 
 .member-cards img {
@@ -404,6 +405,7 @@ body {
     transform: scale(1.01);
     transition: 0.35s;
     box-shadow: 0 3px 10px rgb(0 0 0 / 1);
+    border: 1px solid rgb(124, 128, 134);
 }
 
 /* sets the height to zero so that the overlay doesn't show up */
@@ -456,7 +458,7 @@ body {
 /* ************** */
 /* Tour Section */
 /* ************** */
-.tour-home {
+/* .tour-home {
     min-height: 40dvh;
     background: grey;
     justify-content: center;
@@ -498,13 +500,13 @@ body {
     box-shadow: 0 3px 10px rgb(255 255 255 / 0.6);
     text-align: center;
     font-size: 14px;
-    transition: 0.35s ease;
+    transition: 0.35s;
     ;
 }
 
 .tour-cards:hover {
     transform: scale(1.025);
-    transition: 0.35s ease;
+    transition: 0.35s;
     box-shadow: 0 3px 10px rgb(0 0 0 / 1.4);
 }
 
@@ -536,7 +538,77 @@ body {
     padding: 5px 15px;
     transition: 0.4s;
     cursor: pointer;
+} */
+
+.tours {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
 }
+
+.tour-card {
+    padding: 2em;
+    border: 1px solid rgb(75, 82, 92);
+    border-radius: 10px;
+    background-color: #222429;
+    text-align: center;
+    transition: border 0.3s;
+}
+
+.tour-card:hover{
+    border: 1px solid rgb(124, 128, 134);
+    transition: border 0.3s;
+}
+
+.tour-card h2 {
+    color: var(--background-clr-light);
+}
+
+.tour-card p {
+    color: var(--clr-slate400);
+}
+
+.test {
+    display: flex;
+    padding: 50px;
+}
+.test i {
+    color: orange;
+    font-size: 24px;
+}
+
+.test i:hover{
+color: red;
+}       
+ 
+.test-container{
+    display: flex;
+    gap: 20px;
+    width: 1410px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 25px;
+    border-radius: 14px;  
+    border: 1px solid purple;
+    scrollbar-width: none;
+}
+
+.test-container::-webkit-scrollbar{
+    display: none;
+}
+
+.card {
+    scroll-snap-align: center; /* Change from 'start' to 'center' */
+    flex-shrink: 0;
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    border-radius: 14px;
+    text-align: center;
+}
+
 
 dialog {
     margin: auto;
@@ -602,7 +674,7 @@ dialog[open]::backdrop {
     width: 410px;
     height: 409px;
     margin: 10px;
-    transition: 1.15s ease;
+    transition: 1.15s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -618,7 +690,7 @@ dialog[open]::backdrop {
 /* Increase the size of the cards when you hover over them */
 .albums-cards:hover {
     transform: scale(1.035);
-    transition: 0.5s ease;
+    transition: 0.5s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -697,17 +769,11 @@ dialog[open]::backdrop {
 
 /* 2xl */
 @media (max-width: 1536px) {
-    .container {
-        max-width: 1280px;
-    }
+
 }
 
 /* xl */
 @media (max-width: 1280px) {
-    .container {
-        max-width: 1024px;
-    }
-
     .header-link {
         font-size: var(--size-base);
     }
@@ -724,10 +790,6 @@ dialog[open]::backdrop {
 
 /* lg */
 @media (max-width: 1024px) {
-    .container {
-        max-width: 768px;
-    }
-
     .section {
         margin-top: 10rem;
     }
@@ -748,10 +810,6 @@ dialog[open]::backdrop {
 
 /* md */
 @media (max-width: 768px) {
-    .container {
-        max-width: 640px;
-    }
-
     .header {
         justify-content: flex-end;
     }
@@ -771,15 +829,13 @@ dialog[open]::backdrop {
 }
 
 /* sm */
-@media (max-width: 650px) {
-    .container {
-        max-width: 475px;
+@media (max-width: 640px) {
+    .test{
+        width: 450px;
     }
 }
 
 /* xs */
 @media (max-width: 475px) {
-    .container {
-        width: 100%;
-    }
+
 }
