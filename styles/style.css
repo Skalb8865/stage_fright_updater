@@ -557,7 +557,8 @@ body {
     transition: border 0.3s;
 }
 
-.tour-card:hover{
+
+.tour-card:hover {
     border: 1px solid rgb(124, 128, 134);
     transition: border 0.3s;
 }
@@ -570,43 +571,59 @@ body {
     color: var(--clr-slate400);
 }
 
-.test {
-    display: flex;
-    padding: 50px;
-}
-.test i {
+#scroll-left {
+    position: relative;
+    top: 250px;
     color: orange;
-    font-size: 24px;
+    font-size: 36px;
 }
 
-.test i:hover{
-color: red;
-}       
- 
-.test-container{
+#scroll-right {
+    position: absolute;
+    right: 100px;
+    bottom: -179px;
+    color: orange;
+    font-size: 36px;
+}
+
+#scroll-left:hover {
+    color: red;
+}
+
+#scroll-right:hover {
+    color: red;
+}
+
+.test-container {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     gap: 20px;
     width: 1410px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 25px;
-    border-radius: 14px;  
-    border: 1px solid purple;
+    padding: auto 0;
     scrollbar-width: none;
 }
 
-.test-container::-webkit-scrollbar{
+.test-container::-webkit-scrollbar {
     display: none;
 }
 
 .card {
-    scroll-snap-align: center; /* Change from 'start' to 'center' */
+    scroll-snap-align: center;
+    /* Change from 'start' to 'center' */
     flex-shrink: 0;
     width: 450px;
     height: 450px;
     background-color: white;
-    border-radius: 14px;
     text-align: center;
+}
+
+#card1 img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
 }
 
 
@@ -648,6 +665,7 @@ dialog[open]::backdrop {
     max-width: 40ch;
     margin: 1rem 0;
 }
+
 
 
 
@@ -768,9 +786,7 @@ dialog[open]::backdrop {
 /* ******************* */
 
 /* 2xl */
-@media (max-width: 1536px) {
-
-}
+@media (max-width: 1536px) {}
 
 /* xl */
 @media (max-width: 1280px) {
@@ -830,12 +846,10 @@ dialog[open]::backdrop {
 
 /* sm */
 @media (max-width: 640px) {
-    .test{
+    .test {
         width: 450px;
     }
 }
 
 /* xs */
-@media (max-width: 475px) {
-
-}
+@media (max-width: 475px) {}

@@ -3,6 +3,5 @@ import '../styles/style.css'
 import '../styles/general-sans.css'
 import '../styles/sentient.css'
 
- import slider from './tour.js'
-
- slider();
+import slider from './tour.js'
+slider();
