@@ -32,10 +32,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     scroll-behavior: smooth;
     line-height: calc(1em + 0.5rem);
 }
+
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 
 body {
     font-family: 'General Sans', sans-serif;
@@ -58,7 +64,7 @@ body {
 }
 
 .nav-container {
-    max-width: 100%;
+    max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
@@ -627,50 +633,8 @@ body {
 }
 
 
-dialog {
-    margin: auto;
-    padding: 2rem;
-    border: none;
-    border-radius: 6px;
-    opacity: 0;
-    transition: all 0.3s allow-discrete;
-}
-
-dialog[open] {
-    opacity: 1;
-}
-
-@starting-style {
-    dialog[open] {
-        opacity: 0;
-    }
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0);
-    transition: all 0.3s allow-discrete;
-}
-
-dialog[open]::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-@starting-style {
-    dialog[open]::backdrop {
-        background-color: rgba(0, 0, 0, 0);
-    }
-}
-
-.description {
-    max-width: 40ch;
-    margin: 1rem 0;
-}
-
-
-
-
 /* ************** */
-/* Albumd Section */
+/* Albums Section */
 /* ************** */
 .our-albums {
     padding: 100px 0 220px 0;
@@ -798,6 +762,10 @@ dialog[open]::backdrop {
         max-width: 1024px;
     }
 
+    .nav-container{
+        max-width: 1024px;
+    }
+
     .header-link {
         font-size: var(--size-base);
     }
@@ -815,6 +783,10 @@ dialog[open]::backdrop {
 /* lg */
 @media (max-width: 1024px) {
     .container{
+        max-width: 768px;
+    }
+
+    .nav-container{
         max-width: 768px;
     }
 
@@ -842,6 +814,10 @@ dialog[open]::backdrop {
         max-width: 640px;
     }
 
+    .nav-container{
+        max-width: 640px;
+    }
+
     .header {
         justify-content: flex-end;
     }
@@ -866,6 +842,10 @@ dialog[open]::backdrop {
         max-width: 475px;
     }
 
+    .nav-container{
+        max-width: 475px;
+    }
+
     .test {
         width: 450px;
     }
@@ -874,6 +854,10 @@ dialog[open]::backdrop {
 /* xs */
 @media (max-width: 475px) {
     .container{
+        width: 100%;
+    }
+
+    .nav-container{
         width: 100%;
     }
 }
