@@ -113,9 +113,9 @@ body {
     padding-bottom: 2rem;
     /* uncomment this out to make the navbar stick to the top of the page */
     /* position: fixed;
-  top: 0;
-  right: 0;
-  left: 0; */
+    top: 0;
+    right: 0;
+    left: 0; */
     width: 100%;
     z-index: 9999;
 }
@@ -136,10 +136,6 @@ body {
     letter-spacing: -0.05em;
     transition: color .3s;
 }
-
-/* .header-menu:first-child {
-  padding-left: 250px;
-} */
 
 .header-link:hover {
     color: var(--clr-rose);
@@ -203,7 +199,6 @@ body {
     font-family: 'Sentient', serif;
     text-transform: uppercase;
     font-size: var(--size-3xl);
-    align-self: left;
 }
 
 #logo:hover {
