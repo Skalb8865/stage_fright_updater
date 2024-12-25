@@ -10,6 +10,7 @@ export default defineConfig({
         tours: resolve(__dirname, 'html/tour.html'), 
         merch: resolve(__dirname, 'html/merch.html'), 
         music: resolve(__dirname, 'html/music.html'), 
+        contact: resolve(__dirname, 'html/contact.html'),  
       },
     },
   },
