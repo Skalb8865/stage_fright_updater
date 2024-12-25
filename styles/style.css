@@ -707,6 +707,7 @@ body {
     margin-bottom: 20px;
     border: 1px solid var(--clr-slate400);
     background: var(--background-clr-dark);
+    color: var(--clr-slate400);
     resize: none;
 }
 
