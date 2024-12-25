@@ -1,55 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-.contact-page {
-    height: 90dvh;
-    padding: 0;
-    display: flex;
+.contact{   
+    display: flex; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--accent);
 }
 
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contact-form {
-    padding: 0 15px;
-    text-align: center;
-}
-
-.contact-header {
-    font-weight: 700;
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.contact-form form input,
-.contact-form form textarea {
+.contact form input,
+.contact form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background: var(--accent);
-
+    background: var();
     /* Makes it so you cant resized the textarea by dragging from the bottom right corner of the box */
     resize: none;
 }
 
-.contact-form form button {
-    background-color: var(--primary);
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s ease;
+.contact .submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-form form button:hover {
-    background-color: var(--primary-dark);
-    transition: 0.5s ease;
+.contact .btn{
+    margin-bottom: 25px;
+}
+
+.captcha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
