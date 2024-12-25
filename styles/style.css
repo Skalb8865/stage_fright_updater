@@ -148,7 +148,7 @@ body {
 }
 
 .header-line {
-    border: 1px solid var(--clr-slate600);
+    border: 1px solid var(--clr-slate400);
     padding-top: 1.5em;
 }
 
@@ -685,7 +685,6 @@ body {
 /* ***********E********* */
 /* Contact Form Section */
 /* ******************** */
-
 .contact-page{
     padding: 25px;
 }
