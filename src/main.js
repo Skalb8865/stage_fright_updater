@@ -8,3 +8,5 @@ import '../styles/swiper.css'
 
 import slider from './tour.js'
 slider();
+import swiper from './swiper.js'
+swiper();
