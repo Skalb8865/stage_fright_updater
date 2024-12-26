@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=sentient@400,500,700&display=swap"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
     <meta name="description" content="Stage Fright Website">
@@ -108,8 +109,8 @@
         <!-- -------------- -->
         <!-- Hero Section -->
         <!-- -------------- -->
-        <section class="hero">
-            <img src="./res/group.webp" alt="Group Picture">
+        <section aria-label="concert Images" class="hero">
+            <img src="./res/spiral concert.jpg" alt="Group Picture">
         </section>
 
 
@@ -144,6 +145,39 @@
         <!-- -------------- -->
         <!-- Merch Section -->
         <!-- -------------- -->
+        <h2 class="section-title">Merch</h2>
+        <section class="container section">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-swiper-autoplay="2000">
+                        <img src="./res/boy_Hoodie.png" alt="">
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="10000">
+                        <img src="./res/bright night concert.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="10000">
+                        <img src="./res/Newport-Music-Hall-600x600.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="10000">
+                        <img src="./res/fraze-pavilion-is-southwestern.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="10000">
+                        <img src="./res/white rock band icons.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="10000">
+                        <img src="./res/purple concert.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="10000">
+                        <img src="./res/white rock band icons.jpg" alt="">
+                    </div>
+                </div>
+                <!-- Maybe comment the arrows out-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
 
     </main>
 
@@ -179,6 +213,43 @@
         <!-- --------------- -->
         <script type="module" src="./src/main.js"></script>
         <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: false,
+                speed: 700,
+                // autoplay: {
+                //     delay: 2000,
+                //     disableOnInteraction: false,
+                // },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                breakpoints: {
+                    877: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1307: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1737: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                },
+            });
+        </script>
     </footer>
 </body>
 
