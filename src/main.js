@@ -10,3 +10,5 @@ import slider from './tour.js'
 slider();
 import swiper from './swiper.js'
 swiper();
+import mobileNav from './mobile-nav.js'
+mobileNav();

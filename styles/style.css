@@ -138,6 +138,30 @@ body {
 
 .header-link:hover {
     color: var(--clr-rose);
+    text-decoration: line-through;
+    text-decoration-thickness: 2.5px;
+}
+
+.cross:hover {
+    position: relative;
+    display: inline-block;
+}
+.cross:hover::before, .cross:hover::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.cross:hover::before {
+    border-bottom: 2.5px solid var(--clr-rose);
+    -webkit-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+}
+.cross:hover::after {
+    border-bottom: 2.5px solid var(--clr-active-link);
+    -webkit-transform: skewY(10deg);
+    transform: skewY(10deg);
 }
 
 #active-link {
@@ -158,8 +182,8 @@ body {
     cursor: pointer;
     color: var(--clr-slate400);
     background-color: transparent;
-    width: var(--size-2xl);
-    height: var(--size-2xl);
+    width: var(--size-3xl);
+    height: var(--size-3xl);
     transition: color .3s;
 }
 
@@ -203,6 +227,12 @@ body {
 #logo:hover {
     color: var(--clr-dark-rose);
 }
+
+/* #logo span {
+    background-color: transparent;
+    background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
+    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, var(--clr-rose), transparent 52%, transparent 100%);
+} */
 
 /* .mobile-logo {
   display: none;
@@ -311,10 +341,47 @@ body {
 /* Hero Section */
 /* ************ */
 
-.hero img {
+.hero img{
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
+
+.about-hero{
+    padding: 0;
+}
+
+.about-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--clr-slate800);
+}
+
+.about-hero p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-slate400);
+    font-weight: 800;
+    font-size: var(--size-8xl);
+    z-index: 9999;
+}
+
+.about-hero-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.about-hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /* ************ */
@@ -832,9 +899,9 @@ body {
         max-width: 768px;
     } */
 
-    /* .section {
+    .section {
         margin-top: 10rem;
-    } */
+    }
 
     .header-link {
         font-size: var(--size-sm);
@@ -861,7 +928,7 @@ body {
     } */
 
     .header {
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     .header-menu {

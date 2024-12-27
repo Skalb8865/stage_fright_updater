@@ -2,15 +2,13 @@
 .swiper {
     width: 100%;
     height: 45%;
-    /* change the paddign tp change where the pagiantion bullets are */
+    /* change the padding tp change where the pagiantion bullets are */
     padding: 35px;
+    
 }
 
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 400px;
     height: 400px;
     transition: 0.3s;
