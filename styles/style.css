@@ -1,6 +1,7 @@
 :root {
     /* Colors */
-    --background-clr-dark: #070a13;
+    --background-clr-dark: #0c0d0f;
+    /* #070a13 */
     --background-clr-light: #f1f5f9;
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
@@ -68,6 +69,7 @@ body {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    /* change this to make the navbar stick to the top of the page as you scroll */
     position: absolute;
     right: 0;
     left: 0;
@@ -106,6 +108,7 @@ body {
 /* ************** */
 .header {
     display: flex;
+    
     justify-content: space-evenly;
     align-items: center;
     padding-top: 2rem;
@@ -756,36 +759,63 @@ body {
 
 .contact {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .contact form input,
 .contact form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    gap: 25px;
+    padding: 12.5px;
+    margin-bottom: 10px;
     border: 1px solid var(--clr-slate400);
-    background: var(--background-clr-dark);
-    color: var(--clr-slate400);
-    resize: none;
+    background: var(--background-clr-light);
+    color: var(--background-clr-dark);
 }
 
+/* the name input boxes  */
+#name{
+    width: 30%;
+}
+
+/* the email input box */
+#email{
+    width: 61%;
+}
+
+/* the subject input box */
+#subject{
+    width: 61%;
+}
+
+/* the message textarea */
+#message{
+    width: 61%;
+    resize: none;
+    padding-bottom: 45px;
+}
+
+/* container for the submit btn */
 .contact .submit-btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .contact .btn {
     margin-bottom: 25px;
 }
 
+/* container for the captcha box */
 .captcha {
     display: flex;
     justify-content: center;

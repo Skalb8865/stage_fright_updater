@@ -62,9 +62,11 @@
                     <!-- <input type="hidden" name="redirect"
                             value="https://test-deploy-iota-dusky.vercel.app/html/about.html"> -->
                     <input type="hidden" name="from_name" value="Stage Fright">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" pattern=".+@gmail\.com" placeholder="Your Email" required>
-                    <textarea name="Message" placeholder="Your Message" minlength="5" required></textarea>
+                    <input id="name" type="text" name="First Name" placeholder="First Name (Required)" required>
+                    <input id="name" type="text" name="Last Name" placeholder="Last Name (Required)" required>
+                    <input id="email" type="email" name="Email" pattern=".+@gmail\.com" placeholder="Your Email" required>
+                    <input id="subject" type="text" name="Subject" placeholder="Subject (Required)" required>
+                    <textarea id="message" name="Message" placeholder="Your Message (Required)" minlength="5" required></textarea>
                     <div class="submit-btn">
                         <button type="submit" class="btn">Send Message</button>
                         <!-- type="rest" to clear allm the fields gotta figure out how to clear the fields after user submitts the form -->
