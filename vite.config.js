@@ -11,6 +11,7 @@ export default defineConfig({
         merch: resolve(__dirname, 'html/merch.html'), 
         music: resolve(__dirname, 'html/music.html'), 
         contact: resolve(__dirname, 'html/contact.html'),  
+        thankyou: resolve(__dirname, 'html/thankyou.html'),  
       },
     },
   },
