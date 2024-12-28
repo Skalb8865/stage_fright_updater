@@ -205,10 +205,10 @@ body {
     text-decoration: none;
     border: none;
     cursor: pointer;
-    color: var(--background-clr-light);
+    color: var(--background-clr-dark);
     background-color: transparent;
-    width: var(--size-3xl);
-    height: var(--size-3xl);
+    width: var(--size-5xl);
+    height: var(--size-5xl);
 }
 
 .closeBtn {
@@ -347,45 +347,15 @@ body {
 /* Hero Section */
 /* ************ */
 
+.hero{
+    padding: 0;
+    margin: 0;
+}
+
 .hero img {
     width: 100%;
+    height: 93dvh;
     object-fit: cover;
-}
-
-.about-hero {
-    padding: 0;
-}
-
-.about-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    background-color: var(--clr-slate800);
-}
-
-.about-hero p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--clr-slate400);
-    font-weight: 800;
-    font-size: var(--size-8xl);
-    z-index: 9999;
-}
-
-.about-hero-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 10;
-}
-
-.about-hero-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -643,62 +613,6 @@ body {
 .tour-card p {
     color: var(--clr-slate400);
 }
-
-#scroll-left {
-    position: relative;
-    top: 250px;
-    color: orange;
-    font-size: 36px;
-}
-
-#scroll-right {
-    position: absolute;
-    right: 100px;
-    bottom: -179px;
-    color: orange;
-    font-size: 36px;
-}
-
-#scroll-left:hover {
-    color: red;
-}
-
-#scroll-right:hover {
-    color: red;
-}
-
-.test-container {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 20px;
-    width: 1410px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: auto 0;
-    scrollbar-width: none;
-}
-
-.test-container::-webkit-scrollbar {
-    display: none;
-}
-
-.card {
-    scroll-snap-align: center;
-    /* Change from 'start' to 'center' */
-    flex-shrink: 0;
-    width: 450px;
-    height: 450px;
-    background-color: white;
-    text-align: center;
-}
-
-#card1 img {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-}
-
 
 /* ************** */
 /* Albums Section */
