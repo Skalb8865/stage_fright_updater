@@ -21,7 +21,8 @@
                     <a class="header-link" href="./music.html" aria-label="Albums Page">Music</a>
                 </li>
                 <li>
-                    <a class="header-link cross" id="logo" href="../index.html" aria-current="page" aria-label="HomePage">St<span style="text-decoration: line-through;">a</span>ge
+                    <a class="header-link cross" id="logo" href="../index.html" aria-current="page"
+                        aria-label="HomePage">St<span style="text-decoration: line-through;">a</span>ge
                         <span style="text-decoration: line-through;">Fr</span>ight</a>
                 </li>
                 <li>
@@ -59,30 +60,35 @@
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <!-- <form action="https://formspree.io/f/xldddvdj" method="POST"> -->
                     <input type="hidden" name="access_key" value="a68dae2d-eea5-41f8-a606-efb526aa36e8">
-                    <!-- <input type="hidden" name="redirect"
-                            value="https://test-deploy-iota-dusky.vercel.app/html/about.html"> -->
-                    <input type="hidden" name="from_name" value="Stage Fright">
-                    <input id="name" type="text" name="First Name" placeholder="First Name (Required)" required>
-                    <input id="name" type="text" name="Last Name" placeholder="Last Name (Required)" required>
-                    <input id="email" type="email" name="Email" pattern=".+@gmail\.com" placeholder="Your Email" required>
-                    <input id="subject" type="text" name="Subject" placeholder="Subject (Required)" required>
-                    <textarea id="message" name="Message" placeholder="Your Message (Required)" minlength="5" required></textarea>
+                    <input type="hidden" name="redirect"
+                        value="https://test-deploy-iota-dusky.vercel.app/html/thankyou.html">
+                    <input type="hidden" name="from_name" value="Stage Fright" autocomplete="off">
+                    <input id="first_name" type="text" name="First Name" placeholder="First Name" autocomplete="off"
+                        required>
+                    <input id="last_name" type="text" name="Last Name" placeholder="Last Name" autocomplete="off"
+                        required>
+                    <input id="email" type="email" name="Email"
+                        pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                        placeholder="Your Email" autocomplete="off" required>
+                    <input id="subject" type="text" name="Subject" placeholder="Subject" autocomplete="off" required>
+                    <textarea id="message" name="Message" placeholder="Your Message" minlength="5" autocomplete="off"
+                        required></textarea>
                     <div class="submit-btn">
                         <button type="submit" class="btn">Send Message</button>
-                        <!-- type="rest" to clear allm the fields gotta figure out how to clear the fields after user submitts the form -->
+                        <!-- type="rest" to clear all the fields gotta figure out how to clear the fields after user submitts the form -->
                     </div>
                     <div class="captcha">
-                        <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+                        <div type="hidden" class="h-captcha" data-captcha="true" data-theme="dark"></div>
                     </div>
                 </form>
             </div>
         </section>
     </main>
-    
+
     <!-- -------------- -->
     <!-- Footer Section -->
     <!-- -------------- -->
-    <footer >
+    <footer>
         <!-- --------------- -->
         <!-- JS Link Section -->
         <!-- --------------- -->
