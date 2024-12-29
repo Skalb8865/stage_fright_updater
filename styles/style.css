@@ -1,12 +1,15 @@
 :root {
     /* Colors */
-    --background-clr-dark: #0c0d0f;
+    --background-clr-dark: #0c0807;
+    /* #0c0d0f */
     /* #070a13 */
-    --background-clr-light: #f1f5f9;
+    /* #191919 */
+    --background-clr-light: #fafafa;
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
     --clr-slate800: #1e293b;
     --clr-rose: #e11d48;
+    /* #e0d2bc */
     --clr-dark-rose: #881337;
     --clr-indigo: #4f46e5;
     --clr-active-link: #be123c;
@@ -324,22 +327,22 @@ body {
 /* Btn Section */
 /* *********** */
 .btn {
-    display: inline-block;
-    font-weight: 600;
     text-decoration: none;
-    letter-spacing: -0.05em;
-    background-color: var(--clr-rose);
+    border: 2px solid var(--background-clr-light);
+    background-color: var(--background-clr-dark);
     color: var(--background-clr-light);
-    padding: 0.5em 1em;
-    border: none;
-    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-rose);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 1em 2.5em;
+    font-size: 14px;
     cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25), 0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose);
+    background-color: var(--background-clr-light);
+    color: var(--clr-slate600);
+    transition: 0.3s;
 }
 
 

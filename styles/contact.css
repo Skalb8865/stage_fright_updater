@@ -1,5 +1,5 @@
-.contact{   
-    display: flex; 
+.contact {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
@@ -22,17 +22,17 @@
     resize: none;
 }
 
-.contact .submit-btn{
+.contact .submit-btn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact .btn{
+.contact .btn {
     margin-bottom: 25px;
 }
 
-.captcha{
+.captcha {
     display: flex;
     justify-content: center;
     align-items: center;
