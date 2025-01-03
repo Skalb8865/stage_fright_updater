@@ -39,8 +39,11 @@
 /* Changes the active pagination bullet*/
 .swiper-pagination-bullet-active {
     background: green;
-    height: 25px;
-    width: 25px;
+
+    /* remove if doesnt work */
+    height: 20px;
+    width: 20px;
+    margin: 5px;
 }
 
 .swiper-pagination-bullet-active:hover {
@@ -49,8 +52,11 @@
 
 .swiper-pagination-bullet{
     background: white;
-    height: 15px;
-    width: 15px;
+
+    /* remove if doesnt work */
+    height: 16px; 
+    width: 16px; 
+    margin: 5px;
    } 
 
 .swiper-pagination-bullet:hover {
@@ -64,6 +70,9 @@
     color: red;
     transition: color 0.3s;
     cursor: pointer;
+    /* remove if doesnt work */
+    font-size: 24px;
+    padding: 10px;
 }
 
 
