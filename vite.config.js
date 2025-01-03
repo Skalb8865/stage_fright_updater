@@ -6,12 +6,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'html/about.html'), 
-        tours: resolve(__dirname, 'html/tour.html'), 
-        merch: resolve(__dirname, 'html/merch.html'), 
-        music: resolve(__dirname, 'html/music.html'), 
-        contact: resolve(__dirname, 'html/contact.html'),  
-        thankyou: resolve(__dirname, 'html/thankyou.html'),  
+        about: resolve(__dirname, 'html/About/about.html'), 
+        tours: resolve(__dirname, 'html/Tours/tour.html'), 
+        merch: resolve(__dirname, 'html/Merch/merch.html'), 
+        music: resolve(__dirname, 'html/Music/music.html'), 
+        contact: resolve(__dirname, 'html/Contact/contact.html'),  
       },
     },
   },

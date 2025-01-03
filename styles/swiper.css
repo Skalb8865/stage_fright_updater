@@ -49,6 +49,7 @@
 
 .swiper-pagination-bullet{
     background: white;
+    padding: 5.5px;
    } 
 
 .swiper-pagination-bullet:hover {
