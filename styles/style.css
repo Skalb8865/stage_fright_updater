@@ -51,6 +51,7 @@ body {
     font-family: 'General Sans', sans-serif;
     background-color: var(--clr-dark);
     line-height: calc(1em + 0.5rem);
+    scroll-behavior: smooth scroll;
 }
 
 
@@ -155,7 +156,7 @@ nav a:hover{
     cursor: pointer;
 } */
 
-header {
+/* header {
     transition: 0.48s ease;
 }
 
@@ -201,11 +202,78 @@ header {
 }
 
 header.sticky {
-    /* background: rgba(0, 0, 0, 0.5); */
-    background: black;
+    background: rgba(0, 0, 0, 0.5);
+    /* background: black;
     padding: 2.5rem 10%;
+    box-shadow: 0 1px 3.5px -4px lightblue;
+} */
+
+header {
+    transition: 0.48s ease;
 }
 
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 10%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--clr-light);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: var(--clr-rose);
+}
+
+.header-cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+    color: var(--clr-light);
+}
+
+.header-bars {
+    display: none;
+    /* Hide hamburger icon by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+    color: var(--clr-light);
+}
+
+
+header.sticky {
+    background: rgba(0, 0, 0, 0.5);
+    /* background: black; */
+    padding: 2.5rem 10%;
+    box-shadow: 0 1px 3.5px -4px lightblue;
+} 
 
 
 /* .header {
@@ -353,15 +421,21 @@ header.sticky {
 /* ************ */
 /* Hero Section */
 /* ************ */
-.hero-section{
+.hero-section {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
-    background-image: url("../res/brigh_night_concert/optimized-bnc.webp"); /* Image URL */
-    background-size: cover; /* Ensure the image covers the entire container */
-    background-position: center center; /* Center the image horizontally and vertically */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    background-attachment: fixed; /* Optional: Parallax effect */
+    min-height: 100vh;
+    /* Ensure the container takes up at least the full height of the viewport */
+    background-image: url("../res/brigh_night_concert/optimized-bnc.webp");
+    /* Image URL */
+    background-size: cover;
+    /* Ensure the image covers the entire container */
+    background-position: center center;
+    /* Center the image horizontally and vertically */
+    background-repeat: no-repeat;
+    /* Prevent image repetition */
+    background-attachment: fixed;
+    /* Optional: Parallax effect */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -898,7 +972,7 @@ header.sticky {
         font-size: var(--size-base);
     }
 
-    .hero-content .hero-title{
+    .hero-content .hero-title {
         font-size: 5.5rem;
     }
 }
@@ -917,9 +991,10 @@ header.sticky {
         margin-top: 10rem;
     }
 
+    /* 
     .header-link {
         font-size: var(--size-sm);
-    }
+    } */
 
     /* .header-cart {
         width: var(--size-xl);
@@ -930,13 +1005,13 @@ header.sticky {
         font-size: var(--size-sm);
     }
 
-    .hero-content .hero-title{
+    .hero-content .hero-title {
         font-size: 5rem;
     }
 
-    .spacer{
+    /* .spacer{
         margin-left: 50px;
-    }
+    } */
 }
 
 /* md */
@@ -994,9 +1069,9 @@ header.sticky {
         display: none;
     }
 
-    .header-bars {
+    /* .header-bars {
         display: block;
-    }
+    } */
 
     .mobile-logo {
         display: block;
@@ -1006,8 +1081,22 @@ header.sticky {
         font-size: 4rem;
     }
 
-    .header{
+    /* .header{
         display: none;
+    } */
+
+    .nav-link{
+        display: none;
+    }
+    .header {
+       justify-content: flex-end;
+    }
+    .header-bars{
+        display: block;
+    }
+
+    .header-cart{
+        display: block;
     }
 }
 
@@ -1046,7 +1135,7 @@ header.sticky {
         width: 125%;
     }
 
-    .hero-content .hero-title{
+    .hero-content .hero-title {
         font-size: 3.5rem;
     }
 }
@@ -1063,5 +1152,9 @@ header.sticky {
 
     .hero-content .hero-title {
         font-size: 3.5rem;
+    }
+
+    .logo{
+        font-size: 1.9rem;
     }
 }
