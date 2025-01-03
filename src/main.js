@@ -8,5 +8,7 @@ import '../styles/sentient.css'
 
 // import tourModal from './tour.js'
 // tourModal();
+// import mobileNav from './mobile-nav.js'
+// mobileNav();
 import swiper from './swiper.js'
 swiper();
