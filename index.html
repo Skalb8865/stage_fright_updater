@@ -11,8 +11,17 @@
     <!-- <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=sentient@400,500,700&display=swap"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./styles/swiper.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+    <!-- <link rel="stylesheet" href="./styles/swiper.css"> -->
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
+    <link rel="preload" href="./styles/swiper.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./styles/swiper.css">
+    </noscript>
 
     <script type="module" src="./src/main.js" async defer></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async defer></script>
@@ -103,7 +112,8 @@
             <a href="./html/about.html" aria-label="Our About Band Page">Band</a>
             <a href="./html/music.html" class="logo_spacer" aria-label="Our Music Page">Music</a>
         </nav>
-        <a href="./index.html" class="logo" aria-label="Our Homepage and is The Logo" aria-current="page">Stage Fright</a>
+        <a href="./index.html" class="logo" aria-label="Our Homepage and is The Logo" aria-current="page">Stage
+            Fright</a>
         <nav class="navbar">
             <a href="./html/merch.html" aria-label="Our Merch Page">Merch</a>
             <a href="./html/tour.html" aria-label="Our Tour Page">Tour</a>
