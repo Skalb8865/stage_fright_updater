@@ -11,6 +11,7 @@
     --clr-slate600: #475569;
     --clr-slate800: #1e293b;
     --clr-rose: #e11d48;
+    /* #DC0000 */
     /* #e0d2bc */
     --clr-dark-rose: #881337;
     --clr-indigo: #4f46e5;
@@ -283,7 +284,7 @@ header.sticky {
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
@@ -320,6 +321,7 @@ header.sticky {
     text-decoration: none;
     height: 100%;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .navbar_button {
@@ -330,26 +332,9 @@ header.sticky {
     width: 100%;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: #833ab4;
-    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    color: #fff;
-}
-
 #mobile_logo {
-    background: #ff8177;
-    background-image: linear-gradient(to bottom, #fd1d1d, #ffb199);
+    background: var(--clr-rose);
+    background-image: linear-gradient(to top left, var(--clr-rose), var(--clr-active-link), var(--clr-rose), var(--clr-dark-rose), var(--clr-rose), var(--clr-rose), var(--clr-dark-rose), var(--clr-dark-rose), var(--clr-active-link), var(--clr-rose));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -363,8 +348,8 @@ header.sticky {
 }
 
 .navbar_menu #navbar_logo {
-    background: #ff8177;
-    background-image: linear-gradient(to bottom, #fd1d1d, #ffb199);
+    background: var(--clr-rose);
+    background-image: linear-gradient(to top left, var(--clr-rose), var(--clr-active-link), var(--clr-rose), var(--clr-dark-rose), var(--clr-rose), var(--clr-rose), var(--clr-dark-rose), var(--clr-dark-rose), var(--clr-active-link), var(--clr-rose));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -378,12 +363,12 @@ header.sticky {
     font-family: 'Sentient', serif;
 }
 
-#navbar_logo span{
+#navbar_logo span {
     text-decoration: line-through;
 }
 
 .navbar_link:hover {
-    color: #833ab4;
+    color: var(--clr-rose);
     transition: all 0.3s ease;
 }
 
@@ -577,7 +562,7 @@ header.sticky {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.hero-link{
+.hero-link {
     text-decoration: none;
     color: var(--clr-slate400);
     margin-top: auto;
@@ -865,7 +850,7 @@ header.sticky {
     width: 410px;
     height: 409px;
     margin: 10px;
-    transition: 1.15s;
+    transition: 0.45s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -878,9 +863,8 @@ header.sticky {
 
 /* Increase the size of the cards when you hover over them */
 .albums-cards:hover {
-    transform: scale(1.035);
-    transition: 0.5s;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.45s;
+    box-shadow: 0 1px 1px 0 whitesmoke, 0 1px 1px 0 whitesmoke;
 }
 
 .albums-page {
@@ -891,6 +875,150 @@ header.sticky {
     align-items: center;
 }
 
+
+
+/* ************************ */
+/* Individaul Album Section */
+/* ************************ */
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 90%;
+    width: 87%;
+    z-index: 1;
+    padding: 100px 40px 144px 40px;
+    text-transform: uppercase;
+    background: var(--background-light);
+}
+
+.main_content {
+    color: aliceblue;
+}
+
+.main_img--container {
+    justify-self: center;
+}
+.main_img--card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main_img--card img {
+    border-radius: 10px;
+}
+.main_content h1 {
+    background: linear-gradient(to right, #DC0000, #850000);
+    background-clip: text;
+    color: transparent !important;
+    font-size: 4rem;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+
+/* ===========This is for th images that link to another album================================ */
+
+.OtherAlbums {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+.OtherAlbumsCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10%;
+    width: 10%;
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.OtherAlbumsCards img{
+    border-radius: 10px;
+}
+
+.H1Container{
+    align-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    height:10%;
+    width: 800px;
+    flex-wrap: wrap;
+    cursor: grab;
+
+}
+.main_contentV2 h1 {
+    background: linear-gradient(to right, #DC0000, #850000);
+    background-clip: text;
+    color: transparent !important;
+    font-size: 4rem;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    padding-right: auto;
+    flex-wrap: wrap;
+}
+
+.songs {
+    padding-bottom: 20px;
+}
+
+.Soundtrack {
+    padding-bottom: 10px;
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--clr-light);
+}
+
+.active-song {
+    color: blue;
+}
+
+.Soundtrack span {
+    border-bottom: solid 2px var(--clr-light);
+    padding: 5px;
+}
+
+.Soundtrack .song-length {
+    padding-left: 75px;
+}
+
+.play-icon {
+    padding: 10px;
+    font-size: 21px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.play-icon .fa-circle-pause {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.play-icon:hover {
+    color: var(--clr-rose);
+    transition: 0.3s ease;
+}
+
+.play-icon .fa-circle-pause:hover {
+    color: var(--primary);
+    transition: 0.3s ease;
+}
+
+/* @media screen and (max-width:1440px) {
+    .songs {
+        padding-left: 25px;
+    }
+} */
 
 
 /* ***********E********* */
