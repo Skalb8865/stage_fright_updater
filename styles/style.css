@@ -18,7 +18,6 @@
     --clr-active-link: #be123c;
     --hover-color: #272832;
 
-
     /* Sizes */
     --size-xxs: 0.5rem;
     --size-xs: 0.75rem;
@@ -149,7 +148,7 @@ nav a {
     font-family: 'Sentient', serif;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
     background-color: var(--hover-color);
 }
 
@@ -171,7 +170,7 @@ nav button{
     display: flex;
     color: var(--clr-light);
     font-family: 'Sentient', serif;
-    padding: 1.6em 2em;
+    padding: 1.4em 2em;
     cursor: pointer;
 }
 
@@ -212,7 +211,7 @@ nav button{
     top: 10px;
     left: 10px;
     z-index: 1000;
-    background-color: var(--clr-indigo); 
+    background-color: var(--clr-rose); 
     color: var(--clr-light); 
     padding: 12px 24px;
     border-radius: 5px;
@@ -304,9 +303,13 @@ nav button{
 }
 
 .hero-link {
+    position: absolute;
+    bottom: -345px;
+    right: 0;
+    left: 0;
     text-decoration: none;
+    font-size: 15px;
     color: var(--clr-slate400);
-    margin-top: auto;
 }
 
 .hero-btn {
