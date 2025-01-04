@@ -11,7 +11,7 @@ export default defineConfig({
         merch: resolve(__dirname, 'html/Merch/merch.html'), 
         music: resolve(__dirname, 'html/Music/music.html'), 
         contact: resolve(__dirname, 'html/Contact/contact.html'),  
-        prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'), 
+        prometheus: resolve(__dirname, 'html/Music/Albums/Prometheus.html'), 
       },
     },
   },
