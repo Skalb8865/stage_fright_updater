@@ -14,6 +14,11 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
     <!-- <link rel="stylesheet" href="./styles/swiper.css"> -->
 
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    </noscript>
 
     <!-- --------- -->
     <!-- CSS Links -->
@@ -32,6 +37,7 @@
     <!-- JS Links -->
     <!-- -------- -->
     <script type="module" src="./src/main.js" async defer></script>
+    <script type="module" src="./src/mobileNav.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -58,151 +64,43 @@
 </head>
 
 <body>
-    <!-- <header class="header nav-container">
-        <nav>
-            <ul class="header-menu">
-                <li>
-                    <a class="header-link" href="./html/about.html" aria-label="About Band Page">Band</a>
-                </li>
-                <li>
-                    <a class="header-link" href="./html/music.html" aria-label="Albums Page">Music</a>
-                </li>
-                <li>
-                    <a class="header-link" id="logo" href="./index.html" aria-current="page"
-                        aria-label="HomePage">St<span style="text-decoration: line-through;">a</span>ge
-                        <span style="text-decoration: line-through;">Fr</span>ight</a>
-                </li>
-                <li>
-                    <a class="header-link" href="./html/merch.html" aria-label="Merch Page">Merch</a>
-                </li>
-                <li>
-                    <a class="header-link" href="./html/tour.html" aria-label="Tours Page">Tour</a>
-                </li>
-                <li class="cart">
-                    <button class="header-cart" aria-label="open cart button" aria-expanded="false"
-                        aria-controls="cart">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-            <button class="header-bars" aria-label="open mobile navbar" aria-expanded="false" aria-controls="navbar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button>
-        </nav>
-    </header> -->
-    <!-- <header class="container">
-
-        <button id="open-sidebar-button" onclick="openSidebar()">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+            aria-controls="navbar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+                <path
+                    d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
             </svg>
         </button>
-        <nav>
-            <ul id="navbar">
-                <li><button id="close-sidebar-button" onclick="closeSidebar()">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#e8eaed">
+
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                            fill="#c9c9c9">
                             <path
-                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
                         </svg>
                     </button>
                 </li>
-                <li class="logo"><a href="./index.html">Stage Fright</a></li>
-                <li><a href="./html/about.html">Band</a></li>
-                <li><a href="./html/music.html">Music</a></li>
-                <li><a href="./html/merch.html">Merch</a></li>
-                <li><a href="./html/tour.html">Tour</a></li>
-                <li class="header-cart"><a href="#">Cart</a></li>
+                <li class="home-li"><a class="active-link" aria-label="Homepage" aria-current="page"
+                        href="index.html">Stage Fright</a></li>
+                <li><a href="/html/About/about.html" aria-label="About Band Page">Band</a></li>
+                <li><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
+                <li><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a></li>
+                <li><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a></li>
+                <li class="cart-li"><button><span>0</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="cart-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg></button>
+                </li>
             </ul>
         </nav>
-    </header> -->
-
-
-
-
-    <!-- <header class="header">
-        <nav class="navbar">
-            <a href="./html/about.html" class="nav-link" aria-label="Our About Band Page">Band</a>
-            <a href="./html/music.html" class="nav-link" aria-label="Our Music Page">Music</a>
-            <a href="./index.html" class="logo" aria-label="Our Homepage and is The Logo" aria-current="page">Stage Fright</a>
-            <a href="./html/merch.html" class="nav-link" aria-label="Our Merch Page">Merch</a>
-            <a href="./html/tour.html" class="nav-link" aria-label="Our Tour Page">Tour</a>
-            <button class="header-cart" aria-label="open cart button" aria-expanded="false" aria-controls="cart">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                  </svg>
-            </button>
-            <button class="header-bars" aria-label="open mobile navbar" aria-expanded="false" aria-controls="navbar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                </svg>
-            </button>
-        </nav>
-    </header> -->
-
-
-    <header>
-        <nav class="navbar">
-            <div class="navbar_container"><!--navbar container-->
-                <a href="./index.html" id="mobile_logo" aria-label="Our Homepage" aria-current="page">Stage Fright</a>
-                <div class="navbar_toggle" id="mobile-menu"><!--mobile nav menu-->
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="navbar_menu"><!--menu list-->
-                    <li class="navbar_item">
-                        <a href="./html/About/about.html" class="navbar_link" aria-label="Our About Band Page">
-                           Band
-                        </a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="./html/Music/music.html" class="navbar_link" aria-label="Our Music Page">
-                            Music
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./index.html" id="navbar_logo" aria-label="Our Homepage" aria-current="page">Stage Fright</a><!--logo container-->
-                    </li>
-                    <li class="navbar_item">
-                        <a href="./html/Merch/merch.html" class="navbar_link" aria-label="Our Merch Page">
-                            Merch
-                        </a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="./html/Tours/tour.html" class="navbar_link" aria-label="Our Tours Page">
-                            Tour
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
     </header>
-
-
-
-
-
-    <!-- <header class="header">
-
-        <nav class="navbar">
-            <a href="./html/about.html" aria-label="Our About Band Page">Band</a>
-            <a href="./html/music.html" class="logo_spacer" aria-label="Our Music Page">Music</a>
-        </nav>
-        <a href="./index.html" class="logo" aria-label="Our Homepage and is The Logo" aria-current="page">Stage
-            Fright</a>
-        <nav class="navbar">
-            <a href="./html/merch.html" aria-label="Our Merch Page">Merch</a>
-            <a href="./html/tour.html" aria-label="Our Tour Page">Tour</a>
-        </nav>
-    </header> -->
 
     <main class="main">
         <!-- -------------- -->
@@ -212,7 +110,12 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Unleash Your Inner Rock</h1>
-                <a class="hero-link" href="https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld" aria-label="Wallpaperflare Website">https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld</a>
+                <div class="hero-btn">
+                    <a href="./html/About/about.html"><button class="btn">About Us</button></a>
+                </div>
+                <a class="hero-link"
+                    href="https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld"
+                    aria-label="Wallpaperflare Website">https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld</a>
             </div>
         </div>
 
@@ -293,13 +196,12 @@
         <!-- -------------- -->
         <!-- Merch Section -->
         <!-- -------------- -->
-        <div class="container section" aria-label="Merch Slider Section">
+        <div class="container section" id="main-content" aria-label="Merch Slider Section">
             <h2 class="section-title">Merch</h2>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-swiper-autoplay="2000">
-                        <img decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 1">
+                        <img decoding="async" src="./res/brigh_night_concert/optimized-bright.webp" alt="slider img 1">
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
                         <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"

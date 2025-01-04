@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stage Fright</title>
+  <title>Merch | Stage Fright</title>
 
      <!-- --------- -->
     <!-- CSS Links -->
@@ -27,47 +27,43 @@
 </head>
 
 <body>
-      <header>
-        <nav class="navbar">
-            <div class="navbar_container"><!--navbar container-->
-                <a href="/index.html" id="mobile_logo" aria-label="Our Homepage">Stage Fright</a>
-                <div class="navbar_toggle" id="mobile-menu"><!--mobile nav menu-->
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="navbar_menu"><!--menu list-->
-                    <li class="navbar_item">
-                        <a href="../About/about.html" class="navbar_link" aria-label="Our About Band Page">
-                           Band
-                        </a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="../Music/music.html" class="navbar_link" aria-label="Our Music Page">
-                            Music
-                        </a>
-                    </li>
-                    <a href="/index.html" id="navbar_logo" aria-label="Our Homepage">Stage Fright</a><!--logo container-->
-                    <li class="navbar_item">
-                        <a href="./merch.html" class="navbar_link" aria-label="Our Merch Page" aria-current="page">
-                            Merch
-                        </a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="../Tours/tour.html" class="navbar_link" aria-label="Our Tours Page">
-                            Tour
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a aria-label="Homepage" href="/index.html">Stage Fright</a></li>
+            <li><a href="../About/about.html" aria-label="About Band Page">Band</a></li>
+            <li><a href="../Music/music.html" aria-label="Music Page">Music</a></li>
+            <li><a class="active-link" href="merch.html" aria-label="Merch Page" aria-current="page">Merch</a></li>
+            <li><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a></li>
+            <li class="cart-li"><a href="#">Cart</a></li>
+        </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+</header>
 
   <main class="main">
     <!-- -------------- -->
     <!-- About Band Section -->
     <!-- -------------- -->
-    <div class="bg-white">
+    <div class="container section">
+      <div class="section-title">Our Merch</div>
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 class="sr-only">Products</h2>
     
