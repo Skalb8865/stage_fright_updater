@@ -9,10 +9,9 @@
 
 
 .swiper-slide {
-    width: 400px;
-    height: 400px;
     transition: 0.3s;
     cursor: grab;
+    aspect-ratio: 1/1;
 }
 
 

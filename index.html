@@ -15,13 +15,14 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     </noscript>
-    
+
     <link rel="preload" href="./styles/swiper.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="./styles/swiper.css">
     </noscript>
 
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     </noscript>
@@ -39,8 +40,8 @@
     <!-- -- -->
     <script type="text/javascript" async defer>
         window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle('sticky', window.scrollY > 225);
+            var nav = document.querySelector("nav");
+            nav.classList.toggle('sticky', window.scrollY > 225);
         })
     </script>
 
@@ -50,45 +51,52 @@
 
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-        <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
-            aria-controls="navbar">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-                <path
-                    d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
-            </svg>
-        </button>
+    <header class="container">
+        <nav class="navbar">
+            <div class="nav-left--section">
+                <div class="header-social--links">
+                    <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <div class="hamburger-Icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
 
-        <nav id="navbar">
-            <ul>
-                <li>
-                    <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
-                            fill="#c9c9c9">
-                            <path
-                                d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
-                        </svg>
-                    </button>
-                </li>
-                <li class="home-li"><a class="active-link" aria-label="Homepage" aria-current="page"
-                        href="index.html">Stage Fright</a></li>
-                <li><a href="/html/About/about.html" aria-label="About Band Page">Band</a></li>
-                <li><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
-                <li><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a></li>
-                <li><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a></li>
-                <li class="cart-li">
-                    <button>
-                        <span>0</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="cart-icon">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                        </svg>
-                    </button>
-                </li>
-            </ul>
+            <div class="nav-center--section">
+                <div class="center-left">
+                    <ul class="center-left--list">
+                        <li class="nav-item"><a href="#">Band</a></li>
+                        <li class="nav-item"><a href="#">Music</a></li>
+                    </ul>
+                </div>
+
+                <div class="center-logo">
+                    <a href="#"><img class="logo" src="./res/Stage_Fright_Logo-removebg-preview.png" alt=""></a>
+                </div>
+
+                <div class="center-right">
+                    <ul class="center-right--list">
+                        <li class="nav-item"><a href="#">Merch</a></li>
+                        <li class="nav-item"><a href="#">Tour</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-right--section">
+                <button class="cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                </button>
+            </div>
         </nav>
-        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
     </header>
 
     <main class="main">
