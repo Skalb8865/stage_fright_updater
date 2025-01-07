@@ -30,51 +30,93 @@
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header style="padding: 0;" class="container">
-      <nav class="navbar">
-        <div class="nav-left--section">
-          <div class="header-social--links">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header style="padding: 0;" class="navbar-container">
+    <nav class="navbar">
+      <div class="nav-left--section">
+        <div class="header-social--links">
+          <div class="icon">
             <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <div class="icon">
             <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="icon">
             <a href="#" aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="icon">
             <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
-          <div class="hamburger-Icon">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+          
+        </div>
+        <div id="mobile-nav--icon" aria-label="Open Mobile Navbar" aria-expanded="false" aria-controls="Mobile Navbar">
+          <i class="ri-menu-line" aria-label="Hamburger Icon"></i>
+        </div>
+      </div>
+
+      <div class="nav-center--section">
+        <div class="center-left">
+          <ul class="center-left--list">
+            <li class="nav-item"><a href="html/About/about.html" aria-label="About Band" >Band</a></li>
+            <li class="nav-item"><a href="html/Music/music.html" aria-label="Music Page" >Music</a></li>
+          </ul>
         </div>
 
-        <div class="nav-center--section">
-          <div class="center-left">
-            <ul class="center-left--list">
-              <li class="nav-item"><a href="html/About/about.html">Band</a></li>
-              <li class="nav-item"><a href="html/Music/music.html">Music</a></li>
-            </ul>
-          </div>
-
-          <div class="center-logo">
-            <a href="/index.html"><img class="logo" src="/res/Stage_Fright_Logo-removebg-preview.png" alt=""></a>
-          </div>
-
-          <div class="center-right">
-            <ul class="center-right--list">
-              <li class="nav-item"><a href="html/Merch/merch.html">Merch</a></li>
-              <li class="nav-item"><a href="html/Tours/tour.html">Tour</a></li>
-            </ul>
-          </div>
+        <div class="center-logo">
+          <a href="/index.html" aria-label="Homepage" ><img class="logo" src="/res/Stage_Fright_Logo-removebg-preview.png" alt="Logo"></a>
         </div>
 
-        <div class="nav-right--section">
-          <div id="cart-icon" aria-expanded="false">
-            <i class="ri-shopping-bag-line"></i>
-            <span class="cart-icon-count"></span>
+        <div class="center-right">
+          <ul class="center-right--list">
+            <li class="nav-item"><a href="html/Merch/merch.html" aria-label="Merch Page" aria-current="Page">Merch</a></li>
+            <li class="nav-item"><a href="html/Tours/tour.html" aria-label="Tours Page" >Tour</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-right--section">
+        <div id="cart-icon" aria-expanded="false" aria-label="Open Shopping Cart" aria-expanded="false" aria-controls="Shopping Cart">
+          <i class="ri-shopping-bag-line" aria-label="Shopping Cart Icon"></i>
+          <span class="cart-icon-count"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-nav">
+    <h2 class="cart-title">Your Cart</h2>
+    <div class="cart-content">
+      <div class="cart-box">
+        <img src="/res/boy_Hoodie.png" alt="">
+        <div class="cart-detail">
+          <h2 class="cart-prodcut--title">Casual Black Hoodie</h2>
+          <span class="cart-price">$100</span>
+          <div class="cart-quantity">
+            <button id="decrement">-</button>
+            <span class="number">1</span>
+            <button id="increment">+</button>
           </div>
         </div>
-      </nav>
-    </header>
+        <i class="fa-solid fa-trash remove-from--cart"></i>
+      </div>
+
+    </div>
+    <div class="mobile-nav--social-section">
+      <div class="icon">
+        <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <div class="icon">
+        <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="icon">
+        <a href="#" aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="icon">
+        <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <i class="fa-solid fa-x" id="mobile-nav--close"></i>
+  </div>
 
   <div class="cart">
     <h2 class="cart-title">Your Cart</h2>
@@ -92,13 +134,15 @@
         </div>
         <i class="fa-solid fa-trash remove-from--cart"></i>
       </div>
-    </div>
 
-    <div class="total">
-      <div class="total-title">Total</div>
-      <div class="total-price">$0</div>
     </div>
-    <button class="btn-buy">Buy Now</button>
+    <div class="total-section">
+      <div class="total">
+        <div class="total-title">Subotal</div>
+        <div class="total-price">$0</div>
+      </div>
+      <button class="btn-buy">Buy Now</button>
+    </div>
     <i class="fa-solid fa-x" id="cart-close"></i>
   </div>
 
@@ -196,13 +240,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$100</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -213,13 +251,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$300</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -230,13 +262,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$400</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -247,13 +273,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$500</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -264,13 +284,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$600</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -281,13 +295,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$700</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -298,13 +306,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$800</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -315,13 +317,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$900</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -332,13 +328,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$900</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
 
@@ -349,13 +339,7 @@
           <h2 class="product-title">Casual Black Hoodie</h2>
           <div class="price-and--cart">
             <span class="price">$1000</span>
-            <button class="add-to--cart">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
-            </button>
+            <i class="ri-shopping-bag-line add-to--cart" aria-label="Add to Shopping Cart Icon"></i>
           </div>
         </div>
       </div>
@@ -391,7 +375,7 @@
     <!-- --------------- -->
     <!-- JS Link Section -->
     <!-- --------------- -->
-  <script src="/src/cart.js"></script>
+    <script src="/src/cart.js"></script>
   </footer>
 </body>
 
