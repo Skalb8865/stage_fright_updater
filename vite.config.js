@@ -12,6 +12,7 @@ export default defineConfig({
         music: resolve(__dirname, 'html/Music/music.html'), 
         contact: resolve(__dirname, 'html/Contact/contact.html'),  
         prometheus: resolve(__dirname, 'html/Music/Albums/Prometheus.html'), 
+        cartjs: resolve(__dirname, 'src/cart.js'), 
       },
     },
   },
