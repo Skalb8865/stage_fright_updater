@@ -17,7 +17,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   </noscript>
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+</noscript>
 
   <!-- -------- -->
   <!-- JS Links -->
@@ -57,8 +61,8 @@
       <div class="nav-center--section">
         <div class="center-left">
           <ul class="center-left--list">
-            <li class="nav-item"><a href="html/About/about.html" aria-label="About Band" >Band</a></li>
-            <li class="nav-item"><a href="html/Music/music.html" aria-label="Music Page" >Music</a></li>
+            <li class="nav-item"><a href="../About/about.html" aria-label="About Band" >Band</a></li>
+            <li class="nav-item"><a href="../Music/music.html" aria-label="Music Page" >Music</a></li>
           </ul>
         </div>
 
@@ -68,8 +72,8 @@
 
         <div class="center-right">
           <ul class="center-right--list">
-            <li class="nav-item"><a href="html/Merch/merch.html" aria-label="Merch Page" aria-current="Page">Merch</a></li>
-            <li class="nav-item"><a href="html/Tours/tour.html" aria-label="Tours Page" >Tour</a></li>
+            <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page" aria-current="Page">Merch</a></li>
+            <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page" >Tour</a></li>
           </ul>
         </div>
       </div>
@@ -375,7 +379,6 @@
     <!-- --------------- -->
     <!-- JS Link Section -->
     <!-- --------------- -->
-    <script src="/src/cart.js"></script>
   </footer>
 </body>
 
