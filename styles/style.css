@@ -70,7 +70,7 @@ body {
 }
 
 .navbar-container {
-    max-width: 1536px;
+    max-width: 1400px;
     position: absolute;
     top: 0;
     right: 0;
@@ -80,6 +80,7 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     border: 1px solid red;
+    z-index: 9998;
 }
 
 .section {
@@ -110,7 +111,6 @@ body {
 /* Navbar Section */
 /* ************** */
 .navbar {
-    background-color: green;
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -121,18 +121,35 @@ body {
     padding: 15px;
 }
 
-.header-social--links .icon {
-    font-size: var(--size-xl);
-    border-radius: 50%;
-    color: var(--clr-light);
-    background: var(--clr-active-link);
-    padding: 5px;
-}
-
 .header-social--links {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
+}
+
+.header-social--links:hover {
+    .icon {
+        opacity: 0.3;
+    }
+}
+
+.header-social--links .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.header-social--links .icon:hover {
+    background: var(--clr-indigo);
+    color: red;
+    opacity: 1;
 }
 
 /* .bar{
@@ -188,7 +205,7 @@ body {
 
 .nav-right--section {
     margin-left: auto;
-    padding: 15px 15px 15px 110px;
+    padding: 15px 15px 15px 158px;
 }
 
 #cart-icon {
@@ -197,6 +214,7 @@ body {
     font-size: 30px;
     border-radius: 50%;
     cursor: pointer;
+    color: var(--clr-light);
 }
 
 #cart-icon .cart-icon-count {
@@ -218,6 +236,7 @@ body {
     font-size: 30px;
     border-radius: 50%;
     cursor: pointer;
+    color: var(--clr-light);
 }
 
 
@@ -258,7 +277,7 @@ body {
     opacity: 0;
     background-color: var(--clr-rose);
     padding: 65px 20px 40px;
-    z-index: 100;
+    z-index: 9999;
     cursor: pointer;
     transition: all 0.3s allow-discrete;
 }
@@ -266,14 +285,6 @@ body {
 .mobile-nav.active {
     visibility: visible;
     opacity: 1;
-}
-
-.mobile-nav--social-section .icon {
-    font-size: var(--size-xl);
-    border-radius: 50%;
-    color: var(--clr-light);
-    background: var(--clr-active-link);
-    padding: 5px;
 }
 
 .mobile-nav--social-section {
@@ -286,6 +297,32 @@ body {
     align-items: center;
     background: var(--clr-light);
     padding: 25px;
+    gap: 10px;
+}
+
+.mobile-nav--social-section .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.mobile-nav--social-section:hover {
+    .icon {
+        opacity: 0.3;
+    }
+}
+
+.mobile-nav--social-section .icon:hover {
+    background: var(--clr-indigo);
+    color: red;
+    opacity: 1;
 }
 
 #mobile-nav--close {
@@ -296,12 +333,6 @@ body {
     cursor: pointer;
 }
 
-.mobile-social--links {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: 1px solid var(--clr-slate800);
-}
 
 /* *********** */
 /* Btn Section */
@@ -595,17 +626,41 @@ body {
     z-index: 100;
     overflow: auto;
     transition: right 0.4s;
+    z-index: 9999;
 }
 
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+/* The Class active changes the right property of .cart to 0 from -100% so that 
+ it slides in from the right of the screen */
 .cart.active {
     right: 0;
     transition: right 0.4s;
 }
 
+/* This only gives the div with the id #overlay a display of block when the div
+ with the .cart class has the class .active  */
+.cart.active~#overlay {
+    display: block;
+}
+
 .cart-content {
+    max-height: 630px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+
+.cart-content::-webkit-scrollbar {
+    display: none;
 }
 
 .cart-title {
@@ -618,6 +673,7 @@ body {
     align-items: center;
     margin-top: 20px;
     border: 1px solid var(--clr-dark);
+    scroll-snap-align: end;
 }
 
 .cart-box img {
