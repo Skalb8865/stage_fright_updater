@@ -636,7 +636,7 @@ body {
     display: none;
 }
 
-/* The Class active changes the right property of .cart to 0 from -100% so that 
+/* The Class active changes the right property of .cart to 0 from -100% so that
  it slides in from the right of the screen */
 .cart.active {
     right: 0;
@@ -856,8 +856,6 @@ body {
     font-weight: 500;
     font-size: 20px;
 }
-
-
 
 .tour-cards a {
     margin: 10px 0 80px 0;
