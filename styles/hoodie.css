@@ -1,0 +1,214 @@
+/*********************************************************/
+/*Main Sections Classes and Styling*/
+.main {
+    padding: 10rem 0;
+    margin-bottom: 200px;
+    margin-top: auto;
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content {
+    color: #fff;
+    width: 100%;
+    max-height: 45dvh;
+}
+
+.main_img--container {
+    text-align: center;
+    font-size: 14rem;
+}
+
+.main_img--card {
+    margin: 10px;
+    height: 450px;
+    width: 450px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.main_content h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 4rem;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.main_content h2 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #8f0eff 0%, #da22ff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 4rem;
+}
+
+.main_content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ===============Collapsibles============ */
+.collapsible {
+    background-color: #e7e7e7;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #ffffff;
+
+}
+
+.content {
+    color: black;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-size: 19px;
+}
+
+.content p {
+    font-size: 15px;
+}
+
+/* ================Collapsibles ============= */
+/********************************************************/
+/*Button Styling Section*/
+.main_btn {
+    border-radius: 5px;
+    margin-top: 2rem;
+    outline: none;
+    position: relative;
+    background-color: black;
+    border: 3px solid #fff;
+    padding: 20px 60px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.main_btn a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.main_btn:hover {
+    background-color: #fff;
+}
+
+.main_btn:hover a {
+    color: grey;
+}
+
+
+/************************************/
+/*Responsive CSS for Mobile Devices**/
+@media screen and (max-width:1000px) {
+
+    /********************************************/
+    /*Responsive styling for main sections*/
+    .main_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 85%;
+    }
+
+    .main_img--container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_img--card {
+        height: 350px;
+        width: 350px;
+    }
+
+    .main_content {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .main_content h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .main_content h2 {
+        font-size: 2.5rem;
+    }
+
+    .main_content p {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/********************************************/
+/*Main Section Styling for Mobile Devices*/
+@media screen and (max-width: 600px) {
+    .main_img--card {
+        height: 250px;
+        width: 250px;
+    }
+
+    .main_content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main_content h2 {
+        font-size: 2rem;
+    }
+
+    .main {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main_content p {
+        margin-top: 2rem;
+    }
+
+    .main_btn {
+        margin: 2.5rem 0;
+        padding: .75rem 2rem;
+    }
+}

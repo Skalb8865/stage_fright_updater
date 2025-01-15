@@ -241,7 +241,7 @@
 
 .shop-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
 }
 
@@ -280,9 +280,9 @@
 }
 
 .add-cart {
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    border: 1px solid var(--clr-dark);
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    border: 1px solid var(--clr-light);
     cursor: pointer;
     padding: 10px;
     width: 35%;
@@ -290,8 +290,8 @@
 }
 
 .add-cart:hover {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 /* Sumbit Modal */

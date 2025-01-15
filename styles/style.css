@@ -53,7 +53,7 @@ body {
     overflow-x: hidden;
 }
 
-main{
+main {
     min-height: 100dvh;
 }
 
@@ -144,24 +144,34 @@ main{
     text-align: center;
     font-size: 16px;
     line-height: 35px;
-    transition: all 0.3s;
+    transition: all 0.3s linear;
     cursor: pointer;
 }
 
-.header-social--links .icon:hover {
-    background: var(--clr-indigo);
-    color: red;
+
+.header-social--links .icon:nth-child(1):hover {
+    background: var(--clr-light);
+    color: #0165e1;
     opacity: 1;
 }
 
-/* .bar{
-    width: 25px;
-    height: 4px;
-    margin: 5px auto;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-    background: #fff;
-} */
+.header-social--links .icon:nth-child(2):hover {
+    background: var(--clr-light);
+    color: #ff0000;
+    opacity: 1;
+}
+
+.header-social--links .icon:nth-child(3):hover {
+    background: var(--clr-light);
+    color: #c13584;
+    opacity: 1;
+}
+
+.header-social--links .icon:nth-child(4):hover {
+    background: var(--clr-light);
+    color: var(--clr-slate400);
+    opacity: 1;
+}
 
 .nav-center--section {
     display: flex;
@@ -203,6 +213,12 @@ main{
     color: var(--clr-light);
     font-size: var(--size-xl);
     padding: 0 25px;
+    transition: color 0.2s;
+}
+
+.nav-item:hover {
+    color: var(--clr-rose);
+    transition: color 0.2s;
 }
 
 .nav-right--section {
@@ -678,6 +694,7 @@ main{
 /* ************** */
 /* Albums Section */
 /* ************** */
+
 .our-albums {
     padding: 100px 0 220px 0;
     display: flex;
@@ -698,7 +715,7 @@ main{
     width: 410px;
     height: 409px;
     margin: 10px;
-    transition: 0.45s;
+    transition: 1.15s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -711,8 +728,9 @@ main{
 
 /* Increase the size of the cards when you hover over them */
 .albums-cards:hover {
-    transition: 0.45s;
-    box-shadow: 0 1px 1px 0 whitesmoke, 0 1px 1px 0 whitesmoke;
+    transform: scale(1.035);
+    transition: 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .albums-page {
@@ -725,9 +743,7 @@ main{
 
 
 
-/* ************************ */
-/* Individaul Album Section */
-/* ************************ */
+
 .main_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -735,16 +751,11 @@ main{
     align-items: center;
     margin: auto;
     height: 90%;
-    width: 87%;
-    z-index: 1;
-    padding: 100px 40px 144px 40px;
+    width: 72.5%;
+    padding: 100px 40px 100px 40px;
     text-transform: uppercase;
-    background: var(--background-light);
 }
 
-.main_content {
-    color: aliceblue;
-}
 
 .main_img--container {
     justify-self: center;
@@ -755,23 +766,22 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .main_img--card img {
     border-radius: 10px;
 }
 
-.main_content h1 {
-    background: linear-gradient(to right, #DC0000, #850000);
-    background-clip: text;
-    color: transparent !important;
-    font-size: 4rem;
-    margin-bottom: 22px;
-    text-transform: uppercase;
-    align-self: center;
+.main_content {
+    padding: 15px 15px 15px 35px;
 }
 
+/* .main_content h1 {
+    color: var(--clr-light);
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+} */
 
 /* ===========This is for th images that link to another album================================ */
 
@@ -780,45 +790,38 @@ main{
     justify-content: center;
     align-items: center;
     gap: 15px;
-
 }
 
 .OtherAlbumsCards {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    width: 10%;
     gap: 15px;
     margin-top: 50px;
     margin-bottom: 100px;
 }
 
 .OtherAlbumsCards img {
+    width: 425px;
     border-radius: 10px;
 }
 
-.H1Container {
-    align-self: center;
-    margin-right: auto;
-    margin-left: auto;
-    height: 10%;
-    width: 800px;
-    flex-wrap: wrap;
-    cursor: grab;
-
+.main_contentV2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main_contentV2 h1 {
-    background: linear-gradient(to right, #DC0000, #850000);
-    background-clip: text;
-    color: transparent !important;
-    font-size: 4rem;
+.main_contentV2 {
+    color: var(--clr-light);
+    font-size: 3rem;
     margin-bottom: 32px;
+    padding: 15px;
     text-transform: uppercase;
-    padding-right: auto;
     flex-wrap: wrap;
 }
+
+/* ================================================================================================================================== */
 
 .songs {
     padding-bottom: 20px;
@@ -829,15 +832,16 @@ main{
     margin-top: 2px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--clr-light);
+    color: var(--clr-slate400);
 }
 
 .active-song {
     color: blue;
 }
 
+
 .Soundtrack span {
-    border-bottom: solid 2px var(--clr-light);
+    border-bottom: solid 2px black;
     padding: 5px;
 }
 
@@ -863,7 +867,7 @@ main{
 }
 
 .play-icon .fa-circle-pause:hover {
-    color: var(--primary);
+    color: var(--clr-rose);
     transition: 0.3s ease;
 }
 
@@ -1094,6 +1098,84 @@ main{
         padding: 15px;
         margin-left: auto;
     }
+
+    .main_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main_img--container {
+        display: flex;
+        justify-content: center;
+        /* padding-left: 0px; */
+
+    }
+
+    .main_img--card {
+        height: 375px;
+        width: 375px;
+    }
+
+
+    .main_content {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-top: 20px;
+    }
+
+    .main_content h1 {
+        font-size: 4rem;
+        margin-top: 8rem;
+
+    }
+
+    .main_content h2 {
+        font-size: 2.5rem;
+    }
+
+    .main_content p {
+        margin-bottom: 1.5rem;
+    }
+
+
+    .OtherAlbums {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        cursor: grab;
+        flex-wrap: wrap;
+
+    }
+
+    .OtherAlbumsCards {
+        height: 85%;
+        width: 85%;
+        flex-wrap: wrap;
+    }
+
+
+    .H1Container {
+        align-self: center;
+        margin-right: auto;
+        margin-left: auto;
+        height: 10%;
+        width: 500px;
+        flex-wrap: wrap;
+
+    }
+
+    .main_contentV2 {
+        font-size: 4rem;
+        margin-bottom: 22px;
+    }
 }
 
 /* md */
@@ -1149,6 +1231,54 @@ main{
     #message {
         width: 125%;
     }
+
+    .main_content {
+        padding-top: 10px;
+    }
+
+    .main_content h1 {
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+
+    .main_content h2 {
+        font-size: 2rem;
+    }
+
+    .main_content p {
+        margin-top: 2rem;
+    }
+
+    .albums-cards {
+        position: relative;
+        border-radius: 10px;
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        transition: 1.15s ease;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .OtherAlbumsCards img {
+        border-radius: 10px;
+        height: 350px;
+        width: 350px;
+    }
+
+    .OtherAlbumsCards {
+        height: 75%;
+        width: 75%;
+    }
+
+    .H1Container {
+        height: 10%;
+        width: 300px;
+
+    }
+
+    .main_contentV2 h1 {
+        font-size: 3rem;
+    }
 }
 
 /* xs */
@@ -1159,5 +1289,11 @@ main{
 
     .navbar-container {
         width: 100%;
+    }
+
+    .OtherAlbumsCards {
+        height: 80%;
+        width: 80%;
+        flex-wrap: wrap;
     }
 }

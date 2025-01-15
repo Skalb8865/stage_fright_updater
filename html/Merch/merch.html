@@ -76,8 +76,8 @@
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page"
-                                aria-current="Page">Merch</a></li>
+                        <li class="nav-item"><a href="merch.html" aria-label="Merch Page" aria-current="Page">Merch</a>
+                        </li>
                         <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a></li>
                     </ul>
                 </div>
@@ -140,7 +140,7 @@
                                 <div class="main_img--container">
                                     <div class="main_img--card"><img src="/res/mark-henry.webp" alt=""></div>
                                 </div>
-                                <div class="merch_content">
+                                <div class="main_content">
                                     <h1>Stage Fright White Long Sleeve</h1>
                                     <h2>$22.99</h2>
 
@@ -168,8 +168,17 @@
                                         </li>
                                     </ul>
                                     <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
-                                        <input style="width: 100px;" type="number" id="quantity" name="quantity" min="1"
-                                            max="10" value="1">
+
+                                        <div class="number-input">
+                                            <button
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                            <input class="quantity" id="quantity" min="1" max="10" name="quantity"
+                                                value="1" type="number">
+                                            <button
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                class="plus"></button>
+                                        </div>
+
                                         <button class="add-cart">Add To Cart</button>
                                     </div>
                                 </div>
@@ -226,7 +235,8 @@
                 </div>
                 <!-- BOX 4 -->
                 <div class="product-box">
-                    <img src="./res/Nyxzoom.png" alt="" class="product-img">
+                    <a href="./Apparel/acantha_hoodie.html"> <img src="./res/Nyxzoom.png" alt=""
+                            class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">NYX Vinyl</h2>
                         <span class="product-price">$27.99</span>
