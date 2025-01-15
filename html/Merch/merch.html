@@ -11,6 +11,7 @@
     <!-- --------- -->
     <!-- CSS Links -->
     <!-- --------- -->
+
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -22,6 +23,8 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
+    <link rel="stylesheet" href="/styles/shopping.css">
+    <link rel="stylesheet" href="/styles/merchmodal.css">
 
     <!-- -------- -->
     <!-- JS Links -->
@@ -35,7 +38,7 @@
 
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header style="padding: 0;" class="navbar-container">
+    <header style="padding: 0;" class="container">
         <nav class="navbar">
             <div class="nav-left--section">
                 <div class="header-social--links">
@@ -85,268 +88,240 @@
                     <i class="ri-shopping-bag-line"></i>
                     <span class="cart-icon-count"></span>
                 </div>
+                <!-- CART  -->
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+
+                    <!-- CONTENT  -->
+                    <div class="cart-content">
+
+
+                    </div>
+
+                    <!-- TOTAL   -->
+                    <div class="total-section">
+                        <div class="total">
+                            <div class="total-title">Total</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <!-- BUY BUTTON  -->
+                        <button type="button" class="btn-buy">Checkout</button>
+                    </div>
+                    <!-- CART CLOSE  -->
+                    <i class='ri-close-fill' id="cart-close"></i>
+                </div>
             </div>
         </nav>
+        <div class="cart-overlay"></div>
     </header>
 
-    <div class="mobile-nav">
-        <h2 class="cart-title">Your Cart</h2>
-        <div class="cart-content">
-            <div class="cart-box">
-                <img src="/res/boy_Hoodie.png" alt="">
-                <div class="cart-detail">
-                    <h2 class="cart-prodcut--title">Casual Black Hoodie</h2>
-                    <span class="cart-price">$100</span>
-                    <div class="cart-quantity">
-                        <button id="decrement">-</button>
-                        <span class="number">1</span>
-                        <button id="increment">+</button>
-                    </div>
-                </div>
-                <i class="fa-solid fa-trash remove-from--cart"></i>
-            </div>
-
-        </div>
-        <div class="mobile-nav--social-section">
-            <div class="icon">
-                <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-            <div class="icon">
-                <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div class="icon">
-                <a href="#" aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <div class="icon">
-                <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-        </div>
-        <i class="fa-solid fa-x" id="mobile-nav--close"></i>
-    </div>
-
-    <div class="cart">
-        <h2 class="cart-title">Your Cart</h2>
-        <div class="cart-content">
-            <!-- <div class="cart-box">
-        <img src="/res/boy_Hoodie.png" alt="">
-        <div class="cart-detail">
-          <h2 class="cart-prodcut--title">Casual Black Hoodie</h2>
-          <span class="cart-price">$100</span>
-          <div class="cart-quantity">
-            <button id="decrement">-</button>
-            <span class="number">1</span>
-            <button id="increment">+</button>
-          </div>
-        </div>
-        <i class="fa-solid fa-trash remove-from--cart"></i>
-      </div> -->
-        </div>
-        <div class="total-section">
-            <div class="total">
-                <div class="total-title">Subotal</div>
-                <div class="total-price">$0</div>
-            </div>
-            <button class="btn-buy">Buy Now</button>
-        </div>
-        <i class="fa-solid fa-x" id="cart-close"></i>
-    </div>
-
-    <!-- <div id="overlay" aria-hidden="true"></div> -->
     <main class="main">
-        <!-- -------------- -->
-        <!-- About Band Section -->
-        <!-- -------------- -->
-        <!-- <div class="container section">
-      <div class="section-title">Our Merch</div>
-      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 class="sr-only">Products</h2>
+        <!-- SHOP SECTION  -->
+        <section class="shop shop-container section">
+            <h2 class="section-title">Shop Products</h2>
 
-        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Earthen Bottle</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Nomad Tumbler</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Focus Paper Refill</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Machined Mechanical Pencil</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Earthen Bottle</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Nomad Tumbler</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Focus Paper Refill</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Machined Mechanical Pencil</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Earthen Bottle</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Nomad Tumbler</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Focus Paper Refill</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
-            <button class="mt-1 text-lg font-medium text-gray-900 hover:bg-green-500">Add To Cart</button>
-          </div>
-          <div class="group">
-            <img src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-[7/8]">
-            <h3 class="mt-4 text-base text-gray-700">Machined Mechanical Pencil</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-
-        <section class="shop">
-            <h1 class="shop-section--title">Shop Products</h1>
-            <div class="product-content">
+            <!-- CONTENT  -->
+            <div class="shop-content">
+                <!-- BOX 1 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="/res/mark-henry.webp" alt="" class="product-img" id="open-modal">
+                    <div class="info-section">
+                        <h2 class="product-title">Stage Fright White Long Sleeve</h2>
+                        <span class="product-price">$22.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$100</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+
+                    <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+                    <dialog id="dialog">
+                        <div class="close-merch--modal">
+                            <button id="close-modal" class="btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="main" id="about">
+                            <div class="main_container">
+                                <div class="main_img--container">
+                                    <div class="main_img--card"><img src="/res/mark-henry.webp" alt=""></div>
+                                </div>
+                                <div class="merch_content">
+                                    <h1>Stage Fright White Long Sleeve</h1>
+                                    <h2>$22.99</h2>
+
+
+                                    <ul class="size-list">
+                                        <li>
+                                            <input type="radio" name="size" />
+                                            <label for="size">S</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="size" checked="checked" />
+                                            <label for="size">M</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="size" />
+                                            <label for="size">L</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="size" />
+                                            <label for="size">XL</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="size" />
+                                            <label for="size">XXL</label>
+                                        </li>
+                                    </ul>
+                                    <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
+                                        <input style="width: 100px;" type="number" id="quantity" name="quantity" min="1"
+                                            max="10" value="1">
+                                        <button class="add-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <a href="longSleeveWhite.html">
+                            View Full Page
+                        </a>
+                    </dialog>
                 </div>
-
+                <!-- BOX 2 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/Prometheuszoom.png" alt="" class="product-img" id="open-2-modal">
+                    <div class="info-section">
+                        <h2 class="product-title">Prometheus Vinyl</h2>
+                        <span class="product-price">$27.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$300</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+
+                    <dialog id="dialog2">
+                        <div class="close-merch--modal">
+                            <button id="close-2-modal" class="btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="main" id="about">
+                            <div class="main_container">
+                                <div class="main_img--container">
+                                    <div class="main_img--card"><img src="./res/Prometheuszoom.png" alt=""></div>
+                                </div>
+                                <div class="merch_content">
+                                    <h1>Prometheus Vinyl</h1>
+                                    <h2>$27.99</h2>
+                                    <label style="color: black;" for="quantity">Quantity:</label>
+                                    <input style="width: 100px;" type="number" id="quantity" name="quantity" min="1"
+                                        max="10" value="1">
+
+                                    <button class="add-cart">Add To Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <a href="longSleeveWhite.html">
+                            View Full Page
+                        </a>
+                    </dialog>
                 </div>
-
+                <!-- BOX 3 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="/res/boy_Hoodie.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Acantha Black T-Shirt</h2>
+                        <span class="product-price">$18.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$400</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 4 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/Nyxzoom.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">NYX Vinyl</h2>
+                        <span class="product-price">$27.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$500</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 5 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/hatMerch.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Stage Fright White Hat</h2>
+                        <span class="product-price">$12.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$600</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 6 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/boy_Hoodie.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Stage Fright Logo Black Hoodie</h2>
+                        <span class="product-price">$24.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$700</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 7 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/Phone_Case.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Logo Phone Case</h2>
+                        <span class="product-price">$9.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$800</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 8 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/pants.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Unleash Your Inner Fright Black Sweatpants</h2>
+                        <span class="product-price">$16.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$900</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 9 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/NyxShirt.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">NYX Black T-Shirt</h2>
+                        <span class="product-price">$18.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$900</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
-                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
-
+                <!-- BOX 10 -->
                 <div class="product-box">
-                    <div class="img-box">
-                        <img src="/res/boy_Hoodie.png" alt="">
+                    <img src="./res/Beanie.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Logo Black Beanie</h2>
+                        <span class="product-price">$12.99</span>
                     </div>
-                    <h2 class="product-title">Casual Black Hoodie</h2>
-                    <div class="price-and--cart">
-                        <span class="price">$1000</span>
-                        <i class="ri-shopping-bag-line add-to--cart"></i>
+                    <i class='ri-shopping-bag-line add-cart'></i>
+                </div>
+                <!-- BOX 11 -->
+                <div class="product-box">
+                    <img src="./res/Nyxhood.png  " alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">NYX Black Hoodie</h2>
+                        <span class="product-price">$29.99</span>
                     </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
+                </div>
+                <!-- BOX 12 -->
+                <div class="product-box">
+                    <img src="./res/backAirpod.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Logo Airpod White Case</h2>
+                        <span class="product-price">$7.99</span>
+                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
+                </div>
+                <!-- BOX 13 -->
+                <div class="product-box">
+                    <img src="./res/Prometheushood.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Prometheus Black Hood</h2>
+                        <span class="product-price">$24.99</span>
+                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
+                </div>
+                <!-- BOX 14 -->
+                <div class="product-box">
+                    <img src="./res/PrometheusShirt.png" alt="" class="product-img">
+                    <div class="info-section">
+                        <h2 class="product-title">Prometheus Black T-Shirt</h2>
+                        <span class="product-price">$18.99</span>
+                    </div>
+                    <i class='ri-shopping-bag-line add-cart'></i>
                 </div>
             </div>
         </section>
