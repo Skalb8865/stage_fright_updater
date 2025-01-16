@@ -31,7 +31,6 @@
     <!-- -------- -->
     <script type="module" src="/src/main.js" async defer></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async defer></script>
-    <script src="/src/icon.js" async defer></script>
 
 
     <meta name="description" content="Stage Fright Website">
@@ -125,9 +124,8 @@
                 <div class="main_img--card"><img src="/res/mark-henry.webp" alt=""></div>
             </div>
             <div class="main_content">
-                <h1>Stage Fright White Long Sleeve</h1>
-                <h2>$22.99</h2>
-
+                <h1 class="product-title">Stage Fright White Long Sleeve</h1>
+                <h2 class="product-price">$22.99</h2>
 
                 <ul class="size-list">
                     <li>
@@ -154,10 +152,9 @@
                 <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
                     <div class="number-input">
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                        <button class="quantity-btn minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number">
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                            class="plus"></button>
+                        <button class="quantity-btn plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></button>
                     </div>
 
                     <button class="add-cart">Add To Cart</button>
