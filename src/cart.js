@@ -185,7 +185,7 @@ function handle_buyOrder() {
     }
     localStorage.removeItem('cart');
 
-    alert("Your order is placed successfully :)");
+    alert("Your order is placed successfully");
 
     let cartContent = document.querySelector(".cart-content");
     while (cartContent.hasChildNodes()) {

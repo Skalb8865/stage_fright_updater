@@ -169,11 +169,10 @@
                 <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
                     <div class="number-input">
-                        <button class="quantity-btn minus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                        <button class="quantity-btn minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number" disabled>
                         <button class="quantity-btn plus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></button>
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
 
                     <button class="add-cart">Add To Cart</button>
