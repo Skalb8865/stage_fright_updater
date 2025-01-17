@@ -56,6 +56,35 @@ function initializeCart() {
 
     let buyButton = document.querySelector(".btn-buy");
     buyButton.addEventListener("click", handle_buyOrder);
+
+    updateAddToCartButton();
+
+    document.addEventListener('change', function(event) {
+        if (event.target.matches('input[name="size"]')) {
+            updateAddToCartButton();
+        }
+    });
+
+    updateCartDisplay();
+}
+
+function updateAddToCartButton() {
+    let products = document.querySelectorAll('.main_container, .product-box');
+    
+    products.forEach(product => {
+        let sizeInputs = product.querySelectorAll('input[name="size"]');
+        let addToCartButton = product.querySelector('.add-cart');
+        
+        if (sizeInputs.length > 0 && addToCartButton) {
+            let isSizeSelected = Array.from(sizeInputs).some(input => input.checked);
+            
+            if (isSizeSelected) {
+                addToCartButton.classList.remove('disabled');
+            } else {
+                addToCartButton.classList.add('disabled');
+            }
+        }
+    });
 }
 
 function addCartItem() {
@@ -144,22 +173,6 @@ function handle_removeCartItem() {
     updateTotal();
 }
 
-function handle_changeItemQuantity() {
-    let input = this;
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let cartBox = input.closest('.cart-box');
-    let title = cartBox.querySelector(".cart-product-title").innerHTML;
-    let size = cartBox.querySelector(".cart-size").innerHTML.split(": ")[1];
-    let item = cart.find(el => el.title == title && el.size == size);
-
-    if (item) {
-        item.quantity = Math.max(1, Math.min(parseInt(input.value) || 1, 10));
-        input.value = item.quantity;
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateTotal();
-    }
-}
-
 function updateTotal() {
     let cartBoxes = document.querySelectorAll(".cart-box");
     const totalElement = document.querySelector(".total-price");
@@ -167,7 +180,8 @@ function updateTotal() {
     cartBoxes.forEach((cartBox) => {
         let priceElement = cartBox.querySelector(".cart-price");
         let price = parseFloat(priceElement.innerHTML.replace("$", ""));
-        let quantity = parseInt(cartBox.querySelector(".cart-quantity").value);
+        let quantityElement = cartBox.querySelector(".cart-quantity");
+        let quantity = parseInt(quantityElement.dataset.quantity);
         total += price * quantity;
     });
 
@@ -202,46 +216,22 @@ function CartBoxComponent(item) {
         <div class="cart-box">
             <img src="${item.imgSrc}" alt="" class="cart-img">
             <div class="detail-box">
-                <div class="cart-product-title">${item.title}</div>
-                <div class="cart-price">$${item.price.toFixed(2)}</div>
-                <div class="cart-size">Size: ${item.size}</div>
-                <div class="cart-quantity-wrapper">
-                    <button class="cart-quantity-btn minus">-</button>
-                    <input type="number" value="${item.quantity}" class="cart-quantity" min="1" max="10" disabled>
-                    <button class="cart-quantity-btn plus">+</button>
+                <div class="cart-product-info">
+                    <div class="cart-product-title">${item.title}</div>
+                    <div class="cart-price">$${item.price.toFixed(2)}</div>
                 </div>
+                <div class="cart-size">Size: ${item.size}</div>
+                <div class="cart-quantity" data-quantity="${item.quantity}">Quantity: ${item.quantity}</div>
             </div>
             <i class="fa-regular fa-trash-can cart-remove"></i>
         </div>`;
 }
 
 function addEvents() {
-    let quantityInputs = document.querySelectorAll(".cart-quantity");
-    quantityInputs.forEach((input) => {
-        input.addEventListener("change", handle_changeItemQuantity);
-    });
-
-    let quantityBtns = document.querySelectorAll(".cart-quantity-btn");
-    quantityBtns.forEach(btn => {
-        btn.addEventListener("click", handle_quantityButtonClick);
-    });
-
     let cartRemove_btns = document.querySelectorAll(".cart-remove");
     cartRemove_btns.forEach((btn) => {
         btn.addEventListener("click", handle_removeCartItem);
     });
-}
-
-function handle_quantityButtonClick() {
-    let cartQuantity = this.parentElement.querySelector('.cart-quantity');
-    let value = parseInt(cartQuantity.value);
-    if (this.classList.contains('minus')) {
-        value = Math.max(1, value - 1);
-    } else if (this.classList.contains('plus')) {
-        value = Math.min(10, value + 1);
-    }
-    cartQuantity.value = value;
-    handle_changeItemQuantity.call(cartQuantity);
 }
 
 if (document.readyState === "loading") {

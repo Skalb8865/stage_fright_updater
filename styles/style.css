@@ -259,7 +259,7 @@ main {
 /* ********************* */
 /* Mobile Navbar Section */
 /* ********************* */
-.mobile-nav--list{
+.mobile-nav--list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -268,7 +268,7 @@ main {
     list-style: none;
 }
 
-.mobile-nav--item{
+.mobile-nav--item {
     font-size: 2rem;
     color: var(--clr-light);
     text-decoration: none;
@@ -497,7 +497,14 @@ main {
 /* ************** */
 /* Merch Section */
 /* ************** */
-
+.merch_suggestions--container {
+    max-width: 1568px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
 
 /* ************** */
 /* Tour Section */
@@ -763,11 +770,6 @@ main {
 }
 
 
-.Soundtrack span {
-    border-bottom: solid 2px black;
-    padding: 5px;
-}
-
 .Soundtrack .song-length {
     padding-left: 75px;
 }
@@ -989,7 +991,7 @@ main {
     .navbar-container {
         max-width: 1024px;
     }
-    
+
     .merch_img--card {
         width: 525px;
         height: 525px;
@@ -1126,10 +1128,6 @@ main {
         max-width: 640px;
     }
 
-    .cart {
-        width: 100%;
-    }
-
     .merch_img--card {
         width: 375px;
         height: 375px;
@@ -1222,6 +1220,10 @@ main {
     .merch_content h1 {
         font-size: 2rem;
     }
+
+    .cart {
+        width: 100%;
+    }
 }
 
 /* xs */
@@ -1240,4 +1242,12 @@ main {
         flex-wrap: wrap;
     }
 
+    .size-list li {
+        width: 65px;
+        height: 40px;
+    }
+
+    .add-cart {
+        width: 65%;
+    }
 }

@@ -49,10 +49,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--clr-light);
 }
 
-.minus{
-    color: var(--clr-slate400);
-}
-
 .number-input button {
     background: transparent;
     border: none;
@@ -72,6 +68,11 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1rem;
     height: 2rem;
     text-align: center;
+}
+
+.product-description{
+    max-width: 500px;
+    color: var(--clr-slate400);
 }
 
 .size-list {
@@ -94,7 +95,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .size-list li:hover {
-    background: var(--clr-slate400);
+    color: var(--clr-dark);
+    background: var(--clr-light);
     transition: background 0.3s;
 }
 
@@ -117,18 +119,14 @@ input[type=number]::-webkit-outer-spin-button {
 .size-list input[type="radio"]:checked+label,
 .Checked+label {
     background: var(--clr-light);
-    color: black;
+    color: var(--clr-dark);
 }
 
 .size-list label {
     padding: 5px;
-    border: 1px solid #CCC;
+    border: 1px solid var(--clr-light);
     cursor: pointer;
     z-index: 90;
-}
-
-.size-list label:hover {
-    background: #DDD;
 }
 
 .merch-container {
@@ -136,9 +134,8 @@ input[type=number]::-webkit-outer-spin-button {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    gap: 25px;
-    padding: 100px 40px 100px 40px;
+    padding: 100px 100px 70px 100px;
+    gap: 50px;
     text-transform: uppercase;
 }
 
@@ -152,11 +149,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .merch_img--container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .merch_img--card {
-    border: 3px solid #f7f7f7;
     height: 600px;
     width: 600px;
     border-radius: 7px;
@@ -182,7 +179,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .merch_content h3 {
-    color: #000000;
+    color: var(--clr-dark);
     font-size: 2rem;
 }
 
@@ -200,6 +197,10 @@ input[type=number]::-webkit-outer-spin-button {
         align-items: center;
         justify-content: center;
     }
+    
+    .merch_img--container{
+        justify-content: center;
+    }
 
     .merch_img--card {
         height: 350px;
@@ -215,5 +216,9 @@ input[type=number]::-webkit-outer-spin-button {
 
     .merch_content h1 {
         font-size: 2.5rem;
+    }
+
+    .add-cart {
+        width: 50%;
     }
 }
