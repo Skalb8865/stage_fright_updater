@@ -38,7 +38,6 @@
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header style="padding: 0;" class="container">
         <nav class="navbar">
             <div class="nav-left--section">
@@ -61,13 +60,20 @@
                     aria-controls="Mobile Navbar">
                     <i class="ri-menu-line" aria-label="Hamburger Icon"></i>
                 </div>
-
                 <div class="mobile-nav">
                     <ul class="mobile-nav--list">
-                        <a href="/html/About/about.html"><li class="mobile-nav--item">Band</li></a>
-                        <a href="/html/Music/music.html"><li class="mobile-nav--item">Music</li></a>
-                        <a href="/html/Merch/merch.html"><li class="mobile-nav--item">Merch</li></a>
-                        <a href="/html/Tours/tour.html"><li class="mobile-nav--item">Tour</li></a>
+                        <a href="../About/about.html" aria-label="About Page">
+                            <li class="mobile-nav--item">Band</li>
+                        </a>
+                        <a href="../Music/music.html" aria-label="Music Page">
+                            <li class="mobile-nav--item">Music</li>
+                        </a>
+                        <a href="../merch.html" aria-label="Merch Page">
+                            <li class="mobile-nav--item">Merch</li>
+                        </a>
+                        <a href="../Tours/tour.html" aria-label="Tours Page">
+                            <li class="mobile-nav--item">Tour</li>
+                        </a>
                     </ul>
                     <!-- CART CLOSE  -->
                     <i class='ri-close-fill' id="nav-close"></i>
@@ -125,7 +131,7 @@
                 </div>
             </div>
         </nav>
-        <div class="cart-overlay"></div>
+        <div class="cart-overlay" aria-hidden="true"></div>
     </header>
 
     <main class="main">
