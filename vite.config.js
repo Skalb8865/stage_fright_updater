@@ -12,6 +12,7 @@ export default defineConfig({
         music: resolve(__dirname, 'html/Music/music.html'), 
         contact: resolve(__dirname, 'html/Contact/contact.html'),  
         prometheus: resolve(__dirname, 'html/Music/Albums/Prometheus.html'), 
+        acantha_hoodie: resolve(__dirname, 'html/Merch/Apparel/acantha_hoodie.html'), 
       },
     },
   },
