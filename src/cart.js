@@ -182,6 +182,7 @@
         updateTotal();
 
         document.querySelector(".cart").classList.remove("active");
+        document.querySelector(".cart-overlay").classList.remove("active");
     }
 
     function CartBoxComponent(item) {
