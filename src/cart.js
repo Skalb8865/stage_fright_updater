@@ -1,221 +1,239 @@
-// selects the cart icon in the navbar, the cart and the cart close button
-const cartIcon = document.querySelector("#cart-icon");
-const cart = document.querySelector(".cart");
-const closeCart = document.querySelector("#cart-close");
-const cartOverlay = document.querySelector(".cart-overlay");
+(function () {
+    function initializeCart() {
+        let cartIcon = document.querySelector("#cart-icon");
+        let cart = document.querySelector(".cart");
+        let closeCart = document.querySelector("#cart-close");
+        let cartOverlay = document.querySelector(".cart-overlay");
+        let openMobileNavIcon = document.querySelector("#mobile-nav--icon");
+        let mobileNav = document.querySelector(".mobile-nav");
+        let closeMobileNavIcon = document.querySelector("#nav-close");
 
-// adds the class active to the cart when the cart icon is clicked
-cartIcon.addEventListener("click", () => {
-    cart.classList.add("active");
-    cartOverlay.classList.add("active");
-});
+        cartIcon?.addEventListener("click", () => {
+            cart?.classList.add("active");
+            cartOverlay?.classList.add("active");
+        });
 
-// removes the class active from the cart when the close icon is clicked
-closeCart.addEventListener("click", () => {
-    cart.classList.remove("active");
-    cartOverlay.classList.remove("active");
-});
+        closeCart?.addEventListener("click", () => {
+            cart?.classList.remove("active");
+            cartOverlay?.classList.remove("active");
+        });
 
-cartOverlay.addEventListener("click", () => {
-    cart.classList.remove("active");
-    cartOverlay.classList.remove("active");
-});
+        cartOverlay?.addEventListener("click", () => {
+            cart?.classList.remove("active");
+            cartOverlay?.classList.remove("active");
+            mobileNav.classList.remove("active");
+        });
 
-// starts when the document is ready
-if (document.readyState == "loading") {
-    document.addEventListener("DOMContentLoaded", start);
-} else {
-    start();
-}
+        openMobileNavIcon.addEventListener("click", () => {
+            mobileNav.classList.add("active");
+            cartOverlay.classList.add("active");
+        });
 
-// =============== START ====================
-function start() {
-    updateCartDisplay();
-}
+        closeMobileNavIcon.addEventListener("click", () => {
+            mobileNav.classList.remove("active");
+            cartOverlay.classList.remove("active");
+        });
 
-// ============= UPDATE & RERENDER ===========
-function update() {
-    updateTotal();
-}
-
-// =============== ADD EVENTS ===============
-function addEvents() {
-    // removes items from cart
-    let cartRemove_btns = document.querySelectorAll(".cart-remove");
-    cartRemove_btns.forEach((btn) => {
-        btn.addEventListener("click", handle_removeCartItem);
-    });
-
-    // changes item quantity
-    let minusButtons = document.querySelectorAll(".quantity-btn.minus");
-    let plusButtons = document.querySelectorAll(".quantity-btn.plus");
-    minusButtons.forEach((btn) => {
-        btn.addEventListener("click", handle_decreaseQuantity);
-    });
-    plusButtons.forEach((btn) => {
-        btn.addEventListener("click", handle_increaseQuantity);
-    });
-
-    // adds item to cart
-    let addCart_btns = document.querySelectorAll(".add-cart");
-    addCart_btns.forEach((btn) => {
-        btn.addEventListener("click", handle_addCartItem);
-    });
-
-    // buy Order
-    const buy_btn = document.querySelector(".btn-buy");
-    buy_btn.addEventListener("click", handle_buyOrder);
-}
-
-// ============= HANDLE EVENTS FUNCTIONS =============
-function handle_addCartItem() {
-    let product = this.closest('.product-box');
-    let title = product.querySelector(".product-title").innerHTML;
-    let price = parseFloat(product.querySelector(".product-price").innerHTML.replace('$', ''));
-    let imgSrc = product.querySelector(".product-img").src;
-    let size = document.querySelector('input[name="size"]:checked').nextElementSibling.innerHTML;
-    let quantity = parseInt(document.getElementById('quantity').value);
-
-    let newToAdd = {
-        title,
-        price,
-        imgSrc,
-        size,
-        quantity
-    };
-
-    // handles if the item has already been added to the cart
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let existingItem = cart.find((el) => el.title == newToAdd.title && el.size == newToAdd.size);
-    if (existingItem) {
-        if (existingItem.quantity >= 10) {
-            alert("You already have the maximum of 10 items in the cart.");
-            return;
-        }
-        // if item has already been added, then increase the item quantity by the selected quantity to a max of 10
-        existingItem.quantity = Math.min(existingItem.quantity + quantity, 10);
-    } else {
-        // if item isn't already in the cart, then add the item to the cart
-        cart.push(newToAdd);
-    }
-
-    // saves the current items in the cart to local storage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // updates the cart display
-    updateCartDisplay();
-
-    // opens the cart when adding an item to the cart
-    cart.classList.add("active");
-    cartOverlay.classList.add("active");
-
-    // closes the modal
-    document.getElementById('dialog').close();
-}
-
-function updateCartDisplay() {
-    const cartContent = document.querySelector(".cart-content");
-    cartContent.innerHTML = '';
-
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    cart.forEach(item => {
-        let cartBoxElement = CartBoxComponent(item.title, item.price, item.imgSrc, item.size, item.quantity);
-        let newNode = document.createElement("div");
-        newNode.innerHTML = cartBoxElement;
-        cartContent.appendChild(newNode);
-    });
-
-    updateTotal();
-    addEvents();
-}
-
-function handle_removeCartItem() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let title = this.parentElement.querySelector(".cart-product-title").innerHTML;
-    let size = this.parentElement.querySelector(".cart-size").innerHTML.split(": ")[1];
-    
-    cart = cart.filter(el => !(el.title == title && el.size == size));
-    localStorage.setItem('cart', JSON.stringify(cart));
-    
-    updateCartDisplay();
-}
-
-function updateCartItem(button, newQuantity) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let title = button.closest('.cart-box').querySelector(".cart-product-title").innerHTML;
-    let item = cart.find(el => el.title == title);
-    if (item) {
-        item.quantity = newQuantity;
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-    updateTotal();
-}
-
-function updateTotal() {
-    let cartBoxes = document.querySelectorAll(".cart-box");
-    const totalElement = document.querySelector(".cart .total-price");
-    let total = 0;
-    cartBoxes.forEach((cartBox) => {
-        // gets the price of each item that is in the cart and multiplies it by its quantity then adds it to the total
-        let priceElement = cartBox.querySelector(".cart-price");
-        let price = parseFloat(priceElement.innerHTML.replace("$", ""));
-        let quantity = parseInt(cartBox.querySelector(".cart-quantity").textContent.replace("Quantity: ", ""));
-        total += price * quantity;
-    });
-
-    // rounds the total to 2 decimal places
-    total = total.toFixed(2);
-    // adds the total to the .total-price element + a $ sign
-    totalElement.innerHTML = "$" + total;
-}
-
-function handle_buyOrder() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (cart.length <= 0) {
-        // shows the modal
-        let modal = document.getElementById("orderModal");
-        modal.style.display = "block";
-
-        // closes the modal when clicking on the x
-        let span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // closes the modal when clicking outside of it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        // Add these new lines
+        function checkViewportWidth() {
+            if (window.innerWidth >= 1025) {
+                mobileNav.classList.remove("active");
+                cartOverlay.classList.remove("active");
             }
         }
-        return;
+
+        // Call the function on page load
+        checkViewportWidth();
+
+        // Add event listener for window resize
+        window.addEventListener('resize', checkViewportWidth);
+
+        document.addEventListener("DOMContentLoaded", updateCartDisplay);
+
+        let addToCartButtons = document.querySelectorAll(".add-cart");
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", handle_addCartItem);
+        });
+
+        let buyButton = document.querySelector(".btn-buy");
+        buyButton?.addEventListener("click", handle_buyOrder);
     }
-    localStorage.removeItem('cart');
 
-    // opens the checkout page
-    location.href = "checkout.html";
+    function handle_addCartItem() {
+        let product = this.closest('.main_container') || this.closest('.product-box');
+        if (!product) return;
 
-    // closes the cart
-    cart.classList.remove("active");
+        let title = product.querySelector("h1")?.innerHTML || product.querySelector(".product-title")?.innerHTML;
+        let price = parseFloat(product.querySelector("h2")?.innerHTML.replace('$', '') || product.querySelector(".product-price")?.innerHTML.replace('$', '') || '0');
+        let imgSrc = product.querySelector(".merch_img--card img")?.src || product.querySelector(".product-img")?.src;
 
-    updateCartDisplay();
-}
+        let sizeElement = product.querySelector('input[name="size"]:checked');
+        let size = sizeElement ? sizeElement.nextElementSibling.innerHTML : 'Default';
 
-// ============= HTML COMPONENTS =============
-function CartBoxComponent(title, price, imgSrc, size, quantity) {
-    // outputs the HTML for each item that gets added to the cart (title, price, img, size, and its quantity)
-    return `
-    <div class="cart-box">
-        <img src="${imgSrc}" alt="" class="cart-img">
-        <div class="detail-box">
-            <div class="price-section">
-                <div class="cart-product-title">${title}</div>
-                <div class="cart-price">$${price.toFixed(2)}</div>
+        let quantityElement = product.querySelector('.quantity');
+        let quantity = quantityElement ? parseInt(quantityElement.value) : 1;
+
+        if (!title || !imgSrc) {
+            console.error('Required product information is missing');
+            return;
+        }
+
+        let newToAdd = {
+            title,
+            price,
+            imgSrc,
+            size,
+            quantity
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let existingItem = cart.find((el) => el.title == newToAdd.title && el.size == newToAdd.size);
+        if (existingItem) {
+            existingItem.quantity = Math.min(existingItem.quantity + quantity, 10);
+        } else {
+            cart.push(newToAdd);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        updateCartDisplay();
+
+        let cartElement = document.querySelector(".cart");
+        let cartOverlayElement = document.querySelector(".cart-overlay");
+        if (cartElement) cartElement.classList.add("active");
+        if (cartOverlayElement) cartOverlayElement.classList.add("active");
+    }
+
+    function updateCartDisplay() {
+        const cartContent = document.querySelector(".cart-content");
+        if (!cartContent) return;
+
+        cartContent.innerHTML = '';
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        cart.forEach(item => {
+            let cartBoxElement = CartBoxComponent(item);
+            cartContent.innerHTML += cartBoxElement;
+        });
+
+        updateTotal();
+        addEvents();
+    }
+
+    function handle_removeCartItem() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartBox = this.closest('.cart-box');
+        let title = cartBox.querySelector(".cart-product-title").innerHTML;
+        let size = cartBox.querySelector(".cart-size").innerHTML.split(": ")[1];
+
+        cart = cart.filter(el => !(el.title == title && el.size == size));
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        cartBox.remove();
+        updateTotal();
+    }
+
+    function handle_changeItemQuantity() {
+        let input = this;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartBox = input.closest('.cart-box');
+        let title = cartBox.querySelector(".cart-product-title").innerHTML;
+        let size = cartBox.querySelector(".cart-size").innerHTML.split(": ")[1];
+        let item = cart.find(el => el.title == title && el.size == size);
+
+        if (item) {
+            item.quantity = Math.max(1, Math.min(parseInt(input.value) || 1, 10));
+            input.value = item.quantity;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateTotal();
+        }
+    }
+
+    function updateTotal() {
+        let cartBoxes = document.querySelectorAll(".cart-box");
+        const totalElement = document.querySelector(".total-price");
+        let total = 0;
+        cartBoxes.forEach((cartBox) => {
+            let priceElement = cartBox.querySelector(".cart-price");
+            let price = parseFloat(priceElement.innerHTML.replace("$", ""));
+            let quantity = parseInt(cartBox.querySelector(".cart-quantity").value);
+            total += price * quantity;
+        });
+
+        total = total.toFixed(2);
+        totalElement.innerHTML = "$" + total;
+    }
+
+    function handle_buyOrder() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (cart.length <= 0) {
+            alert("Your cart is empty. Add some products first.");
+            return;
+        }
+        localStorage.removeItem('cart');
+
+        alert("Your order is placed successfully :)");
+
+        let cartContent = document.querySelector(".cart-content");
+        while (cartContent.hasChildNodes()) {
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updateTotal();
+
+        document.querySelector(".cart").classList.remove("active");
+    }
+
+    function CartBoxComponent(item) {
+        return `
+        <div class="cart-box">
+            <img src="${item.imgSrc}" alt="" class="cart-img">
+            <div class="detail-box">
+                <div class="cart-product-title">${item.title}</div>
+                <div class="cart-price">$${item.price.toFixed(2)}</div>
+                <div class="cart-size">Size: ${item.size}</div>
+                <div class="cart-quantity-wrapper">
+                    <button class="cart-quantity-btn minus">-</button>
+                    <input type="number" value="${item.quantity}" class="cart-quantity" min="1" max="10" disabled>
+                    <button class="cart-quantity-btn plus">+</button>
+                </div>
             </div>
-            <div class="cart-size">Size: ${size}</div>
-            <div class="cart-quantity">Quantity: ${quantity}</div>
-        </div>
-        <i class='bx bxs-trash-alt cart-remove'></i>
-    </div>`;
-}
+            <i class="fa-regular fa-trash-can cart-remove"></i>
+        </div>`;
+    }
+
+    function addEvents() {
+        let quantityInputs = document.querySelectorAll(".cart-quantity");
+        quantityInputs.forEach((input) => {
+            input.addEventListener("change", handle_changeItemQuantity);
+        });
+
+        let quantityBtns = document.querySelectorAll(".cart-quantity-btn");
+        quantityBtns.forEach(btn => {
+            btn.addEventListener("click", handle_quantityButtonClick);
+        });
+
+        let cartRemove_btns = document.querySelectorAll(".cart-remove");
+        cartRemove_btns.forEach((btn) => {
+            btn.addEventListener("click", handle_removeCartItem);
+        });
+    }
+
+    function handle_quantityButtonClick() {
+        let input = this.parentElement.querySelector('.cart-quantity');
+        let value = parseInt(input.value);
+        if (this.classList.contains('minus')) {
+            value = Math.max(1, value - 1);
+        } else if (this.classList.contains('plus')) {
+            value = Math.min(10, value + 1);
+        }
+        input.value = value;
+        handle_changeItemQuantity.call(input);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeCart);
+    } else {
+        initializeCart();
+    }
+})();

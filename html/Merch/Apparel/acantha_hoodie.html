@@ -43,9 +43,6 @@
         <nav class="navbar">
             <div class="nav-left--section">
                 <div class="header-social--links">
-                    <div class="icon">
-                        <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
                     <div class="icon youtube-link">
                         <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
@@ -60,6 +57,17 @@
                 <div id="mobile-nav--icon" aria-label="Open Mobile Navbar" aria-expanded="false"
                     aria-controls="Mobile Navbar">
                     <i class="ri-menu-line" aria-label="Hamburger Icon"></i>
+                </div>
+
+                <div class="mobile-nav">
+                    <ul class="mobile-nav--list">
+                        <a href="/html/About/about.html"><li class="mobile-nav--item">Band</li></a>
+                        <a href="/html/Music/music.html"><li class="mobile-nav--item">Music</li></a>
+                        <a href="/html/Merch/merch.html"><li class="mobile-nav--item">Merch</li></a>
+                        <a href="/html/Tours/tour.html"><li class="mobile-nav--item">Tour</li></a>
+                    </ul>
+                    <!-- CART CLOSE  -->
+                    <i class='ri-close-fill' id="nav-close"></i>
                 </div>
             </div>
 
@@ -119,11 +127,11 @@
 
     <main class="main">
         <!--ABOUT SECTION-->
-        <div class="main_container">
-            <div class="main_img--container">
-                <div class="main_img--card"><img src="/res/mark-henry.webp" alt=""></div>
+        <div class="merch-container product-box">
+            <div class="merch_img--container">
+                <div class="merch_img--card product-img"><img src="/res/mark-henry.webp" alt=""></div>
             </div>
-            <div class="main_content">
+            <div class="merch_content">
                 <h1 class="product-title">Stage Fright White Long Sleeve</h1>
                 <h2 class="product-price">$22.99</h2>
 
@@ -152,15 +160,55 @@
                 <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
                     <div class="number-input">
-                        <button class="quantity-btn minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                        <button class="quantity-btn minus"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number">
-                        <button class="quantity-btn plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></button>
+                        <button class="quantity-btn plus"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></button>
                     </div>
 
                     <button class="add-cart">Add To Cart</button>
                 </div>
             </div>
         </div>
+
+        <section class="member container">
+            <h1 class="section-title">Our Members</h1>
+            <div class="member-wrapper" id="haha">
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/aidien.webp" alt="Aidien, Lead Vocalist" />
+                    <div class="overlay">
+                        <h2>Aidien Gooden</h2>
+                        <p>Lead Vocalist</p>
+                    </div>
+                </div>
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/sean.webp" alt="Sean, Lead Guitarist" />
+                    <div class="overlay">
+                        <h2>Sean Kalb</h2>
+                        <p>Lead Guitarist</p>
+                    </div>
+                </div>
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/mark-henry.webp" alt="Jabari, Drummer" />
+                    <div class="overlay">
+                        <h2>Jabari Hill</h2>
+                        <p>Drummer</p>
+                    </div>
+                </div>
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/gabe.webp" alt="Gabe, Lead Bassist" />
+                    <div class="overlay">
+                        <h2>Gabe Zeigler</h2>
+                        <p>Lead Bassist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
