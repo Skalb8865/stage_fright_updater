@@ -154,33 +154,36 @@
 
                 <ul class="size-list">
                     <li>
-                        <input type="radio" name="size" />
+                        <input type="radio" name="size" aria-label="Size Small" aria-label="Size Small"
+                            aria-required="true" required />
                         <label for="size">S</label>
                     </li>
                     <li>
-                        <input type="radio" name="size" />
+                        <input type="radio" name="size" aria-label="Size Medium" aria-required="true" required />
                         <label for="size">M</label>
                     </li>
                     <li>
-                        <input type="radio" name="size" />
+                        <input type="radio" name="size" aria-label="Size Large" aria-required="true" required />
                         <label for="size">L</label>
                     </li>
                     <li>
-                        <input type="radio" name="size" />
+                        <input type="radio" name="size" aria-label="Size Extra Large" aria-required="true" required />
                         <label for="size">XL</label>
                     </li>
                     <li>
-                        <input type="radio" name="size" />
+                        <input type="radio" name="size" aria-label="Size Extra Extra Large" aria-required="true"
+                            required />
                         <label for="size">XXL</label>
                     </li>
                 </ul>
+                
                 <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
                     <div class="number-input">
                         <button class="quantity-btn minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            disabled>
+                            aria-label="quantity" disabled />
                         <button class="quantity-btn plus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
