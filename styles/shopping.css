@@ -136,7 +136,8 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
-    border-bottom: 2px solid var(--clr-slate800);
+    margin-bottom: 1rem;
+    background: rebeccapurple;
 }
 
 .cart-box {
@@ -252,7 +253,7 @@
 
 #cart-close {
     position: absolute;
-    top: 1rem;
+    top: 0.7rem;
     right: .8rem;
     font-size: 2rem;
     color: var(--clr-light);
@@ -261,7 +262,7 @@
 
 #nav-close {
     position: absolute;
-    top: 1rem;
+    top: 0.7rem;
     right: .8rem;
     font-size: 2rem;
     color: var(--clr-light);
