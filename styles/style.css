@@ -214,6 +214,13 @@ main {
     transition: color 0.2s;
 }
 
+.active-link {
+    color: var(--clr-rose);
+    font-size: var(--size-xl);
+    padding: 0 25px;
+    transition: color 0.2s;
+}
+
 .nav-item:hover {
     color: var(--clr-rose);
     transition: color 0.2s;
@@ -278,6 +285,12 @@ main {
     font-size: 2rem;
     color: var(--clr-light);
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.mobile-nav--item:hover{
+    color: var(--clr-rose);
+    transition: color 0.3s;
 }
 
 
