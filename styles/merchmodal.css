@@ -81,7 +81,7 @@ input[type=number]::-webkit-outer-spin-button {
     gap: 10px;
 }
 
-.size-list li {
+.size-list .sizes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +94,7 @@ input[type=number]::-webkit-outer-spin-button {
     transition: background 0.3s;
 }
 
-.size-list li:hover {
+.size-list .sizes:hover {
     color: var(--clr-dark);
     background: var(--clr-light);
     transition: background 0.3s;
@@ -127,6 +127,25 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid var(--clr-light);
     cursor: pointer;
     z-index: 90;
+}
+
+.hat_size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: left;
+    width: 175px;
+    height: 40px;
+    position: relative;
+    color: var(--clr-light);
+    transition: background 0.3s;
+}
+
+.hat_size:hover{
+    color: var(--clr-dark);
+    background: var(--clr-light);
+    transition: background 0.3s;
 }
 
 .merch-container {
@@ -171,6 +190,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 2rem;
     margin-bottom: 22px;
     text-transform: uppercase;
+    max-width: 575px;
 }
 
 .merch_content h2 {

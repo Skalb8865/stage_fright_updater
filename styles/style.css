@@ -1261,12 +1261,10 @@ main {
         flex-wrap: wrap;
     }
 
-    .size-list li {
+    .size-list .sizes{
         width: 65px;
         height: 40px;
     }
 
-    .add-cart {
-        width: 65%;
-    }
+
 }

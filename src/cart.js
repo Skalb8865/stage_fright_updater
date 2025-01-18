@@ -213,6 +213,7 @@ function handle_removeCartItem() {
 
   cartBox.remove();
   updateTotal();
+  updateTotalItems();
 }
 
 function updateTotal() {

@@ -37,13 +37,12 @@
 }
 
 .shop-container {
-    max-width: 1068px;
+    max-width: 1536px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 1px solid red;
 }
 
 #cart-icon {
@@ -137,7 +136,6 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    background: rebeccapurple;
 }
 
 .cart-box {
@@ -277,7 +275,7 @@
 
 .shop-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
