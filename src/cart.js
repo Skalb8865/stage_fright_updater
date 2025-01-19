@@ -1,12 +1,12 @@
 // select everything need for the cart and the mobile nav to function
-let cartIcon = document.querySelector("#cart-icon");
-let cart = document.querySelector(".cart");
-let closeCart = document.querySelector("#cart-close");
-let cartOverlay = document.querySelector(".cart-overlay");
-let openMobileNavIcon = document.querySelector("#mobile-nav--icon");
-let mobileNav = document.querySelector(".mobile-nav");
-let closeMobileNavIcon = document.querySelector("#nav-close");
-let mobileOverlay = document.querySelector(".mobile-overlay");
+const cartIcon = document.querySelector("#cart-icon");
+const cart = document.querySelector(".cart");
+const closeCart = document.querySelector("#cart-close");
+const cartOverlay = document.querySelector(".cart-overlay");
+const openMobileNavIcon = document.querySelector("#mobile-nav--icon");
+const mobileNav = document.querySelector(".mobile-nav");
+const closeMobileNavIcon = document.querySelector("#nav-close");
+const mobileOverlay = document.querySelector(".mobile-overlay");
 
 // adds an event listener to each addCart button
 const addToCartButtons = document.querySelectorAll(".add-cart");
@@ -203,7 +203,7 @@ function updateCartDisplay() {
   updateTotalItems();
 }
 
-// retrieves the items in the cart from local storage
+// retrieves the items in the cart from local storage 
 function getTotalItems() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   return cart.reduce((total, item) => total + item.quantity, 0);
@@ -236,11 +236,12 @@ function removeFromCart() {
 function updateTotal() {
   const totalElement = document.querySelector(".total-price");
   let total = 0;
-  cartBoxes.forEach((cartBox) => {
-    let priceElement = cartBox.querySelector(".cart-price");
-    let price = parseFloat(priceElement.innerHTML.replace("$", ""));
-    let quantityElement = cartBox.querySelector(".cart-quantity");
-    let quantity = parseInt(quantityElement.dataset.quantity);
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.forEach((item) => {
+    let price = item.price;
+    let quantity = item.quantity;
     total += price * quantity;
   });
 
@@ -272,24 +273,22 @@ function buyOrder() {
 
 function CartBoxComponent(item) {
   return `
-        <div class="cart-box">
-            <img src="${item.imgSrc}" alt="" class="cart-img">
-            <div class="detail-box">
-                <div class="cart-product-info">
-                    <div class="cart-product-title">${item.title}</div>
-                    <div class="cart-price">$${item.price.toFixed(2)}</div>
-                </div>
-                ${
-                  item.size
-                    ? `<div class="cart-size">Size: ${item.size}</div>`
-                    : ""
-                }
-                <div class="cart-quantity" data-quantity="${
-                  item.quantity
-                }">Quantity: ${item.quantity}</div>
-            </div>
-            <i class="fa-regular fa-trash-can cart-remove"></i>
-        </div>`;
+         <div class="cart-box">
+             <img src="${item.imgSrc}" alt="" class="cart-img">
+             <div class="detail-box">
+                 <div class="cart-product-info">
+                     <div class="cart-product-title">${item.title}</div>
+                     <div class="cart-price">$${item.price.toFixed(2)}</div>
+                 </div>
+                 ${item.size
+      ? `<div class="cart-size">Size: ${item.size}</div>`
+      : ""
+    }
+                 <div class="cart-quantity" data-quantity="${item.quantity
+    }">Quantity: ${item.quantity}</div>
+             </div>
+             <i class="fa-regular fa-trash-can cart-remove"></i>
+         </div>`;
 }
 
 function addEvents() {
