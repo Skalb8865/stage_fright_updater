@@ -189,14 +189,17 @@ function updateCartDisplay() {
     return;
   }
 
-  cartContent.innerHTML = "";
-
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  cart.forEach((item) => {
-    let cartBoxElement = CartBoxComponent(item);
-    cartContent.innerHTML += cartBoxElement;
-  });
+  if (cart.length === 0) {
+    displayEmptyCartMessage();
+  } else {
+    cartContent.innerHTML = "";
+    cart.forEach((item) => {
+      let cartBoxElement = CartBoxComponent(item);
+      cartContent.innerHTML += cartBoxElement;
+    });
+  }
 
   updateTotal();
   addEvents();
@@ -228,7 +231,7 @@ function removeFromCart() {
   cart = cart.filter((el) => !(el.title == title && el.size == size));
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  cartBox.remove();
+  updateCartDisplay();
   updateTotal();
   updateTotalItems();
 }
@@ -257,18 +260,25 @@ function buyOrder() {
     alert("Your cart is empty. Add some products first.");
     return;
   }
-  localStorage.removeItem("cart");
 
-  alert("Your order is placed successfully");
+  // Here you might want to add a confirmation dialog
+    localStorage.removeItem("cart");
+    alert("Your order has been placed successfully.");
 
-  let cartContent = document.querySelector(".cart-content");
-  while (cartContent.hasChildNodes()) {
-    cartContent.removeChild(cartContent.firstChild);
+    updateCartDisplay();
+    updateTotal();
     updateTotalItems();
-  }
+    closesCart();
+}
 
-  updateTotal();
-  closeCart();
+function displayEmptyCartMessage() {
+  const cartContent = document.querySelector(".cart-content");
+  cartContent.innerHTML = `
+    <div class="empty-cart-message">
+      <p>Your cart is empty</p>
+      <p>Add some items to get started!</p>
+    </div>
+  `;
 }
 
 function CartBoxComponent(item) {
