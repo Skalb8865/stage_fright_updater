@@ -512,6 +512,185 @@ main {
 /* ************** */
 /* Merch Section */
 /* ************** */
+.number {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    background: transparent;
+    color: var(--clr-light);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+    color: var(--clr-light);
+}
+
+.number-input button {
+    background: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+
+.number-input input[type=number] {
+    max-width: 2.5rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 1rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.product-description{
+    max-width: 500px;
+    color: var(--clr-slate400);
+}
+
+.size-list {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.size-list .sizes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: left;
+    width: 85px;
+    height: 40px;
+    position: relative;
+    color: var(--clr-light);
+    transition: background 0.3s;
+}
+
+.size-list .sizes:hover {
+    color: var(--clr-dark);
+    background: var(--clr-light);
+    transition: background 0.3s;
+}
+
+.size-list label,
+.size-list input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.size-list input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.size-list input[type="radio"]:checked+label,
+.Checked+label {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.size-list label {
+    padding: 5px;
+    border: 1px solid var(--clr-light);
+    cursor: pointer;
+    z-index: 90;
+}
+
+.hat_size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: left;
+    width: 175px;
+    height: 40px;
+    position: relative;
+    color: var(--clr-light);
+    transition: background 0.3s;
+}
+
+.hat_size:hover{
+    color: var(--clr-dark);
+    background: var(--clr-light);
+    transition: background 0.3s;
+}
+
+.merch-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 100px 70px 100px;
+    gap: 50px;
+    text-transform: uppercase;
+}
+
+.merch_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.merch_img--container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.merch_img--card {
+    height: 600px;
+    width: 600px;
+    border-radius: 7px;
+}
+
+.merch_img--card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.merch_content h1 {
+    color: var(--clr-light);
+    font-size: 2rem;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    max-width: 575px;
+}
+
+.merch_content h2 {
+    color: var(--clr-light);
+    font-size: 2rem;
+}
+
 .merch_suggestions--container {
     max-width: 1568px;
     width: 100%;
@@ -1089,6 +1268,22 @@ main {
         width: 400px;
         height: 400px;
     }
+
+    .merch-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .merch_content {
+        justify-content:center ;
+        align-items: center;
+    }
+
+    .merch_img--container{
+        justify-content: center;
+    }
 }
 
 /* md */
@@ -1205,7 +1400,4 @@ main {
         width: 350px;
     }
 
-    .size-list {
-        gap: 5px;
-    }
 }

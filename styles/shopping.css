@@ -344,7 +344,7 @@
     border: 1px solid var(--clr-light);
     cursor: pointer;
     padding: 7.5px;
-    width: 35%;
+    width: 150px;
     transition: all 0.3s;
 }
 
