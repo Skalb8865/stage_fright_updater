@@ -1204,4 +1204,8 @@ main {
     .OtherAlbumsCards img {
         width: 350px;
     }
+
+    .size-list {
+        gap: 5px;
+    }
 }
