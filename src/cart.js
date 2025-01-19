@@ -1,49 +1,77 @@
-function initializeCart() {
-  // select everything need for the cart and the mobile nav to function
-  let cartIcon = document.querySelector("#cart-icon");
-  let cart = document.querySelector(".cart");
-  let closeCart = document.querySelector("#cart-close");
-  let cartOverlay = document.querySelector(".cart-overlay");
-  let openMobileNavIcon = document.querySelector("#mobile-nav--icon");
-  let mobileNav = document.querySelector(".mobile-nav");
-  let closeMobileNavIcon = document.querySelector("#nav-close");
+// select everything need for the cart and the mobile nav to function
+let cartIcon = document.querySelector("#cart-icon");
+let cart = document.querySelector(".cart");
+let closeCart = document.querySelector("#cart-close");
+let cartOverlay = document.querySelector(".cart-overlay");
+let openMobileNavIcon = document.querySelector("#mobile-nav--icon");
+let mobileNav = document.querySelector(".mobile-nav");
+let closeMobileNavIcon = document.querySelector("#nav-close");
+let mobileOverlay = document.querySelector(".mobile-overlay");
 
+// adds an event listener to each addCart button
+const addToCartButtons = document.querySelectorAll(".add-cart");
+
+// adds an event listener to the buy button
+const buyButton = document.querySelector(".btn-buy");
+
+let products = document.querySelectorAll(".main_container, .product-box");
+
+let cartBoxes = document.querySelectorAll(".cart-box");
+
+function opensCart() {
+  cart.classList.add("active");
+  cartOverlay.classList.add("active");
+}
+
+function closesCart() {
+  cart.classList.remove("active");
+  cartOverlay.classList.remove("active");
+}
+
+function opensMobileNav() {
+  mobileNav.classList.add("active");
+  mobileOverlay.classList.add("active");
+}
+
+function closesMobileNav() {
+  mobileOverlay.classList.remove("active");
+  mobileNav.classList.remove("active");
+}
+
+function initializeCart() {
   // adds an event listener to the cart icon for when it is clicked the class active gets added to the cart and the cartOverlay
   cartIcon.addEventListener("click", () => {
-    cart.classList.add("active");
-    cartOverlay.classList.add("active");
+    opensCart();
   });
 
   // adds an event listener to the cart icon for when it is clicked the class active gets removed to the cart and the cartOverlay
   closeCart.addEventListener("click", () => {
-    cart.classList.remove("active");
-    cartOverlay.classList.remove("active");
+    closesCart();
   });
 
   // adds an event listener to the cartOverlay to close the cart and the cartOverlay when it is clicked
   cartOverlay.addEventListener("click", () => {
-    cart.classList.remove("active");
-    cartOverlay.classList.remove("active");
-    mobileNav.classList.remove("active");
+    closesCart();
   });
 
-  // adds an event listener to the mobileNav icon for when it is clicked the class active gets added to the mobileNav and the cartOverlay
+  // adds an event listener to the mobileNav icon for when it is clicked the class active gets added to the mobileNav and the mobileNavOverlay
   openMobileNavIcon.addEventListener("click", () => {
-    mobileNav.classList.add("active");
-    cartOverlay.classList.add("active");
+    opensMobileNav();
   });
 
-  // adds an event listener to the mobileNav icon for when it is clicked the class active gets removed to the mobileNav and the cartOverlay
+  // adds an event listener to the mobileNav icon for when it is clicked the class active gets removed to the mobileNav and the mobileNavOverlay
   closeMobileNavIcon.addEventListener("click", () => {
-    mobileNav.classList.remove("active");
-    cartOverlay.classList.remove("active");
+    closesMobileNav();
+  });
+
+  mobileOverlay.addEventListener("click", () => {
+    closesMobileNav();
   });
 
   // checks if the viewpot widht is >= 1025px so that it can remove the class active from the mobileNav and the cartOverlay
   function checkViewportWidth() {
     if (window.innerWidth >= 1025) {
-      mobileNav.classList.remove("active");
-      cartOverlay.classList.remove("active");
+      closesMobileNav();
     }
   }
 
@@ -54,15 +82,11 @@ function initializeCart() {
 
   document.addEventListener("DOMContentLoaded", updateCartDisplay);
 
-  // adds an event listener to each addCart button
-  let addToCartButtons = document.querySelectorAll(".add-cart");
   addToCartButtons.forEach((button) => {
     button.addEventListener("click", addCartItem);
   });
 
-  // adds an event listener to the buy button
-  let buyButton = document.querySelector(".btn-buy");
-  buyButton.addEventListener("click", handle_buyOrder);
+  buyButton.addEventListener("click", buyOrder);
 
   // calls the updateAddToCartButton function when the page loads
   updateAddToCartButton();
@@ -81,8 +105,6 @@ function initializeCart() {
 
 // updates the state of the add-cart button wheter a size is selected or not
 function updateAddToCartButton() {
-  let products = document.querySelectorAll(".main_container, .product-box");
-
   products.forEach((product) => {
     // select the sizes and the add-cart buttons
     let sizeInputs = product.querySelectorAll('input[name="size"]');
@@ -111,7 +133,7 @@ function addCartItem() {
     return;
   }
 
-  // selecs the class product-title and gets the text content and assigns it to the title variable
+  // selects the class product-title and gets the text content and assigns it to the title variable
   let title = product.querySelector(".product-title").innerHTML;
 
   // selects the class with
@@ -122,15 +144,9 @@ function addCartItem() {
   // selects the main_img--card and the img source and assign it to the imgSrc variable
   let imgSrc = product.querySelector(".merch_img--card img").src;
 
-  // selects the size input that is checked
+  // selects the size input that is checked, if it exists
   let sizeElement = product.querySelector('input[name="size"]:checked');
-  let size;
-  // if a size is checked then the size is added to the cart other, it is added as 'Default
-  if (sizeElement) {
-    size = sizeElement.nextElementSibling.innerHTML;
-  } else {
-    size = "Default";
-  }
+  let size = sizeElement ? sizeElement.nextElementSibling.innerHTML : null;
 
   // selects the quantity input
   let quantityElement = product.querySelector(".quantity");
@@ -164,15 +180,7 @@ function addCartItem() {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   updateCartDisplay();
-
-  let cartElement = document.querySelector(".cart");
-  let cartOverlayElement = document.querySelector(".cart-overlay");
-  if (cartElement) {
-    cartElement.classList.add("active");
-  }
-  if (cartOverlayElement) {
-    cartOverlayElement.classList.add("active");
-  }
+  opensCart();
 }
 
 function updateCartDisplay() {
@@ -195,18 +203,27 @@ function updateCartDisplay() {
   updateTotalItems();
 }
 
+// retrieves the items in the cart from local storage
+function getTotalItems() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  return cart.reduce((total, item) => total + item.quantity, 0);
+}
+
+// function to show the total number of items in the cart
 function updateTotalItems() {
-  const totalItemsElement = document.querySelector("#total-items");
-  if (totalItemsElement) {
-    totalItemsElement.textContent = getTotalItems();
+  const totalItems = document.querySelector("#total-items");
+  // checks if the totalItems element exists and updates the #total-items with the total number of items in the cart and if it doesnt exists it wont be updated
+  if (totalItems) {
+    totalItems.textContent = getTotalItems();
   }
 }
 
-function handle_removeCartItem() {
+function removeFromCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let cartBox = this.closest(".cart-box");
   let title = cartBox.querySelector(".cart-product-title").innerHTML;
-  let size = cartBox.querySelector(".cart-size").innerHTML.split(": ")[1];
+  let sizeElement = cartBox.querySelector(".cart-size");
+  let size = sizeElement ? sizeElement.innerHTML.split(": ")[1] : null;
 
   cart = cart.filter((el) => !(el.title == title && el.size == size));
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -217,7 +234,6 @@ function handle_removeCartItem() {
 }
 
 function updateTotal() {
-  let cartBoxes = document.querySelectorAll(".cart-box");
   const totalElement = document.querySelector(".total-price");
   let total = 0;
   cartBoxes.forEach((cartBox) => {
@@ -234,12 +250,7 @@ function updateTotal() {
   totalElement.innerHTML = "$" + total;
 }
 
-function getTotalItems() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  return cart.reduce((total, item) => total + item.quantity, 0);
-}
-
-function handle_buyOrder() {
+function buyOrder() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   if (cart.length <= 0) {
     alert("Your cart is empty. Add some products first.");
@@ -252,11 +263,11 @@ function handle_buyOrder() {
   let cartContent = document.querySelector(".cart-content");
   while (cartContent.hasChildNodes()) {
     cartContent.removeChild(cartContent.firstChild);
+    updateTotalItems();
   }
-  updateTotal();
 
-  document.querySelector(".cart").classList.remove("active");
-  document.querySelector(".cart-overlay").classList.remove("active");
+  updateTotal();
+  closeCart();
 }
 
 function CartBoxComponent(item) {
@@ -268,7 +279,11 @@ function CartBoxComponent(item) {
                     <div class="cart-product-title">${item.title}</div>
                     <div class="cart-price">$${item.price.toFixed(2)}</div>
                 </div>
-                <div class="cart-size">Size: ${item.size}</div>
+                ${
+                  item.size
+                    ? `<div class="cart-size">Size: ${item.size}</div>`
+                    : ""
+                }
                 <div class="cart-quantity" data-quantity="${
                   item.quantity
                 }">Quantity: ${item.quantity}</div>
@@ -280,12 +295,8 @@ function CartBoxComponent(item) {
 function addEvents() {
   let cartRemove_btns = document.querySelectorAll(".cart-remove");
   cartRemove_btns.forEach((btn) => {
-    btn.addEventListener("click", handle_removeCartItem);
+    btn.addEventListener("click", removeFromCart);
   });
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initializeCart);
-} else {
-  initializeCart();
-}
+initializeCart();

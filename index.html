@@ -52,7 +52,7 @@
             <div class="nav-left--section">
                 <div class="header-social--links">
                     <div class="icon">
-                        <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
                     </div>
                     <div class="icon youtube-link">
                         <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
@@ -63,7 +63,6 @@
                     <div class="icon">
                         <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
-
                 </div>
                 <div id="mobile-nav--icon">
                     <i class="ri-menu-line"></i>
@@ -135,7 +134,7 @@
                     <!-- TOTAL   -->
                     <div class="total-section">
                         <div class="total">
-                            <div class="total-title">Total</div>
+                            <div class="total-title">Subtotal</div>
                             <div class="total-price">$0</div>
                         </div>
                         <!-- BUY BUTTON  -->
@@ -147,6 +146,7 @@
             </div>
         </nav>
         <div class="cart-overlay" aria-hidden="true"></div>
+        <div class="mobile-overlay" aria-hidden="true"></div>
     </header>
 
 
@@ -158,9 +158,6 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Unleash Your Inner Rock</h1>
-                <div class="hero-btn">
-                    <a href="./html/About/about.html"><button class="btn">About Us</button></a>
-                </div>
                 <a class="hero-link"
                     href="https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld"
                     aria-label="Wallpaperflare Website">https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld</a>
@@ -244,36 +241,72 @@
         <!-- -------------- -->
         <!-- Merch Section -->
         <!-- -------------- -->
-        <div class="container section" id="main-content">
+        <div class="container" id="main-content">
             <h2 class="section-title">Merch</h2>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-swiper-autoplay="2000">
-                        <img decoding="async" src="./res/brigh_night_concert/optimized-bright.webp" alt="slider img 1">
+                        <div class="merch-box">
+                            <a href="html/Merch/Apparel/black_logo_hoodie.html" aria-label="Stage Fright Black Logo Hoodie"><img src="/res/merch/boy_Hoodie.webp" alt="Stage Fright BLack Logo Hoodie" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">Stage Fright Black Logo Hoodie</h2>
+                                <span class="product-price">$24.99</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 2">
+                        <div class="merch-box">
+                            <a href="html/Merch/Apparel/prometheus_T-shirt.html"><img src="/res/merch/PrometheusShirt.webp" alt="Prometheus Black T-Shirt" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">Prometheus Black T-Shirt</h2>
+                                <span class="product-price">$18.99</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 3">
+                        <div class="merch-box">
+                            <a href="html/Merch/Apparel/nyx_black_hoodie.html"><img src="/res/merch/Nyxhood.webp" alt="NYX Black Hoodie" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">NYX Black Hoodie</h2>
+                                <span class="product-price">$24.99</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 4">
+                        <div class="merch-box">
+                            <a href="html/Merch/Media/prometheus_vinyl.html" aria-label="Prometheus Vinyl"><img src="/res/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">Prometheus Vinyl</h2>
+                                <span class="product-price">$27.99</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 5">
+                        <div class="merch-box">
+                            <a href="html/Merch/Apparel/prometheus_black_hoodie.html"><img src="/res/merch/Prometheushood.webp" alt="Prometheus Black Hoodie" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">Prometheus Black Hoodie</h2>
+                                <span class="product-price">$24.99</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 6">
+                        <div class="merch-box">
+                            <a href="html/Merch/Accessories/motto_phone_case.html" aria-label="Moto Phone Case<"><img src="/res/merch/Phone_Case.webp" alt="Stage Fright Moto Phone Case" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">Motto Phone Case</h2>
+                                <span class="product-price">$9.99</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <img loading="lazy" decoding="async" src="./res/brigh_night_concert/optimized-bright.webp"
-                            alt="slider img 7">
+                        <div class="merch-box">
+                            <a href="html/Merch/Accessories/logo_white_airpod_case.html"><img src="/res/merch/backAirpod.webp" alt="Logo White Airpod Case" class="product-img"></a>
+                            <div class="info-section">
+                                <h2 class="product-title">Logo White Airpod Case</h2>
+                                <span class="product-price">$7.99</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Maybe comment the arrows out-->
@@ -290,12 +323,28 @@
     <!-- -------------- -->
     <!-- Footer Section -->
     <!-- -------------- -->
+    <hr>
     <footer class="footer container section">
         <div class="footer-content">
+            <p>stagefright921@gmail.com</p>
+            <div class="header-social--links">
+                <div class="icon">
+                    <a href="#" aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
+                </div>
+                <div class="icon youtube-link">
+                    <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D" aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
             <div class="copyright">
-                <p>&copy; &nbsp; Stage Fright 2024. All rights reserved. <a href="./html/Contact/contact.html"
-                        aria-label="Contact Page">Contact Us</a> <a href="./html/Merch/merch.html"
-                        aria-label="Contact Page">Merch Test</a>
+                <p>&copy; &nbsp; Stage Fright 2024. All rights reserved.</p>
+                <a href="./html/Contact/contact.html" aria-label="Contact Page">Contact Us</a>
+                <a href="./html/Merch/merch.html" aria-label="Contact Page">Merch Test</a>
             </div>
         </div>
     </footer>

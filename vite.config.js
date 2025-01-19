@@ -19,9 +19,13 @@ export default defineConfig({
         nyx_tshirt: resolve(__dirname, 'html/Merch/Apparel/nyx_T-shirt.html'), 
         black_logo_hoodie: resolve(__dirname, 'html/Merch/Apparel/black_logo_hoodie.html'), 
         black_moto_sweatpants: resolve(__dirname, 'html/Merch/Apparel/black_motto_sweatpants.html'),
+        // Media
         nyx_vinyl: resolve(__dirname, 'html/Merch/Media/nyx_vinyl.html'), 
         prometheus_vinyl: resolve(__dirname, 'html/Merch/Media/prometheus_vinyl.html'),
+        acantha_vinyl: resolve(__dirname, 'html/Merch/Media/acantha_vinyl.html'),
+        // Accessories
         moto_phone_case: resolve(__dirname, 'html/Merch/Accessories/motto_phone_case.html'),
+        logo_white_airpod_case: resolve(__dirname, 'html/Merch/Accessories/logo_white_airpod_case.html'),
       },
     },
   },

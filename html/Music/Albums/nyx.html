@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stage Fright White Long Sleeve | Stage Fright</title>
+    <title>Prometheus | Stage Fright</title>
 
     <!-- --------- -->
     <!-- CSS Links -->
@@ -24,7 +24,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
     <link rel="stylesheet" href="/styles/shopping.css">
-    <link rel="stylesheet" href="/styles/merchmodal.css">
 
     <!-- -------- -->
     <!-- JS Links -->
@@ -43,7 +42,7 @@
             <div class="nav-left--section">
                 <div class="header-social--links">
                     <div class="icon">
-                        <a href="#" aria-label="Our Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
                     </div>
                     <div class="icon">
                         <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
@@ -72,7 +71,7 @@
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../merch.html" aria-label="Merch Page">
+                            <a href="../Merch/merch.html" aria-label="Merch Page">
                                 Merch
                             </a>
                         </li>
@@ -126,7 +125,7 @@
                     <!-- TOTAL   -->
                     <div class="total-section">
                         <div class="total">
-                            <div class="total-title">Subotal</div>
+                            <div class="total-title">Subtotal</div>
                             <div class="total-price">$0</div>
                         </div>
                         <!-- BUY BUTTON  -->
@@ -138,105 +137,78 @@
             </div>
         </nav>
         <div class="cart-overlay" aria-hidden="true"></div>
+        <div class="mobile-overlay" aria-hidden="true"></div>
     </header>
 
     <main class="main">
-        <!--ABOUT SECTION-->
-        <div class="merch-container product-box">
-            <div class="merch_img--container">
-                <div class="merch_img--card product-img"><img src="/res/merch/SFwhitelongsleeve.png"
-                        alt="Stage Fright White Long Sleeve"></div>
+        <div class="main_container">
+            <div class="main_img--container">
+                <div class="main_img--card"><img src="/res/NYX.png" alt="NYX Album Image"></div>
             </div>
-            <div class="merch_content">
-                <h1 class="product-title">Stage Fright White Long Sleeve</h1>
-                <h2 class="product-price">$22.99</h2>
-                <p class="product-description">White Long Sleeve with the Stage Fright Logo. Made with 100% Organic
-                    Cotton. Pre-washed to minimize shrinkage. Reactive-dyed for longer lasting color</p>
-
-                <ul class="size-list">
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Small" aria-label="Size Small"
-                            aria-required="true" required />
-                        <label for="size">S</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Medium" aria-required="true" required />
-                        <label for="size">M</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Large" aria-required="true" required />
-                        <label for="size">L</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Large" aria-required="true" required />
-                        <label for="size">XL</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Extra Large" aria-required="true"
-                            required />
-                        <label for="size">XXL</label>
-                    </li>
-                </ul>
-
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
-
-                    <div class="number-input">
-                        <button class="quantity-btn minus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                        <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
-                        <button class="quantity-btn plus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
-                    </div>
-
-                    <button class="add-cart">Add To Cart</button>
+            <div class="main_content">
+                <h1>Nyx</h1>
+                <div class="songs">
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>1.
+                        Electric Storm - 4:31
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon" onclick="changeButton(this)">
+                        </i>2.
+                        Crank Up the Chaos - 2:18
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>3.
+                        Riff Riot - 3:41
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>4.
+                        Power Surge - 3:11
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>5.
+                        Fire Within - 2:37
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>6.
+                        Rebel's Rise - 2:03
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>7.
+                        Fuel the Fire - 5:21
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>8.
+                        Crow Carnage 1 - 3:09
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>9.
+                        Amped Up - 1:45
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>10. Burning Bridges - 3:55
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>11. Thunder - 2:14
+                    </p>
+                    <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
+                            onclick="changeButton(this)"></i>12. Wildfire Rush - 3:31
+                    </p>
                 </div>
             </div>
         </div>
-
-        <!-- SHOP SECTION  -->
-        <section class="shop merch_suggestions--container section">
-            <h2 class="shop-title">You May Also Like</h2>
-            <!-- CONTENT  -->
-            <div class="shop-content">
-                <!-- BOX 1 -->
-                <div class="merch-box">
-                    <a href="./acantha_hoodie.html" aria-label="Acantha Black Hoodie"><img
-                            src="/res/merch//AcanthaHood.png" alt="Acantha Black Hoodie" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Acantha Black Hoodie</h2>
-                        <span class="product-price">$24.99</span>
-                    </div>
-                </div>
-                <!-- BOX 2 -->
-                <div class="merch-box">
-                    <a href="../Media/prometheus_vinyl.html" aria-label="Prometheus Vinyl"><img
-                            src="/res/merch/Prometheusvinyl.png" alt="Prometheus Vinyl" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Prometheus Vinyl</h2>
-                        <span class="product-price">$27.99</span>
-                    </div>
-                </div>
-                <!-- BOX 3 -->
-                <div class="merch-box">
-                    <a href="./acantha_T-shirt.html" aria-label="Acantha Black T-Shirt"><img
-                            src="/res/merch/AcanthaShirt.png" alt="Black Acantha T-Shirt" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Acantha Black T-Shirt</h2>
-                        <span class="product-price">$18.99</span>
-                    </div>
-                </div>
-                <!-- BOX 4 -->
-                <div class="merch-box">
-                    <a href="../Media/nyx_vinyl.html" aria-label="NYX Vinyl"><img src="/res/merch/Nyxvinyl.png"
-                            alt="Nyx Vinyl" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">NYX Vinyl</h2>
-                        <span class="product-price">$27.99</span>
-                    </div>
-                </div>
+        <div class="H1Container">
+            <div class="main_contentV2">
+                <h1>Check Out Our Other Albums</h1>
             </div>
-        </section>
+        </div>
+        <div class="OtherAlbums">
+            <div class="OtherAlbumsCards">
+                <a href="./acantha.html" aria-label="Acantha Album Page"><img loading="lazy" decoding="async"
+                        src="/res/Acantha.png" alt="Our Acantha Album Image"></a>
+                <a href="./prometheus.html" aria-label="Prometheus Album Page"><img loading="lazy" decoding="async"
+                        src="/res/Prometheus.png" alt="Our Nyx Album Image"></a>
+            </div>
+        </div>
     </main>
 
 

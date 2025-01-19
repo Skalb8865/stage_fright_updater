@@ -149,7 +149,7 @@ main {
 
 .header-social--links .icon:nth-child(1):hover {
     background: var(--clr-light);
-    color: #0165e1;
+    color: #1ED760;
     opacity: 1;
 }
 
@@ -323,7 +323,7 @@ main {
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: 100dvh;
+    min-height: 90dvh;
     background-image: url("../res/brigh_night_concert/optimized-bnc.webp");
     background-size: cover;
     background-position: center center;
@@ -372,10 +372,6 @@ main {
     text-decoration: none;
     font-size: 15px;
     color: var(--clr-slate400);
-}
-
-.hero-btn {
-    padding: 25px;
 }
 
 
@@ -690,9 +686,6 @@ main {
     align-items: center;
 }
 
-
-
-
 .main_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -711,7 +704,7 @@ main {
 }
 
 .main_img--card {
-    width: 500px;
+    width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -732,49 +725,27 @@ main {
     margin-bottom: 50px;
 }
 
-/* ===========This is for th images that link to another album================================ */
-
-.OtherAlbums {
+.bottom_container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 15px;
+    padding: 50px 25px 100px 40px;
 }
 
 .OtherAlbumsCards {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; 
     gap: 15px;
-    margin-top: 50px;
-    margin-bottom: 100px;
 }
+
 
 .OtherAlbumsCards img {
     width: 425px;
     border-radius: 10px;
 }
 
-.main_contentV2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main_contentV2 {
-    color: var(--clr-light);
-    font-size: 3rem;
-    margin-bottom: 32px;
-    padding: 15px;
-    text-transform: uppercase;
-    flex-wrap: wrap;
-}
-
 /* ================================================================================================================================== */
 
-.songs {
-    padding-bottom: 20px;
-}
 
 .Soundtrack {
     padding-bottom: 10px;
@@ -789,9 +760,6 @@ main {
 }
 
 
-.Soundtrack .song-length {
-    padding-left: 75px;
-}
 
 .play-icon {
     padding: 10px;
@@ -930,6 +898,7 @@ main {
 }
 
 .footer-content {
+    padding: 25px;
     color: var(--clr-slate400);
     font-size: var(--size-xl);
 }
@@ -1012,8 +981,8 @@ main {
     }
 
     .merch_img--card {
-        width: 525px;
-        height: 525px;
+        width: 500px;
+        height: 500px;
     }
 }
 
@@ -1054,15 +1023,18 @@ main {
     }
 
     .main_container {
-        display: grid;
         grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
         width: 90%;
-        margin: 0 auto;
         height: 85%;
-        margin-right: auto;
-        margin-left: auto;
+    }
+
+    .bottom_container{
+       flex-direction: column-reverse;
+    }
+
+    .OtherAlbumsCards img {
+        width: 400px;
+        border-radius: 10px;
     }
 
     .main_img--container {
@@ -1076,7 +1048,6 @@ main {
         height: 375px;
         width: 375px;
     }
-
 
     .main_content {
         text-align: center;
@@ -1099,38 +1070,6 @@ main {
     }
 
 
-    .OtherAlbums {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        cursor: grab;
-        flex-wrap: wrap;
-
-    }
-
-    .OtherAlbumsCards {
-        height: 85%;
-        width: 85%;
-        flex-wrap: wrap;
-    }
-
-
-    .H1Container {
-        align-self: center;
-        margin-right: auto;
-        margin-left: auto;
-        height: 10%;
-        width: 500px;
-        flex-wrap: wrap;
-
-    }
-
-    .main_contentV2 {
-        font-size: 4rem;
-        margin-bottom: 22px;
-    }
-
     .merch_img--card {
         width: 400px;
         height: 400px;
@@ -1150,6 +1089,10 @@ main {
     .merch_img--card {
         width: 375px;
         height: 375px;
+    }
+
+    .OtherAlbumsCards img{
+        width: 385px;
     }
 }
 
@@ -1215,33 +1158,16 @@ main {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .OtherAlbumsCards img {
-        border-radius: 10px;
-        height: 350px;
-        width: 350px;
-    }
-
-    .OtherAlbumsCards {
-        height: 75%;
-        width: 75%;
-    }
-
-    .H1Container {
-        height: 10%;
-        width: 300px;
-
-    }
-
-    .main_contentV2 h1 {
-        font-size: 3rem;
-    }
-
     .merch_content h1 {
         font-size: 2rem;
     }
 
     .cart {
         width: 100%;
+    }
+
+    .OtherAlbumsCards img{
+        width: 375px;
     }
 }
 
@@ -1255,16 +1181,12 @@ main {
         width: 100%;
     }
 
-    .OtherAlbumsCards {
-        height: 80%;
-        width: 80%;
-        flex-wrap: wrap;
-    }
-
     .size-list .sizes{
         width: 65px;
         height: 40px;
     }
 
-
+    .OtherAlbumsCards img{
+        width: 350px;
+    }
 }
