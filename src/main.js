@@ -6,4 +6,3 @@ import '../styles/shopping.css'
 
 import './cart.js'
 import './swiper.js'
-import './tour.js'

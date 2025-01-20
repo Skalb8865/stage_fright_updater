@@ -19,7 +19,6 @@ dialog.addEventListener('click', event => {
   }
 });
 
-
 const open2Btn = document.querySelector('#open-2-modal');
 const dialog2 = document.querySelector('#dialog2');
 const close2Btn = document.querySelector('#close-2-modal');

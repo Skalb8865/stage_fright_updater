@@ -96,7 +96,7 @@
 
                 <div class="center-logo">
                     <a href="/index.html" aria-label="Homepage"><img class="logo"
-                            src="/res/Stage_Fright_Logo-removebg-preview.png" alt="Logo"></a>
+                            src="/res/Stage_Fright_Logo-removebg-preview.webp" alt="Logo"></a>
                 </div>
 
                 <div class="center-right">
@@ -141,12 +141,28 @@
     </header>
 
     <main class="main">
-        <div class="main_container">
+        <div class="main_container merch-container">
             <div class="main_img--container">
-                <div class="main_img--card"><img src="/res/NYX.png" alt="NYX Album Image"></div>
+                <div class="merch_img--card product-img"><img src="/res/albums/NYX.webp" alt="Acantha Album Image">
+                </div>
             </div>
             <div class="main_content">
-                <h1>Nyx</h1>
+                <h1 class="product-title">NYX Album</h1>
+                <h2 style="display: none;" class="product-price">$13.98</h2>
+                <button id="btn" class="add-cart">Buy</button>
+                <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
+                    target="_blank" aria-label="Stage Fright Spotify"><button class="btn">Listen</button></a>
+            </div>
+        </div>
+        <div class="bottom_container">
+            <div class="OtherAlbumsCards">
+                <a href="./acantha.html" aria-label="Acantha Album Page"><img loading="lazy" decoding="async"
+                        src="/res/albums/Acantha.webp" alt="Our Album Acantha Image"></a>
+                <a href="./prometheus.html" aria-label="Prometheus Album Page"><img loading="lazy" decoding="async"
+                        src="/res/albums/Prometheus.webp" alt="Our Album Prometheus Image"></a>
+            </div>
+            <div class="main_content">
+                <h1 class="product-title">Track List</h1>
                 <div class="songs">
                     <p class="Soundtrack"><i class="fa-regular fa-circle-play play-icon"
                             onclick="changeButton(this)"></i>1.
@@ -196,19 +212,7 @@
                 </div>
             </div>
         </div>
-        <div class="H1Container">
-            <div class="main_contentV2">
-                <h1>Check Out Our Other Albums</h1>
-            </div>
-        </div>
-        <div class="OtherAlbums">
-            <div class="OtherAlbumsCards">
-                <a href="./acantha.html" aria-label="Acantha Album Page"><img loading="lazy" decoding="async"
-                        src="/res/Acantha.png" alt="Our Acantha Album Image"></a>
-                <a href="./prometheus.html" aria-label="Prometheus Album Page"><img loading="lazy" decoding="async"
-                        src="/res/Prometheus.png" alt="Our Nyx Album Image"></a>
-            </div>
-        </div>
+
     </main>
 
 
