@@ -94,7 +94,8 @@ main {
     font-size: var(--size-6xl);
     text-transform: uppercase;
     padding: 3rem;
-    color: var(--clr-rose);
+    color: var(--clr-light);
+    line-height: 3rem;
 }
 
 .section-title hr {
@@ -298,22 +299,22 @@ main {
 /* Btn Section */
 /* *********** */
 .btn {
-    text-decoration: none;
-    border: 2px solid var(--clr-light);
-    background-color: var(--clr-dark);
+    background: var(--clr-dark);
     color: var(--clr-light);
-    padding: 1em 2.5em;
-    font-size: 14px;
+    border: 2px solid var(--clr-light);
     cursor: pointer;
-    transition: 0.3s;
+    padding: 1em 2.5em;
+    width: 200px;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
 
 .btn:hover {
-    background-color: var(--clr-light);
-    color: var(--clr-slate600);
-    transition: 0.3s;
+    background: var(--clr-light);
+    color: var(--clr-dark);
 }
 
 #btn {
@@ -725,97 +726,18 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     justify-content: center;
     height: 200px;
-    color: var(--clr-light);
+    color: var(--clr-slate400);
     text-align: center;
 }
 
 .empty-cart-message p {
     margin: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* ************** */
 /* Tour Section */
 /* ************** */
-/* .tour-home {
-    min-height: 40dvh;
-    background: grey;
-    justify-content: center;
-    text-align: center;
-}
-
-.tour-home h1 {
-    font-weight: 800;
-    color: black;
-    font-size: 50px;
-    padding: 200px 50px 50px 50px;
-}
-
-.tours {
-    padding: 100px 0 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.tours-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.tour-cards {
-    width: 430px;
-    height: 500px;
-    margin: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    background: var(--clr-light);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 0 3px 10px rgb(255 255 255 / 0.6);
-    text-align: center;
-    font-size: 14px;
-    transition: 0.35s;
-    ;
-}
-
-.tour-cards:hover {
-    transform: scale(1.025);
-    transition: 0.35s;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 1.4);
-}
-
-.tour-cards img {
-    width: 100%;
-    min-height: 301px;
-}
-
-.tour-cards h1 {
-    text-align: center;
-    font-size: 30px;
-}
-
-.tour-cards p {
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.tour-cards a {
-    margin: 10px 0 80px 0;
-    color: var(--clr-light);
-    text-decoration: none;
-    font-size: 14px;
-    background: var(--clr-rose);
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px 15px;
-    transition: 0.4s;
-    cursor: pointer;
-} */
 
 .tours {
     display: grid;
@@ -830,8 +752,8 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid rgb(75, 82, 92);
     border-radius: 10px;
     background-color: #222429;
-    text-align: center;
     transition: border 0.3s;
+    text-align: center;
 }
 
 .tour-card:hover {
@@ -839,14 +761,166 @@ input[type=number]::-webkit-outer-spin-button {
     transition: border 0.3s;
 }
 
+.tour-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-light);
+    padding: 10px;
+    line-height: 2rem;
+}
+
 .tour-card h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--clr-light);
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.tour-card h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--clr-light);
+    padding: 0 5px 10px 5px;
+}
+
+
+.tour-form {
+    min-width: 1000px;
+}
+
+dialog {
+    margin: auto;
+    padding: 0;
+    transition: all 0.3s allow-discrete;
+    background: transparent;
+    overflow: hidden;
+}
+
+
+dialog[open] {
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.3s allow-discrete;
+}
+
+dialog[open]::backdrop {
+    background: #333;
+    opacity: 0.3;
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.tickets-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70.5%;
+}
+
+#tickets {
+    width: 100%;
+}
+
+
+.tour_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.tour_container form {
+    padding: 20px;
+    width: 700px;
+    background: var(--clr-dark);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.tour_container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tour_container form .row .col {
+    flex: 1 1 250px;
+}
+
+.tour_container form .row .col .title {
+    font-size: 20px;
+    color: var(--clr-light);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.tour_container form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.tour_container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
     color: var(--clr-light);
 }
 
-.tour-card p {
-    color: var(--clr-slate400);
+.tour_container form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: var(--clr-dark);
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
 }
 
+.tour_container form .row .col .inputBox input:focus {
+    border: 1px solid var(--clr-light);
+    outline: none;
+}
+
+.tour_container form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.tour_container form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.tour_container form .row .col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+}
+
+.tour_container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.tour_container form .submit-btn:hover {
+    background: #2ecc71;
+}
 
 
 /* ************** */
@@ -939,6 +1013,12 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 3rem;
 }
 
+.main_content .album_date {
+    font-size: 1.5rem;
+    color: var(--clr-light);
+    padding: 5px
+}
+
 .bottom_container {
     display: flex;
     justify-content: center;
@@ -958,8 +1038,6 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 10px;
 } */
 
-/* ================================================================================================================================== */
-
 
 .Soundtrack {
     padding-bottom: 10px;
@@ -967,34 +1045,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 16px;
     font-weight: 600;
     color: var(--clr-slate400);
-}
-
-.active-song {
-    color: blue;
-}
-
-
-
-.play-icon {
-    padding: 10px;
-    font-size: 21px;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.play-icon .fa-circle-pause {
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.play-icon:hover {
-    color: var(--clr-rose);
-    transition: 0.3s ease;
-}
-
-.play-icon .fa-circle-pause:hover {
-    color: var(--clr-rose);
-    transition: 0.3s ease;
 }
 
 /* @media screen and (max-width:1440px) {
@@ -1026,13 +1076,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .contact form input,
-.contact form textarea {
+.contact form textarea,
+.contact form select,
+.contact form option {
     gap: 25px;
     padding: 12.5px;
     margin-bottom: 15px;
-    border: 1px solid var(--clr-slate400);
+    border: 1px solid var(--clr-light);
     background: var(--clr-light);
     color: var(--clr-dark);
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border: 1px solid var(--clr-rose);
+    outline: none;
 }
 
 /* the name input boxes  */
@@ -1067,11 +1125,31 @@ input[type=number]::-webkit-outer-spin-button {
     width: 70.5%;
 }
 
+.select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70.5%;
+}
+
+
+#issue-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70.5%;
+}
+
 form label {
-    align-self: sp;
     color: var(--clr-light);
     padding: 5px 5px 5px 0;
     width: 100%;
+}
+
+form .required {
+    color: var(--clr-rose);
 }
 
 /* the name input boxes  */
@@ -1098,6 +1176,14 @@ form label {
     padding-bottom: 45px;
 }
 
+#group {
+    width: 100%;
+}
+
+#issue {
+    width: 100%;
+}
+
 /* container for the submit btn */
 .contact .submit-btn {
     display: flex;
@@ -1106,7 +1192,7 @@ form label {
     width: 100%;
 }
 
-.submit-btn button{
+.submit-btn button {
     width: 250px;
 }
 
@@ -1213,7 +1299,7 @@ form label {
         height: 500px;
     }
 
-    .submit-btn button{
+    .submit-btn button {
         width: 225px;
     }
 }
@@ -1351,8 +1437,12 @@ form label {
         font-size: 2.9rem;
     }
 
-    .submit-btn button{
+    .submit-btn button {
         width: 200px;
+    }
+
+    .tickets-input-container {
+        width: 60%;
     }
 }
 
@@ -1386,8 +1476,8 @@ form label {
     .albums-cards {
         position: relative;
         border-radius: 10px;
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
         margin: 10px;
         transition: 1.15s ease;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -1405,12 +1495,16 @@ form label {
         width: 375px;
     }
 
-    .submit-btn button{
+    .submit-btn button {
         width: 185px;
     }
 
-    .main_content{
+    .main_content {
         padding-left: 15px;
+    }
+
+    .tickets-input-container {
+        width: 50%;
     }
 }
 
@@ -1433,7 +1527,11 @@ form label {
         width: 350px;
     }
 
-    .submit-btn button{
+    .submit-btn button {
         width: 150px;
+    }
+
+    .tickets-input-container {
+        width: 40%;
     }
 }

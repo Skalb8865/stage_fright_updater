@@ -19,9 +19,9 @@ dialog.addEventListener('click', event => {
   }
 });
 
-const open2Btn = document.querySelector('#open-2-modal');
+const open2Btn = document.querySelector('#open-modal2');
 const dialog2 = document.querySelector('#dialog2');
-const close2Btn = document.querySelector('#close-2-modal');
+const close2Btn = document.querySelector('#close-modal2');
 
 open2Btn.addEventListener('click', () => dialog2.showModal());
 close2Btn.addEventListener('click', () => dialog2.close());

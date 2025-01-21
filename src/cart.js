@@ -1,4 +1,4 @@
-// select everything need for the cart and the mobile nav to function
+// section for cart and mobile nav
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
@@ -7,17 +7,16 @@ const openMobileNavIcon = document.querySelector("#mobile-nav--icon");
 const mobileNav = document.querySelector(".mobile-nav");
 const closeMobileNavIcon = document.querySelector("#nav-close");
 const mobileOverlay = document.querySelector(".mobile-overlay");
+// end of section for cart and mobile nav
 
-// adds an event listener to each addCart button
+// section for cart and merch products 
 const addToCartButtons = document.querySelectorAll(".add-cart");
-
-// adds an event listener to the buy button
 const buyButton = document.querySelector(".btn-buy");
-
 let products = document.querySelectorAll(".main_container, .product-box");
-
 let cartBoxes = document.querySelectorAll(".cart-box");
+// end of section for cart and merch products
 
+// fucntions to open and close the cart and mobile nav
 function opensCart() {
   cart.classList.add("active");
   cartOverlay.classList.add("active");
@@ -37,29 +36,26 @@ function closesMobileNav() {
   mobileOverlay.classList.remove("active");
   mobileNav.classList.remove("active");
 }
+// end of fucntions to open and close the cart and mobile nav
 
 function initializeCart() {
-  // adds an event listener to the cart icon for when it is clicked the class active gets added to the cart and the cartOverlay
+  // cart and mobile nav open and close section
   cartIcon.addEventListener("click", () => {
     opensCart();
   });
 
-  // adds an event listener to the cart icon for when it is clicked the class active gets removed to the cart and the cartOverlay
   closeCart.addEventListener("click", () => {
     closesCart();
   });
 
-  // adds an event listener to the cartOverlay to close the cart and the cartOverlay when it is clicked
   cartOverlay.addEventListener("click", () => {
     closesCart();
   });
 
-  // adds an event listener to the mobileNav icon for when it is clicked the class active gets added to the mobileNav and the mobileNavOverlay
   openMobileNavIcon.addEventListener("click", () => {
     opensMobileNav();
   });
 
-  // adds an event listener to the mobileNav icon for when it is clicked the class active gets removed to the mobileNav and the mobileNavOverlay
   closeMobileNavIcon.addEventListener("click", () => {
     closesMobileNav();
   });
@@ -78,6 +74,7 @@ function initializeCart() {
   // calls the check viewportWidth function when the page loads
   checkViewportWidth();
 
+  // adds an event listener to the window for when it is resized 
   window.addEventListener("resize", checkViewportWidth);
 
   document.addEventListener("DOMContentLoaded", updateCartDisplay);
@@ -86,7 +83,7 @@ function initializeCart() {
     button.addEventListener("click", addCartItem);
   });
 
-  buyButton.addEventListener("click", buyOrder);
+  buyButton.addEventListener("click", submitOrder);
 
   // calls the updateAddToCartButton function when the page loads
   updateAddToCartButton();
@@ -192,8 +189,10 @@ function updateCartDisplay() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (cart.length === 0) {
-    displayEmptyCartMessage();
+    displayMessage();
+    disalbeBuyButton();
   } else {
+    enableBuyButton();
     cartContent.innerHTML = "";
     cart.forEach((item) => {
       let cartBoxElement = CartBoxComponent(item);
@@ -205,6 +204,16 @@ function updateCartDisplay() {
   addEvents();
   updateTotalItems();
 }
+
+// section for enabling and disabling the buy button
+function disalbeBuyButton() {
+  buyButton.classList.add("disabled");
+}
+
+function enableBuyButton() {
+  buyButton.classList.remove("disabled");
+}
+// end of section for enabling and disabling the buy button
 
 // retrieves the items in the cart from local storage 
 function getTotalItems() {
@@ -222,12 +231,17 @@ function updateTotalItems() {
 }
 
 function removeFromCart() {
+  // retrieves the current cart from local storage and if the cart is empty it returns an empty array
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  // selects the closest cart-box with the click remove from cart icon
   let cartBox = this.closest(".cart-box");
+  // selects the title and size from the cart-box
   let title = cartBox.querySelector(".cart-product-title").innerHTML;
   let sizeElement = cartBox.querySelector(".cart-size");
+  // selects the size elemnt and uses the split method to split the string at the colon and space, then selecs the 
+  // second part of the array and if the merch doesnt have a size it sets it to null
   let size = sizeElement ? sizeElement.innerHTML.split(": ")[1] : null;
-
+  // filters the cart array to remove the item that matches the extracted title and size.
   cart = cart.filter((el) => !(el.title == title && el.size == size));
   localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -254,29 +268,23 @@ function updateTotal() {
   totalElement.innerHTML = "$" + total;
 }
 
-function buyOrder() {
+function submitOrder() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  if (cart.length <= 0) {
-    alert("Your cart is empty. Add some products first.");
-    return;
-  }
 
-  // Here you might want to add a confirmation dialog
-    localStorage.removeItem("cart");
-    alert("Your order has been placed successfully.");
+  localStorage.removeItem("cart");
+  alert("Your order has been placed successfully.");
 
-    updateCartDisplay();
-    updateTotal();
-    updateTotalItems();
-    closesCart();
+  updateCartDisplay();
+  updateTotal();
+  updateTotalItems();
+  closesCart();
 }
 
-function displayEmptyCartMessage() {
+function displayMessage() {
   const cartContent = document.querySelector(".cart-content");
   cartContent.innerHTML = `
     <div class="empty-cart-message">
       <p>Your cart is empty</p>
-      <p>Add some items to get started!</p>
     </div>
   `;
 }
