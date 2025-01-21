@@ -16,25 +16,48 @@ let products = document.querySelectorAll(".main_container, .product-box");
 let cartBoxes = document.querySelectorAll(".cart-box");
 // end of section for cart and merch products
 
+const media = window.matchMedia("(width > 1px)");
+
+media.addEventListener("change", (e) => updateNavbar(e));
+
+function updateNavbar(e) {
+  const isMobile = e.matches;
+  
+  if (isMobile) {
+    mobileNav.setAttribute("inert", "");
+    cart.setAttribute("inert", "");
+  } else {
+    mobileNav.removeAttribute("inert");
+    cart.removeAttribute("inert");
+  }
+}
 // fucntions to open and close the cart and mobile nav
 function opensCart() {
   cart.classList.add("active");
   cartOverlay.classList.add("active");
+  cartIcon.setAttribute("aria-expanded", "true");
+  cart.removeAttribute("inert");
 }
 
 function closesCart() {
   cart.classList.remove("active");
   cartOverlay.classList.remove("active");
+  cartIcon.setAttribute("aria-expanded", "false");
+  cart.setAttribute("inert", "");
 }
 
 function opensMobileNav() {
   mobileNav.classList.add("active");
   mobileOverlay.classList.add("active");
+  openMobileNavIcon.setAttribute("aria-expanded", "true");
+  mobileNav.removeAttribute("inert");
 }
 
 function closesMobileNav() {
   mobileOverlay.classList.remove("active");
   mobileNav.classList.remove("active");
+  openMobileNavIcon.setAttribute("aria-expanded", "false");
+  mobileNav.setAttribute("inert", "");
 }
 // end of fucntions to open and close the cart and mobile nav
 
@@ -317,3 +340,4 @@ function addEvents() {
 }
 
 initializeCart();
+updateNavbar(media)
