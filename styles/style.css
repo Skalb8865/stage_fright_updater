@@ -756,19 +756,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .tour-card h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--clr-light);
-    padding: 10px;
-    line-height: 2rem;
-}
-
-.tour-card h2 {
     font-weight: 600;
     font-size: 1.5rem;
     color: var(--clr-light);
     text-transform: uppercase;
     padding: 10px;
+}
+
+.tour-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-light);
+    padding: 10px;
+    line-height: 2rem;
 }
 
 .tour-card h3 {
