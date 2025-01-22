@@ -1,14 +1,12 @@
-import Swiper from 'swiper';
-
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: false,
     speed: 700,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -32,15 +30,12 @@ const swiper = new Swiper('.swiper', {
 
         877: {
             slidesPerView: 2,
-            spaceBetween: 20,
         },
         1307: {
             slidesPerView: 3,
-            spaceBetween: 25,
         },
         1737: {
             slidesPerView: 4,
-            spaceBetween: 35,
         },
 
 

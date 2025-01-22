@@ -1,14 +1,89 @@
-/* Swiper Container */
-.swiper {
-    width: 100%;
-    padding-bottom: 50px;
-    padding-top: 100px;
+:root {
+    /* Colors */
+    --clr-dark: #0c0d0f;
+    --clr-light: #edf0f1;
+    --clr-slate400: #94a3b8;
+    --clr-slate600: #475569;
+    --clr-slate800: #1e293b;
+    --clr-rose: #ff3333;
+    --clr-dark-rose: #881337;
+    --clr-indigo: #4f46e5;
+    --clr-active-link: #be123c;
+    --hover-color: #272832;
 }
 
+/* Swiper Container */
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: grab;
-    width: 500px;
+    max-width: 525px;
+    aspect-ratio: 1/1;
+    padding: 5px;
+}
+
+.tour-link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    color: var(--clr-light);
+}
+
+.tour-link a:hover {
+    border-bottom: 1px solid var(--clr-light);
+}
+
+.swiper-tour-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(75, 82, 92);
+    background: #222429;
+    transition: border 0.3s;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-tour-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-light);
+    padding: 10px;
+    line-height: 2rem;
+}
+
+.swiper-tour-card h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--clr-light);
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.swiper-tour-card h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--clr-light);
+    padding: 0 5px 10px 5px;
 }
 
 
@@ -19,48 +94,39 @@
 
 .swiper-slide img {
     object-fit: cover;
-    border-radius: 8px;
 }
 
 /* .swiper-slide a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
 } */
 
 
 /* Changes the active pagination bullet*/
 .swiper-pagination-bullet-active {
-    background: green;
-
     /* remove if doesnt work */
     height: 20px;
     width: 20px;
 }
 
-.swiper-pagination-bullet-active:hover {
-    background: blue;
-}
-
-.swiper-pagination-bullet{
-    background: white;
+.swiper-pagination-bullet {
+    background: var(--clr-light);
 
     /* remove if doesnt work */
-    height: 16px; 
-    width: 16px; 
+    height: 16px;
+    width: 16px;
     margin: 5px;
-   } 
+}
 
 .swiper-pagination-bullet:hover {
-    background: purple;
-    transition: color 0.3s;
+    background: var(--clr-slate400);
 }
 
 /* Changes the color of the arrows */
 .swiper-button-next,
 .swiper-button-prev {
-    color: red;
+    color: var(--clr-light);
     transition: color 0.3s;
     cursor: pointer;
 }
@@ -69,6 +135,6 @@
 /* Changes the color of the arrows when you hover over them*/
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    color: darkorange;
+    color: var(--clr-slate400);
     transition: color 0.3s;
 }

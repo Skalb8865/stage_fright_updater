@@ -98,16 +98,6 @@ main {
     line-height: 3rem;
 }
 
-.section-title hr {
-    border: none;
-    height: 7px;
-    width: 13%;
-    border-radius: 10px;
-    background: var(--clr-rose);
-    margin-bottom: var(--size-2xl);
-}
-
-
 /* ************** */
 /* Navbar Section */
 /* ************** */
@@ -296,7 +286,7 @@ main {
 }
 
 .mobile-nav--item:hover {
-    color: var(--clr-rose);
+    color: var(--clr-active-link);
     transition: color 0.3s;
 }
 
@@ -434,7 +424,6 @@ main {
 .about-img img {
     width: 75%;
     height: 75%;
-    border-radius: 5px;
     object-fit: contain;
 }
 
@@ -468,7 +457,6 @@ main {
 
 .member-cards {
     position: relative;
-    border-radius: 8px;
     width: 370px;
     height: 370px;
     transition: .35s;
@@ -480,7 +468,6 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
 }
 
 /* Increase the size of the cards when you hover over them */
@@ -496,7 +483,6 @@ main {
     height: 0;
     width: 100%;
     background: linear-gradient(transparent, black 100%);
-    border-radius: 8px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -694,14 +680,12 @@ input[type=number]::-webkit-outer-spin-button {
 .merch_img--card {
     height: 600px;
     width: 600px;
-    border-radius: 7px;
 }
 
 .merch_img--card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 7px;
 }
 
 .merch_content h1 {
@@ -754,12 +738,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .tour-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 2em;
     border: 1px solid rgb(75, 82, 92);
-    border-radius: 10px;
     background-color: #222429;
     transition: border 0.3s;
     text-align: center;
+    height: 400px;
 }
 
 .tour-card:hover {
@@ -842,7 +830,6 @@ dialog[open]::backdrop {
     width: 100%;
 }
 
-
 .tour_container {
     display: flex;
     justify-content: center;
@@ -854,7 +841,8 @@ dialog[open]::backdrop {
 
 .tour_container form {
     padding: 20px;
-    width: 700px;
+    width: 1460px;
+    height: 600px;
     background: var(--clr-dark);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
@@ -905,13 +893,9 @@ dialog[open]::backdrop {
     gap: 15px;
 }
 
-.tour_container form .row .col .flex .inputBox {
-    margin-top: 5px;
-}
-
 .tour_container form .row .col .inputBox img {
     height: 34px;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .tour_container form .submit-btn {
@@ -949,7 +933,6 @@ dialog[open]::backdrop {
 
 .albums-cards {
     position: relative;
-    border-radius: 10px;
     width: 410px;
     height: 409px;
     margin: 10px;
@@ -961,7 +944,6 @@ dialog[open]::backdrop {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 /* Increase the size of the cards when you hover over them */
@@ -1001,10 +983,6 @@ dialog[open]::backdrop {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.main_img--card img {
-    border-radius: 10px;
 }
 
 .main_content {
@@ -1246,7 +1224,6 @@ form .required {
     width: var(--size-3xl);
     cursor: pointer;
     padding: 20px;
-    border-radius: 25px;
     transition: all 0.3s;
 }
 
@@ -1364,7 +1341,6 @@ form .required {
 
     .OtherAlbumsCards img {
         width: 400px;
-        border-radius: 10px;
     }
 
     .main_img--container {
@@ -1487,7 +1463,6 @@ form .required {
 
     .albums-cards {
         position: relative;
-        border-radius: 10px;
         width: 350px;
         height: 350px;
         margin: 10px;
