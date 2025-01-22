@@ -835,7 +835,6 @@ dialog[open]::backdrop {
     justify-content: center;
     align-items: center;
     padding: 25px;
-    min-height: 100vh;
     background: transparent;
 }
 
