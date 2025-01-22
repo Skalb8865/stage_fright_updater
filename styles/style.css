@@ -68,6 +68,7 @@ main {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    border: 1px solid red;
 }
 
 .navbar-container {
@@ -284,6 +285,13 @@ main {
 .mobile-nav--item {
     font-size: 2rem;
     color: var(--clr-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.active-mobile-link{
+    font-size: 2rem;
+    color: var(--clr-rose);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -1170,6 +1178,12 @@ form .required {
 
 /* the message textarea */
 #message {
+    width: 100%;
+    resize: none;
+    padding-bottom: 45px;
+}
+
+#description{
     width: 100%;
     resize: none;
     padding-bottom: 45px;

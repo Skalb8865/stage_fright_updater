@@ -22,7 +22,6 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
-    <link rel="stylesheet" href="/styles/shopping.css">
 
     <!-- -------- -->
     <!-- JS Links -->
@@ -35,7 +34,7 @@
 </head>
 
 <body>
-    <header style="padding: 0;" class="container">
+    <header class="container">
         <nav class="navbar">
             <div class="nav-left--section">
                 <div class="header-social--links">
@@ -46,24 +45,25 @@
                         <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                     <div class="icon">
-                        <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D" aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
+                            aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="icon">
                         <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div> 
+                    </div>
                 </div>
-                <div id="mobile-nav--icon">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
                     <i class="ri-menu-line"></i>
-                </div>
+                </button>
                 <div class="mobile-nav">
                     <ul class="mobile-nav--list">
-                        <li class="mobile-nav--item">
-                            <a href="/html/About/about.html" ariarequired-label="About Page">
+                        <li class="active-mobile-link">
+                            <a href="about.html" aria-label="About Page" aria-current="page">
                                 Band
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="/html/Music/music.html" aria-label="Music Page">
+                            <a href="../Music/music.html" aria-label="Music Page">
                                 Music
                             </a>
                         </li>
@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="/html/Tours/tour.html" aria-label="Tours Page">
+                            <a href="../Tours/tour.html" aria-label="Tours Page">
                                 Tour
                             </a>
                         </li>
@@ -86,8 +86,8 @@
             <div class="nav-center--section">
                 <div class="center-left">
                     <ul class="center-left--list">
-                        <li class="active-link"><a href="about.html" aria-label="About Band" aria-current="Page">Band</a>
-                        </li>
+                        <li class="active-link"><a href="about.html" aria-label="About Band"
+                                aria-current="Page">Band</a></li>
                         <li class="nav-item"><a href="../Music/music.html" aria-label="Music Page">Music</a></li>
                     </ul>
                 </div>
@@ -99,17 +99,19 @@
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a></li>
-                        <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a></li>
+                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a>
+                        </li>
+                        <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div class="nav-right--section">
-                <div id="cart-icon">
+                <button id="cart-icon" aria-label="open cart" aria-controls="cart" aria-expanded="false">
                     <i class="ri-shopping-bag-line"></i>
-                    <span class="cart-icon-count" id="total-items"></span>
-                </div>
+                </button>
+                <span class="cart-icon-count" id="total-items"></span>
                 <!-- CART  -->
                 <div class="cart">
                     <h2 class="cart-title">Your Cart</h2>
@@ -159,45 +161,45 @@
         </section>
 
         <!-- -------------- -->
-    <!-- Member Section -->
-    <!-- -------------- -->
-    <section class="member container section ">
-        <h1 class="section-title">Our Members</h1>
-        <div class="member-wrapper" id="haha">
+        <!-- Member Section -->
+        <!-- -------------- -->
+        <section class="member container section ">
+            <h1 class="section-title">Our Members</h1>
+            <div class="member-wrapper" id="haha">
 
-            <div class="member-cards">
-                <img loading="lazy" decoding="async" src="/res/members/aidien.webp" alt="Aidien, Lead Vocalist" />
-                <div class="overlay">
-                    <h2>Aidien Gooden</h2>
-                    <p>Lead Vocalist</p>
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/members/aidien.webp" alt="Aidien, Lead Vocalist" />
+                    <div class="overlay">
+                        <h2>Aidien Gooden</h2>
+                        <p>Lead Vocalist</p>
+                    </div>
+                </div>
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/members/sean.webp" alt="Sean, Lead Guitarist" />
+                    <div class="overlay">
+                        <h2>Sean Kalb</h2>
+                        <p>Lead Guitarist</p>
+                    </div>
+                </div>
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/members/jabari.webp" alt="Jabari, Drummer" />
+                    <div class="overlay">
+                        <h2>Jabari Hill</h2>
+                        <p>Drummer</p>
+                    </div>
+                </div>
+
+                <div class="member-cards">
+                    <img loading="lazy" decoding="async" src="/res/members/gabe.webp" alt="Gabe, Lead Bassist" />
+                    <div class="overlay">
+                        <h2>Gabe Zeigler</h2>
+                        <p>Lead Bassist</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="member-cards">
-                <img loading="lazy" decoding="async" src="/res/members/sean.webp" alt="Sean, Lead Guitarist" />
-                <div class="overlay">
-                    <h2>Sean Kalb</h2>
-                    <p>Lead Guitarist</p>
-                </div>
-            </div>
-
-            <div class="member-cards">
-                <img loading="lazy" decoding="async" src="/res/members/jabari.webp" alt="Jabari, Drummer" />
-                <div class="overlay">
-                    <h2>Jabari Hill</h2>
-                    <p>Drummer</p>
-                </div>
-            </div>
-
-            <div class="member-cards">
-                <img loading="lazy" decoding="async" src="/res/members/gabe.webp" alt="Gabe, Lead Bassist" />
-                <div class="overlay">
-                    <h2>Gabe Zeigler</h2>
-                    <p>Lead Bassist</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
 
 
