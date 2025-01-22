@@ -13,28 +13,25 @@
 }
 
 /* Swiper Container */
-
 .swiper-wrapper {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    height: 450px;
 }
 
 .swiper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    height: 450px;
+    padding-bottom: 100px;
 }
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: grab;
-    max-width: 525px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
+    flex-grow: 0;
+    flex-shrink: 0;
     padding: 5px;
 }
 
@@ -44,6 +41,7 @@
     align-items: center;
     width: 100%;
     color: var(--clr-light);
+    padding-right: 15px;
 }
 
 .tour-link a:hover {
@@ -137,4 +135,33 @@
 .swiper-button-prev:hover {
     color: var(--clr-slate400);
     transition: color 0.3s;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-tour-card {
+        width: 75%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-tour-card {
+        width: 85%;
+        height: 100%;
+    }
 }
