@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
-    loop: false,
+    loop: true,
     speed: 700,
     autoplay: {
         delay: 2000,

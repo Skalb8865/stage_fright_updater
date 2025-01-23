@@ -22,7 +22,7 @@ media.addEventListener("change", (e) => updateNavbar(e));
 
 function updateNavbar(e) {
   const isMobile = e.matches;
-  
+
   if (isMobile) {
     mobileNav.setAttribute("inert", "");
     cart.setAttribute("inert", "");
@@ -191,6 +191,7 @@ function addCartItem() {
   let existingItem = cart.find(
     (el) => el.title == newToAdd.title && el.size == newToAdd.size
   );
+  
   if (existingItem) {
     existingItem.quantity = Math.min(existingItem.quantity + quantity, 10);
   } else {

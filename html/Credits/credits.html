@@ -1,3 +1,16 @@
+<!-- https://swiperjs.com/ - Swiper
+
+https://www.youtube.com/watch?v=b7uytYTpKos&t=1102s - shopping cart
+
+
+https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld -
+bright night concert img
+
+https://www.youtube.com/watch?v=DULSXJ-sfeM&t=59s - payment dialog
+
+https://unsplash.com/photos/a-large-crowd-of-people-at-a-concert-wOOh6Aez-Ac - news picture -->
+
+
 <!doctype html>
 <html lang="en">
 
@@ -6,7 +19,7 @@
     <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unleash Your Inner Fright Black Sweatpants | Stage Fright</title>
+    <title>Tour | Stage Fright</title>
 
     <!-- --------- -->
     <!-- CSS Links -->
@@ -17,7 +30,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     </noscript>
 
-
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -27,9 +39,9 @@
     <!-- -------- -->
     <!-- JS Links -->
     <!-- -------- -->
-    <script type="module" src="/src/main.js" async defer></script>
-    <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async defer></script>
-
+    <script type="module" src="/src/main.js" async></script>
+    <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async></script>
+    <script type="module" src="/src/tour.js" async></script>
 
     <meta name="description" content="Stage Fright Website">
     <meta name="keywords" content="Web Design, html, css, js">
@@ -63,22 +75,22 @@
                 <div class="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
-                            <a href="/html/About/about.html" aria-label="About Page">
+                            <a href="../About/about.html" aria-label="About Page">
                                 Band
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="/html/Music/music.html" aria-label="Music Page">
+                            <a href="../Music/music.html" aria-label="Music Page">
                                 Music
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../merch.html" aria-label="Merch Page">
+                            <a href="../Merch/merch.html" aria-label="Merch Page">
                                 Merch
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="/html/Tours/tour.html" aria-label="Tours Page">
+                            <a href="../Tours/tour.html" aria-label="Tours Page">
                                 Tour
                             </a>
                         </li>
@@ -91,8 +103,8 @@
             <div class="nav-center--section">
                 <div class="center-left">
                     <ul class="center-left--list">
-                        <li class="nav-item"><a href="/html/About/about.html" aria-label="About Band">Band</a></li>
-                        <li class="nav-item"><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
+                        <li class="nav-item"><a href="../About/about.html" aria-label="About Band">Band</a></li>
+                        <li class="nav-item"><a href="../Music/music.html" aria-label="Music Page">Music</a></li>
                     </ul>
                 </div>
 
@@ -103,9 +115,10 @@
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../merch.html" aria-label="Merch Page">Merch</a>
+                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a>
                         </li>
-                        <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a></li>
+                        <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -144,102 +157,63 @@
     </header>
 
     <main class="main">
-        <!--ABOUT SECTION-->
-        <div class="merch-container product-box container">
-            <div class="merch_img--container">
-                <div class="merch_img--card"><img src="/res/merch/pants.webp" alt="Stage Fright White Hat"></div>
-            </div>
-            <div class="merch_content">
-                <h1 class="product-title">Unleash Your Inner Fright Black Sweatpants</h1>
-                <h2 class="product-price">$16.99</h2>
-                <p class="product-description">Black Sweatpants With Our Band Motto. Made with 90% polyester and 10%
-                    spandex</p>
+        <section class="container section">
+            <h1 class="section-title">Credits Page</h1>
+            <div class="credits">
+                <div class="credits-card">
+                    <h1>Homepage Hero Image</h1>
+                    <a href="https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld"
+                        aria-label="Wallpaperflare Website" target="_blank">Link</a>
+                </div>
 
-                <ul class="size-list">
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Small" aria-label="Size Small"
-                            aria-required="true" required />
-                        <label for="size">S</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Medium" aria-required="true" required />
-                        <label for="size">M</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Large" aria-required="true" required />
-                        <label for="size">L</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Large" aria-required="true" required />
-                        <label for="size">XL</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Extra Large" aria-required="true"
-                            required />
-                        <label for="size">XXL</label>
-                    </li>
-                </ul>
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
+                <div class="credits-card">
+                    <h1>Payment Dialog</h1>
+                    <a href="https://www.youtube.com/watch?v=DULSXJ-sfeM&t=59s" aria-label="Youtube Website"
+                        target="_blank">Link</a>
+                </div>
 
-                    <div class="number-input">
-                        <button class="quantity-btn minus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                        <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
-                        <button class="quantity-btn plus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
-                    </div>
+                <div class="credits-card">
+                    <h1>Swiper</h1>
+                    <a href="https://swiperjs.com/" aria-label="Swiperjs Website" target="_blank">Link</a>
+                </div>
 
-                    <button class="add-cart">Add To Cart</button>
+                <div class="credits-card">
+                    <h1>Cart</h1>
+                    <a href="https://www.youtube.com/watch?v=b7uytYTpKos&t=1102s" aria-label="Youtube Website"
+                        target="_blank">Link</a>
                 </div>
-            </div>
-        </div>
 
-        <!-- SHOP SECTION  -->
-        <section class="shop merch_suggestions--container section">
-            <h2 class="shop-title">You May Also Like</h2>
-            <!-- CONTENT  -->
-            <div class="shop-content">
-                <!-- BOX 1 -->
-                <div class="merch-box">
-                    <a href="./acantha_hoodie.html" aria-label="Acantha Black Hoodie"><img
-                            src="/res/merch//AcanthaHood.webp" alt="Acantha Black Hoodie" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Acantha Black Hoodie</h2>
-                        <span class="product-price">$24.99</span>
-                    </div>
+                <div class="credits-card">
+                    <h1>JavaScript Frontend Tool</h1>
+                    <a href="https://vite.dev/" aria-label="Vite Website" target="_blank">Link</a>
                 </div>
-                <!-- BOX 2 -->
-                <div class="merch-box">
-                    <a href="./nyx_black_hoodie.html"><img src="/res/merch/Nyxhood.webp" alt="NYX Black Hoodie"
-                            class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">NYX Black Hoodie</h2>
-                        <span class="product-price">$24.99</span>
-                    </div>
+
+                <div class="credits-card">
+                    <h1>Website Deployment</h1>
+                    <a href="https://vercel.com/" aria-label="Vercel Website" target="_blank">Link</a>
                 </div>
-                <!-- BOX 3 -->
-                <!-- BOX 7 -->
-                <div class="merch-box">
-                    <a href="../Accessories/motto_phone_case.html" aria-label="Moto Phone Case<"><img
-                            src="/res/merch/Phone_Case.webp" alt="Stage Fright Moto Phone Case" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Black Motto <span style="text-transform: none;">i</span>Phone Case
-                        </h2>
-                        <span class="product-price">$9.99</span>
-                    </div>
+
+                <div class="credits-card">
+                    <h1>Icons</h1>
+                    <span><a href="https://remixicon.com/" aria-label="Remixicon Website" target="_blank">Link</a> and <a
+                        href="https://fontawesome.com/" aria-label="Font Awesome Website" target="_blank">Link</a></span> 
                 </div>
-                <!-- BOX 4 -->
-                <div class="merch-box">
-                    <a href="./prometheus_T-shirt.html"><img src="/res/merch/PrometheusShirt.webp"
-                            alt="Prometheus Black T-Shirt" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Prometheus Black T-Shirt</h2>
-                        <span class="product-price">$18.99</span>
-                    </div>
-                </div>
+                <!-- https://docs.google.com/document/d/1ozOq3qKO1r69MjFD6RO1yv_1ymAlu_OYYPzQKRO1R2M/export?format=pdf -->
             </div>
         </section>
+
+        <div class="citation__icons">
+            <div class="icon">
+                <a href="https://docs.google.com/document/d/1ozOq3qKO1r69MjFD6RO1yv_1ymAlu_OYYPzQKRO1R2M/edit?pli=1&tab=t.0"
+                    aria-label="Google Doc MLA Citations" target="_blank"><i class="fa-brands fa-google-drive"></i></a>
+            </div>
+
+            <div class="icon">
+                <a href="https://docs.google.com/document/d/1ozOq3qKO1r69MjFD6RO1yv_1ymAlu_OYYPzQKRO1R2M/export?format=pdf"
+                    aria-label="Pdf version of our MLA Citations" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i></a>
+            </div>
+        </div>
     </main>
 
 

@@ -37,9 +37,10 @@
     <!-- -------- -->
     <!-- JS Links -->
     <!-- -------- -->
-    <script type="module" src="./src/main.js" async></script>
+    <script type="module" src="./src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./src/tour.js"></script>
 
 
     <meta name="description" content="Stage Fright Website">
@@ -52,17 +53,20 @@
             <div class="nav-left--section">
                 <div class="header-social--links">
                     <div class="icon">
-                        <a href="#" aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
+                        <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
+                            aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
                     </div>
                     <div class="icon">
-                        <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                     <div class="icon">
                         <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
                             aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="icon">
-                        <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
@@ -153,52 +157,84 @@
 
 
     <main class="main">
-        <!-- -------------- -->
+        <!-- ------------ -->
         <!-- Hero Section -->
-        <!-- -------------- -->
+        <!-- ------------ -->
         <div class="hero-section">
             <img src="res/brigh_night_concert/optimized-bnc.webp" alt="">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Unleash Your Inner Rock</h1>
-                <!-- <a class="hero-link"
-                    href="https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld"
-                    aria-label="Wallpaperflare Website">https://www.wallpaperflare.com/people-having-a-concert-audience-celebration-crowd-entertainment-wallpaper-aotld</a> -->
             </div>
         </div>
 
+
+        <!-- ------------ -->
+        <!-- News Section -->
+        <!-- ------------ -->
         <div class="container section">
-            <div class="albums-page">
-                <h1 class="section-title">NEWS</h1>
-                <div class="our-albums" id="our-albums">
-                    <div class="albums-wrapper">
-                        <div class="albums-cards">
-                            <a href="./Albums/prometheus.html" aria-label="Prometheus Album Page">
-                                <img loading="lazy" class="lazy" src="https://fakeimg.pl/500x500"
-                                    alt="Our Album PROMETHEUS" />
-                            </a>
+            <h1 class="section-title">NEWS</h1>
+            <div class="news">
+                <div class="news-wrapper">
+                    <div class="news-card">
+                        <div class="news-info--section">
+                            <h1 class="headline-date">01.26.25</h1>
+                            <h1 class="headline">
+                                Stage Frights 2025 Hermes Tour Begins
+                            </h1>
                         </div>
+                    </div>
 
-                        <div class="albums-cards">
-                            <a href="./Albums/acantha.html" aria-label="Acantha Album Page">
-                                <img loading="lazy" class="lazy" src="https://fakeimg.pl/500x500"
-                                    alt="Our Album Acantha" />
-                            </a>
+                    <div class="news-card">
+                        <a href="#" aria-label="Acantha Album Page">
+                            <img loading="lazy" class="lazy"
+                                src="https://images.unsplash.com/photo-1722841550051-790fd02e8c78?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Rock Concert Image" />
+                        </a>
+                        <div class="news-info--section">
+                            <div class="credit">
+                                <p>Photo by <a
+                                        href="https://unsplash.com/@jerrografie?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">James
+                                        Jeremy Beckers</a> on <a
+                                        href="https://unsplash.com/photos/a-large-crowd-of-people-at-a-concert-wOOh6Aez-Ac?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                                </p>
+                            </div>
+                            <h1 class="headline-date">02.05.25</h1>
+                            <h1 class="headline">
+                                Stage Fright in in Pennsylvania
+                            </h1>
                         </div>
+                    </div>
 
-                        <div class="albums-cards">
-                            <a href="./Albums/nyx.html" aria-label="NYX Album Page">
-                                <img loading="lazy" class="lazy" src="https://fakeimg.pl/500x500" alt="Our Album NYX" />
-                            </a>
+                    <div class="news-card">
+                        <a href="#" aria-label="Acantha Album Page">
+                            <img loading="lazy" class="lazy"
+                                src="https://images.unsplash.com/photo-1495651779359-881fde1808a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Rock Concert Image" />
+                        </a>
+                        <div class="news-info--section">
+                            <div class="credit">
+                                Photo by <a
+                                    href="https://unsplash.com/@alxstls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alexandre
+                                    St-Louis</a> on <a
+                                    href="https://unsplash.com/photos/man-playing-guitar-on-his-back-IlfpKwRMln0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+                            </div>
+                            <h1 class="headline-date">02.12.25</h1>
+                            <h1 class="headline">
+                                One Month Until Stage Fright In New York
+                            </h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <!-- ------------------- -->
+        <!-- Tour Slider Section -->
+        <!-- ------------------- -->
         <div class="container section" id="main-content">
-            <h2 class="section-title">Merch</h2>
+            <h2 class="section-title">TOURS</h2>
             <div class="tour-link">
                 <a href="html/Tours/tour.html">View All Tour Dates</a>
             </div>
@@ -206,67 +242,51 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-swiper-autoplay="2000">
                         <div class="swiper-tour-card">
-                            <h2>Jan 26th - 27th</h2>
-                            <h1>Columbus,<br> OH,<br> United States</h1>
+                            <h1>Jan 26th - 27th</h1>
+                            <h2>Columbus,<br> OH,<br> United States</h2>
                             <h3>The King Of Clubs</h3>
-                            <button class="btn" id="open-modal">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
                         <div class="swiper-tour-card">
-                            <h2>Feb 1st - 2nd</h2>
-                            <h1>Columbus,<br> OH,<br> United States</h1>
+                            <h1>Feb 1st - 2nd</h1>
+                            <h2>Columbus,<br> OH,<br> United States</h2>
                             <h3>SKULLYS MUSIC DINER</h3>
-                            <button class="btn" id="open-modal2">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
                         <div class="swiper-tour-card">
-                            <h2>Feb 1st - 2nd</h2>
-                            <h1>Columbus,<br> OH,<br> United States</h1>
-                            <h3>SKULLYS MUSIC DINER</h3>
-                            <button class="btn" id="open-modal2">Buy Tickets</button>
+                            <h1>Feb 5th - 6th</h1>
+                            <h2> Philadelphia,<br> PA,<br> United States</h2>
+                            <h3>Underground Arts</h3>
                         </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
                         <div class="swiper-tour-card">
-                            <h2>Feb 1st - 2nd</h2>
-                            <h1>Columbus,<br> OH,<br> United States</h1>
-                            <h3>SKULLYS MUSIC DINER</h3>
-                            <button class="btn" id="open-modal2">Buy Tickets</button>
+                            <h1>Feb 7th - 8th</h1>
+                            <h2> Philadelphia,<br> PA,<br> United States</h2>
+                            <h3>Franklin Music Hall</h3>
                         </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <div class="merch-box">
-                            <a href="html/Merch/Apparel/prometheus_black_hoodie.html"><img
-                                    src="/res/merch/Prometheushood.webp" alt="Prometheus Black Hoodie"
-                                    class="product-img"></a>
-                            <div class="info-section">
-                                <h2 class="product-title">Prometheus Black Hoodie</h2>
-                                <span class="product-price">$24.99</span>
-                            </div>
+                        <div class="swiper-tour-card">
+                            <h1>Feb 12th - 13th</h1>
+                            <h2>Brooklyn,<br> NY,<br> United States</h2>
+                            <h3>Brooklyn Paramount</h3>
                         </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <div class="merch-box">
-                            <a href="html/Merch/Accessories/motto_phone_case.html" aria-label="Moto Phone Case<"><img
-                                    src="/res/merch/Phone_Case.webp" alt="Stage Fright Moto Phone Case"
-                                    class="product-img"></a>
-                            <div class="info-section">
-                                <h2 class="product-title">Motto Phone Case</h2>
-                                <span class="product-price">$9.99</span>
-                            </div>
+                        <div class="swiper-tour-card">
+                            <h1>Feb 15th - 16th</h1>
+                            <h2>Lewiston,<br> NY,<br> United States</h2>
+                            <h3>Artpark</h3>
                         </div>
                     </div>
                     <div class="swiper-slide" data-swiper-autoplay="10000">
-                        <div class="merch-box">
-                            <a href="html/Merch/Accessories/logo_white_airpod_case.html"><img
-                                    src="/res/merch/backAirpod.webp" alt="Logo White Airpod Case"
-                                    class="product-img"></a>
-                            <div class="info-section">
-                                <h2 class="product-title">Logo White Airpod Case</h2>
-                                <span class="product-price">$7.99</span>
-                            </div>
+                        <div class="swiper-tour-card">
+                            <h1>Feb 18th - 19th</h1>
+                            <h2>Jericho,<br> NY,<br> United States</h2>
+                            <h3>Flagstar at Westbury Music Fair</h3>
                         </div>
                     </div>
                 </div>
@@ -276,38 +296,41 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-
     </main>
 
 
     <!-- -------------- -->
     <!-- Footer Section -->
     <!-- -------------- -->
-    <hr>
-    <footer class="footer container section">
-        <div class="footer-content">
-            <p>stagefright921@gmail.com</p>
-            <div class="header-social--links">
-                <div class="icon">
-                    <a href="#" aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
-                </div>
-                <div class="icon youtube-link">
-                    <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-                <div class="icon">
-                    <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
-                        aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <div class="icon">
-                    <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <footer class="">
+        <!--FOOTER SECTION-->
+        <div class="footer_container">
+            <div class="footer_links"><!--links section-->
+                <div class="footer_link_wrapper"><!--links wrapper-->
+                    <div class="footer_link_items"><!-- link group 1-->
+                        <a href="html/Credits/credits.html" aria-label="Credits Page">
+                            Credits
+                        </a>
+                        <hr class="small_hr">
+                    </div>
+                    <div class="footer_link_items"><!-- link group 2-->
+                        <a href="html/Contact/contact.html" aria-label="Contact Page">
+                            Contact Us
+                        </a>
+                        <hr class="small_hr">
+                    </div>
+                    <div class="footer_link_items"><!-- link group 2-->
+                        <a href="html/Contact/customer_service.html" aria-label="Customer Service Page">
+                            Customer Service
+                        </a>
+                        <hr class="small_hr">
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; &nbsp; Stage Fright 2024. All rights reserved.</p>
-                <a href="./html/Contact/contact.html" aria-label="Contact Page">Contact Us</a>
-                <a href="./html/Contact/customer_service.html" aria-label="Customer Service Page">Customer Service</a>
-            </div>
+            <p class="website_rights">&copy; &nbsp; PS Final Project 2024. All rights reserved.</p>
+            <!--copyright info-->
         </div>
+        <!-- Font Awesome Js =============================== -->
     </footer>
 </body>
 

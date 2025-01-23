@@ -40,17 +40,20 @@
             <div class="nav-left--section">
                 <div class="header-social--links">
                     <div class="icon">
-                        <a href="#" aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
+                        <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
+                            aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
                     </div>
                     <div class="icon">
-                        <a href="#" aria-label="Our Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                     <div class="icon">
                         <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
                             aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="icon">
-                        <a href="#" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
@@ -74,7 +77,7 @@
                             </a>
                         </li>
                         <li class="active-mobile-link">
-                            <a href="../Tours/tour.html" aria-label="Tours Page" aria-current="page">
+                            <a href="tour.html" aria-label="Tours Page" aria-current="page">
                                 Tour
                             </a>
                         </li>
@@ -142,7 +145,7 @@
 
     <main class="main">
 
-        <section class="container section" id="tour-section">
+        <section class="container section">
             <h1 class="section-title">Hermes Tour</h1>
             <div class="tours">
                 <div class="tour-card">
@@ -209,10 +212,24 @@
                 </div>
 
                 <div class="tour-card">
-                    <h1>Feb 28th - 29th</h1>
+                    <h1>Feb 28th - Mar 1st</h1>
                     <h2>Columbus,<br> OH,<br> United States</h2>
                     <h3>Newport Music Hall</h3>
                     <button class="btn" id="open-modal10">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <h1>Mar 2nd - 3rd</h1>
+                    <h2>Columbus,<br> OH,<br> United States</h2>
+                    <h3>The Summit Music Hall</h3>
+                    <button class="btn" id="open-modal11">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <h1>Mar 5th - Mar 6th</h1>
+                    <h2>Columbus,<br> OH,<br> United States</h2>
+                    <h3>KEMBA Live!</h3>
+                    <button class="btn" id="open-modal12">Buy Tickets</button>
                 </div>
             </div>
         </section>
@@ -221,157 +238,960 @@
 
         <dialog id="dialog">
             <div class="tour_container">
-                <form action="">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
                     <div class="row">
                         <div class="col">
                             <h3 class="title">billing address</h3>
                             <div class="inputBox">
                                 <span>Full Name</span>
-                                <input type="text">
+                                <input type="text" name="first_name" autocomplete="off" required>
                             </div>
 
                             <div class="inputBox">
                                 <span>Email</span>
-                                <input type="email">
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
                             </div>
 
                             <div class="inputBox">
                                 <span>Address</span>
-                                <input type="text">
+                                <input type="text" name="address" autocomplete="off" required>
                             </div>
 
                             <div class="flex">
                                 <div class="inputBox">
                                     <span>City</span>
-                                    <input type="text">
+                                    <input type="text" name="city" autocomplete="off" required>
                                 </div>
 
                                 <div class="inputBox">
                                     <span>State</span>
-                                    <input type="text">
+                                    <input type="text" name="state" autocomplete="off" required>
                                 </div>
 
                                 <div class="inputBox">
                                     <span>Zip Code</span>
-                                    <input type="text">
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col">
                             <h3 class="title">payment</h3>
-                            <div class="inputBox">
-                                <span>Cards Accepted</span>
-                                <img src="/res/card_img.png" alt="">
-                            </div>
 
                             <div class="inputBox">
                                 <span>Name on Card</span>
-                                <input type="text">
+                                <input type="text" name="name on card" autocomplete="off" required>
                             </div>
 
                             <div class="inputBox">
                                 <span>Credit Card Number</span>
-                                <input type="number">
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
                             </div>
 
                             <div class="flex">
                                 <div class="inputBox">
-                                    <span>Exp Month</span>
-                                    <input type="text">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
                                 </div>
 
                                 <div class="inputBox">
-                                    <span>Exp Year</span>
-                                    <input type="number">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
                                 </div>
                                 <div class="inputBox">
                                     <span>CVV</span>
-                                    <input type="text">
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" id="close-modal" class="btn">Order Tickets</button>
+                    <button type="submit" class="btn">Order Tickets</button>
                 </form>
             </div>
         </dialog>
 
-
         <dialog id="dialog2">
             <div class="tour_container">
-                <form action="">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
                     <div class="row">
                         <div class="col">
                             <h3 class="title">billing address</h3>
                             <div class="inputBox">
                                 <span>Full Name</span>
-                                <input type="text">
+                                <input type="text" name="first_name" autocomplete="off" required>
                             </div>
 
                             <div class="inputBox">
                                 <span>Email</span>
-                                <input type="email">
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
                             </div>
 
                             <div class="inputBox">
                                 <span>Address</span>
-                                <input type="text">
+                                <input type="text" name="address" autocomplete="off" required>
                             </div>
 
                             <div class="flex">
                                 <div class="inputBox">
                                     <span>City</span>
-                                    <input type="text">
+                                    <input type="text" name="city" autocomplete="off" required>
                                 </div>
 
                                 <div class="inputBox">
                                     <span>State</span>
-                                    <input type="text">
+                                    <input type="text" name="state" autocomplete="off" required>
                                 </div>
 
                                 <div class="inputBox">
                                     <span>Zip Code</span>
-                                    <input type="text">
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col">
                             <h3 class="title">payment</h3>
-                            <div class="inputBox">
-                                <span>Cards Accepted</span>
-                                <img src="/res/card_img.png" alt="">
-                            </div>
 
                             <div class="inputBox">
                                 <span>Name on Card</span>
-                                <input type="text">
+                                <input type="text" name="name on card" autocomplete="off" required>
                             </div>
 
                             <div class="inputBox">
                                 <span>Credit Card Number</span>
-                                <input type="number">
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
                             </div>
 
                             <div class="flex">
                                 <div class="inputBox">
-                                    <span>Exp Month</span>
-                                    <input type="text">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
                                 </div>
 
                                 <div class="inputBox">
-                                    <span>Exp Year</span>
-                                    <input type="number">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
                                 </div>
                                 <div class="inputBox">
                                     <span>CVV</span>
-                                    <input type="text">
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" id="close-modal" class="btn">Order Tickets</button>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog3">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog4">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog5">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog6">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog7">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog8">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog9">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog10">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog11">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialog12">
+            <div class="tour_container">
+                <form action="https://formspree.io/f/xldddvdj" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">billing address</h3>
+                            <div class="inputBox">
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" name="Email"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" name="address" autocomplete="off" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>City</span>
+                                    <input type="text" name="city" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" name="state" autocomplete="off" required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Zip Code</span>
+                                    <input type="text" name="zip code" autocomplete="off"
+                                        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="title">payment</h3>
+
+                            <div class="inputBox">
+                                <span>Name on Card</span>
+                                <input type="text" name="name on card" autocomplete="off" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <span>Credit Card Number</span>
+                                <input type="number" name="credit card number" placeholder="xxxx xxxx xxxx xxxx"
+                                    autocomplete="off" pattern="[0-9\s]{13,19}" required>
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Tickets($18)</span>
+                                    <input type="number" min="1" max="10" name="ticket amount" autocomplete="off"
+                                        required>
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Exp Date</span>
+                                    <input type="date" name="expiration date" autocomplete="off" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="number" name="cvv" max="999" pattern="([0-9]|[0-9]|[0-9])">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Order Tickets</button>
                 </form>
             </div>
         </dialog>
