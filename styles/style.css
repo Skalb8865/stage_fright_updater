@@ -1078,6 +1078,13 @@ dialog[open]::backdrop {
     align-items: center;
 }
 
+.songs{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .Soundtrack {
     padding-bottom: 10px;
     margin-top: 2px;
