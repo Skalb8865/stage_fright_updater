@@ -145,7 +145,7 @@
 
 @media screen and (max-width: 800px) {
 
-    .swiper-slide{
+    .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -159,7 +159,7 @@
 
 @media screen and (max-width: 600px) {
 
-    .swiper-slide{
+    .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;

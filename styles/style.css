@@ -846,9 +846,9 @@ main {
 
 dialog {
     margin: auto;
-    padding: 0;
+    padding: 50px;
     transition: all 0.3s allow-discrete;
-    background: transparent;
+    background: var(--clr-dark);
 }
 
 
@@ -906,79 +906,6 @@ dialog[open]::backdrop {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
-.tour_container form .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.tour_container form .row .col {
-    flex: 1 1 250px;
-}
-
-.tour_container form .row .col .title {
-    font-size: 20px;
-    color: var(--clr-light);
-    padding-bottom: 5px;
-    text-transform: uppercase;
-}
-
-.tour_container form .row .col .inputBox {
-    margin: 15px 0;
-    color: var(--clr-light);
-}
-
-.tour_container form .row .col .inputBox span {
-    margin-bottom: 10px;
-    display: block;
-    color: var(--clr-light);
-}
-
-.tour_container form .row .col .inputBox input {
-    width: 100%;
-    border: 1px solid #ccc;
-    background: var(--clr-dark);
-    padding: 10px 15px;
-    font-size: 15px;
-    text-transform: none;
-}
-
-.tour_container form .row .col .inputBox input:focus {
-    border: 1px solid var(--clr-light);
-    outline: none;
-}
-
-.tour_container form .row .col .flex {
-    display: flex;
-    gap: 15px;
-}
-
-.tour_container form .row .col .inputBox img {
-    height: 34px;
-    margin-top: 20px;
-}
-
-.tour_container form .submit-btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 17px;
-    background: #27ae60;
-    color: #fff;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.tour_container form .submit-btn:hover {
-    background: #2ecc71;
-}
-
-.payment_warning{
-    color: var(--clr-light);
-    position: relative;
-    top: -100px;
-}
-
-
 /* ************** */
 /* Albums Section */
 /* ************** */
@@ -1025,7 +952,7 @@ dialog[open]::backdrop {
     align-items: center;
 }
 
-.albums-buttons{
+.albums-buttons {
     display: flex;
     gap: 5px;
 }
@@ -1078,8 +1005,8 @@ dialog[open]::backdrop {
     align-items: center;
 }
 
-.songs{
-    display: flex; 
+.songs {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1259,7 +1186,7 @@ form .required {
     gap: 15px;
 }
 
-.credits-card{
+.credits-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1280,7 +1207,8 @@ form .required {
     padding: 10px;
 }
 
-.credits-card a, .credits-card span {
+.credits-card a,
+.credits-card span {
     font-size: 2rem;
     font-weight: 700;
     color: var(--clr-light);
@@ -1289,7 +1217,7 @@ form .required {
     transition: color 0.3s;
 }
 
-.credits-card a:hover{
+.credits-card a:hover {
     color: var(--clr-rose);
     transition: color 0.3s;
 }
@@ -1299,7 +1227,7 @@ form .required {
     transition: border 0.3s;
 }
 
-.citation__icons{
+.citation__icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1392,39 +1320,6 @@ form .required {
     margin-bottom: 30px;
     border: none;
     border-top: 1px solid var(--clr-rose);
-}
-
-
-@media screen and (max-width:1000px) {
-    .footer_link_wrapper {
-        flex-direction: column;
-    }
-
-    .footer_links {
-        padding-top: 1rem;
-    }
-}
-
-@media screen and (max-width:750px) {
-    .social_media_wrapper {
-        flex-direction: column;
-    }
-
-    .website_rights {
-        margin-bottom: 1.5rem;
-    }
-
-    .social_media {
-        margin-bottom: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .footer_link_items {
-        margin: 0;
-        padding: 10px;
-        width: 70%;
-    }
 }
 
 

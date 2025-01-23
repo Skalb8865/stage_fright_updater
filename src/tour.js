@@ -5,16 +5,16 @@ openBtn.addEventListener('click', () => dialog.showModal());
 
 // close modal when clicking outside
 dialog.addEventListener('click', event => {
-  const rect = dialog.getBoundingClientRect();
-  const isInDialog =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog.getBoundingClientRect();
+    const isInDialog =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isInDialog) {
-    dialog.close();
-  }
+    if (!isInDialog) {
+        dialog.close();
+    }
 });
 
 const open2Btn = document.querySelector('#open-modal2');
@@ -24,16 +24,16 @@ open2Btn.addEventListener('click', () => dialog2.showModal());
 
 // close modal when clicking outside
 dialog2.addEventListener('click', event => {
-  const rect = dialog2.getBoundingClientRect();
-  const isIndialog2 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog2.getBoundingClientRect();
+    const isIndialog2 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog2) {
-    dialog2.close();
-  }
+    if (!isIndialog2) {
+        dialog2.close();
+    }
 });
 
 
@@ -44,16 +44,16 @@ open3Btn.addEventListener('click', () => dialog3.showModal());
 
 // close modal when clicking outside
 dialog3.addEventListener('click', event => {
-  const rect = dialog3.getBoundingClientRect();
-  const isIndialog3 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog3.getBoundingClientRect();
+    const isIndialog3 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog3) {
-    dialog3.close();
-  }
+    if (!isIndialog3) {
+        dialog3.close();
+    }
 });
 
 const open4Btn = document.querySelector('#open-modal4');
@@ -63,16 +63,16 @@ open4Btn.addEventListener('click', () => dialog4.showModal());
 
 // close modal when clicking outside
 dialog4.addEventListener('click', event => {
-  const rect = dialog4.getBoundingClientRect();
-  const isIndialog4 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog4.getBoundingClientRect();
+    const isIndialog4 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog4) {
-    dialog4.close();
-  }
+    if (!isIndialog4) {
+        dialog4.close();
+    }
 });
 
 const open5Btn = document.querySelector('#open-modal5');
@@ -82,16 +82,16 @@ open5Btn.addEventListener('click', () => dialog5.showModal());
 
 // close modal when clicking outside
 dialog5.addEventListener('click', event => {
-  const rect = dialog5.getBoundingClientRect();
-  const isIndialog5 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog5.getBoundingClientRect();
+    const isIndialog5 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog5) {
-    dialog5.close();
-  }
+    if (!isIndialog5) {
+        dialog5.close();
+    }
 });
 
 const open6Btn = document.querySelector('#open-modal6');
@@ -101,16 +101,16 @@ open6Btn.addEventListener('click', () => dialog6.showModal());
 
 // close modal when clicking outside
 dialog6.addEventListener('click', event => {
-  const rect = dialog6.getBoundingClientRect();
-  const isIndialog6 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog6.getBoundingClientRect();
+    const isIndialog6 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog6) {
-    dialog6.close();
-  }
+    if (!isIndialog6) {
+        dialog6.close();
+    }
 });
 
 const open7Btn = document.querySelector('#open-modal7');
@@ -120,16 +120,16 @@ open7Btn.addEventListener('click', () => dialog7.showModal());
 
 // close modal when clicking outside
 dialog7.addEventListener('click', event => {
-  const rect = dialog7.getBoundingClientRect();
-  const isIndialog7 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog7.getBoundingClientRect();
+    const isIndialog7 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog7) {
-    dialog7.close();
-  }
+    if (!isIndialog7) {
+        dialog7.close();
+    }
 });
 
 const open8Btn = document.querySelector('#open-modal8');
@@ -139,16 +139,16 @@ open8Btn.addEventListener('click', () => dialog8.showModal());
 
 // close modal when clicking outside
 dialog8.addEventListener('click', event => {
-  const rect = dialog8.getBoundingClientRect();
-  const isIndialog8 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog8.getBoundingClientRect();
+    const isIndialog8 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog8) {
-    dialog8.close();
-  }
+    if (!isIndialog8) {
+        dialog8.close();
+    }
 });
 
 const open9Btn = document.querySelector('#open-modal9');
@@ -158,16 +158,16 @@ open9Btn.addEventListener('click', () => dialog9.showModal());
 
 // close modal when clicking outside
 dialog9.addEventListener('click', event => {
-  const rect = dialog9.getBoundingClientRect();
-  const isIndialog9 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog9.getBoundingClientRect();
+    const isIndialog9 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog9) {
-    dialog9.close();
-  }
+    if (!isIndialog9) {
+        dialog9.close();
+    }
 });
 
 const open10Btn = document.querySelector('#open-modal10');
@@ -177,16 +177,16 @@ open10Btn.addEventListener('click', () => dialog10.showModal());
 
 // close modal when clicking outside
 dialog10.addEventListener('click', event => {
-  const rect = dialog10.getBoundingClientRect();
-  const isIndialog10 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog10.getBoundingClientRect();
+    const isIndialog10 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog10) {
-    dialog10.close();
-  }
+    if (!isIndialog10) {
+        dialog10.close();
+    }
 });
 
 const open11Btn = document.querySelector('#open-modal11');
@@ -196,16 +196,16 @@ open11Btn.addEventListener('click', () => dialog11.showModal());
 
 // close modal when clicking outside
 dialog11.addEventListener('click', event => {
-  const rect = dialog11.getBoundingClientRect();
-  const isIndialog11 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog11.getBoundingClientRect();
+    const isIndialog11 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog11) {
-    dialog11.close();
-  }
+    if (!isIndialog11) {
+        dialog11.close();
+    }
 });
 
 const open12Btn = document.querySelector('#open-modal12');
@@ -215,14 +215,14 @@ open12Btn.addEventListener('click', () => dialog12.showModal());
 
 // close modal when clicking outside
 dialog12.addEventListener('click', event => {
-  const rect = dialog12.getBoundingClientRect();
-  const isIndialog12 =
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom;
+    const rect = dialog12.getBoundingClientRect();
+    const isIndialog12 =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-  if (!isIndialog12) {
-    dialog12.close();
-  }
+    if (!isIndialog12) {
+        dialog12.close();
+    }
 });
