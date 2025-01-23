@@ -100,7 +100,7 @@
 }
 
 .cart-content {
-    height: 77%;
+    height: 65%;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;

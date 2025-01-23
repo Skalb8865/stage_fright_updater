@@ -245,7 +245,6 @@ main {
 }
 
 #total-items {
-
     font-size: 12px;
     color: var(--clr-light);
 }
@@ -1024,6 +1023,11 @@ dialog[open]::backdrop {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.albums-buttons{
+    display: flex;
+    gap: 5px;
 }
 
 .main_container {
