@@ -1,18 +1,11 @@
 :root {
     /* Colors */
     --clr-dark: #0c0d0f;
-    /* #0c0807 */
-    /* #0c0d0f */
-    /* #070a13 */
-    /* #191919 */
     --clr-light: #edf0f1;
-    /* #fafafa */
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
     --clr-slate800: #1e293b;
     --clr-rose: #ff3333;
-    /* #DC0000 */
-    /* #e0d2bc */
     --clr-dark-rose: #881337;
     --clr-indigo: #4f46e5;
     --clr-active-link: #be123c;
