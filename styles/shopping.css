@@ -97,6 +97,63 @@
     background: var(--clr-dark);
 }
 
+.mobilenav-Social--Links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--hover-color);
+    height: 15dvh;
+    gap: 10px;
+}
+
+.mobilenav-Social--Links:hover .icon {
+    opacity: 0.3;
+}
+
+.mobilenav-Social--Links .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+
+.mobilenav-Social--Links .icon:nth-child(1):hover {
+    background: var(--clr-light);
+    color: #1ED760;
+    opacity: 1;
+}
+
+.mobilenav-Social--Links .icon:nth-child(2):hover {
+    background: var(--clr-light);
+    color: #ff0000;
+    opacity: 1;
+}
+
+.mobilenav-Social--Links .icon:nth-child(3):hover {
+    background: var(--clr-light);
+    color: #c13584;
+    opacity: 1;
+}
+
+.mobilenav-Social--Links .icon:nth-child(4):hover {
+    background: var(--clr-light);
+    color: var(--clr-slate400);
+    opacity: 1;
+}
+
+
+
 .cart-content {
     height: 75%;
     overflow-y: scroll;
