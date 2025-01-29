@@ -435,7 +435,7 @@ main {
     right: 0;
     left: 0;
     font-size: 12px;
-    color: var(--clr-slate400);
+    color: var(--clr-light);
 }
 
 .news-card .headline-date {
@@ -1050,7 +1050,7 @@ dialog[open]::backdrop {
 
 .contact form input:focus,
 .contact form textarea:focus {
-    border: 1px solid var(--clr-rose);
+    border: 1px solid var(--clr-slate400);
     outline: none;
 }
 

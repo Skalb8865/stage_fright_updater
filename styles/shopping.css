@@ -155,7 +155,7 @@
 
 
 .cart-content {
-    height: 75%;
+    height: 82%;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
@@ -438,4 +438,58 @@
         margin-top: 1rem;
     }
 
+}
+
+@media (max-height: 1100px) {
+    .cart-content {
+        height: 80%
+    }
+}
+
+@media (max-height: 977px) {
+    .cart-content {
+        height: 79%
+    }
+}
+
+@media (max-height: 915px) {
+    .cart-content {
+        height: 75%
+    }
+}
+
+@media (max-height: 794px) {
+    .cart-content {
+        height: 74%
+    }
+}
+
+@media (max-height: 760px) {
+    .cart-content {
+        height: 70%
+    }
+}
+
+@media (max-height: 640px) {
+    .cart-content {
+        height: 65%
+    }
+}
+
+@media (max-height: 550px) {
+    .cart-content {
+        height: 60%
+    }
+}
+
+@media (max-height: 482px) {
+    .cart-content {
+        height: 50%
+    }
+}
+
+@media (max-height: 390px) {
+    .cart-content {
+        height: 40%
+    }
 }
