@@ -454,12 +454,7 @@ main {
 /* ************** */
 /* About Section */
 /* ************** */
-.about {
-    text-align: center;
-}
-
 .about-info {
-    margin: 2rem 2rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -471,18 +466,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35rem;
-    height: 35rem;
+    width: 25rem;
+    height: 25rem;
 }
 
 .about-img img {
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
 .about-info p {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.3rem;
     margin: 0 2rem;
     color: var(--clr-slate400);
@@ -835,6 +830,27 @@ main {
 
 .tour-form {
     min-width: 1000px;
+}
+
+.tours-btn {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    border: 2px solid var(--clr-dark);
+    cursor: pointer;
+    padding: 1em 2.5em;
+    width: 200px;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.tours-btn:hover {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    border: 2px solid var(--clr-light);
+    transition: all 0.3s;
 }
 
 dialog {
