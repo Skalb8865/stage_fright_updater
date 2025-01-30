@@ -225,8 +225,8 @@ main {
 
 .cart-icon-count {
     position: relative;
-    top: -30px;
-    right: -17px;
+    top: -1px;
+    right: 12px;
     width: 18px;
     height: 18px;
     background: var(--clr-rose);
