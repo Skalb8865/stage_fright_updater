@@ -307,7 +307,6 @@
 
 
 /* SHOP SECTION  */
-
 .shop {
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -394,12 +393,12 @@
 
 
 /* For Small Devices */
-
 @media (max-width: 360px) {
     .shop {
         margin-top: 1rem;
     }
 }
+
 
 @media (max-height: 1100px) {
     .cart-content {

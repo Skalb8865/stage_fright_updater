@@ -206,7 +206,7 @@ main {
 }
 
 .nav-item:hover {
-    color: var(--clr-rose);
+    color: var(--clr-dark-rose);
     transition: color 0.2s;
 }
 
@@ -243,7 +243,7 @@ main {
     opacity: 0;
 }
 
-#total-items.enabled{
+#total-items.enabled {
     opacity: 1;
 }
 
@@ -814,7 +814,7 @@ main {
     font-size: 1.5rem;
     color: var(--clr-light);
     text-transform: uppercase;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
 }
 
 .tour-card h2 {
@@ -923,26 +923,17 @@ dialog[open]::backdrop {
 /* ************** */
 /* Albums Section */
 /* ************** */
-
-.our-albums {
+.albums-page {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.albums-wrapper {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .albums-cards {
-    position: relative;
-    width: 410px;
-    height: 410px;
-    margin: 10px;
-    transition: 1.15s ease;
+    width: 400px;
+    height: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -957,13 +948,6 @@ dialog[open]::backdrop {
     transform: scale(1.035);
     transition: 0.5s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-}
-
-.albums-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .albums-buttons {
@@ -1546,12 +1530,8 @@ form .required {
     }
 
     .albums-cards {
-        position: relative;
         width: 350px;
         height: 350px;
-        margin: 10px;
-        transition: 1.15s ease;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 
     .merch_content h1 {

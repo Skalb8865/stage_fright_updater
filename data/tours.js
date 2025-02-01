@@ -1,0 +1,21 @@
+// Tours JSON Section
+const tourCards = document.querySelector(".tours");
+const jsonFile = "/data/tours.json";
+
+fetch(jsonFile)
+    .then((respone) => {
+        return respone.json();
+    })
+    .then((data) => {
+        data.map((tours) => {
+            const {date, location, place, buttonid } = tours;
+            tourCards.innerHTML += `
+        <div class="tour-card">
+            <h1>${date}</h1>
+            <h2>${location}</h2>
+            <h3>${place}</h3>
+            <button class="tours-btn" id="${buttonid}">Buy Tickets</button>
+        </div>
+        `;
+        });
+    });
