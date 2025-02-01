@@ -248,9 +248,16 @@ function getTotalItems() {
 // function to show the total number of items in the cart
 function updateTotalItems() {
     const totalItems = document.querySelector("#total-items");
+    const totalItemCount = getTotalItems();
     // checks if the totalItems element exists and updates the #total-items with the total number of items in the cart and if it doesnt exists it wont be updated
     if (totalItems) {
-        totalItems.textContent = getTotalItems();
+        totalItems.textContent = totalItemCount;
+        // if no items in cart  
+        if (totalItemCount > 0) {
+            totalItems.classList.add("enabled");
+        } else {
+            totalItems.classList.remove("enabled");
+        }
     }
 }
 

@@ -12,7 +12,9 @@
     cursor: pointer;
 }
 
+
 /* CART  */
+
 .cart {
     position: fixed;
     top: 0;
@@ -25,7 +27,6 @@
     transition: 0.5s;
     z-index: 9999;
 }
-
 
 .cart.active {
     right: 0;
@@ -127,7 +128,6 @@
     cursor: pointer;
 }
 
-
 .mobilenav-Social--Links .icon:nth-child(1):hover {
     background: var(--clr-light);
     color: #1ED760;
@@ -151,8 +151,6 @@
     color: var(--clr-slate400);
     opacity: 1;
 }
-
-
 
 .cart-content {
     height: 82%;
@@ -213,7 +211,6 @@
     font-size: 1rem;
     font-weight: 600;
 }
-
 
 .cart-size {
     color: var(--clr-slate400);
@@ -308,7 +305,9 @@
     cursor: pointer;
 }
 
+
 /* SHOP SECTION  */
+
 .shop {
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -326,6 +325,7 @@
 
 .merch-box {
     transition: .4s;
+    overflow: hidden;
 }
 
 .merch-box:hover {
@@ -385,59 +385,20 @@
     pointer-events: none;
 }
 
-/* Sumbit Modal */
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/* ================ RESPONSIVE & BREAKPOINTS ============= */
 @media (max-width: 1080px) {
     .shop {
         margin-top: 2rem;
     }
 }
 
+
 /* For Small Devices */
+
 @media (max-width: 360px) {
     .shop {
         margin-top: 1rem;
     }
-
 }
 
 @media (max-height: 1100px) {

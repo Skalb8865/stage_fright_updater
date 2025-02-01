@@ -1,0 +1,48 @@
+[{
+        "id": 1,
+        "name": "Stage Fright White Long Sleeve",
+        "link": "/html/Merch/Apparel/white_long_sleeve.html",
+        "price": "$22.99",
+        "images": [{
+            "url": "/res/merch/SFwhitelongsleeve.webp"
+        }]
+    },
+
+    {
+        "id": 2,
+        "name": "Prometheus Vinyl",
+        "link": "/html/Merch/Media/prometheus_vinyl.html",
+        "price": "$27.99",
+        "images": [{
+            "url": "/res/merch/Prometheusvinyl.webp"
+        }]
+    },
+
+    {
+        "id": 3,
+        "name": "Acantha Black T-Shirt",
+        "link": "/html/Merch/Apparel/acantha_T-shirt.html",
+        "price": "$18.99",
+        "images": [{
+            "url": "/res/merch/AcanthaShirt.webp"
+        }]
+    },
+    {
+        "id": 4,
+        "name": "NYX Vinyl",
+        "link": "/html/Merch/Media/nyx_vinyl.html",
+        "price": "$27.99",
+        "images": [{
+            "url": "/res/merch/Nyxvinyl.webp"
+        }]
+    },
+    {
+        "id": 5,
+        "name": "Stage Fright White Hat",
+        "link": "/html/Merch/Apparel/white_logo_hat.html",
+        "price": "$12.99",
+        "images": [{
+            "url": "/res/merch/hatMerch.webp"
+        }]
+    }
+]
