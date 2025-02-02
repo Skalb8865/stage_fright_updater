@@ -5,5 +5,3 @@ import '../styles/shopping.css'
 
 import './cart.js'
 import './swiper.js'
-import '../data/tours.js'
-import '../data/merch.js'

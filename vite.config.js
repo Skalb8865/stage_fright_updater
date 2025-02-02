@@ -40,9 +40,6 @@ export default defineConfig({
 
         merch_json: resolve(__dirname, 'data/merch.json'),
         tours_json: resolve(__dirname, 'data/tours.json'),
-
-        merchjs: resolve(__dirname, 'data/merch.js'),
-        tourjs: resolve(__dirname, 'data/tours.js'),
       },
     },
   },
