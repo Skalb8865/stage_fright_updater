@@ -38,8 +38,8 @@ export default defineConfig({
         moto_phone_case: resolve(__dirname, 'html/Merch/Accessories/motto_phone_case.html'),
         logo_white_airpod_case: resolve(__dirname, 'html/Merch/Accessories/logo_white_airpod_case.html'),
 
-        merch_json: resolve(__dirname, 'data/merch.json'),
-        tours_json: resolve(__dirname, 'data/tours.json'),
+        merch_json: resolve(__dirname, 'public/data/merch.json'),
+        tours_json: resolve(__dirname, 'public/data/tours.json'),
       },
     },
   },
