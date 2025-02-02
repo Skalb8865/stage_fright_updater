@@ -2,11 +2,13 @@ const merch = document.querySelector(".shop-content");
 const jsonFile = "/data/merch.json";
 
 fetch(jsonFile)
-  .then(respone => respone.json())
-  .then((data) => {
-    data.forEach((product) => {
-      const { link, name, price, image } = product;
-      merch.innerHTML += `
+    .then((respone) => {
+        return respone.json();
+    })
+    .then((data) => {
+        data.forEach((product) => {
+            const {link, name, price, image} = product;
+            merch.innerHTML += `
         <div class="merch-box">
           <a href="${link}" aria-label="${name}"><img
           src="${image}" alt="${name}" class="product-img"></a>
@@ -16,5 +18,5 @@ fetch(jsonFile)
           </div>
 				</div>
         `;
+        });
     });
-  });
