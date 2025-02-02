@@ -920,7 +920,6 @@ dialog[open]::backdrop {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
-
 .modal {
     display: none;
     position: fixed;
