@@ -1,14 +1,13 @@
-const mostPopPorducts = document.querySelector(".shop-content");
-const jsonFile = "/data/merch.json";
+const merch = document.querySelector(".shop-content");
 
-fetch(jsonFile)
-    .then((respone) => {
-        return respone.json();
-    })
+fetch("/data/merch.json")
+      .then((respone) => {
+          return respone.json();
+      })
     .then((data) => {
         data.forEach((product) => {
             const {link, name, price, image} = product;
-            mostPopPorducts.innerHTML += `
+            merch.innerHTML += `
         <div class="merch-box">
           <a href="${link}" aria-label="${name}"><img
           src="${image}" alt="${name}" class="product-img"></a>
