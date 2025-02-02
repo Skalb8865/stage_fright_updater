@@ -2,72 +2,96 @@
     {
         "date": "Feb 26th - 27th",
         "location": "Columbus,<br> OH,<br> United States",
+        "modalLocation": "Columbus, OH, United States",
+        "ticketsPrice": "$19",
         "place": "The King Of Clubs",
         "buttonid": "open-modal"
     },
     {
         "date": "Mar 1st - 2nd",
         "location": "Columbus,<br> OH,<br> United States",
+        "modalLocation": "Columbus, OH, United States",
+        "ticketsPrice": "$18",
         "place": "SKULLYS MUSIC DINER",
         "buttonid": "open-modal2"
     },
     {
         "date": "Mar 5th - 6th",
         "location": "Philadelphia,<br> PA,<br> United States",
+        "modalLocation": "Philadelphia, PA, United States",
+        "ticketsPrice": "$20",
         "place": "Underground Arts",
         "buttonid": "open-modal3"
     },
     {
         "date": "Mar 7th - 8th",
         "location": "Philadelphia,<br> PA,<br> United States",
+        "modalLocation": "Philadelphia, PA, United States",
+        "ticketsPrice": "$19",
         "place": "Franklin Music Hall",
         "buttonid": "open-modal4"
     },
     {
         "date": "Mar 12th - 13th",
         "location": "Brooklyn,<br> NY,<br> United States",
+        "modalLocation": "rooklyn, NY, United States",
+        "ticketsPrice": "$19",
         "place": "Brooklyn Paramount",
         "buttonid": "open-modal5"
     },
     {
         "date": "Mar 15th - 16th",
         "location": "Lewiston,<br> NY,<br> United States",
+        "modalLocation": "Lewiston, NY, United States",
+        "ticketsPrice": "$19",
         "place": "Artpark",
         "buttonid": "open-modal6"
     },
     {
         "date": "Mar 18th - 19th",
         "location": "Jericho,<br> NY,<br> United States",
+        "modalLocation": "Jericho, NY, United States",
+        "ticketsPrice": "$19",
         "place": "Flagstar at Westbury Music Fair",
         "buttonid": "open-modal7"
     },
     {
         "date": "Mar 21th - 22th",
         "location": "Queens,<br> NY,<br> United States",
+        "modalLocation": "Queens, NY, United States",
+        "ticketsPrice": "$19",
         "place": "Forest Hills Stadium",
         "buttonid": "open-modal8"
     },
     {
         "date": "Mar 24th - 25th",
         "location": "Queens,<br> NY,<br> United States",
+        "modalLocation": "Queens, NY, United States",
+        "ticketsPrice": "$19",
         "place": "Radio City Music Hall",
         "buttonid": "open-modal9"
     },
     {
         "date": "Mar 28th - Apr 1st",
         "location": "Columbus,<br> OH,<br> United States",
+        "modalLocation": "Columbus, OH, United States",
+        "ticketsPrice": "$19",
         "place": "Newport Music Hall",
         "buttonid": "open-modal10"
     },
     {
         "date": "Apr 3rd - 4th",
         "location": "Columbus,<br> OH,<br> United States",
+        "modalLocation": "Columbus, OH, United States",
+        "ticketsPrice": "$19",
         "place": "The Summit Music Hall",
         "buttonid": "open-modal11"
     },
     {
         "date": "Apr 6th - 7th",
         "location": "Columbus,<br> OH,<br> United States",
+        "modalLocation": "Columbus, OH, United States",
+        "ticketsPrice": "$19",
         "place": "KEMBA Live!",
         "buttonid": "open-modal12"
     }

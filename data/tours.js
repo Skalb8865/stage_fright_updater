@@ -1,5 +1,5 @@
 const tourCards = document.querySelector(".tours");
-const toursJson = "/public/data/tours.json";
+const toursJson = "/data/tours.json";
 
 // Modal elements
 const modal = document.getElementById("tourModal");
@@ -7,6 +7,7 @@ const modalTitle = document.getElementById("modalTitle");
 const modalDate = document.getElementById("modalDate");
 const modalLocation = document.getElementById("modalLocation");
 const modalPlace = document.getElementById("modalPlace");
+const modalPrice = document.getElementById("modalPrice");
 const closeBtn = document.querySelector(".close");
 
 fetch(toursJson)
@@ -28,13 +29,12 @@ fetch(toursJson)
         document.querySelectorAll('.tours-btn').forEach(button => {
             button.addEventListener('click', (e) => {
                 const tourData = data.find(tour => tour.buttonid === e.target.dataset.id);
-                if (tourData) {
-                    modalTitle.textContent = "Tour Details";
-                    modalDate.textContent = `Date: ${tourData.date}`;
-                    modalLocation.textContent = `Location: ${tourData.location}`;
-                    modalPlace.textContent = `Place: ${tourData.place}`;
-                    modal.style.display = "block";
-                }
+                modalTitle.textContent = "Tour Details";
+                modalDate.textContent = `Date: ${tourData.date}`;
+                modalLocation.textContent = `Location: ${tourData.modalLocation}`;
+                modalPlace.textContent = `Place: ${tourData.place}`;
+                modalPrice.textContent = `Price: ${tourData.ticketsPrice}`;
+                modal.style.display = "block";
             });
         });
     })
