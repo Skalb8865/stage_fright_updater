@@ -29,7 +29,7 @@ fetch(toursJson)
         document.querySelectorAll('.tours-btn').forEach(button => {
             button.addEventListener('click', (e) => {
                 const tourData = data.find(tour => tour.buttonid === e.target.dataset.id);
-                modalTitle.textContent = "Tour Details";
+                modalTitle.textContent = "Tour Details:";
                 modalDate.textContent = `Date: ${tourData.date}`;
                 modalLocation.textContent = `Location: ${tourData.modalLocation}`;
                 modalPlace.textContent = `Place: ${tourData.place}`;
