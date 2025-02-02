@@ -1,7 +1,7 @@
 const merch = document.querySelector(".shop-content");
-const jsonFile = "/data/merch.json";
+const merchJson = "/data/merch.json";
 
-fetch(jsonFile)
+fetch(merchJson)
     .then((respone) => {
         return respone.json();
     })

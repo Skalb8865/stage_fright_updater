@@ -1393,8 +1393,7 @@ form .required {
     }
 
     .nav-right--section {
-        padding: 15px;
-        margin-left: auto;
+        padding: 0 0 0 15px;
     }
 
     .main_container {

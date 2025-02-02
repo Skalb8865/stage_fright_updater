@@ -1,7 +1,7 @@
 const tourCards = document.querySelector(".tours");
-const jsonFile = "/data/tours.json";
+const toursJson = "/data/tours.json";
 
-fetch(jsonFile)
+fetch(toursJson)
     .then((respone) => {
         return respone.json();
     })
