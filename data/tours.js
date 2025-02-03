@@ -14,7 +14,7 @@ fetch(toursJson)
     .then((response) => response.json())
     .then((data) => {
         data.forEach((tour) => {
-            const {date, location, place, buttonid} = tour;
+            const { date, location, place, buttonid } = tour;
             tourCards.innerHTML += `
         <div class="tour-card">
             <h1>${date}</h1>

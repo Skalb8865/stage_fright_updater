@@ -31,12 +31,29 @@ function updateNavbar(e) {
         cart.removeAttribute("inert");
     }
 }
+
+function updateScrollBehavior() {
+    const disableScroll = window.innerWidth <= 640;
+    const isCartOpen = cart.classList.contains("active");
+    const isMobileNavOpen = mobileNav.classList.contains("active");
+
+    if (disableScroll && (isCartOpen || isMobileNavOpen)) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
+}
+
+window.addEventListener("resize", updateScrollBehavior);
+
+
 // fucntions to open and close the cart and mobile nav
 function opensCart() {
     cart.classList.add("active");
     cartOverlay.classList.add("active");
     cartIcon.setAttribute("aria-expanded", "true");
     cart.removeAttribute("inert");
+    updateScrollBehavior();
 }
 
 function closesCart() {
@@ -44,6 +61,7 @@ function closesCart() {
     cartOverlay.classList.remove("active");
     cartIcon.setAttribute("aria-expanded", "false");
     cart.setAttribute("inert", "");
+     updateScrollBehavior();
 }
 
 function opensMobileNav() {
@@ -51,6 +69,7 @@ function opensMobileNav() {
     mobileOverlay.classList.add("active");
     openMobileNavIcon.setAttribute("aria-expanded", "true");
     mobileNav.removeAttribute("inert");
+     updateScrollBehavior();
 }
 
 function closesMobileNav() {
@@ -58,6 +77,7 @@ function closesMobileNav() {
     mobileNav.classList.remove("active");
     openMobileNavIcon.setAttribute("aria-expanded", "false");
     mobileNav.setAttribute("inert", "");
+     updateScrollBehavior();
 }
 // end of fucntions to open and close the cart and mobile nav
 

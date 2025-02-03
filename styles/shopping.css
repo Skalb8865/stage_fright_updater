@@ -122,7 +122,7 @@
     background: var(--clr-light);
     color: var(--clr-dark);
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 50px;
     transition: all 0.3s linear;
     cursor: pointer;
@@ -218,7 +218,7 @@
 }
 
 .cart-remove {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--clr-rose);
     cursor: pointer;
     transition: color 0.3s;
@@ -323,13 +323,13 @@
 }
 
 .merch-box {
-    transition: .4s;
+    transition: .3s;
     overflow: hidden;
 }
 
 .merch-box:hover {
-    transform: scale(1.025);
-    transition: .4s;
+    opacity: 0.85;
+    transition: .3s;
 }
 
 .product-img {
@@ -369,7 +369,7 @@
     width: 200px;
     transition: all 0.3s;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
@@ -393,7 +393,7 @@
 
 
 /* For Small Devices */
-@media (max-width: 360px) {
+@media (max-width: 22.5rem) {
     .shop {
         margin-top: 1rem;
     }
