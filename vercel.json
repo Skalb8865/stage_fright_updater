@@ -1,8 +1,5 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "data/merch.js" },
-      { "source": "/(.*)", "destination": "data/tours.js" },
-      { "source": "/(.*)", "destination": "data/merch.json" },
-      { "source": "/(.*)", "destination": "data/tours.json" }
+      { "source": "/(.*)", "destination": "/" }
     ]
   }
