@@ -2,7 +2,12 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({  
-  base: './',
+  "builds": [
+    {
+      "src": "public/data/*.json",
+      "use": "@vercel/static"
+    }
+  ],
   build: {
     rollupOptions: {
       input: {
@@ -38,9 +43,6 @@ export default defineConfig({
         // Accessories
         moto_phone_case: resolve(__dirname, 'html/Merch/Accessories/motto_phone_case.html'),
         logo_white_airpod_case: resolve(__dirname, 'html/Merch/Accessories/logo_white_airpod_case.html'),
-
-        merch_json: resolve(__dirname, 'public/data/merch.json'),
-        tours_json: resolve(__dirname, 'public/data/tours.json'),
       },
     },
   },
