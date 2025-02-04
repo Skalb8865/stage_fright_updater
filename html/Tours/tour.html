@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -23,9 +23,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <!-- -------- -->
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
     <script type="module" src="/data/tours.js"></script>
@@ -56,10 +56,11 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                    aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="../About/about.html" aria-label="About Page">
@@ -122,7 +123,7 @@
                     <ul class="center-right--list">
                         <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a>
                         </li>
-                        <li class="active-link"><a href="tour.html" aria-label="Tours Page" aria-current="Page">Tour</a>
+                        <li class="active-link"><a href="tour.html" aria-label="Tours Page" aria-current="page">Tour</a>
                         </li>
                     </ul>
                 </div>
@@ -134,7 +135,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -167,6 +168,89 @@
             <h1 class="section-title">Hermes Tour</h1>
             <div class="tours">
                 <!-- JSON Cards Loaded Here -->
+                <!-- <div class="tour-card">
+                    <p class="tour-dates">Feb 26th - 27th</p>
+                    <p class="tour-location">Columbus,<br> OH,<br> United States</p>
+                    <p class="tour-place">The King Of Clubs</p>
+                    <button class="tours-btn" id="open-modal">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 1st - 2nd</p>
+                    <p class="tour-location">Columbus,<br> OH,<br> United States</p>
+                    <p class="tour-place">SKULLYS MUSIC DINER</p>
+                    <button class="btn" id="open-modal2">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 5th - 6th</p>
+                    <p class="tour-location"> Philadelphia,<br> PA,<br> United States</p>
+                    <p class="tour-place">Underground Arts</p>
+                    <button class="btn" id="open-modal3">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 7th - 8th</p>
+                    <p class="tour-location"> Philadelphia,<br> PA,<br> United States</p>
+                    <p class="tour-place">Franklin Music Hall</p>
+                    <button class="btn" id="open-modal4">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 12th - 13th</p>
+                    <p class="tour-location">Brooklyn,<br> NY,<br> United States</p>
+                    <p class="tour-place">Brooklyn Paramount</p>
+                    <button class="btn" id="open-modal5">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 15th - 16th</p>
+                    <p class="tour-location">Lewiston,<br> NY,<br> United States</p>
+                    <p class="tour-place">Artpark</p>
+                    <button class="btn" id="open-modal6">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 18th - 19th</p>
+                    <p class="tour-location">Jericho,<br> NY,<br> United States</p>
+                    <p class="tour-place">Flagstar at Westbury Music Fair</p>
+                    <button class="btn" id="open-modal7">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 21th - 22th</p>
+                    <p class="tour-location">Queens,<br> NY,<br> United States</p>
+                    <p class="tour-place">Forest Hills Stadium</p>
+                    <button class="btn" id="open-modal8">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 24th - 25th</p>
+                    <p class="tour-location">Queens,<br> NY,<br> United States</p>
+                    <p class="tour-place">Radio City Music Hall</p>
+                    <button class="btn" id="open-modal9">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Mar 28th - Apr 1st</p>
+                    <p class="tour-location">Columbus,<br> OH,<br> United States</p>
+                    <p class="tour-place">Newport Music Hall</p>
+                    <button class="btn" id="open-modal10">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Apr 3rd - 4th</p>
+                    <p class="tour-location">Columbus,<br> OH,<br> United States</p>
+                    <p class="tour-place">The Summit Music Hall</p>
+                    <button class="btn" id="open-modal11">Buy Tickets</button>
+                </div>
+
+                <div class="tour-card">
+                    <p class="tour-dates">Apr 6th - 7th</p>
+                    <p class="tour-location">Columbus,<br> OH,<br> United States</p>
+                    <p class="tour-place">KEMBA Live!</p>
+                    <button class="btn" id="open-modal12">Buy Tickets</button>
+                </div> -->
             </div>
         </section>
 
@@ -184,9 +268,9 @@
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ========-===== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">

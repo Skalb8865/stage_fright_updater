@@ -17,9 +17,9 @@ fetch(toursJson)
             const { date, location, place, buttonid } = tour;
             tourCards.innerHTML += `
         <div class="tour-card">
-            <h1>${date}</h1>
-            <h2>${location}</h2>
-            <h3>${place}</h3>
+            <p class="tour-dates">${date}</p>
+            <p class="tour-location">${location}</p>
+            <p class="tour-place">${place}</p>
             <button class="tours-btn" data-id="${buttonid}">Buy Tickets</button>
         </div>
         `;

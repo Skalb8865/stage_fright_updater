@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -24,9 +24,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <!-- -------- -->
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
 
@@ -57,10 +57,10 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav" aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="../About/about.html" aria-label="About Page">
@@ -111,7 +111,7 @@
                     <ul class="center-left--list">
                         <li class="nav-item"><a href="../About/about.html" aria-label="About Band">Band</a></li>
                         <li class="active-link"><a href="music.html" aria-label="Music Page"
-                                aria-current="Page">Music</a></li>
+                                aria-current="page">Music</a></li>
                     </ul>
                 </div>
 
@@ -136,7 +136,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -169,19 +169,19 @@
             <div class="albums-page">
                 <div class="albums-cards">
                     <a href="./Albums/prometheus.html" aria-label="Prometheus Album Page">
-                        <img src="/res/albums/Prometheus.webp" alt="Our Album PROMETHEUS" />
+                        <img src="/res/albums/Prometheus.webp" alt="Our Album PROMETHEUS">
                     </a>
                 </div>
 
                 <div class="albums-cards">
                     <a href="./Albums/acantha.html" aria-label="Acantha Album Page">
-                        <img src="/res/albums/Acantha.webp" alt="Our Album Acantha" />
+                        <img src="/res/albums/Acantha.webp" alt="Our Album Acantha">
                     </a>
                 </div>
 
                 <div class="albums-cards">
                     <a href="./Albums/nyx.html" aria-label="NYX Album Page">
-                        <img src="/res/albums/NYX.webp" alt="Our Album NYX" />
+                        <img src="/res/albums/NYX.webp" alt="Our Album NYX">
                     </a>
                 </div>
             </div>
@@ -189,9 +189,9 @@
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ============== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">
