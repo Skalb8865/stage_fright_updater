@@ -1,5 +1,5 @@
 const tourCards = document.querySelector(".tours");
-const toursJson = "/public/tours.json";
+const toursJson = "/tours.json";
 
 // Modal elements
 const modal = document.getElementById("tourModal");
