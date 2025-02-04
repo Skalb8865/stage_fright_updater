@@ -3,12 +3,6 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    "builds": [
-      {
-        "src": "public/data/*.json",
-        "use": "@vercel/static"
-      }
-    ],
     rollupOptions: {
       input: {
         // Main Pages

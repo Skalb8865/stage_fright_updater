@@ -1,4 +1,4 @@
-const toursJson = "/dist/data/tours.json";
+const toursJson = "/data/tours.json";
 const tourCards = document.querySelector(".tours");
 
 // Modal elements

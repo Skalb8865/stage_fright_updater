@@ -1,4 +1,4 @@
-const merchJson = "/dist/data/merch.json";
+const merchJson = "/data/merch.json";
 const merch = document.querySelector(".shop-content");
 
 fetch(merchJson)
