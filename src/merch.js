@@ -1,10 +1,8 @@
-const merchJson = "/public/data/merch.json";
+const jsonFile = "/data/merch.json";
 const merch = document.querySelector(".shop-content");
 
-fetch(merchJson)
-    .then((respone) => {
-        return respone.json();
-    })
+fetch(jsonFile)
+.then((response) => response.json())
     .then((data) => {
         data.forEach((product) => {
             const { link, name, price, image } = product;

@@ -1,4 +1,4 @@
-const toursJson = "/public/data/tours.json";
+const jsonFile = "/data/tours.json";
 const tourCards = document.querySelector(".tours");
 
 // Modal elements
@@ -10,7 +10,7 @@ const modalPlace = document.getElementById("modalPlace");
 const modalPrice = document.getElementById("modalPrice");
 const closeBtn = document.querySelector(".close");
 
-// fetch(toursJson)
+// fetch(jsonFile)
 //     .then((response) => response.json())
 //     .then((data) => {
 //         data.forEach((tour) => {
@@ -71,7 +71,7 @@ xhr.onload = function(){
     }
 }
 
-xhr.open('GET', toursJson, true)
+xhr.open('GET', jsonFile, true)
 xhr.send(null)
 
 // Close modal when clicking the close button
