@@ -6,7 +6,6 @@ fetch(merchJson)
         return respone.json();
     })
     .then((data) => {
-        console.log(data);
         data.forEach((product) => {
             const { link, name, price, image } = product;
             merch.innerHTML += `
