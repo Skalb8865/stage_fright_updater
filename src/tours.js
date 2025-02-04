@@ -43,6 +43,7 @@ let xhr = new XMLHttpRequest();
 xhr.onload = function(){
     if(xhr.status ===200){
         let responseObject = JSON.parse(xhr.responseText)
+        console.log(responseObject);
 
         responseObject.forEach((tour) => {
             const { date, location, place, buttonid } = tour;
