@@ -397,6 +397,10 @@ main {
     color: var(--clr-slate400);
 }
 
+.hlink:hover{
+    border-bottom: 1px solid var(--clr-slate400);
+}
+
 /* ************ */
 /* Home Section */
 /* ************ */
@@ -455,6 +459,10 @@ main {
     left: 0;
     font-size: 0.75rem;
     color: var(--clr-light);
+}
+
+.credit a:hover{
+    border-bottom: 1px solid var(--clr-slate400);
 }
 
 .news-card .headline-date {
