@@ -1,15 +1,8 @@
 {
-    "functions": {
-      "data/merch.js": {
-        "memory": 1024,
-        "includeFiles": "data/merch.json"
-      },
-      "data/tours.js": {
-        "memory": 1024,
-        "includeFiles": "data/tours.json"
-      }
-    },
     "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
+      { "source": "/(.*)", "destination": "data/merch.js" },
+      { "source": "/(.*)", "destination": "data/tours.js" },
+      { "source": "/(.*)", "destination": "data/merch.json" },
+      { "source": "/(.*)", "destination": "data/tours.json" }
     ]
   }
