@@ -61,7 +61,7 @@ function closesCart() {
     cartOverlay.classList.remove("active");
     cartIcon.setAttribute("aria-expanded", "false");
     cart.setAttribute("inert", "");
-     updateScrollBehavior();
+    updateScrollBehavior();
 }
 
 function opensMobileNav() {
@@ -69,7 +69,7 @@ function opensMobileNav() {
     mobileOverlay.classList.add("active");
     openMobileNavIcon.setAttribute("aria-expanded", "true");
     mobileNav.removeAttribute("inert");
-     updateScrollBehavior();
+    updateScrollBehavior();
 }
 
 function closesMobileNav() {
@@ -77,7 +77,7 @@ function closesMobileNav() {
     mobileNav.classList.remove("active");
     openMobileNavIcon.setAttribute("aria-expanded", "false");
     mobileNav.setAttribute("inert", "");
-     updateScrollBehavior();
+    updateScrollBehavior();
 }
 // end of fucntions to open and close the cart and mobile nav
 
@@ -323,12 +323,34 @@ function submitOrder() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     localStorage.removeItem("cart");
-    alert("Your order has been placed successfully.");
+
+
+    const modal = document.getElementById("order-modal");
+    modal.style.display = "block";
+    document.body.classList.add = "no-scroll";
+
 
     updateCartDisplay();
     updateTotal();
     updateTotalItems();
     closesCart();
+}
+
+// Close the modal when the user clicks on the x
+const closeModal = document.getElementById("close-modal");
+closeModal.onclick = function () {
+    const modal = document.getElementById("order-modal");
+    modal.style.display = "none";
+    document.body.classList.remove = "no-scroll";
+}
+
+// Close the modal when the user clicks anywhere outside of the modal
+window.onclick = function (event) {
+    const modal = document.getElementById("order-modal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.classList.remove = "no-scroll";
+    }
 }
 
 function displayMessage() {
