@@ -34,7 +34,7 @@
 }
 .lpcontainer .two {
     flex: 1;
-    background-image: url("http://skywide.co.uk/wp-content/uploads/2017/10/Design-Manufacture.jpg");
+    background-image: url("/res/members/group.webp");
     height: 100%;
     display: flex;
     align-items: center;
