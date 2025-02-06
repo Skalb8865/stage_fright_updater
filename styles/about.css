@@ -1,136 +1,84 @@
-:root {
-    --container-bg-color: #333;
-    --left-bg-color: rgba(223, 39, 39, 0.7);
-    --left-button-hover-color: rgba(161, 11, 11, 0.3);
-    --right-bg-color: rgba(43, 43, 43, 0.8);
-    --right-button-hover-color: rgba(92, 92, 92, 0.3);
-    --hover-width: 75%;
-    --other-width: 25%;
-    --speed: 1000ms;
-  }
-  
-  
-  h1 {
-    font-size: 4rem;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-  }
-  
-  .button {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    height: 2.5rem;
-    padding-top: 1.3rem;
-    width: 15rem;
-    text-align: center;
-    color: #fff;
-    border: #fff solid 0.2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+}
+.lpcontainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.lpcontainer .two,
+.one {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    max-width: 100%;
+    transition: all 0.6s;
+}
+.lpcontainer .one {
+    flex: 1;
+    height: 100%;
+    background-image: url("http://skywide.co.uk/wp-content/uploads/2017/10/Animations.png");
+}
+
+.lpcontainer .one:hover {
+    flex: 1.5;
+}
+.lpcontainer .two:hover {
+    flex: 1.5;
+}
+.lpcontainer .two {
+    flex: 1;
+    background-image: url("http://skywide.co.uk/wp-content/uploads/2017/10/Design-Manufacture.jpg");
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 500px;
+    height: 150px;
+    border-radius: 6em;
+    border-width: 1px;
+    border: 1.5px solid !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 44px ;
+    background: transparent;
+    cursor: pointer;
+    color: white !important;
     text-decoration: none;
-    transform: translateX(-50%);
-  }
-  
-  .split.left .button:hover {
-    background-color: var(--left-button-hover-color);
-    border-color: var(--left-button-hover-color);
-  }
-  
-  .split.right .button:hover {
-    background-color: var(--right-button-hover-color);
-    border-color: var(--right-button-hover-color);
-  }
-  
-  .landing_page--container {
-    position: relative;
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.content {
     width: 100%;
     height: 100%;
-    background: var(--container-bg-color);
-  }
-  
-  .split {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .split.left {
-    left:0;
-    background: url('https://image.ibb.co/m56Czw/designer.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  
-  .split.left:before {
-    position:absolute;
-    content: "";
+}
+.two .content {
     width: 100%;
     height: 100%;
-    background: var(--left-bg-color);
-  }
-  
-  .split.right {
-    right:0;
-    background: url('https://image.ibb.co/m3ZbRb/programmer.png') center center no-repeat;
-    background-size: cover;
-  }
-  
-  .split.right:before {
-    position:absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--right-bg-color);
-  }
-  
-  .split.left, .split.right, .split.right:before, .split.left:before {
-    transition: var(--speed) all ease-in-out;
-  }
-  
-  .hover-left .left {
-    width: var(--hover-width);
-  }
-  
-  .hover-left .right {
-    width: var(--other-width);
-  }
-  
-  .hover-left .right:before {
-    z-index: 2;
-  }
-  
-  
-  .hover-right .right {
-    width: var(--hover-width);
-  }
-  
-  .hover-right .left {
-    width: var(--other-width);
-  }
-  
-  .hover-right .left:before {
-    z-index: 2;
-  }
-  
-  @media(max-width: 800px) {
-    h1 {
-      font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one .content {
+    background: linear-gradient(to right, #00000094, #84001887);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .lpcontainer {
+        flex-direction: column;
     }
-  
-    .button {
-      width: 12rem;
-    }
-  }
-  
-  @media(max-height: 700px) {
-    .button {
-      top: 70%;
-    }
-  }
+}

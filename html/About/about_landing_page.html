@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <header class="container">
+    <header class="navbar-container">
         <nav class="navbar">
             <div class="nav-left--section">
                 <div class="header-social--links">
@@ -166,16 +166,27 @@
     </header>
 
     <main class="main">
-        <div class="landing_page--container">
-            <div class="split left">
-              <h1>The Designer</h1>
-              <a href="#" class="button">Read More</a>
+        <div class="lpcontainer">
+            <div class="one">
+                <div class="content">
+                    <a href="./about.html" class="button">Animation & Graphics</a>
+                </div>
             </div>
-            <div class="split right">
-              <h1>The Programmer</h1>
-              <a href="#" class="button">Read More</a>
+            <div class="two">
+                <div class="content">
+                    <a href="#" class="button">Design & Manufacture</a>
+                </div>
             </div>
-          </div>
+        </div>
+        </div>
+
+        <!-- Order Confirmation Modal -->
+        <div id="order-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <p>Your order has been placed successfully.</p>
+            </div>
+        </div>
     </main>
 
 
