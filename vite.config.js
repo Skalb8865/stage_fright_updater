@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         // Main Pages
         main: resolve(__dirname, 'index.html'),
+        about_landing_page: resolve(__dirname, 'html/About/about_landing_page.html'),
         about: resolve(__dirname, 'html/About/about.html'),
         tours: resolve(__dirname, 'html/Tours/tour.html'),
         merch: resolve(__dirname, 'html/Merch/merch.html'),
