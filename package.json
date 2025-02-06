@@ -15,7 +15,7 @@
     "vite": "^6.0.11"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.4",
     "git": "^0.1.5",
     "swiper": "^11.1.15"
   }
