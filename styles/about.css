@@ -1,60 +1,34 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-* {
-    padding: 0px;
-    margin: 0px;
-    font-family: "Poppins", sans-serif;
-}
 .lpcontainer {
+    display: flex;
     width: 100%;
     height: 100vh;
-    display: flex;
 }
 .lpcontainer .two,
 .one {
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    text-align: justify;
-    max-width: 100%;
-    transition: all 0.6s;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    transition: all 0.65s;
 }
 .lpcontainer .one {
     flex: 1;
     height: 100%;
-    background-image: url("http://skywide.co.uk/wp-content/uploads/2017/10/Animations.png");
+    background-image: url("/res/merch/backAirpod.webp");
 }
 
 .lpcontainer .one:hover {
-    flex: 1.5;
+    flex: 1.25;
 }
 .lpcontainer .two:hover {
-    flex: 1.5;
+    flex: 1.25;
 }
 .lpcontainer .two {
     flex: 1;
     background-image: url("/res/members/group.webp");
     height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.button {
-    width: 500px;
-    height: 150px;
-    border-radius: 6em;
-    border-width: 1px;
-    border: 1.5px solid !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 44px ;
-    background: transparent;
-    cursor: pointer;
-    color: white !important;
-    text-decoration: none;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 .content {
@@ -62,23 +36,26 @@
     height: 100%;
 }
 .two .content {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .one .content {
-    background: linear-gradient(to right, #00000094, #84001887);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
 }
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
     .lpcontainer {
         flex-direction: column;
     }
-}
+} */
