@@ -16,7 +16,7 @@
 .lpcontainer .one {
     flex: 1;
     height: 100%;
-    background-image: url("/res/merch/backAirpod.webp");
+    background-image: url("/res/news/timelineLandImg.png");
 }
 
 .lpcontainer .one:hover {
