@@ -16,11 +16,7 @@
 .lpcontainer .one {
     flex: 1;
     height: 100%;
-<<<<<<< HEAD
-    background-image: url("/res/hero_image/hero-image.webp");
-=======
     background-image: url("/res/members/timelineLandImg.png");
->>>>>>> 23fa46c605181592962c465908b54680f462f67a
 }
 
 .lpcontainer .one:hover {
