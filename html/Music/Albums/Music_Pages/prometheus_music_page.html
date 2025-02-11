@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour | Stage Fright</title>
+    <title>Prometheus | Stage Fright</title>
 
     <!-- ========= -->
     <!-- CSS Links -->
@@ -17,18 +17,21 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     </noscript>
 
+
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
+    <!-- <link rel="stylesheet" href="/styles/music.css"> -->
+
     <!-- ======== -->
     <!-- JS Links -->
     <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/tours.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
+
 
     <meta name="description" content="Stage Fright Website">
     <meta name="keywords" content="Web Design, html, css, js">
@@ -63,22 +66,22 @@
                 <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
-                            <a href="../About/about.html" aria-label="About Page">
+                            <a href="/html/About/about.html" aria-label="About Page">
                                 Band
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../Music/music.html" aria-label="Music Page">
+                            <a href="/html/Music/music.html" aria-label="Music Page">
                                 Music
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../Merch/merch.html" aria-label="Merch Page">
+                            <a href="/html/Merch/merch.html" aria-label="Merch Page">
                                 Merch
                             </a>
                         </li>
-                        <li class="active-mobile-link">
-                            <a href="tour.html" aria-label="Tours Page" aria-current="page">
+                        <li class="mobile-nav--item">
+                            <a href="/html/Tours/tour.html" aria-label="Tours Page">
                                 Tour
                             </a>
                         </li>
@@ -109,8 +112,8 @@
             <div class="nav-center--section">
                 <div class="center-left">
                     <ul class="center-left--list">
-                        <li class="nav-item"><a href="../About/about.html" aria-label="About Band">Band</a></li>
-                        <li class="nav-item"><a href="../Music/music.html" aria-label="Music Page">Music</a></li>
+                        <li class="nav-item"><a href="/html/About/about.html" aria-label="About Band">Band</a></li>
+                        <li class="nav-item"><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
                     </ul>
                 </div>
 
@@ -121,9 +124,9 @@
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a>
+                        <li class="nav-item"><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a>
                         </li>
-                        <li class="active-link"><a href="tour.html" aria-label="Tours Page" aria-current="page">Tour</a>
+                        <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a>
                         </li>
                     </ul>
                 </div>
@@ -163,28 +166,74 @@
     </header>
 
     <main class="main">
-        <!-- Tour Cards Section -->
-        <section class="container section">
-            <h1 class="section-title">Hermes Tour</h1>
-            <div class="tours">
-                <!-- JSON Cards Loaded Here -->
+        <div class="main_container">
+            <div class="main_img--container">
+                <div><img src="/res/albums/Prometheus.webp" alt="Prometheus Album Image">
+                </div>
             </div>
-        </section>
+            <div class="main_content">
+                <h1 class="product-title">Prometheus Soundtrack</h1>
+                <div class="album_songs">
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Aggressive_Rock_Trailer_-_Alexander_Lyamin.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
 
-        <!-- Modal Section -->
-        <dialog id="tourModal" class="tour_modal">
-            <h2 id="modalTitle">Tour Details</h2>
-            <p id="modalDate"></p>
-            <p id="modalLocation"></p>
-            <p id="modalPlace"></p>
-            <p id="modalPrice"></p>
-            <button id="closeModal" class="tour_modal--close">&times;</button>
-        </dialog>
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Aggressive_Rock_Trailer_-_Alexander_Lyamin.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
 
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Indie_Rock_Sensation_-_alumo.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Old_Rock_Club_-_Amoebacrew.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Rock'n'Roll_-_shearer.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/slap_delay_rock_(happy_bonus)_-_Ton_(2).mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Symphonic_Epic_Metal_Rock_-_DmitriyTaras_(2).mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <span class="song-title">Electric Storm</span>
+                    <audio controls>
+                        <source src="/songs/Upbeat_Fun_Rock_-_SoundForYou.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
     </main>
 
 
-    <!-- ========-===== -->
+    <!-- ============== -->
     <!-- Footer Section -->
     <!-- ============== -->
     <footer class="cotainer section">

@@ -3,96 +3,96 @@
         "name": "Stage Fright White Long Sleeve",
         "link": "/html/Merch/Apparel/white_long_sleeve.html",
         "price": "$22.99",
-        "image": "/res/merch/SFwhitelongsleeve.webp"
+        "image": "/merch/SFwhitelongsleeve.webp"
     },
     {
         "name": "Prometheus Vinyl",
         "link": "/html/Merch/Media/prometheus_vinyl.html",
         "price": "$27.99",
-        "image": "/res/merch/Prometheusvinyl.webp"
+        "image": "/merch/Prometheusvinyl.webp"
     },
     {
         "name": "Acantha Black T-Shirt",
         "link": "/html/Merch/Apparel/acantha_T-shirt.html",
         "price": "$18.99",
-        "image": "/res/merch/AcanthaShirt.webp"
+        "image": "/merch/AcanthaShirt.webp"
     },
     {
         "name": "NYX Vinyl",
         "link": "/html/Merch/Media/nyx_vinyl.html",
         "price": "$27.99",
-        "image": "/res/merch/Nyxvinyl.webp"
+        "image": "/merch/Nyxvinyl.webp"
     },
     {
         "name": "Stage Fright White Hat",
         "link": "/html/Merch/Apparel/white_logo_hat.html",
         "price": "$12.99",
-        "image": "/res/merch/hatMerch.webp"
+        "image": "/merch/hatMerch.webp"
     },
     {
         "name": "Stage Fright Black Logo Hoodie",
         "link": "/html/Merch/Apparel/black_logo_hoodie.html",
         "price": "$24.99",
-        "image": "/res/merch/boy_Hoodie.webp"
+        "image": "/merch/boy_Hoodie.webp"
     },
     {
         "name": "Black Motto iPhone Case",
         "link": "/html/Merch/Accessories/motto_phone_case.html",
         "price": "$9.99",
-        "image": "/res/merch/Phone_Case.webp"
+        "image": "/merch/Phone_Case.webp"
     },
     {
         "name": "UYIF Black Sweatpants",
         "link": "/html/Merch/Apparel/black_motto_sweatpants.html",
         "price": "$16.99",
-        "image": "/res/merch/pants.webp"
+        "image": "/merch/pants.webp"
     },
     {
         "name": "NYX Black T-Shirt",
         "link": "/html/Merch/Apparel/nyx_T-shirt",
         "price": "$18.99",
-        "image": "/res/merch/NyxShirt.webp"
+        "image": "/merch/NyxShirt.webp"
     },
     {
         "name": "Black Logo Beanie",
         "link": "/html/Merch/Apparel/black_logo_beanie.html",
         "price": "$12.99",
-        "image": "/res/merch/Beanie.webp"
+        "image": "/merch/Beanie.webp"
     },
     {
         "name": "NYX Black Hoodie",
         "link": "/html/Merch/Apparel/nyx_black_hoodie.html",
         "price": "$24.99",
-        "image": "/res/merch/Nyxhood.webp"
+        "image": "/merch/Nyxhood.webp"
     },
     {
         "name": "Logo White Airpod Case",
         "link": "/html/Merch/Accessories/logo_white_airpod_case.html",
         "price": "$7.99",
-        "image": "/res/merch/backAirpod.webp"
+        "image": "/merch/backAirpod.webp"
     },
     {
         "name": "Prometheus Black Hoodie",
         "link": "/html/Merch/Apparel/prometheus_black_hoodie.html",
         "price": "$24.99",
-        "image": "/res/merch/Prometheushood.webp"
+        "image": "/merch/Prometheushood.webp"
     },
     {
         "name": "Prometheus Black T-Shirt",
         "link": "/html/Merch/Apparel/prometheus_T-shirt.html",
         "price": "$18.99",
-        "image": "/res/merch/PrometheusShirt.webp"
+        "image": "/merch/PrometheusShirt.webp"
     },
     {
         "name": "Acantha Black Hoodie",
         "link": "/html/Merch/Apparel/acantha_hoodie.html",
         "price": "$24.99",
-        "image": "/res/merch/AcanthaHood.webp"
+        "image": "/merch/AcanthaHood.webp"
     },
     {
         "name": "Acantha Vinyl",
         "link": "/html/Merch/Media/acantha_vinyl.html",
         "price": "$27.99",
-        "image": "/res/merch/Acanthavinyl.webp"
+        "image": "/merch/Acanthavinyl.webp"
     }
 ]
