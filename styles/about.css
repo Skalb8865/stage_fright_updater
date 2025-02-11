@@ -16,7 +16,7 @@
 .lpcontainer .one {
     flex: 1;
     height: 100%;
-    background-image: url("/res/news/timelineLandImg.png");
+    background-image: url("/res/members/timelineLandImg.png");
 }
 
 .lpcontainer .one:hover {
