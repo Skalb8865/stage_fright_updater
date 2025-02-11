@@ -37,7 +37,7 @@ function timeFormat(ct) {
   seconds = Math.floor(ct % 60);
 
   if (seconds < 10) {
-    seconds = "0"+seconds;
+    seconds = "0" + seconds;
   }
 
   return minutes + ":" + seconds;
