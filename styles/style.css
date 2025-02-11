@@ -914,6 +914,7 @@ main {
     color: var(--clr-slate400);
 }
 
+
 .tickets-input-container {
     display: flex;
     flex-direction: column;
