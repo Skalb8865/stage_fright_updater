@@ -57,7 +57,8 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                    aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
                 <div class="mobile-nav" id="mobile-nav">
@@ -176,26 +177,27 @@
 
                 <ul class="size-list">
                     <li class="sizes">
-                        <input id="size" type="radio" name="size" aria-label="Size Small"
-                            aria-required="true" required >
-                        <label for="size">S</label>
+                        <input id="small" type="radio" name="size" aria-label="Size Small" aria-required="true" required>
+                        <label for="small">S</label>
                     </li>
                     <li class="sizes">
-                        <input id="size" type="radio" name="size" aria-label="Size Medium" aria-required="true" required >
-                        <label for="size">M</label>
+                        <input id="medium" type="radio" name="size" aria-label="Size Medium" aria-required="true"
+                            required>
+                        <label for="medium">M</label>
                     </li>
                     <li class="sizes">
-                        <input id="size" type="radio" name="size" aria-label="Size Large" aria-required="true" required >
-                        <label for="size">L</label>
+                        <input id="large" type="radio" name="size" aria-label="Size Large" aria-required="true" required>
+                        <label for="large">L</label>
                     </li>
                     <li class="sizes">
-                        <input id="size" type="radio" name="size" aria-label="Size Extra Large" aria-required="true" required >
-                        <label for="size">XL</label>
+                        <input id="extra-large" type="radio" name="size" aria-label="Size Extra Large" aria-required="true"
+                            required>
+                        <label for="extra-large">XL</label>
                     </li>
                     <li class="sizes">
-                        <input id="size" type="radio" name="size" aria-label="Size Extra Extra Large" aria-required="true"
-                            required >
-                        <label for="size">XXL</label>
+                        <input id="extra-extra-large" type="radio" name="size" aria-label="Size Extra Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-extra-large">XXL</label>
                     </li>
                 </ul>
 
@@ -205,7 +207,7 @@
                         <button class="quantity-btn minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
+                            aria-label="quantity" disabled>
                         <button class="quantity-btn plus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
@@ -260,7 +262,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Order Confirmation Modal -->
         <dialog id="order-modal" class="order-modal">
             <div class="modal-content">
