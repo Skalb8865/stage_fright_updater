@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about_landing_page: resolve(__dirname, 'html/About/about_landing_page.html'),
         about: resolve(__dirname, 'html/About/about.html'),
+        timeline: resolve(__dirname, 'html/About/timeline.html'),
         tours: resolve(__dirname, 'html/Tours/tour.html'),
         merch: resolve(__dirname, 'html/Merch/merch.html'),
         music: resolve(__dirname, 'html/Music/music.html'),
@@ -17,6 +18,7 @@ export default defineConfig({
         credits: resolve(__dirname, 'html/Credits/credits.html'),
         // Music
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
+        prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
         Acantha: resolve(__dirname, 'html/Music/Albums/acantha.html'),
         NYX: resolve(__dirname, 'html/Music/Albums/nyx.html'),
         // Apparel
