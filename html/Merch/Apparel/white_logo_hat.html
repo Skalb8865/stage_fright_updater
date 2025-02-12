@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage Fright White Hat | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -24,9 +24,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <!-- -------- -->
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
 
@@ -57,10 +57,11 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                    aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="/html/About/about.html" aria-label="About Page">
@@ -134,7 +135,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -177,21 +178,21 @@
                     <li class="hat_size">
                         <input type="radio" name="size" aria-label="Size Small/Medium" aria-label="Size Small"
                             aria-required="true" required />
-                        <label for="size">S / M</label>
+                        <label for="small and medium">S / M</label>
                     </li>
                     <li class="hat_size">
                         <input type="radio" name="size" aria-label="Size Large/Extra Large" aria-required="true"
                             required />
-                        <label for="size">L / XL</label>
+                        <label for="large and extra large">L / XL</label>
                     </li>
                 </ul>
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
+                <div class="quantity-container">
                     <div class="number-input">
                         <button class="quantity-btn minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
+                            aria-label="quantity" disabled>
                         <button class="quantity-btn plus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
@@ -255,9 +256,9 @@
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ============== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">

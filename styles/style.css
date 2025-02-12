@@ -644,6 +644,13 @@ main {
     cursor: pointer;
 }
 
+.quantity-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
 
 .number-input input[type=number] {
     max-width: 2.5rem;
@@ -910,7 +917,7 @@ main {
     transition: color 0.3s;
 }
 
-.tour_modal--close:hover{
+.tour_modal--close:hover {
     color: var(--clr-slate400);
 }
 
