@@ -18,12 +18,12 @@ export default defineConfig({
         credits: resolve(__dirname, 'html/Credits/credits.html'),
         // Music
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
-        prometheus_music_page: resolve(__dirname, 'html/Music/Albums/music_pages/prometheus_music_page.html'),
+        prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
         acantha: resolve(__dirname, 'html/Music/Albums/acantha.html'),
         // 
-        acantha_music_page: resolve(__dirname, 'html/Music/Albums/music_pages/acantha_music_page.html'),
+        acantha_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/acantha_music_page.html'),
         NYX: resolve(__dirname, 'html/Music/Albums/nyx.html'),
-        nyx_music_page: resolve(__dirname, 'html/Music/Albums/music_pages/nyx_music_page.html'),
+        nyx_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/nyx_music_page.html'),
         // Apparel
         logo_long_sleeve: resolve(__dirname, 'html/Merch/Apparel/white_long_sleeve.html'),
         acantha_tshirt: resolve(__dirname, 'html/Merch/Apparel/acantha_T-shirt.html'),
