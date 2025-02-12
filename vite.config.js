@@ -24,6 +24,7 @@ export default defineConfig({
         NYX: resolve(__dirname, 'html/Music/Albums/nyx.html'),
         nyx_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/nyx_music_page.html'),
         // Apparel
+        
         logo_long_sleeve: resolve(__dirname, 'html/Merch/Apparel/white_long_sleeve.html'),
         acantha_tshirt: resolve(__dirname, 'html/Merch/Apparel/acantha_T-shirt.html'),
         acantha_hoodie: resolve(__dirname, 'html/Merch/Apparel/acantha_hoodie.html'),
