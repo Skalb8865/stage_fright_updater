@@ -66,6 +66,12 @@
     font-weight: 700;
 }
 
+.landing_credit{
+position: absolute;
+bottom: 0;
+color: var(--clr-slate400);
+}
+
 /* @media (max-width: 768px) {
     .landing_page--container {
         flex-direction: column;
