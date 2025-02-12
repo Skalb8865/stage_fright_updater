@@ -1030,14 +1030,14 @@ main {
     align-items: center;
 }
 
-.songs {
+.albums_songs {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.Soundtrack {
+.songs {
     padding-bottom: 10px;
     margin-top: 2px;
     font-size: 1rem;
