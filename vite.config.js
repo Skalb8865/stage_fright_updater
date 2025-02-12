@@ -20,7 +20,6 @@ export default defineConfig({
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
         prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
         acantha: resolve(__dirname, 'html/Music/Albums/acantha.html'),
-        // 
         acantha_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/acantha_music_page.html'),
         NYX: resolve(__dirname, 'html/Music/Albums/nyx.html'),
         nyx_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/nyx_music_page.html'),
