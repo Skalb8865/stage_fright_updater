@@ -21,6 +21,12 @@
     background-image: url("/res/members/timelineLandImg.png");
 }
 
+.landing_page--container .two {
+    flex: 1;
+    height: 100%;
+    background-image: url("/res/members/group.webp");
+}
+
 .landing_page--container .one:hover {
     flex: 1.25;
 }
@@ -29,11 +35,7 @@
     flex: 1.25;
 }
 
-.landing_page--container .two {
-    flex: 1;
-    height: 100%;
-    background-image: url("/res/members/group.webp");
-}
+
 
 .content {
     width: 100%;
