@@ -13,7 +13,7 @@
     transition: color 0.3s;
 }
 
-#cart-icon:hover{
+#cart-icon:hover {
     color: var(--clr-dark-rose);
     transition: color 0.3s;
 }
@@ -24,7 +24,7 @@
 .cart {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -9999%;
     width: 450px;
     height: 100%;
     overflow: hidden;
@@ -80,7 +80,7 @@
 .mobile-nav {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -9999%;
     width: 450px;
     height: 100%;
     overflow: hidden;
@@ -298,13 +298,15 @@
     top: 0.7rem;
     right: .8rem;
     font-size: 2rem;
-    color: var(--clr-light);
+    /* color: var(--clr-light); */
+    color: var(--clr-slate400);
     cursor: pointer;
     transition: color 0.3s;
 }
 
-#cart-close:hover{
-    color: var(--clr-slate400);
+#cart-close:hover {
+    /* color: var(--clr-slate400); */
+    color: var(--clr-light);
     transition: color 0.3s;
 }
 
@@ -396,42 +398,101 @@
     pointer-events: none;
 }
 
-/* Order Confirmation Modal */
 .order-modal {
     display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: fixed;
     z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .order_modal--content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    margin-top: 25rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--clr-light);
+}
+
+.order_modal--content h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--clr-dark);
+    padding: 20px 10px 0 10px;
+}
+
+.order_modal--content p {
+    color: var(--clr-slate400);
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .order_modal--close {
-    color: #aaa;
-    float: right;
+    position: relative;
+    top: -205px;
+    right: -240px;
+    color: var(--clr-slate400);
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
 .order_modal--close:hover,
 .order_modal--close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
+    transition: color 0.3s;
 }
 
+.order_checkmark {
+    height: 40px;
+}
+
+.order_checkmark i {
+    color: #1faa50;
+    font-size: 28px;
+}
+
+.checkmark-background {
+    position: relative;
+    top: -41px;
+    background: #4bee84;
+    opacity: 0.2;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.order_close--btn {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    border: 1px solid var(--clr-dark);
+    cursor: pointer;
+    padding: 1em 2.5em;
+    width: 200px;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.order_close--btn:hover {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+}
 
 @media (max-width: 1080px) {
     .shop {
@@ -499,5 +560,33 @@
 @media (max-height: 390px) {
     .cart-content {
         height: 40%
+    }
+}
+
+/* md */
+@media (max-width: 569px) {
+    .order_modal--content {
+        max-width: 515px;
+    }
+    .order_modal--close{
+        right: -220px;
+    }
+}
+
+/* sm */
+@media (max-width: 533px) {
+    .order_modal--content {
+        max-width: 475px;
+    }
+
+    .order_modal--close{
+        right: -210px;
+    }
+}
+
+/* xs */
+@media (max-width: 492px) {
+    .order_modal--content {
+        width: 400px;
     }
 }

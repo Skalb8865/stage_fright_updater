@@ -330,9 +330,15 @@
 
         <!-- Order Confirmation Modal -->
         <dialog id="order-modal" class="order-modal">
-            <div class="modal-content">
-                <span class="close" id="close-modal">&times;</span>
+            <div class="order_modal--content">
+                <div class="order_checkmark">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <div class="checkmark-background"></div>
+                </div>
+                <h1>Thank You!</h1>
                 <p>Your order has been placed successfully.</p>
+                <button class="order_close--btn" id="order_close--btn">Got it</button>
+                <span class="order_modal--close" id="close-modal">&times;</span>
             </div>
         </dialog>
     </main>
