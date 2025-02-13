@@ -24,7 +24,7 @@
 .cart {
     position: fixed;
     top: 0;
-    right: -9999%;
+    right: -200%;
     width: 450px;
     height: 100%;
     overflow: hidden;
@@ -80,7 +80,7 @@
 .mobile-nav {
     position: fixed;
     top: 0;
-    left: -9999%;
+    left: -200%;
     width: 450px;
     height: 100%;
     overflow: hidden;

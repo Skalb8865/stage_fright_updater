@@ -36,14 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     modalPlace.textContent = `Place: ${tourData.place}`;
                     modalPrice.textContent = `Price: ${tourData.ticketsPrice}`;
                     modal.showModal();
+                    document.body.style.overflow = 'hidden';
                 });
             });
         })
-        .catch(error => console.error('Error fetching tour data:', error));
 
     // Close modal when clicking the close button
     closeBtn.addEventListener('click', () => {
         modal.close();
+        document.body.style.overflow = 'auto';
     });
 
     // Close modal when clicking outside of it
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!isInDialog) {
             modal.close();
+            document.body.style.overflow = 'auto';
         }
     });
 });

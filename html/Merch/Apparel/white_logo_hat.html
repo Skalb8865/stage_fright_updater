@@ -176,12 +176,13 @@
 
                 <ul class="size-list">
                     <li class="hat_size">
-                        <input id="small-and-medium" type="radio" name="size" aria-label="Size Small/Medium" aria-required="true" required>
+                        <input id="small-and-medium" type="radio" name="size" aria-label="Size Small/Medium"
+                            aria-required="true" required>
                         <label for="small-and-medium">S / M</label>
                     </li>
                     <li class="hat_size">
-                        <input id="large-and-extra-large" type="radio" name="size" aria-label="Size Large/Extra Large" aria-required="true"
-                            required>
+                        <input id="large-and-extra-large" type="radio" name="size" aria-label="Size Large/Extra Large"
+                            aria-required="true" required>
                         <label for="large-and-extra-large">L / XL</label>
                     </li>
                 </ul>
@@ -246,12 +247,18 @@
         </section>
 
         <!-- Order Confirmation Modal -->
-        <div id="order-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="close-modal">&times;</span>
+        <dialog id="order-modal" class="order-modal">
+            <div class="order_modal--content">
+                <div class="order_checkmark">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <div class="checkmark-background"></div>
+                </div>
+                <h1>Thank You!</h1>
                 <p>Your order has been placed successfully.</p>
+                <button class="order_close--btn" id="order_close--btn">Got it</button>
+                <span class="order_modal--close" id="close-modal">&times;</span>
             </div>
-        </div>
+        </dialog>
     </main>
 
 
