@@ -42,14 +42,14 @@
         "image": "/merch/Phone_Case.webp"
     },
     {
-        "name": "UYIF Black Sweatpants",
+        "name": "Black Motto Sweatpants",
         "link": "/html/Merch/Apparel/black_motto_sweatpants.html",
         "price": "$16.99",
         "image": "/merch/pants.webp"
     },
     {
         "name": "NYX Black T-Shirt",
-        "link": "/html/Merch/Apparel/nyx_T-shirt",
+        "link": "/html/Merch/Apparel/nyx_T-shirt.html",
         "price": "$18.99",
         "image": "/merch/NyxShirt.webp"
     },
@@ -85,7 +85,7 @@
     },
     {
         "name": "Acantha Black Hoodie",
-        "link": "/html/Merch/Apparel/acantha_hoodie.html",
+        "link": "/html/Merch/Apparel/acantha_black_hoodie.html",
         "price": "$24.99",
         "image": "/merch/AcanthaHood.webp"
     },

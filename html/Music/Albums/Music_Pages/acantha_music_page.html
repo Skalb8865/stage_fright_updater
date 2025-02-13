@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acantha Black Hoodie | Stage Fright</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acantha Soundtrack | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -24,9 +24,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <!-- -------- -->
+    <link rel="stylesheet" href="/styles/music.css" />
+    <script src="/songs.js"></script>
+
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
 
@@ -57,10 +60,11 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                    aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="/html/About/about.html" aria-label="About Page">
@@ -73,7 +77,7 @@
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../merch.html" aria-label="Merch Page">
+                            <a href="/html/Merch/merch.html" aria-label="Merch Page">
                                 Merch
                             </a>
                         </li>
@@ -121,9 +125,10 @@
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../merch.html" aria-label="Merch Page">Merch</a>
+                        <li class="nav-item"><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a>
                         </li>
-                        <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a></li>
+                        <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -134,7 +139,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -162,114 +167,116 @@
     </header>
 
     <main class="main">
-        <!--ABOUT SECTION-->
-        <div class="merch-container product-box container">
-            <div class="merch_img--container">
-                <div class="merch_img--card"><img src="/res/merch/AcanthaHood.webp" alt="Acantha Black Hoodie"></div>
-            </div>
-            <div class="merch_content">
-                <h1 class="product-title">Acantha Black Hoodie</h1>
-                <h2 class="product-price">$24.99</h2>
-                <p class="product-description">White Long Sleeve with the Stage Fright Logo. Made with 100% Organic
-                    Cotton. Pre-washed to minimize shrinkage. Reactive-dyed for longer lasting color</p>
+        <section class="container section">
+            <h1 class="section-title">Acantha Soundtrack</h1>
 
-                <ul class="size-list">
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Small" aria-label="Size Small"
-                            aria-required="true" required />
-                        <label for="size">S</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Medium" aria-required="true" required />
-                        <label for="size">M</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Large" aria-required="true" required />
-                        <label for="size">L</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Large" aria-required="true" required />
-                        <label for="size">XL</label>
-                    </li>
-                    <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Extra Large" aria-required="true"
-                            required />
-                        <label for="size">XXL</label>
-                    </li>
-                </ul>
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
+            <div class="album_soundtrack">
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        1. Electric Storm
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
 
-                    <div class="number-input">
-                        <button class="quantity-btn minus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                        <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
-                        <button class="quantity-btn plus"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                <div class="player">
+                    <audio src="/songs/Rock'n'Roll_-_shearer.mp3"></audio>
+                    <div class="info">
+                        2. Riff Riot
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
+                    <div class="current">0:30</div>
+                </div>
 
-                    <button class="add-cart">Add To Cart</button>
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        3. Power Surge
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
                 </div>
-            </div>
-        </div>
 
-        <!-- SHOP SECTION  -->
-        <section class="shop merch_suggestions--container section">
-            <h2 class="shop-title">You May Also Like</h2>
-            <!-- CONTENT  -->
-            <div class="shop-content">
-                <!-- BOX 1 -->
-                <div class="merch-box">
-                    <a href="./acantha_hoodie.html" aria-label="Acantha Black Hoodie"><img
-                            src="/res/merch//AcanthaHood.webp" alt="Acantha Black Hoodie" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Acantha Black Hoodie</h2>
-                        <span class="product-price">$24.99</span>
+                <div class="player">
+                    <audio src="/songs/Symphonic_Epic_Metal_Rock_-_DmitriyTaras_(2).mp3"></audio>
+                    <div class="info">
+                        4. Fire Within
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
+                    <div class="current">0:30</div>
                 </div>
-                <!-- BOX 2 -->
-                <div class="merch-box">
-                    <a href="../Media/prometheus_vinyl.html" aria-label="Prometheus Vinyl"><img
-                            src="/res/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Prometheus Vinyl</h2>
-                        <span class="product-price">$27.99</span>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        5. Rebel's Rise
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
+                    <div class="current">0:30</div>
                 </div>
-                <!-- BOX 3 -->
-                <div class="merch-box">
-                    <a href="./acantha_T-shirt.html" aria-label="Acantha Black T-Shirt"><img
-                            src="/res/merch/AcanthaShirt.webp" alt="Black Acantha T-Shirt" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">Acantha Black T-Shirt</h2>
-                        <span class="product-price">$18.99</span>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        6. Fuel the Fire
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
+                    <div class="current">0:30</div>
                 </div>
-                <!-- BOX 4 -->
-                <div class="merch-box">
-                    <a href="../Media/nyx_vinyl.html" aria-label="NYX Vinyl"><img src="/res/merch/Nyxvinyl.webp"
-                            alt="Nyx Vinyl" class="product-img"></a>
-                    <div class="info-section">
-                        <h2 class="product-title">NYX Vinyl</h2>
-                        <span class="product-price">$27.99</span>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        7. Amped Up
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        8. Thunder
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        9. Wildfire Rush
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
                 </div>
             </div>
         </section>
-
-         <!-- Order Confirmation Modal -->
-         <div id="order-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="close-modal">&times;</span>
-                <p>Your order has been placed successfully.</p>
-            </div>
-        </div>
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ============== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">

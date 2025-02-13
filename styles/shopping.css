@@ -10,6 +10,12 @@
 #cart-icon {
     font-size: 1.8rem;
     cursor: pointer;
+    transition: color 0.3s;
+}
+
+#cart-icon:hover{
+    color: var(--clr-dark-rose);
+    transition: color 0.3s;
 }
 
 
@@ -294,6 +300,12 @@
     font-size: 2rem;
     color: var(--clr-light);
     cursor: pointer;
+    transition: color 0.3s;
+}
+
+#cart-close:hover{
+    color: var(--clr-slate400);
+    transition: color 0.3s;
 }
 
 #nav-close {

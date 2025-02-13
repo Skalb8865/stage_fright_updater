@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prometheus Vinyl | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -24,9 +24,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <!-- -------- -->
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
 
@@ -57,10 +57,11 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                    aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="/html/About/about.html" aria-label="About Page">
@@ -134,7 +135,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -165,7 +166,7 @@
         <!--ABOUT SECTION-->
         <div class="merch-container product-box container">
             <div class="merch_img--container">
-                <div class="merch_img--card"><img src="/res/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl"></div>
+                <div class="merch_img--card"><img src="/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl"></div>
             </div>
             <div class="merch_content">
                 <h1 class="product-title">Prometheus Vinyl</h1>
@@ -173,8 +174,7 @@
                 <p class="product-description">Prometheus Black 7 inch Vinyl. Our Debut Album Prometheus was Released on
                     September 16, 2022 This is the album that started it all.</p>
 
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
-
+                <div class="quantity-container">
                     <div class="number-input">
                         <button class="quantity-btn minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
@@ -186,6 +186,7 @@
 
                     <button class="add-cart">Add To Cart</button>
                 </div>
+                <link rel="stylesheet" href="/html/Merch/Apparel/acantha_black_hoodie.html">
             </div>
         </div>
 
@@ -196,7 +197,7 @@
             <div class="shop-content">
                 <!-- BOX 1 -->
                 <div class="merch-box">
-                    <a href="../Apparel/prometheus_black_hoodie.html"><img src="/res/merch/Prometheushood.webp"
+                    <a href="../Apparel/prometheus_black_hoodie.html"><img src="/merch/Prometheushood.webp"
                             alt="Prometheus Black Hoodie" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Prometheus Black Hoodie</h2>
@@ -205,8 +206,8 @@
                 </div>
                 <!-- BOX 2 -->
                 <div class="merch-box">
-                    <a href="../Apparel/nyx_T-shirt.html" aria-label="NYX Black T-Shirt"><img
-                            src="/res/merch/NyxShirt.webp" alt="Nyx Black T-Shirt" class="product-img"></a>
+                    <a href="../Apparel/nyx_T-shirt.html" aria-label="NYX Black T-Shirt"><img src="/merch/NyxShirt.webp"
+                            alt="Nyx Black T-Shirt" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">NYX Black T-Shirt</h2>
                         <span class="product-price">$18.99</span>
@@ -214,8 +215,8 @@
                 </div>
                 <!-- BOX 3 -->
                 <div class="merch-box">
-                    <a href="./nyx_vinyl.html" aria-label="NYX Vinyl"> <img src="/res/merch/Nyxvinyl.webp"
-                            alt="Nyx Vinyl" class="product-img"></a>
+                    <a href="./nyx_vinyl.html" aria-label="NYX Vinyl"> <img src="/merch/Nyxvinyl.webp" alt="Nyx Vinyl"
+                            class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">NYX Vinyl</h2>
                         <span class="product-price">$27.99</span>
@@ -223,7 +224,7 @@
                 </div>
                 <!-- BOX 4 -->
                 <div class="merch-box">
-                    <a href="../Apparel/prometheus_T-shirt.html"><img src="/res/merch/PrometheusShirt.webp"
+                    <a href="../Apparel/prometheus_T-shirt.html"><img src="/merch/PrometheusShirt.webp"
                             alt="Prometheus Black T-Shirt" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Prometheus Black T-Shirt</h2>
@@ -233,8 +234,8 @@
             </div>
         </section>
 
-         <!-- Order Confirmation Modal -->
-         <div id="order-modal" class="modal">
+        <!-- Order Confirmation Modal -->
+        <div id="order-modal" class="modal">
             <div class="modal-content">
                 <span class="close" id="close-modal">&times;</span>
                 <p>Your order has been placed successfully.</p>
@@ -243,9 +244,9 @@
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ============== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">

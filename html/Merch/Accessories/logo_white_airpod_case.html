@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo White Airpod Case | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -25,9 +25,9 @@
     </noscript>
     <link rel="stylesheet" href="/styles/shopping.css">
 
-    <!-- -------- -->
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js" async defer></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous" async defer></script>
 
@@ -58,10 +58,10 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav" aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="/html/About/about.html" aria-label="About Page">
@@ -135,7 +135,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -166,20 +166,20 @@
         <!--ABOUT SECTION-->
         <div class="merch-container product-box container">
             <div class="merch_img--container">
-                <div class="merch_img--card"><img src="/res/merch/backAirpod.webp" alt="Logo White Airpod Case"></div>
+                <div class="merch_img--card"><img src="/merch/backAirpod.webp" alt="Logo White Airpod Case"></div>
             </div>
             <div class="merch_content">
                 <h1 class="product-title">Logo White Airpod Case</h1>
                 <h2 class="product-price">$7.99</h2>
                 <p class="product-description">White Long Sleeve with the Stage Fright Logo. Made with 100% Organic
                     Cotton. Pre-washed to minimize shrinkage. Reactive-dyed for longer lasting color</p>
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
+                <div class="quantity-container">
                     <div class="number-input">
                         <button class="quantity-btn minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
+                            aria-label="quantity" disabled>
                         <button class="quantity-btn plus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
@@ -196,8 +196,8 @@
             <div class="shop-content">
                 <!-- BOX 1 -->
                 <div class="merch-box">
-                    <a href="./motto_phone_case.html" aria-label="Moto Phone Case<"><img
-                            src="/res/merch/Phone_Case.webp" alt="Stage Fright Moto Phone Case" class="product-img"></a>
+                    <a href="./motto_phone_case.html" aria-label="Moto Phone Case<"><img src="/merch/Phone_Case.webp"
+                            alt="Stage Fright Moto Phone Case" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Black Motto <span style="text-transform: none;">i</span>Phone Case
                         </h2>
@@ -206,7 +206,7 @@
                 </div>
                 <!-- BOX 2 -->
                 <div class="merch-box">
-                    <a href="../Media/acantha_vinyl.html"><img src="/res/merch/Acanthavinyl.webp" alt="Acntha Vinyl"
+                    <a href="../Media/acantha_vinyl.html"><img src="/merch/Acanthavinyl.webp" alt="Acntha Vinyl"
                             class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Acantha Vinyl</h2>
@@ -216,7 +216,7 @@
                 <!-- BOX 3 -->
                 <div class="merch-box">
                     <a href="../Apparel/white_logo_hat.html" aria-label="Stage Fright White Hat"><img
-                            src="/res/merch/hatMerch.webp" alt="White Stage Fright Hat" class="product-img"></a>
+                            src="/merch/hatMerch.webp" alt="White Stage Fright Hat" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Stage Fright White Hat</h2>
                         <span class="product-price">$12.99</span>
@@ -225,7 +225,7 @@
                 <!-- BOX 4 -->
                 <div class="merch-box">
                     <a href="../Apparel/white_long_sleeve.html" aria-label="White Long Sleeve Merch Page"><img
-                            src="/res/merch/SFwhitelongsleeve.webp" alt="White Long Sleeve" class="product-img"></a>
+                            src="/merch/SFwhitelongsleeve.webp" alt="White Long Sleeve" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Stage Fright White Long Sleeve</h2>
                         <span class="product-price">$22.99</span>
@@ -244,9 +244,9 @@
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ============== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">

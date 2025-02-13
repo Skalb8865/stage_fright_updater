@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acantha Black T-Shirt | Stage Fright</title>
 
-    <!-- --------- -->
+    <!-- ========= -->
     <!-- CSS Links -->
-    <!-- --------- -->
+    <!-- ========= -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -24,9 +24,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <!-- -------- -->
+    <!-- ======== -->
     <!-- JS Links -->
-    <!-- -------- -->
+    <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
 
@@ -57,10 +57,11 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="navbar" aria-expanded="false">
+                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                    aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
-                <div class="mobile-nav">
+                <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
                             <a href="/html/About/about.html" aria-label="About Page">
@@ -134,7 +135,7 @@
                     <span class="cart-icon-count" id="total-items"></span>
                 </button>
                 <!-- CART  -->
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2 class="cart-title">Your Cart</h2>
 
                     <!-- CONTENT  -->
@@ -165,44 +166,48 @@
         <!--ABOUT SECTION-->
         <div class="merch-container product-box container">
             <div class="merch_img--container">
-                <div class="merch_img--card"><img src="/res/merch/AcanthaShirt.webp" alt="Acantha Black T-Shirt"></div>
+                <div class="merch_img--card"><img src="/merch/AcanthaShirt.webp" alt="Acantha Black T-Shirt"></div>
             </div>
             <div class="merch_content">
                 <h1 class="product-title">Acantha Black T-Shirt</h1>
                 <h2 class="product-price">$18.99</h2>
                 <p class="product-description">Our 2nd Album Acantha Black T-shirt. Made with 100% Organic
                     Cotton. Pre-washed to minimize shrinkage.</p>
+
                 <ul class="size-list">
                     <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Small" aria-label="Size Small"
-                            aria-required="true" required />
-                        <label for="size">S</label>
+                        <input id="small" type="radio" name="size" aria-label="Size Small" aria-required="true"
+                            required>
+                        <label for="small">S</label>
                     </li>
                     <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Medium" aria-required="true" required />
-                        <label for="size">M</label>
+                        <input id="medium" type="radio" name="size" aria-label="Size Medium" aria-required="true"
+                            required>
+                        <label for="medium">M</label>
                     </li>
                     <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Large" aria-required="true" required />
-                        <label for="size">L</label>
+                        <input id="large" type="radio" name="size" aria-label="Size Large" aria-required="true"
+                            required>
+                        <label for="large">L</label>
                     </li>
                     <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Large" aria-required="true" required />
-                        <label for="size">XL</label>
+                        <input id="extra-large" type="radio" name="size" aria-label="Size Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-large">XL</label>
                     </li>
                     <li class="sizes">
-                        <input type="radio" name="size" aria-label="Size Extra Extra Large" aria-required="true"
-                            required />
-                        <label for="size">XXL</label>
+                        <input id="extra-extra-large" type="radio" name="size" aria-label="Size Extra Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-extra-large">XXL</label>
                     </li>
                 </ul>
-                <div style="display: flex; gap: 10px; align-items: center; text-align: center;">
 
+                <div class="quantity-container">
                     <div class="number-input">
                         <button class="quantity-btn minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                         <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
-                            aria-label="quantity" disabled />
+                            aria-label="quantity" disabled>
                         <button class="quantity-btn plus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
@@ -219,8 +224,8 @@
             <div class="shop-content">
                 <!-- BOX 1 -->
                 <div class="merch-box">
-                    <a href="./acantha_hoodie.html" aria-label="Acantha Black Hoodie"><img
-                            src="/res/merch//AcanthaHood.webp" alt="Acantha Black Hoodie" class="product-img"></a>
+                    <a href="./acantha_black_hoodie.html" aria-label="Acantha Black Hoodie"><img
+                            src="/merch//AcanthaHood.webp" alt="Acantha Black Hoodie" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Acantha Black Hoodie</h2>
                         <span class="product-price">$24.99</span>
@@ -229,7 +234,7 @@
                 <!-- BOX 2 -->
                 <div class="merch-box">
                     <a href="../Media/prometheus_vinyl.html" aria-label="Prometheus Vinyl"><img
-                            src="/res/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl" class="product-img"></a>
+                            src="/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Prometheus Vinyl</h2>
                         <span class="product-price">$27.99</span>
@@ -237,7 +242,7 @@
                 </div>
                 <!-- BOX 3 -->
                 <div class="merch-box">
-                    <a href="../Media/acantha_vinyl.html"><img src="/res/merch/Acanthavinyl.webp" alt="Acantha Vinyl"
+                    <a href="../Media/acantha_vinyl.html"><img src="/merch/Acanthavinyl.webp" alt="Acantha Vinyl"
                             class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">Acantha Vinyl</h2>
@@ -246,7 +251,7 @@
                 </div>
                 <!-- BOX 4 -->
                 <div class="merch-box">
-                    <a href="../Media/nyx_vinyl.html" aria-label="NYX Vinyl"><img src="/res/merch/Nyxvinyl.webp"
+                    <a href="../Media/nyx_vinyl.html" aria-label="NYX Vinyl"><img src="/merch/Nyxvinyl.webp"
                             alt="Nyx Vinyl" class="product-img"></a>
                     <div class="info-section">
                         <h2 class="product-title">NYX Vinyl</h2>
@@ -266,9 +271,9 @@
     </main>
 
 
-    <!-- -------------- -->
+    <!-- ============== -->
     <!-- Footer Section -->
-    <!-- -------------- -->
+    <!-- ============== -->
     <footer class="cotainer section">
         <div class="footer_container">
             <div class="footer_links">
