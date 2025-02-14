@@ -112,7 +112,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--hover-color);
+    border-top: 1px solid var(--clr-slate400);
     height: 15dvh;
     gap: 10px;
 }
@@ -122,15 +122,15 @@
 }
 
 .mobilenav-Social--Links .icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: var(--clr-light);
     color: var(--clr-dark);
     text-align: center;
     font-size: 1.125rem;
-    line-height: 50px;
-    transition: all 0.3s linear;
+    line-height: 45px;
+    transition: all 0.3s;
     cursor: pointer;
 }
 
@@ -298,15 +298,13 @@
     top: 0.7rem;
     right: .8rem;
     font-size: 2rem;
-    /* color: var(--clr-light); */
-    color: var(--clr-slate400);
+    color: var(--clr-light);
     cursor: pointer;
     transition: color 0.3s;
 }
 
 #cart-close:hover {
-    /* color: var(--clr-slate400); */
-    color: var(--clr-light);
+    color: var(--clr-slate400);
     transition: color 0.3s;
 }
 
@@ -316,7 +314,13 @@
     right: .8rem;
     font-size: 2rem;
     color: var(--clr-light);
+    transition: color 0.3s;
     cursor: pointer;
+}
+
+#nav-close:hover{
+    color: var(--clr-slate400);
+    transition: color 0.3s;
 }
 
 
@@ -418,7 +422,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 25px;
-    margin-top: 25rem;
+    margin-top: 15rem;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
@@ -588,5 +592,9 @@
 @media (max-width: 492px) {
     .order_modal--content {
         width: 400px;
+    }
+
+    .order_modal--close{
+        right: -175px;
     }
 }

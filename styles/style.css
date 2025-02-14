@@ -46,9 +46,6 @@ body {
     overflow-x: hidden;
 }
 
-main {
-    min-height: 100dvh;
-}
 
 /* ***************** */
 /* Container Section */
@@ -60,6 +57,7 @@ main {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    /* border: 1px solid red; */
 }
 
 .navbar-container {
@@ -73,10 +71,12 @@ main {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     z-index: 9998;
+    /* border: 1px solid red; */
 }
 
 .section {
     margin-top: 5rem;
+    /* border: 1px solid red; */
 }
 
 .section-title {
@@ -253,6 +253,12 @@ main {
     border-radius: 50%;
     cursor: pointer;
     color: var(--clr-light);
+    transition: color 0.3s;
+}
+
+#mobile-nav--icon:hover{
+    color: var(--clr-dark-rose);
+    transition: color 0.3s;
 }
 
 
@@ -644,9 +650,9 @@ main {
 
 .quantity-container {
     display: flex;
-    gap: 10px;
     align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
 
@@ -812,17 +818,21 @@ main {
 /* ************** */
 /* Tour Section */
 /* ************** */
-
 .tours {
     display: grid;
+    max-width: 1536px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
+    align-items: center;
     padding: 20px;
     gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tour-card {
     display: flex;
+    grid-template-columns: subgrid;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -953,17 +963,21 @@ main {
 /* Albums Section */
 /* ************** */
 .albums-page {
-    display: flex;
+    display: grid;
+    max-width: 1536px;
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
+    padding: 20px;
     gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .albums-cards {
-    width: 400px;
-    height: 400px;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .albums-cards img {
@@ -1415,9 +1429,9 @@ form .required {
         max-width: 768px;
     }
 
-    /* .section {
+    .section {
         margin-top: 10rem;
-    } */
+    }
 
     #mobile-nav--icon {
         display: flex;
@@ -1448,10 +1462,6 @@ form .required {
 
     .bottom_container {
         flex-direction: column-reverse;
-    }
-
-    .OtherAlbumsCards img {
-        width: 400px;
     }
 
     .main_img--container {
@@ -1536,10 +1546,6 @@ form .required {
         height: 375px;
     }
 
-    .OtherAlbumsCards img {
-        width: 385px;
-    }
-
     .section-title {
         font-size: 2.9rem;
     }
@@ -1584,10 +1590,10 @@ form .required {
         margin-top: 2rem;
     }
 
-    .albums-cards {
+    /* .albums-cards {
         width: 350px;
         height: 350px;
-    }
+    } */
 
     .merch_content h1 {
         font-size: 2rem;
@@ -1599,10 +1605,6 @@ form .required {
 
     .cart.active {
         width: 100%;
-    }
-
-    .OtherAlbumsCards img {
-        width: 375px;
     }
 
     .submit-btn button {
@@ -1646,10 +1648,6 @@ form .required {
     .size-list .sizes {
         width: 65px;
         height: 40px;
-    }
-
-    .OtherAlbumsCards img {
-        width: 350px;
     }
 
     .submit-btn button {
