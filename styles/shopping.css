@@ -325,15 +325,16 @@
 
 
 /* SHOP SECTION  */
-.shop {
+/* .shop {
     margin-top: 2rem;
     margin-bottom: 5rem;
-}
+} */
 
 .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+    padding-top: 20px;
 }
 
 .info-section {
@@ -426,13 +427,13 @@
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--clr-light);
+    background: var(--clr-dark);
 }
 
 .order_modal--content h1 {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--clr-dark);
+    color: var(--clr-light);
     padding: 20px 10px 0 10px;
 }
 
@@ -455,7 +456,7 @@
 
 .order_modal--close:hover,
 .order_modal--close:focus {
-    color: black;
+    color: var(--clr-light);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -479,9 +480,9 @@
 }
 
 .order_close--btn {
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    border: 1px solid var(--clr-dark);
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    border: 1px solid var(--clr-light);
     cursor: pointer;
     padding: 1em 2.5em;
     width: 200px;
@@ -494,8 +495,8 @@
 }
 
 .order_close--btn:hover {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 @media (max-width: 1080px) {

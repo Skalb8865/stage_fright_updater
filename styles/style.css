@@ -1097,6 +1097,11 @@ body {
     border: 1px solid var(--clr-light);
     background: var(--clr-light);
     color: var(--clr-dark);
+    field-sizing: content;
+}
+
+.contact form textarea {
+    min-height: 7rem;
 }
 
 .contact form input:focus,
@@ -1185,13 +1190,11 @@ form .required {
 #message {
     width: 100%;
     resize: none;
-    padding-bottom: 45px;
 }
 
 #description {
     width: 100%;
     resize: none;
-    padding-bottom: 45px;
 }
 
 #group {
@@ -1429,9 +1432,9 @@ form .required {
         max-width: 768px;
     }
 
-    .section {
+    /* .section {
         margin-top: 10rem;
-    }
+    } */
 
     #mobile-nav--icon {
         display: flex;
@@ -1627,6 +1630,26 @@ form .required {
     .mobile-nav.active {
         width: 100%;
         overflow: hidden;
+    }
+
+    .name-input-container {
+        width: 45%;
+    }
+    
+    .email-input-container {
+        width: 92%;
+    }
+    
+    .subject-input-container {
+        width: 92%;
+    }
+    
+    .message-textbox-container {
+        width: 92%;
+    }
+    
+    .select-container {
+        width: 92%;
     }
 
 }
