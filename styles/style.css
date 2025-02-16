@@ -7,7 +7,6 @@
     --clr-slate800: #1e293b;
     --clr-rose: #ff3333;
     --clr-dark-rose: #881337;
-    --clr-indigo: #4f46e5;
     --clr-active-link: #be123c;
     --hover-color: #272832;
 
@@ -44,6 +43,10 @@ body {
     background-color: var(--clr-dark);
     line-height: calc(1em + 0.5rem);
     overflow-x: hidden;
+}
+
+.main{
+    min-height: 63dvh;
 }
 
 
@@ -194,14 +197,18 @@ body {
 .nav-item {
     color: var(--clr-light);
     font-size: var(--size-xl);
-    padding: 0 25px;
+    /* padding: 0 25px; */
+    margin: 0 25px;
     transition: color 0.2s;
 }
 
 .active-link {
     color: var(--clr-rose);
     font-size: var(--size-xl);
-    padding: 0 25px;
+    border-bottom: 3px solid var(--clr-rose);
+    border-radius: px;
+    /* padding: 0 25px; */
+    margin: 0 25px;
     transition: color 0.2s;
 }
 
@@ -256,7 +263,7 @@ body {
     transition: color 0.3s;
 }
 
-#mobile-nav--icon:hover{
+#mobile-nav--icon:hover {
     color: var(--clr-dark-rose);
     transition: color 0.3s;
 }
@@ -904,8 +911,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background: var(--clr-light);
-    border: 2px solid var(--clr-dark);
+    background: var(--clr-dark);
+    border: 2px solid var(--clr-light);
+    color: var(--clr-light);
     z-index: 1000;
 }
 
@@ -1380,7 +1388,7 @@ form .required {
         max-width: 1280px;
     }
 
-    .order_modal--content{
+    .order_modal--content {
         max-width: 1280px;
     }
 
@@ -1400,7 +1408,7 @@ form .required {
         max-width: 1024px;
     }
 
-    .order_modal--content{
+    .order_modal--content {
         max-width: 1024px;
     }
 
@@ -1424,7 +1432,7 @@ form .required {
         max-width: 768px;
     }
 
-    .order_modal--content{
+    .order_modal--content {
         max-width: 768px;
     }
 
@@ -1536,7 +1544,7 @@ form .required {
         max-width: 640px;
     }
 
-    .order_modal--content{
+    .order_modal--content {
         max-width: 640px;
     }
 
@@ -1568,7 +1576,7 @@ form .required {
         max-width: 475px;
     }
 
-    .order_modal--content{
+    .order_modal--content {
         max-width: 475px;
     }
 
@@ -1635,19 +1643,19 @@ form .required {
     .name-input-container {
         width: 45%;
     }
-    
+
     .email-input-container {
         width: 92%;
     }
-    
+
     .subject-input-container {
         width: 92%;
     }
-    
+
     .message-textbox-container {
         width: 92%;
     }
-    
+
     .select-container {
         width: 92%;
     }
@@ -1660,10 +1668,10 @@ form .required {
         width: 100%;
     }
 
-    .order_modal--content{
+    .order_modal--content {
         width: 100%;
     }
-    
+
     .navbar-container {
         width: 100%;
     }

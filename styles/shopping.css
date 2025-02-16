@@ -10,6 +10,7 @@
 #cart-icon {
     font-size: 1.8rem;
     cursor: pointer;
+    color: var(--clr-light);
     transition: color 0.3s;
 }
 
