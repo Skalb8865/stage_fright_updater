@@ -78,8 +78,8 @@
     color: var(--clr-slate400);
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .landing_page--container {
         flex-direction: column;
     }
-} */
+}
