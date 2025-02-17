@@ -1,4 +1,4 @@
-# Stage-Fright
+# Stage Fright
 
 Eastland BPA Web Design Team
 
