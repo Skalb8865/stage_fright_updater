@@ -45,6 +45,20 @@ body {
     overflow-x: hidden;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+button{
+    background: transparent;
+    border: none;
+}
+
 .main{
     min-height: 63dvh;
 }
@@ -1073,6 +1087,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    width: 1536px;
 }
 
 .contact form input,
