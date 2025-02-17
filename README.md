@@ -1,6 +1,6 @@
 # Stage Fright
 
-Eastland BPA Web Design Team
+# Eastland BPA Web Design Team
 
 Stage Fright Website - Made By Sean Kalb, Aidien Gooden, Jabari Hill, and Gabe Zeigler.
 
