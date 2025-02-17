@@ -60,7 +60,6 @@ body {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    /* border: 1px solid red; */
 }
 
 .navbar-container {
@@ -74,12 +73,10 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     z-index: 9998;
-    /* border: 1px solid red; */
 }
 
 .section {
     margin-top: 5rem;
-    /* border: 1px solid red; */
 }
 
 .section-title {
@@ -196,7 +193,7 @@ body {
 }
 
 .nav-item:hover {
-    color: var(--clr-dark-rose);
+    color: var(--clr-rose);
     transition: color 0.2s;
 }
 
