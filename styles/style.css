@@ -462,7 +462,7 @@ button{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -35px;
+    top: -40px;
     right: 0;
     left: 0;
     font-size: 0.75rem;
@@ -470,7 +470,7 @@ button{
 }
 
 .credit a:hover {
-    border-bottom: 1px solid var(--clr-slate400);
+    border-bottom: 1px solid var(--clr-light);
 }
 
 .news-card .headline-date {
@@ -1227,7 +1227,6 @@ form .required {
 /* *************** */
 /* Credits Section */
 /* *************** */
-
 .credits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
