@@ -1,8 +1,8 @@
 # Stage-Fright
 
-Stage Fright Website - Made By Sean Kalb, Aidien Gooden, Jabari Hill, and Gabe Zeigler.
+Eastland BPA Web Design Team
 
-BPA Competiton
+Stage Fright Website - Made By Sean Kalb, Aidien Gooden, Jabari Hill, and Gabe Zeigler.
 
 Website URL: https://stage-fright-iota-dusky.vercel.app/
 
