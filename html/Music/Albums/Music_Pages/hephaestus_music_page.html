@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music | Stage Fright</title>
+    <title>Hephaestus Soundtrack | Stage Fright</title>
 
     <!-- ========= -->
     <!-- CSS Links -->
@@ -23,6 +23,9 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
+
+    <link rel="stylesheet" href="/styles/music.css" />
+    <script src="/songs.js"></script>
 
     <!-- ======== -->
     <!-- JS Links -->
@@ -64,22 +67,22 @@
                 <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
-                            <a href="../About/about.html" aria-label="About Page">
+                            <a href="/html/About/about.html" aria-label="About Page">
                                 Band
                             </a>
                         </li>
-                        <li class="active-mobile-link">
-                            <a href="music.html" aria-label="Music Page" aria-current="page">
+                        <li class="mobile-nav--item">
+                            <a href="/html/Music/music.html" aria-label="Music Page">
                                 Music
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../Merch/merch.html" aria-label="Merch Page">
+                            <a href="/html/Merch/merch.html" aria-label="Merch Page">
                                 Merch
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="../Tours/tour.html" aria-label="Tours Page">
+                            <a href="/html/Tours/tour.html" aria-label="Tours Page">
                                 Tour
                             </a>
                         </li>
@@ -110,9 +113,8 @@
             <div class="nav-center--section">
                 <div class="center-left">
                     <ul class="center-left--list">
-                        <li class="nav-item"><a href="../About/about.html" aria-label="About Band">Band</a></li>
-                        <li class="active-link"><a href="music.html" aria-label="Music Page"
-                                aria-current="page">Music</a></li>
+                        <li class="nav-item"><a href="/html/About/about.html" aria-label="About Band">Band</a></li>
+                        <li class="nav-item"><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
                     </ul>
                 </div>
 
@@ -123,9 +125,9 @@
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a>
+                        <li class="nav-item"><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a>
                         </li>
-                        <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a>
+                        <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a>
                         </li>
                     </ul>
                 </div>
@@ -165,31 +167,107 @@
     </header>
 
     <main class="main">
-        <section class="section">
-            <h1 class="section-title">Our Albums</h1>
-            <div class="albums-page">
-                <div class="albums-cards">
-                    <a href="./Albums/prometheus.html" aria-label="Prometheus Album Page">
-                        <img src="/res/albums/Prometheus.webp" alt="Our Album PROMETHEUS">
-                    </a>
+        <section class="container section">
+            <h1 class="section-title">Hephaestus Soundtrack</h1>
+
+            <div class="album_soundtrack">
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        1. Electric Storm
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
                 </div>
 
-                <div class="albums-cards">
-                    <a href="./Albums/acantha.html" aria-label="Acantha Album Page">
-                        <img src="/res/albums/Acantha.webp" alt="Our Album Acantha">
-                    </a>
+                <div class="player">
+                    <audio src="/songs/Rock'n'Roll_-_shearer.mp3"></audio>
+                    <div class="info">
+                        2. Riff Riot
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
                 </div>
 
-                <div class="albums-cards">
-                    <a href="./Albums/nyx.html" aria-label="NYX Album Page">
-                        <img src="/res/albums/NYX.webp" alt="Our Album NYX">
-                    </a>
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        3. Power Surge
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
                 </div>
 
-                <div class="albums-cards">
-                    <a href="./Albums/hephaestus.html" aria-label="Hephaestus Album Page">
-                        <img src="/res/albums/Hephaestus.webp" alt="Our Album Hephaestus">
-                    </a>
+                <div class="player">
+                    <audio src="/songs/Symphonic_Epic_Metal_Rock_-_DmitriyTaras_(2).mp3"></audio>
+                    <div class="info">
+                        4. Fire Within
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        5. Rebel's Rise
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        6. Fuel the Fire
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        7. Amped Up
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        8. Thunder
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
+                </div>
+
+                <div class="player">
+                    <audio src="/songs/AlexGrohl_-_Aggressive_Metal_Rock.mp3"></audio>
+                    <div class="info">
+                        9. Wildfire Rush
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="current">0:30</div>
                 </div>
             </div>
         </section>

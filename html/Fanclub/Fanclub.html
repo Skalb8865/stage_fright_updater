@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
+    <link rel="stylesheet" href="/styles/footer.css">
+
     <!-- ======== -->
     <!-- JS Links -->
     <!-- ======== -->
@@ -34,7 +36,7 @@
 </head>
 
 <body>
-    <header class="navbar-container">
+    <header class="container">
         <nav class="navbar">
             <div class="nav-left--section">
                 <div class="header-social--links">
@@ -163,7 +165,82 @@
 
 
     <main class="main">
-      
+        <section class="hero_container">
+            <div class="content">
+                <span class="blur"></span>
+                <span class="blur"></span>
+                <h4>CREATE YOUR SITE LIKE A PRO</h4>
+                <H1>Hi, I'm <span>Reza</span>, Web Developer</H1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rem eos aliquid quo rerum
+                    temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
+                    dolorem.
+                </p>
+                <button class="btn">Get Started</button>
+            </div>
+            <div class="image">
+                <img src="/res/fanclubv3.png">
+            </div>
+        </section>
+
+        <div class="news section">
+            <div class="news-wrapper">
+                <div class="news-card">
+                    <img loading="lazy" src="/res/news/Feb.webp" alt="News Writing Image">
+                    <div class="news-info--section">
+                        <div class="credit">
+                            <p>Photo by Aidien Gooden</p>
+                        </div>
+                        <h1 class="headline-date">02.26.25</h1>
+                        <h1 class="headline">
+                            Stage Frights 2025 Hermes Tour Begins
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1722841550051-790fd02e8c78?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Rock Concert Image">
+                    <div class="news-info--section">
+                        <div class="credit">
+                            <p>Photo by <a
+                                    href="https://unsplash.com/@jerrografie?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+                                    target="_blank">James
+                                    Jeremy Beckers</a> on <a
+                                    href="https://unsplash.com/photos/a-large-crowd-of-people-at-a-concert-wOOh6Aez-Ac?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+                                    target="_blank">Unsplash</a>
+                            </p>
+                        </div>
+                        <h1 class="headline-date">03.05.25</h1>
+                        <h1 class="headline">
+                            Stage Fright in Pennsylvania
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1495651779359-881fde1808a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Guitarist">
+                    <div class="news-info--section">
+                        <div class="credit">
+                            <p>Photo by<a
+                                    href="https://unsplash.com/@alxstls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                                    &nbsp;
+                                    Alexandre St-Louis</a> on <a
+                                    href="https://unsplash.com/photos/man-playing-guitar-on-his-back-IlfpKwRMln0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            </p>
+
+                        </div>
+                        <h1 class="headline-date">03.12.25</h1>
+                        <h1 class="headline">
+                            One Month Until Stage Fright In New York
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Order Confirmation Modal -->
         <dialog id="order-modal" class="order-modal">
@@ -184,41 +261,38 @@
     <!-- ============== -->
     <!-- Footer Section -->
     <!-- ============== -->
-    <footer class="cotainer section">
-        <div class="footer_container">
-            <div class="footer_links">
-                <div class="footer_link_wrapper">
-                    <div class="footer_link_items">
-                        <a href="html/Credits/credits.html" aria-label="Credits Page">
-                            Credits
-                        </a>
-                    </div>
-                    <div class="footer_link_items">
-                        <a href="html/Contact/contact.html" aria-label="Contact Page">
-                            Contact Us
-                        </a>
-                    </div>
-                    <div class="footer_link_items">
-                        <a href="/html/Contact/customer_service.html" aria-label="Customer Service Page">
-                            Customer Service
-                        </a>
-                    </div>
-                    <div class="footer_link_items">
-                        <a href="#" aria-label="Customer Service Page">
-                            Privacy
-                        </a>
-                    </div>
-                    <div class="footer_link_items">
-                        <a href="/html/test/jsontest.html" aria-label="Customer Service Page">
-                            The Amplified Brigade
-                        </a>
-                    </div>
-                </div>
+    <footer class="container section">
+        <div class="column">
+            <div class="footer_logo">
+                <img src="/res/Stage_Fright_Logo-removebg-preview.webp">
             </div>
-            <!--copyright info-->
-            <p class="website_rights">&copy; Stage Fright 2025. All rights reserved.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+        <div class="column">
+            <h4>Company</h4>
+            <a href="#">Business</a>
+            <a href="#">Partnership</a>
+            <a href="#">Network</a>
+        </div>
+        <div class="column">
+            <h4>Information</h4>
+            <a href="../Credits/credits.html">Credits</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <a href="../Contact/contact.html">Contact Us</a>
+            <a href="../Contact/customer_service.html">Customer Support</a>
+            <a href="./fanclub.html">The Amplified Brigade</a>
         </div>
     </footer>
+
+    <div class="copyright">
+        Copyright © 2025 Stage Fright. All rights reserved.
+    </div>
 </body>
 
 </html>
