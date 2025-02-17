@@ -4,5 +4,5 @@ Stage Fright Website - Made By Sean Kalb, Aidien Gooden, Jabari Hill, and Gabe Z
 
 BPA Competiton
 
-Website URL: https://skalb8865.github.io/Stage-Fright/
+Website URL: https://stage-fright-iota-dusky.vercel.app/
 
