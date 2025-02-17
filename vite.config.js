@@ -16,7 +16,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'html/Contact/contact.html'),
         customer_service: resolve(__dirname, 'html/Contact/customer_service.html'),
         credits: resolve(__dirname, 'html/Credits/credits.html'),
-        // fanclub: resolve(__dirname, 'html/Fanclub/fanclub.html'),
+        fan_club: resolve(__dirname, 'html/Fanclub/fanclub.html'),
         // Music
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
         prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
