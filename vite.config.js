@@ -24,6 +24,8 @@ export default defineConfig({
         acantha_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/acantha_music_page.html'),
         NYX: resolve(__dirname, 'html/Music/Albums/nyx.html'),
         nyx_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/nyx_music_page.html'),
+        hephaestus: resolve(__dirname, 'html/Music/Albums/hephaestus.html'),
+        hephaestus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/hephaestus_music_page.html'),
         // Apparel
 
         logo_long_sleeve: resolve(__dirname, 'html/Merch/Apparel/white_long_sleeve.html'),
