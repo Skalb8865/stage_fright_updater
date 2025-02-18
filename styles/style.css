@@ -214,8 +214,8 @@ button{
 
 .nav-right--section {
     margin-left: auto;
-    /* padding: 15px 15px 15px 145px; */
-    padding: 15px;
+    padding: 15px 15px 15px 150px;
+    /* padding: 15px; */
 }
 
 .cart-icon-count {
@@ -243,7 +243,7 @@ button{
 }
 
 #mobile-nav--icon {
-    display: flex;
+    display: none;
     font-size: 1.875rem;
     border-radius: 50%;
     cursor: pointer;
