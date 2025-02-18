@@ -34,11 +34,12 @@
     background: var(--clr-dark);
     transition: 0.5s;
     z-index: 9999;
+    transition: right 0.5s ease;
 }
 
 .cart.active {
     right: 0;
-    transition: 0.5s;
+    transition: right 0.5s ease;
     position: fixed;
     background: var(--clr-dark);
 }
@@ -53,7 +54,7 @@
     background: #333;
     opacity: 0;
     z-index: 998;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .cart-overlay.active {
@@ -71,7 +72,7 @@
     background: #333;
     opacity: 0;
     z-index: 998;
-    transition: opacity 1s ease, visibility 1s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .mobile-overlay.active {
@@ -88,7 +89,7 @@
     overflow: hidden;
     padding: 20px;
     background: var(--clr-dark);
-    transition: 1s ease-in-out;
+    transition: left 0.5s ease;
     z-index: 9998;
     display: flex;
     justify-content: center;
@@ -99,7 +100,7 @@
     position: fixed;
     left: 0;
     width: 100%;
-    transition: 1s ease-in-out;
+    transition: left 0.5s ease;
     padding-left: 16px;
     overflow-x: hidden;
     z-index: 9998;
