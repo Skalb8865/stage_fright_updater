@@ -45,27 +45,31 @@ section .content p {
 }
 
 section .image {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 600px;
 }
 
 
 section .image img {
-    max-width: 600px;
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin: auto;
 }
 
 footer {
     position: relative;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 400px repeat(3, 1fr);
     gap: 2rem;
 }
 
-footer .column .footer_logo {
+footer .column .footer_logo img{
     max-width: 100px;
-    margin-bottom: 2rem;
 }
 
 footer .column p {
@@ -121,13 +125,13 @@ footer .column>a:hover {
     text-align: center;
 }
 
-@media (width < 1024px) {
+@media (width < 960px) {
     section.hero_container {
         grid-template-columns: repeat(1, 1fr);
     }
 
     section.hero_container .image {
-        grid-area: 1/1/2/2;
+        grid-area: 1/1;
     }
 
     footer {
@@ -139,4 +143,11 @@ footer .column>a:hover {
     footer {
         grid-template-columns: 1fr 150px;
     }
+
+    /* section .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
 }

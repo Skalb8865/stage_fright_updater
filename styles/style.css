@@ -86,7 +86,7 @@ button{
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    z-index: 9998;
+    z-index: 9999;
 }
 
 .section {
@@ -102,6 +102,7 @@ button{
     padding: 3rem;
     color: var(--clr-light);
     line-height: 3rem;
+    font-weight: 500;
 }
 
 /* ************** */
@@ -190,7 +191,7 @@ button{
 
 .nav-item {
     color: var(--clr-light);
-    font-size: var(--size-xl);
+    font-size: var(--size-lg);
     /* padding: 0 25px; */
     margin: 0 25px;
     transition: color 0.2s;
@@ -198,7 +199,7 @@ button{
 
 .active-link {
     color: var(--clr-rose);
-    font-size: var(--size-xl);
+    font-size: var(--size-lg);
     border-bottom: 3px solid var(--clr-rose);
     border-radius: px;
     /* padding: 0 25px; */
@@ -213,15 +214,8 @@ button{
 
 .nav-right--section {
     margin-left: auto;
-    padding: 15px 15px 15px 145px;
-}
-
-#cart-icon {
-    display: flex;
-    font-size: 1.875rem;
-    border-radius: 50%;
-    cursor: pointer;
-    color: var(--clr-light);
+    /* padding: 15px 15px 15px 145px; */
+    padding: 15px;
 }
 
 .cart-icon-count {
@@ -249,7 +243,7 @@ button{
 }
 
 #mobile-nav--icon {
-    display: none;
+    display: flex;
     font-size: 1.875rem;
     border-radius: 50%;
     cursor: pointer;
@@ -344,7 +338,7 @@ button{
 .hero-section {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -364,7 +358,7 @@ button{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -665,6 +659,10 @@ button{
     font-size: 1rem;
     height: 2.35rem;
     text-align: center;
+}
+
+.number-input button{
+    color: var(--clr-light);
 }
 
 .product-description {
