@@ -118,7 +118,6 @@ button {
     justify-content: center;
     align-items: center;
     min-height: 40dvh;
-    padding: 0 250px;
     background: var(--clr-dark-grey);
 }
 
