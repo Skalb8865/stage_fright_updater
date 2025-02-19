@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
-    }, 2500);
+    }, 1500);
 
 
     updateCartDisplay();
