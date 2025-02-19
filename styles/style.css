@@ -1545,10 +1545,6 @@ form .required {
     .section-title {
         font-size: var(--size-5xl);
     }
-
-    .hero-link {
-        font-size: var(--size-xs);
-    }
 }
 
 /* md */
