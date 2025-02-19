@@ -29,7 +29,7 @@
     right: -200%;
     width: 450px;
     height: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
     overflow: hidden;
     background: var(--clr-dark);
     transition: 0.5s;
@@ -190,6 +190,7 @@
     align-items: center;
     margin-top: 1rem;
     border-bottom: 1px solid var(--clr-slate800);
+    padding-bottom: 10px;
     scroll-snap-align: end;
 }
 

@@ -84,9 +84,8 @@ button{
     left: 0;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    z-index: 9999;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .section {
@@ -117,6 +116,7 @@ button{
 .nav-left--section {
     margin-right: auto;
     padding: 15px;
+    z-index: 9002;
 }
 
 .header-social--links {
@@ -154,6 +154,7 @@ button{
 
 .nav-center--section {
     display: flex;
+    z-index: 9000;
 }
 
 .center-left {
@@ -177,6 +178,7 @@ button{
     object-fit: cover;
     transition: opacity 0.3s;
 }
+
 
 .center-right {
     display: flex;
@@ -214,8 +216,9 @@ button{
 
 .nav-right--section {
     margin-left: auto;
-    padding: 15px 15px 15px 150px;
-    /* padding: 15px; */
+    /* padding: 15px 15px 15px 150px; */
+    padding: 15px;
+    z-index: 9002;
 }
 
 .cart-icon-count {

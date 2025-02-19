@@ -1,5 +1,5 @@
 /* style.css */
-body {
+/* body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,18 +27,19 @@ body {
 .logo img {
     height: 150px;
     object-fit: contain;
-}
+} */
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    z-index: 9999;
 }
 
 .bar {
     width: 30px;
     height: 3px;
-    background: white;
+    background: var(--clr-light);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -62,14 +63,28 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100dvh;
-    background: black;
-    color: white;
+    background: var(--clr-dark);
+    color: var(--clr-light);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: left 0.5s ease;
-    z-index: 5;
+    transition: left 0.85s ease;
+    z-index: 9001;
 }
+
+/* 
+.menu-logo{
+    width: 150px;
+    position: relative;
+    top: -420px;
+    right: -754px;
+}
+
+.menu-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
 
 .menu.active {
     left: 0;
@@ -78,22 +93,21 @@ body {
 .menu-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     max-width: 80%;
     width: 100%;
 }
 
 .menu-left {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid grey;
+    width: 375px;
+    padding: 0 0 0 40px;
+    height: 100%;
+    border-right: 1px solid var(--clr-slate600);
 }
 
 .menu-left a {
-    color: white;
+    color: var(--clr-light);
     text-decoration: none;
     font-size: 2rem;
     margin: 1rem 0;
@@ -102,16 +116,15 @@ body {
 
 .menu-left a:hover {
     padding-left: 5px;
-    color: red;
+    color: var(--clr-rose);
     transition: all 0.25s;
 }
 
 .menu-right {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 40px;
+    height: 100%;
+    padding: 0 40px;
 }
 
 .menu-header {
@@ -119,46 +132,60 @@ body {
     flex-direction: column;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    height: 100%;
     gap: 10px;
 }
 
 .menu-header a {
     text-decoration: none;
     font-size: 1rem;
-    color: gray;
+    color: var(--clr-slate400);
     transition: all 0.25s;
 }
 
 .menu-header a:hover {
     padding-left: 5px;
-    color: red;
+    color: var(--clr-rose);
     transition: all 0.25s;
 }
 
+.menu-social {
+    display: flex;
+    gap: 10px;
+}
+
 .menu-social a {
-    display: block;
-    color: white;
+    color: var(--clr-light);
+    font-size: 1.35rem;
     text-decoration: none;
     margin: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.menu-social a:hover {
+    color: var(--clr-rose);
+    padding-left: 2.5px;
+    transition: all 0.3s ease;
 }
 
 .menu-address {
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 1.2rem;
 }
 
-.menu-address span{
-    color: gray;
+.menu-address span {
+    font-size: 0.9rem;
+    color: var(--clr-slate400);
 }
 
 .cart {
     font-size: 2rem;
     cursor: pointer;
-    color: white;
+    color: var(--clr-light);
 }
 
 /* Hero Section */
-.hero {
+/* .hero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -185,7 +212,7 @@ body {
     z-index: 2;
     font-size: 3rem;
     padding: 20px;
-}
+} */
 
 
 /* Responsive styles */
@@ -194,20 +221,27 @@ body {
         height: 100px;
     } */
 
+
     .menu-container {
         flex-direction: column;
+        align-items: flex-end;
     }
 
     .menu-left {
+        width: 100%;
         align-items: flex-start;
         border-right: none;
         padding-right: 0;
         padding-bottom: 40px;
-        border-bottom: 1px solid grey;
+        padding: 0;
+        border-bottom: 1px solid var(--clr-slate400);
     }
 
     .menu-right {
         padding-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        align-items: flex-start;
     }
 
     .menu-left a {
@@ -222,7 +256,7 @@ body {
         font-size: 1rem;
     }
 
-    .hero-content {
+    /* .hero-content {
         font-size: 2rem;
-    }
+    } */
 }

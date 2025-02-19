@@ -26,6 +26,7 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
+    <link rel="stylesheet" href="/html/test/jsontest.css">
 
     <!-- ======== -->
     <!-- JS Links -->
@@ -34,6 +35,7 @@
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./src/swiper.js"></script>
+    <script src="/src/menu.js"></script>
     <script type="speculationrules">
         {
             "prerender": [{ "urls": ["/", "/html/Merch/merch.html", "/html/Music/music.html", "/html/Tours/tour.html"],
@@ -51,7 +53,7 @@
     <header class="navbar-container">
         <nav class="navbar">
             <div class="nav-left--section">
-                <div class="header-social--links">
+                <!-- <div class="header-social--links">
                     <div class="icon">
                         <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
                             aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
@@ -68,8 +70,8 @@
                         <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter"><i
                                 class="fa-brands fa-x-twitter"></i></a>
                     </div>
-                </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
+                </div> -->
+                <!-- <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
                     aria-expanded="false">
                     <i class="ri-menu-line"></i>
                 </button>
@@ -114,9 +116,14 @@
                                     class="fa-brands fa-x-twitter"></i></a>
                         </div>
                     </div>
-                    <!-- NAV CLOSE  -->
                     <i class='ri-close-fill' id="nav-close"></i>
-                </div>
+                </div> -->
+                <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="open menu"
+                    aria-controls="menu" aria-expanded="false">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
             </div>
 
             <div class="nav-center--section">
@@ -175,6 +182,40 @@
         <div class="mobile-overlay" aria-hidden="true"></div>
     </header>
 
+    <div class="menu" id="menu">
+        <!-- <div class="menu-logo">
+            <a href="/index.html"><img src="/res/Stage_Fright_Logo-removebg-preview.webp" alt="logo"></a>
+        </div> -->
+        <div class="menu-container container">
+            <div class="menu-left">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#tours">Tours</a>
+                <a href="#music">Music</a>
+                <a href="#merch">Merch</a>
+            </div>
+
+            <div class="menu-right">
+                <div class="menu-header">
+                    <a href="#">Contact</a>
+                    <a href="#">Customer Support</a>
+                    <a href="#">The Amplified Brigade</a>
+                </div>
+
+                <div class="menu-social">
+                    <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
+                        aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
+                        aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="menu-address">Stage Fright<br><span>123 Amplified St, Music City</span></div>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <!-- ============ -->
