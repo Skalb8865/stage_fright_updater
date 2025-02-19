@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   mobileNav.setAttribute("inert", "");
   //   updateScrollBehavior();
   // }
-  
+
   // end of fucntions to open and close the cart and mobile nav
 
   function initializeCart() {
@@ -327,9 +327,21 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.removeItem("cart");
 
     const modal = document.getElementById("order-modal");
+    const loaderContainer = document.getElementById("loader-container");
+    const loader = document.getElementById("loader");
+
     setTimeout(() => {
-      modal.style.display = "block";
+      loaderContainer.style.display = "flex";
+      loader.style.display = "block";
     }, 150);
+
+    setTimeout(() => {
+      loaderContainer.style.display = "none";
+      loader.style.display = "none";
+
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }, 2500);
 
 
     updateCartDisplay();
@@ -382,14 +394,12 @@ document.addEventListener("DOMContentLoaded", () => {
                      <div class="cart-product-title">${item.title}</div>
                      <div class="cart-price">$${item.price.toFixed(2)}</div>
                  </div>
-                 ${
-                   item.size
-                     ? `<div class="cart-size">Size: ${item.size}</div>`
-                     : ""
-                 }
-                 <div class="cart-quantity" data-quantity="${
-                   item.quantity
-                 }">Quantity: ${item.quantity}</div>
+                 ${item.size
+        ? `<div class="cart-size">Size: ${item.size}</div>`
+        : ""
+      }
+                 <div class="cart-quantity" data-quantity="${item.quantity
+      }">Quantity: ${item.quantity}</div>
              </div>
              <i class="fa-regular fa-trash-can cart-remove"></i>
          </div>`;

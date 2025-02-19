@@ -41,6 +41,7 @@
     right: 0;
     transition: right 0.5s ease;
     position: fixed;
+    z-index: 9999;
     background: var(--clr-dark);
 }
 
@@ -53,7 +54,7 @@
     visibility: hidden;
     background: #333;
     opacity: 0;
-    z-index: 998;
+    z-index: 9003;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
@@ -62,7 +63,7 @@
     opacity: 0.5;
 }
 
-.mobile-overlay {
+/* .mobile-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -163,7 +164,7 @@
     background: var(--clr-light);
     color: var(--clr-slate400);
     opacity: 1;
-}
+} */
 
 .cart-content {
     height: 82%;

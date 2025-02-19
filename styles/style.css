@@ -436,7 +436,6 @@ button{
 }
 
 .news-card {
-    position: relative;
     width: 480px;
     height: 480px;
     transition: all 0.3s;
@@ -1700,3 +1699,38 @@ form .required {
         width: 40%;
     }
 }
+
+.loader-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.loader {
+    display: none;
+    border: 12px solid var(--clr-light);
+    border-radius: 50%;
+    border-top: 12px solid var(--clr-dark-grey);
+    width: 75px;
+    height: 75px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    z-index: 9998;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

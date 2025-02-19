@@ -1,7 +1,10 @@
 function toggleMenu() {
   const menu = document.getElementById('menu');
   const hamburger = document.getElementById('hamburger');
+  // const navLeftSection = document.querySelector('.nav-right--section');
+  // const navRightSection = document.querySelector('.nav-left--section');
   const navCenterLeft = document.querySelector('.center-left');
+  // const navCenter = document.querySelector('.nav-center--section');
   const navCenterRight = document.querySelector('.center-right');
   menu.classList.toggle('active');
   hamburger.classList.toggle('open');
@@ -15,6 +18,9 @@ function toggleMenu() {
     document.getElementById("cart-icon").style.pointerEvents = "none";
     hamburger.setAttribute("aria-expanded", "true");
     menu.removeAttribute("inert");
+    // navRightSection.style.zIndex = "9002"
+    // navLeftSection.style.zIndex = "9002"
+    // navCenter.style.zIndex = "9002"
     setTimeout(() => {
       navCenterLeft.style.display = 'none';
       navCenterRight.style.display = 'none';

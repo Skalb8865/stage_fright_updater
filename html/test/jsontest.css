@@ -76,20 +76,6 @@
     z-index: 9001;
 }
 
-/* 
-.menu-logo{
-    width: 150px;
-    position: relative;
-    top: -420px;
-    right: -754px;
-}
-
-.menu-logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 .menu.active {
     left: 0;
 }
