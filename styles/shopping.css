@@ -13,14 +13,7 @@
     border-radius: 50%;
     cursor: pointer;
     color: var(--clr-light);
-    transition: color 0.3s;
 }
-
-#cart-icon:hover {
-    color: var(--clr-dark-rose);
-    transition: color 0.3s;
-}
-
 
 /* CART  */
 .cart {

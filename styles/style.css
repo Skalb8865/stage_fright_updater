@@ -222,7 +222,7 @@ button{
 
 .nav-item:hover {
     color: var(--clr-rose);
-    transition: color 0.2s;
+    transition: color 0.4s;
 }
 
 .nav-right--section {
@@ -1714,9 +1714,9 @@ form .required {
 
 .loader {
     display: none;
-    border: 12px solid var(--clr-light);
+    border: 12px solid rgba(0, 0, 0, 0.6);
     border-radius: 50%;
-    border-top: 12px solid var(--clr-dark-grey);
+    border-top: 12px solid var(--clr-light);
     width: 75px;
     height: 75px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
