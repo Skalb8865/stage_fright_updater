@@ -63,7 +63,7 @@
     opacity: 0.5;
 }
 
-/* .mobile-overlay {
+.mobile-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -164,7 +164,7 @@
     background: var(--clr-light);
     color: var(--clr-slate400);
     opacity: 1;
-} */
+}
 
 .cart-content {
     height: 82%;
