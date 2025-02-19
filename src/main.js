@@ -4,3 +4,10 @@ import '../styles/fonts.css'
 import '../styles/shopping.css'
 
 import './utils.js'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+    once: true, 
+  });

@@ -2,6 +2,8 @@
     /* Colors */
     --clr-dark: #000000;
     /* #0c0d0f */
+
+    --clr-dark-grey: #0a0a0a;
     --clr-light: #fefefe;
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
@@ -91,6 +93,14 @@ button{
 
 .section {
     margin-top: 5rem;
+}
+
+.section-background{
+    /* add this to section and change margin-top to padding-top */
+    min-height: 95dvh;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    background: var(--clr-dark-grey);
 }
 
 .section-title {
@@ -427,15 +437,22 @@ button{
 
 .news-card {
     position: relative;
-    width: 410px;
-    height: 410px;
+    width: 480px;
+    height: 480px;
     transition: all 0.3s;
+}
+
+.news-overlay{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 70%;
 }
 
 .news-info--section {
     width: 100%;
     transition: background 0.3s;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
 
