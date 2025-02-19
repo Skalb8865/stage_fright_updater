@@ -20,4 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.setAttribute("inert", "");
     }
   }
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', toggleMenu);
+  });
 });
+
