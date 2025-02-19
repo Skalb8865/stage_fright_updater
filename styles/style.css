@@ -1,9 +1,9 @@
 :root {
     /* Colors */
-    --clr-dark: #000000;
+    --clr-dark: black;
     /* #0c0d0f */
 
-    --clr-dark-grey: #121212;
+    --clr-dark-grey: #0e0e0e;
     --clr-light: #fefefe;
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
@@ -48,21 +48,22 @@ body {
     overflow-x: hidden;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
 
-ul, ol{
+ul,
+ol {
     list-style: none;
 }
 
-button{
+button {
     background: transparent;
     border: none;
 }
 
-.main{
+.main {
     min-height: 63dvh;
 }
 
@@ -95,11 +96,29 @@ button{
     margin-top: 5rem;
 }
 
-.section-background{
+.section-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* add this to section and change margin-top to padding-top */
-    min-height: 95dvh;
+    min-height: 75dvh;
+    background: var(--clr-dark-grey);
+}
+
+.tours_slider--section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75dvh;
     padding-bottom: 5rem;
-    padding-top: 5rem;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40dvh;
+    padding: 0 250px;
     background: var(--clr-dark-grey);
 }
 
@@ -309,7 +328,7 @@ button{
 .btn {
     background: var(--clr-dark);
     color: var(--clr-light);
-    border: 2px solid var(--clr-light);
+    border: 2px solid var(--clr-rose);
     cursor: pointer;
     padding: 1em 2.5em;
     width: 200px;
@@ -322,8 +341,8 @@ button{
 }
 
 .btn:hover {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-rose);
+    color: var(--clr-light);
 }
 
 #btn {
@@ -440,7 +459,7 @@ button{
     transition: all 0.3s;
 }
 
-.news-overlay{
+.news-overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -680,7 +699,7 @@ button{
     text-align: center;
 }
 
-.number-input button{
+.number-input button {
     color: var(--clr-light);
 }
 
@@ -1092,6 +1111,12 @@ button{
 /* ******************** */
 .contact-page {
     padding: 25px;
+}
+
+.contact_button--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact {
@@ -1695,7 +1720,7 @@ form .required {
     }
 }
 
-.loader-container{
+.loader-container {
     display: none;
     justify-content: center;
     align-items: center;
@@ -1714,18 +1739,29 @@ form .required {
     border-top: 12px solid var(--clr-light);
     width: 75px;
     height: 75px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
     animation: spin 2s linear infinite;
     z-index: 9998;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
