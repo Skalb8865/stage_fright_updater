@@ -15,7 +15,7 @@ We aim to sell out every item by offering limited-edition designs that capture t
 ### Website URL: https://stage-fright-iota-dusky.vercel.app/
 
 
-# Jeremiah 29:11 ~ For I love the lord. He gives me stuff and happy circles. He makes me smile. Jabari is a bum. blud an't too cool on blud ts pmo
+# Jeremiah 29:11 ~ For I love the lord. He gives me stuff and happy circles. He makes me smile. Jabari is a bum. blud an't too cool
 
 top 5 mov:
 
