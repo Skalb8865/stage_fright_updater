@@ -327,7 +327,10 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.removeItem("cart");
 
     const modal = document.getElementById("order-modal");
-    modal.style.display = "block";
+    setTimeout(() => {
+      modal.style.display = "block";
+    }, 150);
+
 
     updateCartDisplay();
     updateTotal();
