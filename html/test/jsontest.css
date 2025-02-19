@@ -164,7 +164,7 @@
 
 .menu-social a:hover {
     color: var(--clr-rose);
-    padding-left: 2.5px;
+    padding-left: 3.5px;
     transition: all 0.3s ease;
 }
 

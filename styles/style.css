@@ -1,6 +1,7 @@
 :root {
     /* Colors */
-    --clr-dark: #0c0d0f;
+    --clr-dark: #000000;
+    /* #0c0d0f */
     --clr-light: #fefefe;
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
@@ -981,6 +982,8 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--hover-color);
+    transition: 0.3s;
 }
 
 .albums-cards img {
