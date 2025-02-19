@@ -44,6 +44,10 @@
     transition: 0.4s;
 }
 
+.bar:nth-child(2){
+    width: 35px;
+}
+
 .hamburger.open .bar:nth-child(1) {
     transform: translateY(12px) rotate(45deg);
 }
