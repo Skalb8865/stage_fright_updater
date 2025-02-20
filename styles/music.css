@@ -38,7 +38,7 @@ body {
     grid-gap: 16px;
     position: relative;
     padding: 20px 0 5px 0;
-    border-top: 3px solid #38323224;
+    border-top: 3px solid var(--clr-dark-grey);
 }
 
 .player{

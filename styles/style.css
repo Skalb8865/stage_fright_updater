@@ -5,10 +5,10 @@
 
     --clr-dark-grey: #0e0e0e;
     --clr-light: #fefefe;
-    --clr-slate400: #94a3b8;
+    --clr-grey: #929292;
     --clr-slate600: #475569;
     --clr-slate800: #1e293b;
-    --clr-rose: #ff3333;
+    --clr-red: #ff3333;
     --clr-dark-rose: #881337;
     --clr-active-link: #be123c;
     --hover-color: #272832;
@@ -176,8 +176,8 @@ button {
 
 
 .header-social--links .icon:hover {
-    background: var(--clr-rose);
-    border: 2px solid var(--clr-rose);
+    background: var(--clr-red);
+    border: 2px solid var(--clr-red);
     opacity: 1;
     transition: all 0.3s;
 }
@@ -230,9 +230,9 @@ button {
 }
 
 .active-link {
-    color: var(--clr-rose);
+    color: var(--clr-red);
     font-size: var(--size-lg);
-    border-bottom: 3px solid var(--clr-rose);
+    border-bottom: 3px solid var(--clr-red);
     border-radius: px;
     /* padding: 0 25px; */
     margin: 0 25px;
@@ -240,7 +240,7 @@ button {
 }
 
 .nav-item:hover {
-    color: var(--clr-rose);
+    color: var(--clr-red);
     transition: color 0.4s;
 }
 
@@ -257,7 +257,7 @@ button {
     right: 12px;
     width: 18px;
     height: 18px;
-    background: var(--clr-rose);
+    background: var(--clr-red);
     border-radius: 50%;
     color: var(--clr-light);
     display: flex;
@@ -311,7 +311,7 @@ button {
 
 .active-mobile-link {
     font-size: 2rem;
-    color: var(--clr-rose);
+    color: var(--clr-red);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -328,7 +328,7 @@ button {
 .btn {
     background: var(--clr-dark);
     color: var(--clr-light);
-    border: 2px solid var(--clr-rose);
+    border: 2px solid var(--clr-light);
     cursor: pointer;
     padding: 1em 2.5em;
     width: 200px;
@@ -341,8 +341,8 @@ button {
 }
 
 .btn:hover {
-    background: var(--clr-rose);
-    color: var(--clr-light);
+    background: var(--clr-light);
+    color: var(--clr-dark-grey);
 }
 
 #btn {
@@ -382,6 +382,7 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    user-select: none;
 }
 
 
@@ -428,11 +429,11 @@ button {
     left: 0;
     right: 0;
     font-size: var(--size-sm);
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
 }
 
 .hlink:hover {
-    border-bottom: 1px solid var(--clr-slate400);
+    border-bottom: 1px solid var(--clr-grey);
 }
 
 /* ************ */
@@ -454,6 +455,7 @@ button {
 }
 
 .news-card {
+    position: relative;
     width: 445px;
     height: 445px;
     transition: all 0.3s;
@@ -506,7 +508,7 @@ button {
 }
 
 .news-card .headline-date {
-    color: var(--clr-rose);
+    color: var(--clr-red);
     font-size: 1.2rem;
 }
 
@@ -547,7 +549,7 @@ button {
     font-weight: 700;
     font-size: 1.3rem;
     margin: 0 2rem;
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
     max-width: 550px;
     text-align: center;
 }
@@ -617,7 +619,7 @@ button {
     font-weight: 800;
     margin: 50% 0 0 0;
     font-size: 2.188rem;
-    color: var(--clr-rose);
+    color: var(--clr-red);
     text-align: center;
 }
 
@@ -705,7 +707,7 @@ button {
 
 .product-description {
     max-width: 500px;
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
 }
 
 .size-list {
@@ -843,7 +845,7 @@ button {
     align-items: center;
     justify-content: center;
     height: 200px;
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
     text-align: center;
 }
 
@@ -875,7 +877,7 @@ button {
     justify-content: center;
     padding: 2em;
     border: 1px solid rgb(75, 82, 92);
-    background-color: #222429;
+    background: #222429;
     transition: border 0.3s;
     text-align: center;
     height: 400px;
@@ -964,7 +966,7 @@ button {
 }
 
 .tour_modal--close:hover {
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
 }
 
 
@@ -1101,7 +1103,7 @@ button {
     margin-top: 2px;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
 }
 
 
@@ -1153,7 +1155,7 @@ button {
 
 .contact form input:focus,
 .contact form textarea:focus {
-    border: 1px solid var(--clr-slate400);
+    border: 1px solid var(--clr-grey);
     outline: none;
 }
 
@@ -1213,7 +1215,7 @@ form label {
 }
 
 form .required {
-    color: var(--clr-rose);
+    color: var(--clr-red);
 }
 
 /* the name input boxes  */
@@ -1311,7 +1313,7 @@ form .required {
 }
 
 .credits-card a:hover {
-    color: var(--clr-rose);
+    color: var(--clr-red);
     transition: color 0.3s;
 }
 
@@ -1395,12 +1397,12 @@ form .required {
 }
 
 .footer_link_items a:hover {
-    color: var(--clr-rose);
+    color: var(--clr-red);
     transition: .3s ease-out;
 }
 
 .website_rights {
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
 }
 
 .small_hr {
@@ -1408,11 +1410,11 @@ form .required {
     justify-content: center;
     align-items: center;
     width: 75px;
-    color: var(--clr-rose);
-    background-color: var(--clr-rose);
+    color: var(--clr-red);
+    background-color: var(--clr-red);
     margin-bottom: 30px;
     border: none;
-    border-top: 1px solid var(--clr-rose);
+    border-top: 1px solid var(--clr-red);
 }
 
 
@@ -1635,11 +1637,6 @@ form .required {
     .main_content p {
         margin-top: 2rem;
     }
-
-    /* .albums-cards {
-        width: 350px;
-        height: 350px;
-    } */
 
     .merch_content h1 {
         font-size: 2rem;
