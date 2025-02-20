@@ -12,7 +12,7 @@ Whether you're checking out our latest releases, grabbing tickets for upcoming s
 Plus, our merch section is front and center, showcasing our unique gear and apparel.
 We aim to sell out every item by offering limited-edition designs that capture the spirit of our music, giving fans a way to wear their love for the band proudly.
 
-### Website URL: https://stage-fright-2025bpa.vercel.app/
+### Website URL: https://stage-fright-bpa2025.vercel.app/
 
 top 5 mov:
 
