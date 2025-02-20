@@ -62,7 +62,7 @@
     width: 375px;
     padding: 0 0 0 40px;
     height: 100%;
-    border-right: 1px solid var(--clr-slate600);
+    border-right: 1px solid var(--clr-grey);
 }
 
 .menu-left a {
