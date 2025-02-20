@@ -30,12 +30,6 @@
     "image": "/merch/boy_Hoodie.webp"
   },
   {
-    "name": "Black Logo Beanie",
-    "link": "/html/Merch/Apparel/black_logo_beanie.html",
-    "price": "$12.99",
-    "image": "/merch/Beanie.webp"
-  },
-  {
     "name": "Stage Fright White Long Sleeve",
     "link": "/html/Merch/Apparel/white_long_sleeve.html",
     "price": "$22.99",
@@ -46,6 +40,12 @@
     "link": "/html/Merch/Apparel/black_motto_sweatpants.html",
     "price": "$16.99",
     "image": "/merch/pants.webp"
+  },
+  {
+    "name": "Black Logo Beanie",
+    "link": "/html/Merch/Apparel/black_logo_beanie.html",
+    "price": "$12.99",
+    "image": "/merch/Beanie.webp"
   },
   {
     "name": "Prometheus Black Hoodie",
