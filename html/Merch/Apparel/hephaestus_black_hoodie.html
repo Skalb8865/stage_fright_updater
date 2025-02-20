@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fanclub | Stage Fright</title>
+    <title>Hephaestus Black Hoodie | Stage Fright</title>
 
     <!-- ========= -->
     <!-- CSS Links -->
@@ -15,8 +16,6 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
-
-    <link rel="stylesheet" href="/styles/fanclub.css">
 
     <!-- ======== -->
     <!-- JS Links -->
@@ -58,7 +57,7 @@
                 <div class="mobile-nav" id="mobile-nav">
                     <ul class="mobile-nav--list">
                         <li class="mobile-nav--item">
-                            <a href="/html/About/about_landing_page.html" aria-label="About Page">
+                            <a href="/html/About/about.html" aria-label="About Page">
                                 Band
                             </a>
                         </li>
@@ -68,7 +67,7 @@
                             </a>
                         </li>
                         <li class="mobile-nav--item">
-                            <a href="/html/Merch/merch.html" aria-label="Merch Page">
+                            <a href="../merch.html" aria-label="Merch Page">
                                 Merch
                             </a>
                         </li>
@@ -104,20 +103,19 @@
             <div class="nav-center--section">
                 <div class="center-left">
                     <ul class="center-left--list">
-                        <li class="nav-item"><a href="/html/About/about_landing_page.html"
-                                aria-label="About Band">Band</a></li>
+                        <li class="nav-item"><a href="/html/About/about.html" aria-label="About Band">Band</a></li>
                         <li class="nav-item"><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
                     </ul>
                 </div>
 
                 <div class="center-logo">
-                    <a href="/index.html" aria-label="Homepage" aria-current="page"><img class="logo"
+                    <a href="/index.html" aria-label="Homepage"><img class="logo"
                             src="/res/Stage_Fright_Logo-removebg-preview.webp" alt="Logo"></a>
                 </div>
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a>
+                        <li class="nav-item"><a href="../merch.html" aria-label="Merch Page">Merch</a>
                         </li>
                         <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a></li>
                     </ul>
@@ -157,42 +155,63 @@
         <div class="mobile-overlay" aria-hidden="true"></div>
     </header>
 
-
     <main class="main">
-        <section class="hero_container">
-            <div class="content">
-                <h4>Join Our Fan Club</h4>
-                <H1>The<br><span>Amplified </span>Brigade</H1>
-                <p>
-                    Don’t miss out on being part of our free Fan Club that amplifies your love for rock. Become a fifth
-                    member our the band, and you can Join our community, which is 37,597 Strong and counting. Join The
-                    Amplified Brigade Today!
-                </p>
-                <button class="btn">Get Started</button>
+        <!--ABOUT SECTION-->
+        <div class="merch-container product-box container">
+            <div class="merch_img--container">
+                <div class="merch_img--card"><img src="/public/merch/HephaestusHoodie.webp" alt="Prometheus Black Hoodie">
+                </div>
             </div>
-            <div class="image">
-                <img src="/res/fanclubv3.png">
-            </div>
-        </section>
+            <div class="merch_content">
+                <h1 class="product-title">Hephaestus Black Hoodie</h1>
+                <h2 class="product-price">$24.99</h2>
+                <p class="product-description">Our fourth Album Prometheus Black Hoodie and our first album of the year.
+                    Made with 100% Cotton.
+                    Double-lined hood
+                    with color-matched drawcord</p>
 
-        <section class="container section">
-            <div class="perk_boxes">
-                <i class="fa-solid fa-shirt"></i>
-                <p>One-of-a-kind merch only available to fanclub members</p>
-            </div>
-            <div class="perk_boxes">
+                <ul class="size-list">
+                    <li class="sizes">
+                        <input id="small" type="radio" name="size" aria-label="Size Small" aria-required="true"
+                            required>
+                        <label for="small">S</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="medium" type="radio" name="size" aria-label="Size Medium" aria-required="true"
+                            required>
+                        <label for="medium">M</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="large" type="radio" name="size" aria-label="Size Large" aria-required="true"
+                            required>
+                        <label for="large">L</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="extra-large" type="radio" name="size" aria-label="Size Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-large">XL</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="extra-extra-large" type="radio" name="size" aria-label="Size Extra Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-extra-large">XXL</label>
+                    </li>
+                </ul>
 
-                <p></p>
-            </div>
-            <div class="perk_boxes">
+                <div class="quantity-container">
+                    <div class="number-input">
+                        <button class="quantity-btn minus"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                        <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
+                            aria-label="quantity" disabled>
+                        <button class="quantity-btn plus"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                    </div>
 
-                <p></p>
+                    <button class="add-cart">Add To Cart</button>
+                </div>
             </div>
-            <div class="perk_boxes">
-
-                <p></p>
-            </div>
-        </section>
+        </div>
 
         <!-- SHOP SECTION  -->
         <section class="shop merch_suggestions--container section">
@@ -201,39 +220,38 @@
             <div class="shop-content">
                 <!-- BOX 1 -->
                 <div class="merch-box">
-                    <a href="./acantha_black_hoodie.html" aria-label="Acantha Black Hoodie"><img
-                            src="/merch//AcanthaHood.webp" alt="Acantha Black Hoodie" class="product-img"></a>
+                    <a href="#"><img src="/merch/HephaestusShirt.webp"
+                            alt="Hephaestus Black T-Shirt" class="product-img"></a>
                     <div class="info-section">
-                        <h2 class="product-title">Acantha Black Hoodie</h2>
-                        <span class="product-price">$24.99</span>
+                        <h2 class="product-title">Hephaestus Black T-Shirt</h2>
+                        <span class="product-price">$18.99</span>
                     </div>
                 </div>
                 <!-- BOX 2 -->
                 <div class="merch-box">
-                    <a href="../Media/prometheus_vinyl.html" aria-label="Prometheus Vinyl"><img
-                            src="/merch/Prometheusvinyl.webp" alt="Prometheus Vinyl" class="product-img"></a>
+                    <a href="#" aria-label="Prometheus Vinyl"><img
+                            src="/merch/HephaestusVinyl.webp" alt="Hephaestus Vinyl" class="product-img"></a>
                     <div class="info-section">
-                        <h2 class="product-title">Prometheus Vinyl</h2>
+                        <h2 class="product-title">Hephaestus Vinyl</h2>
                         <span class="product-price">$27.99</span>
                     </div>
                 </div>
                 <!-- BOX 3 -->
                 <div class="merch-box">
-                    <a href="./prometheus_black_hoodie.html"><img src="/merch/Prometheushood.webp"
-                            alt="Prometheus Black Hoodie" class="product-img"></a>
+                    <a href="./acantha_T-shirt.html" aria-label="Acantha Black T-Shirt"><img
+                            src="/merch/AcanthaShirt.webp" alt="Black Acantha T-Shirt" class="product-img"></a>
                     <div class="info-section">
-                        <h2 class="product-title">Prometheus Black Hoodie</h2>
-                        <span class="product-price">$24.99</span>
+                        <h2 class="product-title">Acantha Black T-Shirt</h2>
+                        <span class="product-price">$18.99</span>
                     </div>
                 </div>
                 <!-- BOX 4 -->
                 <div class="merch-box">
-                    <a href="./black_motto_sweatpants.html" aria-label="Unleash Your Inner Fright Black Sweatpants"><img
-                            src="/merch/pants.webp" alt="Unleash Your Inner Fright Black Sweatpants"
-                            class="product-img"></a>
+                    <a href="../Media/nyx_vinyl.html" aria-label="NYX Vinyl"><img src="/merch/Nyxvinyl.webp"
+                            alt="Nyx Vinyl" class="product-img"></a>
                     <div class="info-section">
-                        <h2 class="product-title">Black Motto Sweatpants</h2>
-                        <span class="product-price">$16.99</span>
+                        <h2 class="product-title">NYX Vinyl</h2>
+                        <span class="product-price">$27.99</span>
                     </div>
                 </div>
             </div>
@@ -258,22 +276,30 @@
     <!-- ============== -->
     <!-- Footer Section -->
     <!-- ============== -->
-    <footer class="footer">
-        <p>4465 S Hamilton Rd, Columbus, Ohio</p>
-        <p>(220) 465-1915 | stagefrightrb@gmail.com</p>
-        <div class="footer-socials">
-            <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter" target="_blank"><i
-                    class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
-                aria-label="Our Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
-                aria-label="Our Spotify" target="_blank"><i class="fa-brands fa-spotify"></i></a>
-            <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube" target="_blank"><i
-                    class="fa-brands fa-youtube"></i></a>
+    <footer class="cotainer section">
+        <div class="footer_container">
+            <div class="footer_links">
+                <div class="footer_link_wrapper">
+                    <div class="footer_link_items">
+                        <a href="/html/Credits/credits.html" aria-label="Credits Page">
+                            Credits
+                        </a>
+                    </div>
+                    <div class="footer_link_items">
+                        <a href="/html/Contact/contact.html" aria-label="Contact Page">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="footer_link_items">
+                        <a href="/html/Contact/customer_service.html" aria-label="Customer Service Page">
+                            Customer Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--copyright info-->
+            <p class="website_rights">&copy; Stage Fright 2025. All rights reserved.</p>
         </div>
-        <p>Eastland Career Center BPA</p>
-        <p>&copy; Stage Fright 2025. All rights reserved.</p>
-        <p class="made_by">Made By Sean Kalb, Aidien Gooden, Jabari Hill, Gabe Zeigler</p>
     </footer>
 </body>
 
