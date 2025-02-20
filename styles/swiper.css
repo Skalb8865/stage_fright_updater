@@ -113,7 +113,7 @@
 }
 
 .swiper-pagination-bullet:hover {
-    background: var(--clr-slate400);
+    background: var(--clr-grey);
 }
 
 /* Changes the color of the arrows */
@@ -130,7 +130,7 @@
 /* Changes the color of the arrows when you hover over them*/
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
     transition: color 0.3s;
 }
 

@@ -75,7 +75,7 @@
 .landing_credit {
     position: absolute;
     bottom: 0;
-    color: var(--clr-slate400);
+    color: var(--clr-grey);
 }
 /* 
 @media (max-width: 768px) {

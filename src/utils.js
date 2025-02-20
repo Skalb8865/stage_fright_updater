@@ -333,13 +333,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       loaderContainer.style.display = "flex";
       loader.style.display = "block";
+      document.body.style.overflow = "hidden";
     }, 150);
 
     setTimeout(() => {
       loaderContainer.style.display = "none";
       loader.style.display = "none";
 
-      modal.style.display = "block";
+      modal.style.display = "flex";
       document.body.style.overflow = "hidden";
     }, 1500);
 
@@ -348,7 +349,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotal();
     updateTotalItems();
     closesCart();
-    document.body.style.overflow = "hidden";
   }
 
   // Close the modal when the user clicks on the x
