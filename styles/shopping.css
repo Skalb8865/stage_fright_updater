@@ -224,13 +224,22 @@
 }
 
 .merch-box {
-    transition: .3s;
+    transition: all .3s;
     overflow: hidden;
 }
 
 .merch-box:hover {
     opacity: 0.85;
-    transition: .3s;
+    transition: all .3s;
+}
+
+.merch-box img{
+    transition: all 0.3s;
+}
+
+.merch-box:hover img{
+    transform: scale(1.015);
+    transition: all 0.3s;
 }
 
 .product-img {
