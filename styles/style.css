@@ -103,6 +103,7 @@ button {
     /* add this to section and change margin-top to padding-top */
     min-height: 75dvh;
     background: var(--clr-dark-grey);
+    padding-bottom: 5rem;
 }
 
 .tours_slider--section{
@@ -453,8 +454,8 @@ button {
 }
 
 .news-card {
-    width: 480px;
-    height: 480px;
+    width: 445px;
+    height: 445px;
     transition: all 0.3s;
 }
 
@@ -1597,6 +1598,11 @@ form .required {
     .tickets-input-container {
         width: 60%;
     }
+    
+    .news-card {
+        width: 435px;
+        height: 435px;
+    }
 }
 
 /* sm */
@@ -1659,16 +1665,6 @@ form .required {
         width: 50%;
     }
 
-    .mobile-nav {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .mobile-nav.active {
-        width: 100%;
-        overflow: hidden;
-    }
-
     .name-input-container {
         width: 45%;
     }
@@ -1687,6 +1683,11 @@ form .required {
 
     .select-container {
         width: 92%;
+    }
+
+    .news-card {
+        width: 420px;
+        height: 420px;
     }
 
 }
