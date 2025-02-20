@@ -100,13 +100,12 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* add this to section and change margin-top to padding-top */
     min-height: 75dvh;
     background: var(--clr-dark-grey);
     padding-bottom: 5rem;
 }
 
-.tours_slider--section{
+.tours_slider--section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1360,6 +1359,46 @@ form .required {
 /* ************** */
 /* Footer Section */
 /* ************** */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 75px;
+    gap: 10px;
+}
+
+.footer p {
+    color: var(--clr-light);
+    font-size: 15px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials a {
+    color: var(--clr-light);
+    font-size: 18px;
+    text-decoration: none;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--clr-red);
+    transition: all 0.3s ease;
+}
+
+.footer .made_by {
+    width: 250px;
+    color: var(--clr-grey);
+}
+
 .footer_container {
     background-color: var(--clr-dark);
     display: flex;
@@ -1600,7 +1639,7 @@ form .required {
     .tickets-input-container {
         width: 60%;
     }
-    
+
     .news-card {
         width: 435px;
         height: 435px;
