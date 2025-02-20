@@ -118,6 +118,7 @@ button {
     justify-content: center;
     align-items: center;
     min-height: 40dvh;
+    padding: 25px 0 75px 0;
     background: var(--clr-dark-grey);
 }
 
@@ -1367,7 +1368,8 @@ form .required {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 75px;
+    padding-top: 75px;
+    margin-bottom: 10px;
     gap: 10px;
 }
 

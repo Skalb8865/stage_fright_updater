@@ -94,5 +94,23 @@
         "link": "/html/Merch/Media/acantha_vinyl.html",
         "price": "$27.99",
         "image": "/merch/Acanthavinyl.webp"
+    },
+    {
+        "name": "Hephaestus Black T-Shirt",
+        "link": "#",
+        "price": "$18.99",
+        "image": "/merch/HephaestusShirt.webp"
+    },
+    {
+        "name": "Hephaestus Black Hoodie",
+        "link": "#",
+        "price": "$24.99",
+        "image": "/merch/HephaestusHoodie.webp"
+    },
+    {
+        "name": "Hephaestus Vinyl",
+        "link": "#",
+        "price": "$27.99",
+        "image": "/merch/HephaestusVinyl.webp"
     }
 ]
