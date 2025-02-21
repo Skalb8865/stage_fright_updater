@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach((tour) => {
                 const { date, location, place, buttonid } = tour;
                 tourCards.innerHTML += `
-            <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="tour-card">
                 <p class="tour-dates">${date}</p>
                 <p class="tour-location">${location}</p>
                 <p class="tour-place">${place}</p>

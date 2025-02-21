@@ -7,7 +7,7 @@ fetch(jsonFile)
     data.forEach((product) => {
       const { link, name, price, image } = product;
       merch.innerHTML += `
-      <div class="merch-box" data-aos="fade-up" data-aos-delay="600">
+      <div class="merch-box">
           <a href="${link}" aria-label="${name}"><img
           src="${image}" alt="${name}" class="product-img"></a>
           <div class="info-section">
