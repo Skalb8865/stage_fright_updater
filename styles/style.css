@@ -87,7 +87,7 @@ button {
     transition: all 0.3s;
 }
 
-.scroll_up--button:focus {
+.scroll_up--button:focus, .scroll_up--button:focus-visible {
     color: var(--clr-light);
 }
 
