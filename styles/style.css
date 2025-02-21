@@ -1430,7 +1430,7 @@ form .required {
     height: 400px;
 }
 
-.credits-card h1 {
+.credits-card p {
     font-weight: 600;
     font-size: 1.5rem;
     color: var(--clr-light);
