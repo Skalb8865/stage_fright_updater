@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/res/Stage Fright Logo.png">
+    <link rel="icon" type="image/svg+xml" href="/res/logo/Stage_Fright_Logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credits | Stage Fright</title>
@@ -31,93 +31,33 @@
     <header class="container">
         <nav class="navbar">
             <div class="nav-left--section">
-                <div class="header-social--links">
-                    <div class="icon">
-                        <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
-                            aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube"><i
-                                class="fa-brands fa-youtube"></i></a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
-                            aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-                <button id="mobile-nav--icon" aria-label="open sidebar" aria-controls="mobile-nav"
-                    aria-expanded="false">
-                    <i class="ri-menu-line"></i>
-                </button>
-                <div class="mobile-nav" id="mobile-nav">
-                    <ul class="mobile-nav--list">
-                        <li class="mobile-nav--item">
-                            <a href="../About/about.html" aria-label="About Page">
-                                Band
-                            </a>
-                        </li>
-                        <li class="mobile-nav--item">
-                            <a href="../Music/music.html" aria-label="Music Page">
-                                Music
-                            </a>
-                        </li>
-                        <li class="mobile-nav--item">
-                            <a href="../Merch/merch.html" aria-label="Merch Page">
-                                Merch
-                            </a>
-                        </li>
-                        <li class="mobile-nav--item">
-                            <a href="../Tours/tour.html" aria-label="Tours Page">
-                                Tour
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="mobilenav-Social--Links">
-                        <div class="icon">
-                            <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
-                                aria-label="Our Spotify"><i class="fa-brands fa-spotify"></i></a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube"><i
-                                    class="fa-brands fa-youtube"></i></a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
-                                aria-label="Our Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter"><i
-                                    class="fa-brands fa-x-twitter"></i></a>
-                        </div>
-                    </div>
-                    <!-- NAV CLOSE  -->
-                    <i class='ri-close-fill' id="nav-close"></i>
+                <div class="hamburger" id="hamburger" aria-label="open menu" aria-controls="menu" aria-expanded="false"
+                    role="button">
+                    <div class="nav_bar"></div>
+                    <div class="nav_bar"></div>
+                    <div class="nav_bar"></div>
                 </div>
             </div>
 
             <div class="nav-center--section">
                 <div class="center-left">
                     <ul class="center-left--list">
-                        <li class="nav-item"><a href="../About/about.html" aria-label="About Band">Band</a></li>
-                        <li class="nav-item"><a href="../Music/music.html" aria-label="Music Page">Music</a></li>
+                        <li class="nav-item"><a href="/html/About/about_landing_page.html"
+                                aria-label="About Band">About</a></li>
+                        <li class="active-link"><a href="/html/Music/music.html" aria-label="Music Page">Music</a></li>
                     </ul>
                 </div>
 
                 <div class="center-logo">
                     <a href="/index.html" aria-label="Homepage"><img class="logo"
-                            src="/res/Stage_Fright_Logo-removebg-preview.webp" alt="Logo"></a>
+                            src="/res/logo/Stage_Fright_Logo_no_background.webp" alt="Logo"></a>
                 </div>
 
                 <div class="center-right">
                     <ul class="center-right--list">
-                        <li class="nav-item"><a href="../Merch/merch.html" aria-label="Merch Page">Merch</a>
+                        <li class="nav-item"><a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a>
                         </li>
-                        <li class="nav-item"><a href="../Tours/tour.html" aria-label="Tours Page">Tour</a>
-                        </li>
+                        <li class="nav-item"><a href="/html/Tours/tour.html" aria-label="Tours Page">Tour</a></li>
                     </ul>
                 </div>
             </div>
@@ -126,35 +66,72 @@
                 <button id="cart-icon" aria-label="open cart" aria-controls="cart" aria-expanded="false">
                     <i class="ri-shopping-bag-line"></i>
                     <span class="cart-icon-count" id="total-items"></span>
-
                 </button>
-                <!-- CART  -->
-                <div class="cart" id="cart">
-                    <h2 class="cart-title">Your Cart</h2>
 
-                    <!-- CONTENT  -->
-                    <div class="cart-content">
-
-
-                    </div>
-
-                    <!-- TOTAL   -->
-                    <div class="total-section">
-                        <div class="total">
-                            <div class="total-title">Subtotal</div>
-                            <div class="total-price">$0</div>
-                        </div>
-                        <!-- BUY BUTTON  -->
-                        <button type="button" class="btn-buy">Checkout</button>
-                    </div>
-                    <!-- CART CLOSE  -->
-                    <i class='ri-close-fill' id="cart-close"></i>
-                </div>
             </div>
         </nav>
-        <div class="cart-overlay" aria-hidden="true"></div>
-        <div class="mobile-overlay" aria-hidden="true"></div>
     </header>
+    <div class="cart-overlay" aria-hidden="true"></div>
+
+    <!-- CART  -->
+    <div class="cart" id="cart">
+        <h2 class="cart-title">Your Cart</h2>
+
+        <!-- CONTENT  -->
+        <div class="cart-content">
+
+
+        </div>
+
+        <!-- TOTAL   -->
+        <div class="total-section">
+            <div class="total">
+                <div class="total-title">Subtotal</div>
+                <div class="total-price">$0</div>
+            </div>
+            <!-- BUY BUTTON  -->
+            <button type="button" class="btn-buy">Checkout</button>
+        </div>
+        <!-- CART CLOSE  -->
+        <i class='ri-close-fill' id="cart-close"></i>
+    </div>
+
+    <!-- Navbar Menu -->
+    <div class="menu" id="menu">
+        <div class="menu-container container">
+            <div class="menu-left">
+                <a href="/index.html" aria-label="Homepage">Home</a>
+                <a href="/html/About/about_landing_page.html" aria-label="About Page">About</a>
+                <a href="/html/Tours/tour.html" aria-label="Tours Page">Tours</a>
+                <a href="/html/Music/music.html" aria-label="Music Page">Music</a>
+                <a href="/html/Merch/merch.html" aria-label="Merch Page">Merch</a>
+            </div>
+
+            <div class="menu-right">
+                <div class="menu-header">
+                    <a href="/html/Contact/contact.html" aria-label="Contact Page">Contact</a>
+                    <a href="/html/Contact/customer_service.html" aria-label="Customer Support Page">Customer Support</a>
+                    <a href="/html/Fanclub/fanclub.html" aria-label="Fanclub Page">The Amplified Brigade</a>
+                    <a href="/html/Credits/credits.html" aria-label="Credits Page" aria-current="page">Credits</a>
+                </div>
+
+                <div class="menu-social">
+                    <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter" target="_blank"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
+                        aria-label="Our Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
+                        aria-label="Our Spotify" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube"
+                        target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="menu-address">Stage Fright<br><span>4465 S Hamilton Rd, Columbus, Ohio</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="loader-container" id="loader-container">
+        <div class="loader" id="loader"></div>
+    </div>
 
     <main class="main">
         <section class="container section">
