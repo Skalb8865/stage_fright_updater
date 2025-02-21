@@ -1397,6 +1397,40 @@ form .required {
 }
 
 /* *************** */
+/* Fanclub Section */
+/* *************** */
+.perk {
+    background-color: #000000;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -70px;
+}
+
+.perk_card--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+    background: black;
+    overflow: hidden;
+}
+
+.perk_card {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.perk_container {
+    padding: 2px 16px;
+    color: white;
+}
+
+/* *************** */
 /* Credits Section */
 /* *************** */
 .credits {
