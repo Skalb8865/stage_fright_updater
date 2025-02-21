@@ -28,11 +28,11 @@
 }
 
 .landing_page--container .one:hover {
-    flex: 1.25;
+    flex: 2.25;
 }
 
 .landing_page--container .two:hover {
-    flex: 1.25;
+    flex: 2.25;
 }
 
 .content {
@@ -73,9 +73,9 @@
 }
 
 .landing_credit {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    color: var(--clr-grey);
+    color: var(--clr-light);
 }
 
 @media (max-width: 768px) {
