@@ -1504,13 +1504,18 @@ form .required {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 75px;
+    padding-top: 175px;
     margin-bottom: 10px;
     gap: 10px;
 }
 
 .footer p {
     color: var(--clr-light);
+    font-size: 15px;
+}
+
+.footer p:nth-child(2) {
+    color: var(--clr-grey);
     font-size: 15px;
 }
 
@@ -1538,50 +1543,6 @@ form .required {
     color: var(--clr-grey);
 }
 
-.footer_container {
-    background-color: var(--clr-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.footer_links {
-    display: flex;
-    justify-content: center;
-}
-
-.footer_link_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer_link_items {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-    margin-top: 40px;
-}
-
-.footer_link_items a {
-    color: var(--clr-light);
-    font-size: 0.938rem;
-    text-decoration: none;
-    margin-bottom: .5rem;
-    transition: .3s ease-out;
-}
-
-.footer_link_items a:hover {
-    color: var(--clr-red);
-    transition: .3s ease-out;
-}
-
-.website_rights {
-    color: var(--clr-grey);
-}
 
 
 /* ******************* */
