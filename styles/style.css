@@ -287,7 +287,7 @@ button {
     z-index: 9999;
 }
 
-.bar {
+.nav_bar {
     width: 30px;
     height: 3px;
     background: var(--clr-light);
@@ -295,19 +295,19 @@ button {
     transition: 0.4s;
 }
 
-.bar:nth-child(2) {
+.nav_bar:nth-child(2) {
     width: 35px;
 }
 
-.hamburger.open .bar:nth-child(1) {
+.hamburger.open .nav_bar:nth-child(1) {
     transform: translateY(12px) rotate(45deg);
 }
 
-.hamburger.open .bar:nth-child(2) {
+.hamburger.open .nav_bar:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.open .bar:nth-child(3) {
+.hamburger.open .nav_bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
 

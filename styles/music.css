@@ -72,11 +72,11 @@ body {
 .info {
     display: flex;
     align-items: center;
-    font-size: 21px;
+    font-size: 18px;
     color: white;
     padding: 0;
     margin: 0;
-    width: 165px;
+    width: 175px;
 }
 
 .current {
