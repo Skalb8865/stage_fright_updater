@@ -40,5 +40,6 @@ function toggleMenu() {
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   hamburger.addEventListener('click', toggleMenu);
+  menu.setAttribute('inert', '');
 });
 

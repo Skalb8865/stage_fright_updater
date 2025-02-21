@@ -4,11 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cart = document.querySelector(".cart");
   const closeCart = document.querySelector("#cart-close");
   const cartOverlay = document.querySelector(".cart-overlay");
-  // const openMobileNavIcon = document.querySelector("#mobile-nav--icon");
-  // const mobileNav = document.querySelector(".mobile-nav");
-  // const closeMobileNavIcon = document.querySelector("#nav-close");
-  // const mobileOverlay = document.querySelector(".mobile-overlay");
-  // end of section for cart and mobile nav
 
   // section for cart and merch products
   const addToCartButtons = document.querySelectorAll(".add-cart");
@@ -17,27 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let cartBoxes = document.querySelectorAll(".cart-box");
   // end of section for cart and merch products
 
-  // const media = window.matchMedia("(width > 1px)");
+  const scrollUpButton = document.getElementById('scroll_up--button');
 
-  // media.addEventListener("change", (e) => updateNavbar(e));
-
-  // function updateNavbar(e) {
-  //   const isMobile = e.matches;
-
-  //   if (isMobile) {
-  //     mobileNav.setAttribute("inert", "");
-  //     cart.setAttribute("inert", "");
-  //   } else {
-  //     mobileNav.removeAttribute("inert");
-  //     cart.removeAttribute("inert");
-  //   }
-  // }
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 75) {
+      scrollUpButton.style.opacity = '1';
+      scrollUpButton.removeAttribute("inert");
+    } else {
+      scrollUpButton.style.opacity = '0';
+      scrollUpButton.setAttribute("inert", "");
+    }
+  });
 
   function updateScrollBehavior() {
     const disableScroll = window.innerWidth <= 640;
     const isCartOpen = cart.classList.contains("active");
-    // const isMobileNavOpen = mobileNav.classList.contains("active");
-    // || isMobileNavOpen
+
     if (disableScroll && (isCartOpen)) {
       document.body.style.overflow = "hidden";
     } else {
@@ -47,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", updateScrollBehavior);
 
-  // fucntions to open and close the cart and mobile nav
+  // fucntions to open and close the cart
   function opensCart() {
     cart.classList.add("active");
     cartOverlay.classList.add("active");
@@ -63,22 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cart.setAttribute("inert", "");
     updateScrollBehavior();
   }
-
-  // function opensMobileNav() {
-  //   mobileNav.classList.add("active");
-  //   mobileOverlay.classList.add("active");
-  //   openMobileNavIcon.setAttribute("aria-expanded", "true");
-  //   mobileNav.removeAttribute("inert");
-  //   updateScrollBehavior();
-  // }
-
-  // function closesMobileNav() {
-  //   mobileOverlay.classList.remove("active");
-  //   mobileNav.classList.remove("active");
-  //   openMobileNavIcon.setAttribute("aria-expanded", "false");
-  //   mobileNav.setAttribute("inert", "");
-  //   updateScrollBehavior();
-  // }
 
   // end of fucntions to open and close the cart and mobile nav
 
@@ -96,30 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
       closesCart();
     });
 
-    // openMobileNavIcon.addEventListener("click", () => {
-    //   opensMobileNav();
-    // });
-
-    // closeMobileNavIcon.addEventListener("click", () => {
-    //   closesMobileNav();
-    // });
-
-    // mobileOverlay.addEventListener("click", () => {
-    //   closesMobileNav();
-    // });
-
-    // checks if the viewpot widht is >= 1025px so that it can remove the class active from the mobileNav and the cartOverlay
-    // function checkViewportWidth() {
-    //   if (window.innerWidth >= 1025) {
-    //     closesMobileNav();
-    //   }
-    // }
-
-    // calls the check viewportWidth function when the page loads
-    // checkViewportWidth();
-
-    // adds an event listener to the window for when it is resized
-    // window.addEventListener("resize", checkViewportWidth);
 
     document.addEventListener("DOMContentLoaded", updateCartDisplay);
 
