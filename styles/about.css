@@ -77,9 +77,9 @@
     bottom: 0;
     color: var(--clr-grey);
 }
-/* 
+
 @media (max-width: 768px) {
     .landing_page--container {
         flex-direction: column;
     }
-} */
+}
