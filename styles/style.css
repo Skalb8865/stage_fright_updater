@@ -116,7 +116,7 @@ button {
 }
 
 .section {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .section-background {
@@ -170,39 +170,6 @@ button {
     margin-right: auto;
     padding: 15px;
     z-index: 9002;
-}
-
-.header-social--links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.header-social--links:hover {
-    .icon {
-        opacity: 0.3;
-    }
-}
-
-.header-social--links .icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    color: var(--clr-light);
-    border: 2px solid var(--clr-light);
-    text-align: center;
-    font-size: 1rem;
-    line-height: 35px;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-
-.header-social--links .icon:hover {
-    background: var(--clr-red);
-    border: 2px solid var(--clr-red);
-    opacity: 1;
-    transition: all 0.3s;
 }
 
 .nav-center--section {
@@ -1629,10 +1596,10 @@ form .required {
     .navbar-container {
         max-width: 768px;
     }
-
+/* 
     .section {
         margin-top: 5rem;
-    }
+    } */
 
     .header-social--links {
         display: none;

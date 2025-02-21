@@ -27,7 +27,6 @@ export default defineConfig({
         hephaestus: resolve(__dirname, 'html/Music/Albums/hephaestus.html'),
         hephaestus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/hephaestus_music_page.html'),
         // Apparel
-
         logo_long_sleeve: resolve(__dirname, 'html/Merch/Apparel/white_long_sleeve.html'),
         acantha_tshirt: resolve(__dirname, 'html/Merch/Apparel/acantha_T-shirt.html'),
         acantha_hoodie: resolve(__dirname, 'html/Merch/Apparel/acantha_black_hoodie.html'),
@@ -39,6 +38,7 @@ export default defineConfig({
         black_logo_hoodie: resolve(__dirname, 'html/Merch/Apparel/black_logo_hoodie.html'),
         black_moto_sweatpants: resolve(__dirname, 'html/Merch/Apparel/black_motto_sweatpants.html'),
         black_logo_beanie: resolve(__dirname, 'html/Merch/Apparel/black_logo_beanie.html'),
+        hephaestus_black_hoodie: resolve(__dirname, 'html/Merch/Apparel/hephaestus_black_hoodie.html'),
         // Media
         nyx_vinyl: resolve(__dirname, 'html/Merch/Media/nyx_vinyl.html'),
         prometheus_vinyl: resolve(__dirname, 'html/Merch/Media/prometheus_vinyl.html'),
