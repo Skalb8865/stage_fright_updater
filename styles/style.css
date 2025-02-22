@@ -209,26 +209,42 @@ button {
 }
 
 .nav-item {
+    position: relative;
     color: var(--clr-light);
     font-size: var(--size-lg);
-    /* padding: 0 25px; */
     margin: 0 25px;
-    transition: color 0.2s;
+}
+
+.nav-item::before {
+    content: '';
+    background: var(--clr-red);
+    height: 2.5px;
+    width: 0px;
+    position: absolute;
+    bottom: -5px;
+    transition: 450ms;
+}
+
+.nav-item:hover::before {
+    width: 50px;
+    transition: 350ms;
 }
 
 .active-link {
+    position: relative;
     color: var(--clr-red);
     font-size: var(--size-lg);
-    border-bottom: 3px solid var(--clr-red);
-    border-radius: px;
-    /* padding: 0 25px; */
     margin: 0 25px;
-    transition: color 0.2s;
 }
 
-.nav-item:hover {
-    color: var(--clr-red);
-    transition: color 0.4s;
+.active-link::before {
+    content: '';
+    background: var(--clr-red);
+    height: 2.5px;
+    width: 25px;
+    position: absolute;
+    bottom: -5px;
+    transition: 450ms;
 }
 
 .nav-right--section {
@@ -1422,7 +1438,7 @@ form .required {
     border-radius: 5px;
 }
 
-.perk_card img{
+.perk_card img {
     width: 100%;
 }
 
@@ -1638,7 +1654,8 @@ form .required {
     .navbar-container {
         max-width: 768px;
     }
-/* 
+
+    /* 
     .section {
         margin-top: 5rem;
     } */
