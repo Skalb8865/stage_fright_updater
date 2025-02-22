@@ -1422,6 +1422,10 @@ form .required {
     border-radius: 5px;
 }
 
+.perk_card img{
+    width: 100%;
+}
+
 .perk_container {
     padding: 2px 16px;
     color: white;
