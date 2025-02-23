@@ -18,6 +18,8 @@ export default defineConfig({
         credits: resolve(__dirname, 'html/Credits/credits.html'),
         fan_club: resolve(__dirname, 'html/Fanclub/fanclub.html'),
         account_login: resolve(__dirname, 'html/Fanclub/account.html'),
+        fanclub_black_hoodie: resolve(__dirname, 'html/Fanclub/Fanclub_Merch/fanclub_black_hoodie.html'),
+        fanclub_tshirt: resolve(__dirname, 'html/Fanclub/Fanclub_Merch/fanclub_T-shirt.html'),
         // Music
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
         prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
@@ -49,8 +51,6 @@ export default defineConfig({
         // Accessories
         moto_phone_case: resolve(__dirname, 'html/Merch/Accessories/motto_phone_case.html'),
         logo_white_airpod_case: resolve(__dirname, 'html/Merch/Accessories/logo_white_airpod_case.html'),
-
-        test: resolve(__dirname, 'html/test/jsontest.html'),
       },
     },
   },
