@@ -679,7 +679,6 @@ button {
     background-size: cover;
     background-position: center;
     width: 100%;
-    transition: all 0.65s;
 }
 
 .landing_page--container .one {
@@ -694,17 +693,20 @@ button {
     background-image: url("/res/members/group.webp");
 }
 
-.landing_page--container .one:hover {
-    flex: 2.25;
+.landing_page--container .one:hover .content{
+    background: rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
 }
 
-.landing_page--container .two:hover {
-    flex: 2.25;
+.landing_page--container .two:hover .content{
+    background: rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
 }
 
 .content {
     width: 100%;
     height: 100%;
+    transition: all 0.3s;
 }
 
 .two .content {
@@ -714,7 +716,7 @@ button {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
 }
 
 .one .content {
@@ -724,7 +726,7 @@ button {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
 }
 
 .landing_page--links {
@@ -1171,16 +1173,36 @@ button {
     transition: all 0.3s;
 }
 
+.tour_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tour_form .email-input-container, .tour_form .tickets-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
 .tour_modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
     padding: 20px;
+    width: 640px;
     background: var(--clr-dark);
     border: 2px solid var(--clr-light);
     color: var(--clr-light);
     z-index: 1000;
+}
+
+.tour_modal p{
+    color: var(--clr-grey);
+}
+
+.tour_modal .tour_form .required{
+    color: var(--clr-red);
 }
 
 .tour_modal::backdrop {
@@ -1197,6 +1219,7 @@ button {
     border: none;
     background: none;
     transition: color 0.3s;
+    color: var(--clr-light);
 }
 
 .tour_modal--close:hover {
@@ -1204,32 +1227,12 @@ button {
 }
 
 
-.tickets-input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70.5%;
-}
-
-#tickets {
-    width: 100%;
-}
-
 .tour_container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 25px;
     background: transparent;
-}
-
-.tour_container form {
-    padding: 20px;
-    width: 1460px;
-    min-height: 600px;
-    background: var(--clr-dark);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
 
@@ -1496,6 +1499,14 @@ button {
     width: 70.5%;
 }
 
+.tickets-input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70.5%;   
+}
+
 .message-textbox-container {
     display: flex;
     flex-direction: column;
@@ -1545,6 +1556,10 @@ button {
 
 /* the subject input box */
 #subject {
+    width: 100%;
+}
+
+#tickets{
     width: 100%;
 }
 
@@ -1737,40 +1752,6 @@ section .image img {
     transition: border 0.3s;
 }
 
-.citation__icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.citation__icons:hover .icon {
-    opacity: 0.3;
-}
-
-.citation__icons .icon {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 75px;
-    transition: all 0.3s linear;
-    cursor: pointer;
-}
-
-.citation__icons .icon:nth-child(1):hover {
-    color: #3b5998;
-    opacity: 1;
-}
-
-.citation__icons .icon:nth-child(2):hover {
-    color: #ff0000;
-    opacity: 1;
-}
 
 /* ************** */
 /* Footer Section */
@@ -2006,10 +1987,6 @@ section .image img {
         width: 200px;
     }
 
-    .tickets-input-container {
-        width: 60%;
-    }
-
     .news-card {
         width: 435px;
         height: 435px;
@@ -2077,15 +2054,15 @@ section .image img {
         padding-left: 15px;
     }
 
-    .tickets-input-container {
-        width: 50%;
-    }
-
     .name-input-container {
         width: 45%;
     }
 
     .email-input-container {
+        width: 92%;
+    }
+
+    .tickets-input-container {
         width: 92%;
     }
 
@@ -2129,9 +2106,5 @@ section .image img {
 
     .submit-btn button {
         width: 150px;
-    }
-
-    .tickets-input-container {
-        width: 40%;
     }
 }

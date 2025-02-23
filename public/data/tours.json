@@ -27,7 +27,7 @@
         "date": "Mar 7th - 8th",
         "location": "Philadelphia,<br> PA,<br> United States",
         "modalLocation": "Philadelphia, PA, United States",
-        "ticketsPrice": "$19",
+        "ticketsPrice": "$20",
         "place": "Franklin Music Hall",
         "buttonid": "open-modal4"
     },
@@ -51,7 +51,7 @@
         "date": "Mar 18th - 19th",
         "location": "Jericho,<br> NY,<br> United States",
         "modalLocation": "Jericho, NY, United States",
-        "ticketsPrice": "$19",
+        "ticketsPrice": "$18",
         "place": "Flagstar at Westbury Music Fair",
         "buttonid": "open-modal7"
     },
@@ -64,20 +64,20 @@
         "buttonid": "open-modal8"
     },
     {
-        "date": "Mar 24th - 26th",
-        "location": "Norfolk,<br> VA,<br> United States",
-        "modalLocation": "Norfork, VA, United States",
-        "ticketsPrice": "$19",
-        "place": "The NorVa",
+        "date": "Mar 24th - 25th",
+        "location": "Queens,<br> NY,<br> United States",
+        "modalLocation": "Queens, NY, United States",
+        "ticketsPrice": "$20",
+        "place": "Radio City Music Hall",
         "buttonid": "open-modal9"
     },
     {
         "date": "Mar 29th - Apr 1st",
-        "location": "Columbus,<br> OH,<br> United States",
-        "modalLocation": "Columbus, OH, United States",
-        "ticketsPrice": "$19",
-        "place": "Newport Music Hall",
-        "buttonid": "open-modal10"
+        "location": "Norfolk,<br> VA,<br> United States",
+        "modalLocation": "Norfork, VA, United States",
+        "ticketsPrice": "$18",
+        "place": "The NorVa",
+        "buttonid": "open-modal9"
     },
     {
         "date": "Apr 3rd - 4th",
@@ -91,7 +91,7 @@
         "date": "Apr 6th - 7th",
         "location": "Columbus,<br> OH,<br> United States",
         "modalLocation": "Columbus, OH, United States",
-        "ticketsPrice": "$19",
+        "ticketsPrice": "$18",
         "place": "KEMBA Live!",
         "buttonid": "open-modal12"
     }

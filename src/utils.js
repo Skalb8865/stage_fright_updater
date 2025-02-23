@@ -33,7 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       document.body.style.overflow = "auto";
     }
+
+    // Add event listener for window resize
+    window.addEventListener('resize', () => {
+      if (isCartOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    });
   }
+
+
 
   window.addEventListener("resize", updateScrollBehavior);
 
