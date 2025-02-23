@@ -21,6 +21,7 @@ export default defineConfig({
         fanclub_black_hoodie: resolve(__dirname, 'html/Fanclub/Fanclub_Merch/fanclub_black_hoodie.html'),
         fanclub_tshirt: resolve(__dirname, 'html/Fanclub/Fanclub_Merch/fanclub_T-shirt.html'),
         fanclub_mug: resolve(__dirname, 'html/Fanclub/Fanclub_Merch/fanclub_mug.html'),
+        fanclub_backpack: resolve(__dirname, 'html/Fanclub/Fanclub_Merch/fanclub_backpack.html'),
         // Music
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
         prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
