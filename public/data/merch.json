@@ -19,7 +19,7 @@
   },
   {
     "name": "Hephaestus Vinyl",
-    "link": "#",
+    "link": "/html/Merch/Media/hephaestus_vinyl.html",
     "price": "$27.99",
     "image": "/merch/HephaestusVinyl.webp"
   },
@@ -91,7 +91,7 @@
   },
   {
     "name": "Hephaestus Black T-Shirt",
-    "link": "#",
+    "link": "/html/Merch/Apparel/hephaestus_T-shirt.html",
     "price": "$18.99",
     "image": "/merch/HephaestusShirt.webp"
   },

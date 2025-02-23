@@ -17,6 +17,7 @@ export default defineConfig({
         customer_service: resolve(__dirname, 'html/Contact/customer_service.html'),
         credits: resolve(__dirname, 'html/Credits/credits.html'),
         fan_club: resolve(__dirname, 'html/Fanclub/fanclub.html'),
+        account_login: resolve(__dirname, 'html/Fanclub/account.html'),
         // Music
         prometheus: resolve(__dirname, 'html/Music/Albums/prometheus.html'),
         prometheus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/prometheus_music_page.html'),
@@ -28,10 +29,10 @@ export default defineConfig({
         hephaestus_music_page: resolve(__dirname, 'html/Music/Albums/Music_Pages/hephaestus_music_page.html'),
         // Apparel
         logo_long_sleeve: resolve(__dirname, 'html/Merch/Apparel/white_long_sleeve.html'),
-        acantha_tshirt: resolve(__dirname, 'html/Merch/Apparel/acantha_T-shirt.html'),
+        acantha_black_tshirt: resolve(__dirname, 'html/Merch/Apparel/acantha_T-shirt.html'),
         acantha_hoodie: resolve(__dirname, 'html/Merch/Apparel/acantha_black_hoodie.html'),
         white_hat: resolve(__dirname, 'html/Merch/Apparel/white_logo_hat.html'),
-        nyx_tshirt: resolve(__dirname, 'html/Merch/Apparel/nyx_T-shirt.html'),
+        nyx_black_tshirt: resolve(__dirname, 'html/Merch/Apparel/nyx_T-shirt.html'),
         nyx_black_hoodie: resolve(__dirname, 'html/Merch/Apparel/nyx_black_hoodie.html'),
         prometheus_black_hoodie: resolve(__dirname, 'html/Merch/Apparel/prometheus_black_hoodie.html'),
         prometheus_black_tshirt: resolve(__dirname, 'html/Merch/Apparel/prometheus_T-shirt.html'),
@@ -39,10 +40,12 @@ export default defineConfig({
         black_moto_sweatpants: resolve(__dirname, 'html/Merch/Apparel/black_motto_sweatpants.html'),
         black_logo_beanie: resolve(__dirname, 'html/Merch/Apparel/black_logo_beanie.html'),
         hephaestus_black_hoodie: resolve(__dirname, 'html/Merch/Apparel/hephaestus_black_hoodie.html'),
+        hephaestus_black_tshirt: resolve(__dirname, 'html/Merch/Apparel/hephaestus_T-shirt.html'),
         // Media
         nyx_vinyl: resolve(__dirname, 'html/Merch/Media/nyx_vinyl.html'),
         prometheus_vinyl: resolve(__dirname, 'html/Merch/Media/prometheus_vinyl.html'),
         acantha_vinyl: resolve(__dirname, 'html/Merch/Media/acantha_vinyl.html'),
+        hephaestus_vinyl: resolve(__dirname, 'html/Merch/Media/hephaestus_vinyl.html'),
         // Accessories
         moto_phone_case: resolve(__dirname, 'html/Merch/Accessories/motto_phone_case.html'),
         logo_white_airpod_case: resolve(__dirname, 'html/Merch/Accessories/logo_white_airpod_case.html'),

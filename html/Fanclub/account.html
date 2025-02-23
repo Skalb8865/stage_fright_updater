@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/res/logo/Stage_Fright_Logo.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline | Stage Fright</title>
+    <title>Fanclub | Stage Fright</title>
 
     <!-- ========= -->
     <!-- CSS Links -->
@@ -17,17 +16,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
-    <link rel="preload" href="/styles/timeline.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="/styles/timeline.css">
-    </noscript>
+    <link rel="stylesheet" href="/styles/fanclublogin.css">
 
     <!-- ======== -->
     <!-- JS Links -->
     <!-- ======== -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
-    <script type="module" src="/src/timeline.js"></script>
 
 
     <meta name="description" content="Stage Fright Website">
@@ -121,7 +116,8 @@
                     <a href="/html/Contact/contact.html" aria-label="Contact Page">Contact</a>
                     <a href="/html/Contact/customer_service.html" aria-label="Customer Support Page">Customer
                         Support</a>
-                    <a href="/html/Fanclub/fanclub.html" aria-label="Fanclub Page">The Amplified Brigade</a>
+                    <a href="/html/Fanclub/fanclub.html" aria-label="Fanclub Page" aria-current="page">The Amplified
+                        Brigade</a>
                     <a href="/html/Credits/credits.html" aria-label="Credits Page">Credits</a>
                 </div>
 
@@ -143,92 +139,70 @@
         <div class="loader" id="loader"></div>
     </div>
 
-    <main class="main">
-        <div class="container section">
-            <h1 class="section-title">Our History</h1>
-            <section class="timeline">
-                <ol>
-                    <li>
-                        <div class="item-inner">
-                            <div class="time-wrapper">
-                                <time>2022</time>
-                            </div>
-                            <div class="details">
-                                <h3>Start of the Fire...</h3>
-                                <!-- Sean contacted his friends, who shared his passion for experimenting with
-                                    sound. At first, it was just jam sessions—unpolished, raw, and experimental. They would meet
-                                    after hours, playing until dawn, weaving together genres and sounds that didn’t quite fit into
-                                    the mainstream. Their early work was chaotic and dissonant, but there was something undeniable
-                                    about their energy. -->
-                                <p>
-                                    Stage Fright breakthrough came when they played at a local music festival in early
-                                    2022. The crowd was electrified, and a small but devoted fanbase began to take
-                                    shape. In
-                                    June 2022
-                                    Stage Fright joins Indie record label TNR Records. Over a few months, the band
-                                    played at
-                                    bars and
-                                    spread the word about their upcoming debut album with the label. Stage Fright's "
-                                    Prometheus" sold
-                                    13k copies in the first week. Stage Fright released Music Videos for the Prometheus
-                                    album.
-                                </p>
 
+    <main class="account">
+        <div class="account_container">
+            <input type="checkbox" id="flip">
+            <div class="cover">
+                <div class="front">
+                    <img src="/res/fanclubv3.png" alt="">
+                    <div class="text"></div>
+                </div>
+                <div class="back">
+                    <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+                    <img src="/res/fanclubv3.png" alt="">
+                    <div class="text"></div>
+                </div>
+            </div>
+            <div class="forms">
+                <div class="form-content">
+                    <div class="login-form">
+                        <div class="title">Login</div>
+                        <form action="#">
+                            <div class="input-boxes">
+                                <div class="input-box">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="text" placeholder="Enter your email" required>
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" placeholder="Enter your password" required>
+                                </div>
+                                <div class="text"><a href="#">Forgot password?</a></div>
+                                <div class="button input-box">
+                                    <input type="submit" class="btn" value="Sumbit">
+                                </div>
+                                <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup
+                                        now</label></div>
                             </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-inner">
-                            <div class="time-wrapper">
-                                <time>2023</time>
+                        </form>
+                    </div>
+                    <div class="signup-form">
+                        <div class="title">Signup</div>
+                        <form action="#">
+                            <div class="input-boxes">
+                                <div class="input-box">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" placeholder="Enter your name" required>
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="text" placeholder="Enter your email" required>
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" placeholder="Enter your password" required>
+                                </div>
+                                <div class="button input-box">
+                                    <input type="submit" class="btn" value="Sumbit">
+                                </div>
+                                <div class="text sign-up-text">Already have an account? <label for="flip">Login
+                                        now</label></div>
                             </div>
-                            <div class="details">
-                                <h3>The Seeds of Growth...</h3>
-                                <p>Stage Fright announces that their sophomore album will be released in July 2023. When
-                                    Stage
-                                    Fright dropped their sophomore album, Acantha, It sold over 20k copies in the first
-                                    week,
-                                    Beating their freshman album by 7k copies. Stage Fright releases Music Videos for
-                                    the
-                                    Acantha album in mid-July. Stage Fright partners with a clothing brand and drops the
-                                    first
-                                    waves of merchandise for their two albums, Prometheus and Acantha.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-inner">
-                            <div class="time-wrapper">
-                                <time>2024</time>
-                            </div>
-                            <div class="details">
-                                <h3>The Ourea...</h3>
-                                <p>Stage Fright announces their junior album "Nyx dropping in April 2024. Stage Fright
-                                    drops
-                                    the
-                                    Nyx album along with Nyx album merch. It sold well over 35k copies in the first week
-                                    beating
-                                    their first two albums combined. Stage Fright announces that TNR Records and the
-                                    band
-                                    have
-                                    organized a tour and a new album to be started and released in 2025.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-inner">
-                            <div class="time-wrapper">
-                                <time>2025</time>
-                            </div>
-                            <div class="details">
-                                <h3>Forged by Fire and Speed...</h3>
-                                <p>Hermes Tour starts and Hephaestus album releases.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ol>
-            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Order Confirmation Modal -->
@@ -245,29 +219,6 @@
             </div>
         </dialog>
     </main>
-
-
-
-    <!-- ============== -->
-    <!-- Footer Section -->
-    <!-- ============== -->
-    <footer class="footer">
-        <p>4465 S Hamilton Rd, Columbus, Ohio</p>
-        <p>(220) 465-1915 | stagefrightrb@gmail.com</p>
-        <div class="footer-socials">
-            <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter" target="_blank"><i
-                    class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
-                aria-label="Our Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
-                aria-label="Our Spotify" target="_blank"><i class="fa-brands fa-spotify"></i></a>
-            <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube" target="_blank"><i
-                    class="fa-brands fa-youtube"></i></a>
-        </div>
-        <p>Eastland Career Center BPA</p>
-        <p>&copy; Stage Fright 2025. All rights reserved.</p>
-        <p class="made_by">Made By Sean Kalb, Aidien Gooden, Jabari Hill, Gabe Zeigler</p>
-    </footer>
 </body>
 
 </html>
