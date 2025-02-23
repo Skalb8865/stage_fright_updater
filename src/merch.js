@@ -9,7 +9,7 @@ fetch(jsonFile)
       merch.innerHTML += `
       <div class="merch-box">
           <a href="${link}" aria-label="${name}"><img
-          src="${image}" alt="${name}" class="product-img"></a>
+          src="${image}" alt="${name}" class="product-img" data-aos="zoom-in-up" data-aos-delay="300" data-aos-easing="linear"></a>
           <div class="info-section">
             <h2 class="product-title">${name}</h2>
             <span class="product-price">${price}</span>
