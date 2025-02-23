@@ -64,15 +64,15 @@
         "buttonid": "open-modal8"
     },
     {
-        "date": "Mar 24th - 25th",
-        "location": "Queens,<br> NY,<br> United States",
-        "modalLocation": "Queens, NY, United States",
+        "date": "Mar 24th - 26th",
+        "location": "Norfolk,<br> VA,<br> United States",
+        "modalLocation": "Norfork, VA, United States",
         "ticketsPrice": "$19",
-        "place": "Radio City Music Hall",
+        "place": "The NorVa",
         "buttonid": "open-modal9"
     },
     {
-        "date": "Mar 28th - Apr 1st",
+        "date": "Mar 29th - Apr 1st",
         "location": "Columbus,<br> OH,<br> United States",
         "modalLocation": "Columbus, OH, United States",
         "ticketsPrice": "$19",
