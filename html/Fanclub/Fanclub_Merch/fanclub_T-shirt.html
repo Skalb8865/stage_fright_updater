@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/res/logo/Stage_Fright_Logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fanclub | Stage Fright</title>
+    <title>Fanclub Black Shirt | Stage Fright</title>
 
     <!-- ========= -->
     <!-- CSS Links -->
@@ -15,8 +16,6 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
-
-    <link rel="stylesheet" href="/styles/fanclublogin.css">
 
     <!-- ======== -->
     <!-- JS Links -->
@@ -116,8 +115,7 @@
                     <a href="/html/Contact/contact.html" aria-label="Contact Page">Contact</a>
                     <a href="/html/Contact/customer_service.html" aria-label="Customer Support Page">Customer
                         Support</a>
-                    <a href="/html/Fanclub/fanclub.html" aria-label="Fanclub Page" aria-current="page">The Amplified
-                        Brigade</a>
+                    <a href="/html/Fanclub/fanclub.html" aria-label="Fanclub Page">The Amplified Brigade</a>
                     <a href="/html/Credits/credits.html" aria-label="Credits Page">Credits</a>
                 </div>
 
@@ -139,70 +137,105 @@
         <div class="loader" id="loader"></div>
     </div>
 
-
-    <main class="account">
-        <div class="account_container">
-            <input type="checkbox" id="flip">
-            <div class="cover">
-                <div class="front">
-                    <img src="/res/fanclub/fanclub_logo.png" alt="Fanclub Logo">
-                    <div class="text"></div>
-                </div>
-                <div class="back">
-                    <img src="/res/fanclub/fanclub_logo.png" alt="Fanclub Logo">
-                    <div class="text"></div>
+    <main class="main">
+        <!--ABOUT SECTION-->
+        <div class="merch-container product-box container">
+            <div class="merch_img--container">
+                <div class="merch_img--card"><img src="/merch/Fanclub_Shirt.webp" alt="Fanclub Black Shirt">
                 </div>
             </div>
-            <div class="forms">
-                <div class="form-content">
-                    <div class="login-form">
-                        <div class="title">Login</div>
-                        <form action="#">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="text" placeholder="Enter your email" required>
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" placeholder="Enter your password" required>
-                                </div>
-                                <div class="text"><a href="#" aria-label="Forgot Password">Forgot password?</a></div>
-                                <div class="button input-box">
-                                    <input type="submit" class="btn" value="Sumbit">
-                                </div>
-                                <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup
-                                        now</label></div>
-                            </div>
-                        </form>
+            <div class="merch_content">
+                <h1 class="product-title">Fanclub Black Shirt</h1>
+                <h2 class="product-price">$18.99</h2>
+                <p class="product-description">Our Fanclub Black T-shirt. Made with 100% Organic Cotton.
+                    Pre-washed to minimize shrinkage.</p>
+
+                <ul class="size-list">
+                    <li class="sizes">
+                        <input id="small" type="radio" name="size" aria-label="Size Small" aria-required="true"
+                            required>
+                        <label for="small">S</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="medium" type="radio" name="size" aria-label="Size Medium" aria-required="true"
+                            required>
+                        <label for="medium">M</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="large" type="radio" name="size" aria-label="Size Large" aria-required="true"
+                            required>
+                        <label for="large">L</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="extra-large" type="radio" name="size" aria-label="Size Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-large">XL</label>
+                    </li>
+                    <li class="sizes">
+                        <input id="extra-extra-large" type="radio" name="size" aria-label="Size Extra Extra Large"
+                            aria-required="true" required>
+                        <label for="extra-extra-large">XXL</label>
+                    </li>
+                </ul>
+
+                <div class="quantity-container">
+                    <div class="number-input">
+                        <button class="quantity-btn minus"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                        <input class="quantity" id="quantity" min="1" max="10" name="quantity" value="1" type="number"
+                            aria-label="quantity" disabled>
+                        <button class="quantity-btn plus"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                     </div>
-                    <div class="signup-form">
-                        <div class="title">Signup</div>
-                        <form action="#">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" placeholder="Enter your name" required>
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="text" placeholder="Enter your email" required>
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" placeholder="Enter your password" required>
-                                </div>
-                                <div class="button input-box">
-                                    <input type="submit" class="btn" value="Sumbit">
-                                </div>
-                                <div class="text sign-up-text">Already have an account? <label for="flip">Login
-                                        now</label></div>
-                            </div>
-                        </form>
-                    </div>
+
+                    <button class="add-cart">Add To Cart</button>
                 </div>
             </div>
         </div>
+
+        <!-- SHOP SECTION  -->
+        <section class="shop merch_suggestions--container section">
+            <h2 class="shop-title">You May Also Like</h2>
+            <!-- CONTENT  -->
+            <div class="shop-content">
+                <!-- BOX 1 -->
+                <div class="merch-box">
+                    <a href="#" aria-label="Fanclub Black Coffee Mug"><img src="/merch/Fanclub_Mug.webp"
+                            alt="Fanclub Black Coffee Mug" class="product-img"></a>
+                    <div class="info-section">
+                        <h2 class="product-title">Fanclub Blak Coffee Mug</h2>
+                        <span class="product-price">$12.99</span>
+                    </div>
+                </div>
+                <!-- BOX 2 -->
+                <div class="merch-box">
+                    <a href="#" aria-label="Fanclub Black Backpack"><img src="/merch/Fanclub_Backpack.webp"
+                            alt="Fanclub Black Backpack" class="product-img"></a>
+                    <div class="info-section">
+                        <h2 class="product-title">Fanclub Black Backpack</h2>
+                        <span class="product-price">$15.99</span>
+                    </div>
+                </div>
+                <!-- BOX 3 -->
+                <div class="merch-box">
+                    <a href="./fanclub_black_hoodie.html" aria-label="Fanclub Black Hoodie"><img
+                            src="/merch/Fanclub_Hoodie.webp" alt="Fanclub Black Hoodie" class="product-img"></a>
+                    <div class="info-section">
+                        <h2 class="product-title">Fanclub Black Hoodie</h2>
+                        <span class="product-price">$24.99</span>
+                    </div>
+                </div>
+                <!-- BOX 4 -->
+                <div class="merch-box">
+                    <a href="/html/Merch/Media/nyx_vinyl.html" aria-label="NYX Vinyl"><img src="/merch/Nyxvinyl.webp"
+                            alt="Nyx Vinyl" class="product-img"></a>
+                    <div class="info-section">
+                        <h2 class="product-title">NYX Vinyl</h2>
+                        <span class="product-price">$27.99</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Order Confirmation Modal -->
         <dialog id="order-modal" class="order-modal">
@@ -218,6 +251,28 @@
             </div>
         </dialog>
     </main>
+
+
+    <!-- ============== -->
+    <!-- Footer Section -->
+    <!-- ============== -->
+    <footer class="footer">
+        <p>4465 S Hamilton Rd, Columbus, Ohio</p>
+        <p>(220) 465-1915 | stagefrightrb@gmail.com</p>
+        <div class="footer-socials">
+            <a href="https://x.com/StageFrightRB?s=09" aria-label="Our Twitter" target="_blank"><i
+                    class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/stagefrightoffical/?igsh=MXJ4MXZsbGtva3JmdQ%3D%3D"
+                aria-label="Our Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://open.spotify.com/user/31mk4mtczxnuxitto37orbgyps7q?si=X3NFJPe1RW6WBEY4RFS6VQ"
+                aria-label="Our Spotify" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+            <a href="https://youtube.com/@stagefrightrb?si=K0BPTB77cNhv7n7M" aria-label="Our Youtube" target="_blank"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Eastland Career Center BPA</p>
+        <p>&copy; Stage Fright 2025. All rights reserved.</p>
+        <p class="made_by">Made By Sean Kalb, Aidien Gooden, Jabari Hill, Gabe Zeigler</p>
+    </footer>
 </body>
 
 </html>
