@@ -1182,8 +1182,8 @@ main {
 }
 
 
-.tour_form .email-input-container,
-.tour_form .tickets-input-container {
+.tour_form .tour_email-input-container,
+.tour_form .tour_tickets-input-container {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -1547,13 +1547,13 @@ main {
     width: 70.5%;
 }
 
-.tickets-input-container {
+/* .tickets-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
+} */
 
 .message-textbox-container {
     display: flex;
@@ -1666,7 +1666,6 @@ main {
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-bottom: -70px;
 }
 
 .perk_card--container {
@@ -1697,6 +1696,7 @@ main {
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
+    overflow: hidden;
 }
 
 section.hero_container {
