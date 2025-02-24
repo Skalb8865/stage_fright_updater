@@ -70,20 +70,6 @@ button {
     min-height: 63dvh;
 }
 
-.member {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.music {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .scroll_up--button {
     opacity: 0;
     position: fixed;
