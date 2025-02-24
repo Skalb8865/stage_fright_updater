@@ -1773,7 +1773,7 @@ section .image img {
 }
 
 .credits-card a:hover {
-    color: var(--clr-red);
+    color: var(--clr-grey);
     transition: color 0.3s;
 }
 

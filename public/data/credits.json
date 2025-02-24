@@ -1,62 +1,58 @@
 [
   {
     "name": "Homepage Hero Image",
-    "link": "/html/Merch/Media/prometheus_vinyl.html"
+    "link": "https://pxhere.com/en/photo/1229156"
   },
   {
     "name": "News Image #1",
-    "link": "/html/Merch/Media/acantha_vinyl.html"
+    "link": "https://unsplash.com/photos/man-singing-on-stage-in-front-of-people-uGh-hHVPRYI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
   },
   {
     "name": "News Image #2",
-    "link": "/html/Merch/Media/nyx_vinyl.html"
+    "link": "http://unsplash.com/photos/a-black-and-white-shot-of-a-wire-plugged-in-into-a-guitar-OUgLA2unwtg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
   },
   {
     "name": "News Image #3",
-    "link": "/html/Merch/Media/hephaestus_vinyl.html"
+    "link": "https://unsplash.com/photos/man-playing-guitar-on-his-back-IlfpKwRMln0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
   },
   {
     "name": "Swiper",
-    "link": "/html/Merch/Apparel/black_logo_hoodie.html"
+    "link": "https://swiperjs.com/"
   },
   {
     "name": "Cart",
-    "link": "/html/Merch/Apparel/white_long_sleeve.html"
+    "link": "https://www.youtube.com/watch?v=b7uytYTpKos&t=1102s"
   },
   {
     "name": "JavaScript Frontend Tool",
-    "link": "/html/Merch/Apparel/black_motto_sweatpants.html"
+    "link": "https://vite.dev/"
   },
   {
     "name": "Website Deployment",
-    "link": "/html/Merch/Apparel/black_logo_beanie.html"
+    "link": "https://vercel.com/"
   },
   {
     "name": "Icons",
-    "link": "/html/Merch/Apparel/prometheus_black_hoodie.html"
+    "link": "https://remixicon.com/"
   },
   {
     "name": "Icons 2",
-    "link": "/html/Merch/Apparel/prometheus_black_hoodie.html"
+    "link": "https://fontawesome.com/"
   },
   {
     "name": "Vinyl",
-    "link": "/html/Merch/Apparel/prometheus_T-shirt.html"
+    "link": "https://shop.vinylacy.com/pages/customizer"
   },
   {
     "name": "Music",
-    "link": "/html/Merch/Apparel/prometheus_T-shirt.html"
+    "link": "https://freemusicarchive.org/home"
   },
   {
     "name": "Music Player",
-    "link": "/html/Merch/Apparel/acantha_black_hoodie.html"
+    "link": "https://www.youtube.com/watch?v=IO7Mh31fHs4&list=WL&index=36"
   },
   {
     "name": "Login / Signup Page",
-    "link": "/html/Merch/Apparel/acantha_T-shirt.html"
-  },
-  {
-    "name": "NYX Black Hoodie",
-    "link": "/html/Merch/Apparel/nyx_black_hoodie.html"
+    "link": "https://www.codingnepalweb.com/login-and-registration-form-in-html-css/"
   }
 ]
