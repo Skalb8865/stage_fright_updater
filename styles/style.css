@@ -125,16 +125,15 @@ button {
 }
 
 .tours_slider--section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 75dvh;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 .contact-section {
     min-height: 40dvh;
-    padding: 75px 0 75px 0;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
     background: var(--clr-dark-grey);
 }
 
