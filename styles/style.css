@@ -602,13 +602,13 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 35px;
+    gap: 45px;
 }
 
 .news-card {
     position: relative;
-    width: 445px;
-    height: 445px;
+    width: 400px;
+    height: 400px;
     transition: all 0.3s;
 }
 
