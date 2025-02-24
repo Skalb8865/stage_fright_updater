@@ -59,8 +59,13 @@ button {
     border: none;
 }
 
+main{
+    overflow-x: hidden;
+}
+
 .main {
     min-height: 63dvh;
+    overflow-x: hidden;
 }
 
 .account {
@@ -119,8 +124,9 @@ button {
 
 .section-background {
     min-height: 75dvh;
-    background: var(--clr-dark-grey);
     padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: var(--clr-dark-grey);
 }
 
 .tours_slider--section {
@@ -603,6 +609,7 @@ button {
     transition: all 0.3s;
 }
 
+
 .news-overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
@@ -623,7 +630,7 @@ button {
 }
 
 .news-card:hover .news-info--section {
-    background: var(--clr-active-link);
+    background: var(--clr-dark-grey);
     transition: all 0.3s;
 }
 
