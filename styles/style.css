@@ -59,7 +59,7 @@ button {
     border: none;
 }
 
-main{
+main {
     overflow-x: hidden;
 }
 
@@ -316,7 +316,7 @@ main{
 .menu {
     position: fixed;
     top: 0;
-    left: -125%;
+    left: -100%;
     width: 100%;
     height: 100%;
     height: 100dvh;
@@ -1153,10 +1153,6 @@ main{
 }
 
 
-.tour-form {
-    min-width: 1000px;
-}
-
 .tours-btn {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -1182,7 +1178,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 
@@ -1195,11 +1191,20 @@ main{
 
 .tour_modal {
     margin: auto;
-    padding: 20px;
-    width: 640px;
-    height: 375px;
+    width: 842px;
+    min-height: 375px;
     background: var(--clr-dark);
     z-index: 1000;
+}
+
+.tour_modal--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--clr-dark-grey);
 }
 
 .tour_modal h2 {
@@ -1218,13 +1223,34 @@ main{
     color: var(--clr-red);
 }
 
+.tour_btn {
+    background: var(--clr-dark-grey);
+    color: var(--clr-light);
+    border: 2px solid var(--clr-light);
+    cursor: pointer;
+    padding: 1em 2.5em;
+    width: 100%;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.tour_btn:hover {
+    background: var(--clr-light);
+    color: var(--clr-dark-grey);
+}
+
 .tour_modal::backdrop {
     background: rgba(0, 0, 0, 0.5);
 }
 
 .tour_modal--close {
     position: relative;
-    top: -125px;
+    top: -75px;
+    right: 10px;
     float: right;
     font-size: 1.5rem;
     font-weight: bold;
@@ -1505,6 +1531,14 @@ main{
     width: 70.5%;
 }
 
+.tour_email-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+}
+
 .subject-input-container {
     display: flex;
     flex-direction: column;
@@ -1518,7 +1552,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70.5%;
+    width: 100%;
 }
 
 .message-textbox-container {
@@ -1568,12 +1602,19 @@ main{
     width: 100%;
 }
 
+#tour_email {
+    padding: 10px;
+    width: 100%;
+}
+
+
 /* the subject input box */
 #subject {
     width: 100%;
 }
 
 #tickets {
+    padding: 10px;
     width: 100%;
 }
 
@@ -1606,6 +1647,10 @@ main{
 
 .submit-btn button {
     width: 250px;
+}
+
+.tour_submit-btn{
+    width: 100%;
 }
 
 .contact .btn {
@@ -2075,10 +2120,10 @@ section .image img {
     .email-input-container {
         width: 92%;
     }
-
+/* 
     .tickets-input-container {
         width: 92%;
-    }
+    } */
 
     .subject-input-container {
         width: 92%;

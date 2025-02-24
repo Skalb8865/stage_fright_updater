@@ -10,7 +10,6 @@
 #cart-icon {
     display: flex;
     font-size: 1.875rem;
-    border-radius: 50%;
     cursor: pointer;
     color: var(--clr-light);
 }

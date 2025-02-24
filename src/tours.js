@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // Add event listeners to all buttons after they're created
             document.querySelectorAll('.tours-btn').forEach(button => {
                 button.addEventListener('click', (e) => {
-                    const tourData = data.find(tour => tour.buttonid === e.target.dataset.id);
-                    modalTitle.textContent = "Tour Details";
-                    modalDate.textContent = `Date: ${tourData.date}`;
-                    modalLocation.textContent = `Location: ${tourData.modalLocation}`;
-                    modalPlace.textContent = `Place: ${tourData.place}`;
-                    modalPrice.textContent = `Price: ${tourData.ticketsPrice}`;
+                    // commented out in case I use this again later
+                    // const tourData = data.find(tour => tour.buttonid === e.target.dataset.id);
+                    // modalTitle.textContent = "Tour Details";
+                    // modalDate.textContent = `Date: ${tourData.date}`;
+                    // modalLocation.textContent = `Location: ${tourData.modalLocation}`;
+                    // modalPlace.textContent = `Place: ${tourData.place}`;
+                    // modalPrice.textContent = `Price: ${tourData.ticketsPrice}`;
                     modal.showModal();
-                    document.body.style.overflow = 'hidden';
                 });
             });
         })
@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Close modal when clicking the close button
     closeBtn.addEventListener('click', () => {
         modal.close();
-        document.body.style.overflow = 'auto';
     });
 
     // Close modal when clicking outside of it
@@ -58,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!isInDialog) {
             modal.close();
-            document.body.style.overflow = 'auto';
         }
     });
 });
