@@ -119,12 +119,9 @@ button {
 }
 
 .section-background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 75dvh;
     background: var(--clr-dark-grey);
-    padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 .tours_slider--section {
@@ -136,11 +133,8 @@ button {
 }
 
 .contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 40dvh;
-    padding: 25px 0 75px 0;
+    padding: 75px 0 75px 0;
     background: var(--clr-dark-grey);
 }
 
@@ -602,13 +596,13 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 45px;
+    gap: 35px;
 }
 
 .news-card {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 445px;
+    height: 445px;
     transition: all 0.3s;
 }
 
