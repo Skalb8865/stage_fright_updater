@@ -44,8 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
-
   window.addEventListener("resize", updateScrollBehavior);
 
   // fucntions to open and close the cart
