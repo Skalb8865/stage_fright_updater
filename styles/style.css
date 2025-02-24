@@ -1706,6 +1706,7 @@ section.hero_container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
+    overflow: hidden;
 }
 
 section .content h4 {
