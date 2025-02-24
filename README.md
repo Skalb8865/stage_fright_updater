@@ -11,15 +11,3 @@ It is designed to show our history, tours, and merchandise, allowing fans to pro
 In addition, you can find our music and other social media links. This site is your gateway to everything Stage Fright.
 
 ### Website URL: https://stage-fright-bpa2025.vercel.app/
-
-top 5 mov:
-
-  puss boots
-
-  hacksiw rige
-
-  egg of tomorrow
-
-  maz run all 3
-
-  grin book
