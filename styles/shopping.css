@@ -19,7 +19,7 @@
 .cart {
     position: fixed;
     top: 0;
-    right: -200%;
+    right: -125%;
     width: 450px;
     height: 100%;
     padding-bottom: 25px;
@@ -27,14 +27,11 @@
     background: var(--clr-dark);
     transition: 0.5s;
     z-index: 9999;
-    transition: right 0.5s ease;
+    transition: right 0.75s ease;
 }
 
 .cart.active {
     right: 0;
-    transition: right 0.5s ease;
-    position: fixed;
-    z-index: 9999;
     background: var(--clr-dark);
 }
 
