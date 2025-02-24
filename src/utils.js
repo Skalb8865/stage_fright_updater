@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add event listener for window resize
     window.addEventListener('resize', () => {
-      if (isCartOpen) {
+      if (disableScroll && isCartOpen) {
         document.body.style.overflow = "hidden";
       } else {
         document.body.style.overflow = "auto";

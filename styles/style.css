@@ -63,7 +63,7 @@ button {
     min-height: 63dvh;
 }
 
-.account{
+.account {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -322,14 +322,25 @@ button {
     left: -100%;
     width: 100%;
     height: 100%;
-    min-height: 100dvh;
+    padding-top: 100px;
+    max-height: 100vh;
+    overflow-y: auto;
     background: var(--clr-dark);
     color: var(--clr-light);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     transition: left 0.85s ease;
     z-index: 9001;
+}
+
+.menu_header {
+    position: fixed;
+    top: 0;
+    padding: 50px 0;
+    width: 95%;
+    z-index: 10000;
+    background: var(--clr-dark);
 }
 
 .menu.active {
@@ -341,6 +352,7 @@ button {
     justify-content: center;
     max-width: 80%;
     width: 100%;
+    padding-top: 50px;
 }
 
 .menu-left {
@@ -693,12 +705,12 @@ button {
     background-image: url("/res/members/group.webp");
 }
 
-.landing_page--container .one:hover .content{
+.landing_page--container .one:hover .content {
     background: rgba(0, 0, 0, 0.25);
     transition: all 0.3s;
 }
 
-.landing_page--container .two:hover .content{
+.landing_page--container .two:hover .content {
     background: rgba(0, 0, 0, 0.25);
     transition: all 0.3s;
 }
@@ -1049,7 +1061,7 @@ button {
     font-size: 0.875rem;
 }
 
-.merch_content span a:hover{
+.merch_content span a:hover {
     border-bottom: 1px solid var(--clr-light);
 }
 
@@ -1173,7 +1185,7 @@ button {
     transition: all 0.3s;
 }
 
-.tour_form{
+.tour_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1181,7 +1193,8 @@ button {
     gap: 10px;
 }
 
-.tour_form .email-input-container, .tour_form .tickets-input-container {
+.tour_form .email-input-container,
+.tour_form .tickets-input-container {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -1197,11 +1210,11 @@ button {
     z-index: 1000;
 }
 
-.tour_modal p{
+.tour_modal p {
     color: var(--clr-grey);
 }
 
-.tour_modal .tour_form .required{
+.tour_modal .tour_form .required {
     color: var(--clr-red);
 }
 
@@ -1356,15 +1369,16 @@ button {
     border-top: 3px solid var(--clr-dark-grey);
 }
 
-.player{
+.player {
     cursor: pointer;
 }
 
-#playerbtn{
+#playerbtn {
     cursor: pointer;
 }
 
-.control,#current {
+.control,
+#current {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -1411,13 +1425,13 @@ button {
 
 .progress {
     display: block;
-    width: var(--progress,0%);
+    width: var(--progress, 0%);
     background: var(--clr-light);
     transition: all 1s linear;
     height: 3%;
 }
 
-.album_soundtrack{
+.album_soundtrack {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -1499,12 +1513,12 @@ button {
     width: 70.5%;
 }
 
-.tickets-input-container{
+.tickets-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70.5%;   
+    width: 70.5%;
 }
 
 .message-textbox-container {
@@ -1559,7 +1573,7 @@ button {
     width: 100%;
 }
 
-#tickets{
+#tickets {
     width: 100%;
 }
 
