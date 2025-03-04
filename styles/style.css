@@ -59,13 +59,8 @@ button {
     border: none;
 }
 
-main {
-    overflow-x: hidden;
-}
-
 .main {
     min-height: 63dvh;
-    overflow-x: hidden;
 }
 
 .account {
