@@ -328,7 +328,7 @@ button {
 .menu_header {
     position: fixed;
     top: 0;
-    padding: 50px 0;
+    padding: 40px 0;
     width: 95%;
     z-index: 10000;
     background: var(--clr-dark);
@@ -2176,7 +2176,13 @@ section .image img {
 
 @media (max-height: 672px) {
     .menu {
-        padding-top: 150px;
+        padding-top: 250px;
+    }
+}
+
+@media (max-height: 500px) {
+    .menu {
+        padding-top: 305px;
     }
 }
 
