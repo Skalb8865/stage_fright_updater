@@ -2174,21 +2174,21 @@ section .image img {
     }
 }
 
-@media (max-height: 590px) {
+@media (max-height: 622px) {
     .menu {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 }
 
 @media (max-height: 576px) {
     .menu {
-        padding-top: 350px;
+        padding-top: 225px;
     }
 }
 
 @media (max-height: 485px) {
     .menu {
-        padding-top: 400px;
+        padding-top: 325px;
     }
 }
 
