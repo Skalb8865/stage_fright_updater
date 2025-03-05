@@ -1123,12 +1123,14 @@ button {
     height: 400px;
 }
 
-.tour_card-overlay{
+/* <div class="tour_card-overlay"></div> */
+
+/* .tour_card-overlay{
     position: absolute;
     width: 50%;
     height: 50%;
     background: red;
-}
+} */
 
 
 .tour-card:hover {
