@@ -335,7 +335,7 @@
     top: -205px;
     right: -240px;
     color: var(--clr-grey);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
@@ -354,7 +354,7 @@
 
 .order_checkmark i {
     color: #1faa50;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 .checkmark-background {

@@ -132,7 +132,7 @@ button {
 
 .contact-section {
     min-height: 40dvh;
-    padding-top: 10rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
     background: var(--clr-dark-grey);
 }
@@ -739,7 +739,7 @@ button {
     align-items: center;
     height: 100%;
     width: 100%;
-    font-size: 36px;
+    font-size: 2.25rem;
     color: var(--clr-light);
     text-transform: uppercase;
     font-weight: 700;
@@ -1408,7 +1408,7 @@ button {
 }
 
 #playbtn {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--clr-light);
@@ -1422,7 +1422,7 @@ button {
 .info {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--clr-light);
     padding: 0;
     margin: 0;
@@ -1656,7 +1656,7 @@ button {
 /* Fanclub Section */
 /* *************** */
 .perk {
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #fff;
     text-align: center;
     align-items: center;
@@ -1824,12 +1824,12 @@ section .image img {
 
 .footer p {
     color: var(--clr-light);
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .footer p:nth-child(2) {
     color: var(--clr-grey);
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .footer-socials {
@@ -1839,7 +1839,7 @@ section .image img {
 
 .footer-socials a {
     color: var(--clr-light);
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     margin: 1.5rem 0;
     transition: all 0.3s ease;
@@ -2046,7 +2046,7 @@ section .image img {
     }
 
     .perk {
-        font-size: 30px;
+        font-size: 1.875rem;
         margin: 130px 0 50px 0;
         background: #000000;
     }
