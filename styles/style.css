@@ -37,10 +37,6 @@
     scroll-behavior: smooth;
 }
 
-html{
-    cursor: url('/icons/icons8-metal-music-50.png'), default;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     background: var(--clr-dark);
