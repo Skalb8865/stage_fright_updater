@@ -1109,12 +1109,12 @@ button {
     display: flex;
     grid-template-columns: subgrid;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 2em;
     border: 1px solid rgb(75, 82, 92);
     /* background: #222429; */
-    background-image: url(/res/hero_image/hero-image.webp);
+    background-image: url(/res/king_of_clubs.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
