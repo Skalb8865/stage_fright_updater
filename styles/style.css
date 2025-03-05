@@ -1113,7 +1113,8 @@ button {
     justify-content: center;
     padding: 2em;
     border: 1px solid rgb(75, 82, 92);
-    background: #222429;
+    /* background: #222429; */
+    background-image: url(/res/hero_image/hero-image.webp);
     transition: border 0.3s;
     text-align: center;
     height: 400px;
