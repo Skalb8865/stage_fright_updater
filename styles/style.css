@@ -1123,6 +1123,14 @@ button {
     height: 400px;
 }
 
+.tour_card-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+
 .tour-card:hover {
     border: 1px solid rgb(124, 128, 134);
     transition: border 0.3s;

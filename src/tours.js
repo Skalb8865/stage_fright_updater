@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const { date, location, place, buttonid } = tour;
                 tourCards.innerHTML += `
             <div class="tour-card">
+                <div class="tour_card-overlay"></div>
                 <p class="tour-dates">${date}</p>
                 <p class="tour-location">${location}</p>
                 <p class="tour-place">${place}</p>
