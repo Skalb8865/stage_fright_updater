@@ -2311,7 +2311,7 @@ section .image img {
     font-family: 'Sentient', serif;
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     mix-blend-mode: difference;
     position: relative;
     z-index: 1;
