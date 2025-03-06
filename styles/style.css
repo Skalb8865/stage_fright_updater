@@ -203,6 +203,7 @@ button {
 }
 
 .nav-item {
+    font-family: 'Sentient', serif;
     position: relative;
     color: var(--clr-light);
     font-size: var(--size-lg);
@@ -1644,7 +1645,7 @@ button {
     width: 250px;
 }
 
-.tour_submit-btn{
+.tour_submit-btn {
     width: 100%;
 }
 
@@ -2114,7 +2115,8 @@ section .image img {
     .email-input-container {
         width: 92%;
     }
-/* 
+
+    /* 
     .tickets-input-container {
         width: 92%;
     } */
