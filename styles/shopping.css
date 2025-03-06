@@ -7,6 +7,11 @@
     padding-right: 0.5rem;
 }
 
+.shop-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
 #cart-icon {
     display: flex;
     font-size: 1.875rem;
@@ -212,7 +217,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    padding-top: 20px;
 }
 
 .info-section {
