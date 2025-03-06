@@ -552,6 +552,7 @@ button {
 }
 
 .hero-title {
+    font-family: 'Sentient', serif;
     color: var(--clr-light);
     font-size: clamp(2rem, calc(7vw + 1rem), 6rem);
     font-weight: 800;
