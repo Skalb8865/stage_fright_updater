@@ -18,47 +18,6 @@
     </noscript>
     <link rel="stylesheet" href="/styles/menu.css">
 
-    <style>
-        .test-hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .test-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url('/res/il_fullxfull.3699243721_cm4z-740800104.jpg') no-repeat center center/cover;
-            background-attachment: fixed;
-            z-index: -2;
-        }
-
-        .test-hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
-
-        .test-hero h1 {
-            font-size: 10vw;
-            font-family: 'Sentient', serif;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: white;
-            mix-blend-mode: difference;
-            position: relative;
-            z-index: 1;
-        }
-    </style>
-
     <!-- ======== -->
     <!-- JS Links -->
     <!-- ======== -->
@@ -182,35 +141,17 @@
     </div>
 
     <main class="main">
-        <div class="test-hero">
+        <div class="merch-hero">
             <h1>Store</h1>
-            <!-- merhc image credit -->
+            <!-- merch image credit 
+             https://www.etsy.com/listing/1174534503/classic-rock-vintage-band-tshirt-mystery -->
         </div>
         <!-- Shop Section -->
         <section class="shop-container section">
-            <h2 class="section-title" data-aos="fade-down"></h2>
-            <div class="shop-wrapper">
-                <div class="sort-container">
-                    <fieldset>
-                        <legend>Filter by Category:</legend>
-                        <label><input type="checkbox" class="category-filter" value="vinyl"> Vinyl</label>
-                        <label><input type="checkbox" class="category-filter" value="accessories">
-                            Accessories</label>
-                        <label><input type="checkbox" class="category-filter" value="apparel"> Apparel</label>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Sort by Price:</legend>
-                        <label><input type="radio" name="price-sort" value="default" checked> Default</label>
-                        <label><input type="radio" name="price-sort" value="low-to-high"> Low to High</label>
-                        <label><input type="radio" name="price-sort" value="high-to-low"> High to Low</label>
-                    </fieldset>
-                </div>
-
+            <h2 class="section-title" data-aos="fade-down">Store</h2>
                 <div class="shop-content">
                     <!-- JSON Cards Loaded Here -->
                 </div>
-            </div>
         </section>
         <!-- Order Confirmation Modal -->
         <dialog id="order-modal" class="order-modal">
